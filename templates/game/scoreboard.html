@@ -1,0 +1,183 @@
+<table width="720px"  align="center" bgcolor="#333333" background="../images/game/background1.jpg"  style="border:1px solid darkred">
+    <tr>
+        <td width="100%" align="center">
+            <b style="color:#cacaca">{t}Scoreboard{/t}</b> |
+            <a  class="link" href="#" onclick="open_page('hall_of_fame.php')"><b>{t}Hall Of Fame{/t}</b></a>
+        </td>
+    </tr>
+</table>
+
+<br/>
+<table cellpadding="1" cellspacing="0" border="0" bgcolor="darkred"
+       width="720" align="center">
+    <tr>
+        <td background="../images/game/header.jpg"><b>&nbsp;{t}Top Players{/t}</b></td>
+    </tr>
+    <tr>
+        <td>
+            <table background="../images/game/background1.jpg" style="font-size:11pt;"
+                   bgcolor="#333333" width="100%" cellspacing="0" cellpadding="3"
+                   border="0" align="center">
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="right" style="color:#cacaca"><b>{t}Current Galaxy Master:{/t}</b></td>
+                    <td><b>{$galaxy_master}</b></td>
+                </tr>
+                <tr>
+                    <td align="right" style="color:#cacaca">{t}Current Planets Master:{/t}
+                    </td>
+                    <td><b>{$planets_master}</b></td>
+                </tr>
+                <tr>
+                    <td align="right" style="color:#cacaca">{t}Current Galactic	Warlord:{/t}</td>
+                    {if $galactic_warlord eq ''}
+                    <td><b>---</b></td>
+                    {else}
+                    <td><b>{$galactic_warlord}</b></td>
+                    {/if}
+                </tr>
+                <tr>
+                    <td align="right" style="color:#cacaca">{t}Current Technology Master:{/t}</td>
+                    <td><b>{$tech_master}</b></td>
+                </tr>
+                <tr>
+                    <td align="right" style="color:#cacaca">{t}Current Population Zealot:{/t}</td>
+                    <td><b>{$pop_zealot}</b></td>
+                </tr>
+                <tr>
+                    <td align="right" style="color:#cacaca">{t}Current Food Master:{/t}</td>
+                    <td><b>{$food_master}</b></td>
+                </tr>
+                <tr>
+                    <td align="right" style="color:#cacaca">{t}Current Credits Overlord:{/t}</td>
+                    <td><b>{$credits_overlord}</b></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+</table>
+
+
+<br />
+<br />
+
+
+<table cellpadding="1" align="center" cellspacing="0" border="0" bgcolor="darkred"
+       width="720">
+    <tr>
+        <td background="../images/game/header.jpg"><b>&nbsp;{t}Coalitions score{/t}</b><br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table background="../images/game/background1.jpg"
+                   style="font-size:10pt;color:white" bgcolor="#333333" width="720"
+                   cellspacing="1" cellpadding="5" border="0" align="center">
+                <tr>
+                    <td align="left" width="40"><b>{t}Rank{/t}</b></td>
+                    <td align="left" width="100%"><b>{t}Name{/t}</b></td>
+                    <td align="left" width="100"><b>{t}Members{/t}</b></td>
+                    <td align="left" width="200"><b>{t}Planets{/t}</b></td>
+                    <td align="left" nowrap><b>{t}Net Worth{/t}</b></td>
+                </tr>
+
+			{section name="ct" loop=$coalition_toplist}
+                <tr>
+                    <td background="{$coalition_toplist[ct].background}" align="right"
+                        bgcolor="{$coalition_toplist[ct].bgcolor}" style="color:yellow"><b>{$coalition_toplist[ct].rank}</b></td>
+                    <td background="{$coalition_toplist[ct].background}"
+                        bgcolor="{$coalition_toplist[ct].bgcolor}">
+                        <table cellspacing="0" cellpadding="2" border="0">
+                            <tr>
+                                <td>
+                                    <a  href="javascript:show_coalition({$coalition_toplist[ct].id})"
+                                        style="text-decoration:none;color:{$coalition_toplist[ct].color}">
+                                        <img src="{$coalition_toplist[ct].img_logo}" width="32" height="32" border="1" bordercolor="yellow" style="color:yellow">
+                                    </a></td>
+                                <td><b style="font-size:10pt;color:#333333;">{$coalition_toplist[ct].name}</a></b></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td background="{$coalition_toplist[ct].background}" align="right"
+                        bgcolor="{$coalition_toplist[ct].bgcolor}" style="color:black"><b>{$coalition_toplist[ct].members}</b></td>
+                    <td background="{$coalition_toplist[ct].background}" align="right"
+                        bgcolor="{$coalition_toplist[ct].bgcolor}" style="color:black"><b>{$coalition_toplist[ct].planets_count|number_format}</b></td>
+                    <td background="{$coalition_toplist[ct].background}" align="right"
+                        bgcolor="{$coalition_toplist[ct].bgcolor}" style="color:black"><b>{$coalition_toplist[ct].networth|number_format}</b></td>
+
+                </tr>
+			{sectionelse}
+                <tr>
+                    <td bgcolor="#333333" colspan="5"><b style="color:yellow">{t}No coalitions{/t}</b></td>
+                </tr>
+			{/section}
+
+
+            </table>
+        </td>
+    </tr>
+</table>
+
+
+
+<br />
+<br />
+
+
+<table cellpadding="1" align="center" cellspacing="0" border="0" bgcolor="darkred"
+       width="720">
+    <tr>
+        <td background="../images/game/header.jpg"><b>&nbsp;{t}Players score{/t}</b><br/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table background="../images/game/background1.jpg"
+                   style="font-size:10pt;color:white" bgcolor="#333333" width="720"
+                   cellspacing="1" cellpadding="5" border="0" align="center">
+                <tr>
+                    <td align="left" width="40"><b>{t}Rank{/t}</b></td>
+                    <td align="left" width="100%"><b>{t}Empire{/t}</b></td>
+                    <td align="left" width="200"><b>{t}Planets{/t}</b></td>
+                    <td align="left" nowrap><b>{t}Net Worth{/t}</b></td>
+                </tr>
+
+			{section name="tl" loop="$toplist}
+                <tr>
+                    <td background="{$toplist[tl].background}" align="right"
+                        bgcolor="{$toplist[tl].bgcolor}" style="color:yellow"><b>{$toplist[tl].rank}</b></td>
+                    <td background="{$toplist[tl].background}" bgcolor="{$toplist[tl].bgcolor}">
+                        <table cellspacing="0" cellpadding="1" border="0">
+                            <tr>
+                                <td><a href="javascript:show_info({$toplist[tl].id})"
+                                       style="text-decoration:none;color:{$toplist[tl].color}"><img
+                                            src="{$toplist[tl].img_logo}" width="32" height="32" border="1"
+                                            bordercolor="yellow" style="border-color:yellow"></a></td>
+                                        <td><b style="font-size:10pt;color:#333333;">{$toplist[tl].name}</b></a></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td background="{$toplist[tl].background}" align="right"
+                        bgcolor="{$toplist[tl].bgcolor}" style="color:black"><b>{$toplist[tl].planets_count|number_format}</b></td>
+                    <td background="{$toplist[tl].background}" align="right"
+                        bgcolor="{$toplist[tl].bgcolor}" style="color:black"><b>{$toplist[tl].networth|number_format}</b></td>
+
+                </tr>
+
+			{/section}
+
+            </table>
+        </td>
+    </tr>
+</table>
+
+
+
+<br />
+<br />

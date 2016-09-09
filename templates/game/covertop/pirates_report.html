@@ -1,0 +1,17 @@
+<div class="text_normal"><b>{t}Pirates report{/t}</b><br/>
+<br/>
+
+<table class="text_normal">
+<tr><td>Pirate gang</td><td>Networth</td></tr>
+{section name="p" loop=$pirates}
+
+<tr>
+<td style="color:yellow">{$pirates[p].name}</td>
+<td style="color:yellow">{$pirates[p].networth|number_format}</td>
+</tr>
+
+{sectionelse}
+{/section}
+
+</table>
+</div>

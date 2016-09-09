@@ -1,0 +1,42 @@
+{capture name=page_title}
+{t}Welcome{/t}
+{/capture}
+
+{include file="frame_header.html" title=$smarty.capture.page_title}
+<!-- begin content -->
+
+{if $players_registered eq 0}
+<div class="div_warning_visible">
+<b>{t}No players can be found in the game database, this mean that the first player who register on this server will be the administrator!{/t}</b>
+</div>
+<br/>
+{/if}
+
+<div align="center">
+<div align="center" style="background-image:url(images/system/div_bg.jpg);background-color:darkred;padding:10px;border:1px solid red">
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="login.php"><b>{t}PLAY NOW{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="take_a_tour.php"><b>{t}TAKE A TOUR{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="scoreboard.php"><b>{t}SCOREBOARD{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="server_status.php"><b>{t}SERVER STATUS{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="forum.php"><b>{t}FORUM{/t}</b></a></div>
+</div>
+<div  class="div_welcome_background">
+
+<div style="position:relative;top:380px;left:210px;width:340px;text-align:right">
+<b class="text_small" style="color:yellow">{$server_name}</b><br/>
+<b class="text_small" style="color:#767676">{$connected_players} / {$players_registered} {t}players{/t}, {t}Version{/t}: {$game_version}</b>
+</div>
+
+
+</div>
+
+
+</div>
+
+</td>
+</tr>
+</table>
+
+<!-- end content -->
+
+{include file="frame_footer.html"}

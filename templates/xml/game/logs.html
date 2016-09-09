@@ -1,0 +1,53 @@
+		<table  cellspacing="0" cellpadding="0" border="0">
+		<tr>	
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666" style="padding:0px 5px 0px 5px"><a  class="link" href="manage.php"><b>{t}Manage{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="stats.php"><b>{t}Performance{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab_left.gif" border="0"></td>
+		<td nowrap bgcolor="darkred"  style="padding:0px 5px 0px 5px"><a  style="text-decoration:none;color:white" href="logs.php"><b>{t}Activity Logs{/t}</b></a></td> 
+		<td><img src="../images/game/tab_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="logo_editor.php"><b>{t}Edit Logo{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="lastturn.php"><b>{t}Turn Summary{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="research.php"><b>{t}Research Map{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="edit_production.php"><b>{t}Production{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		</table>
+
+<table width="720"  bgcolor="darkred" cellspacing="1"
+	cellpadding="5" border="0">
+<tr><td background="../images/game/background1.jpg">
+<div align="left">
+<br/>
+<b>
+<a class="link" href="?filter=ALL">{t}All Activities{/t} ({$logs_activities})</a>&nbsp;|&nbsp;
+<a class="link" href="?filter=WARFARE">{t}Warfare{/t} ({$logs_warfare})</a>&nbsp;|&nbsp;
+<a class="link" href="?filter=COMMUNICATION">{t}Communication{/t} ({$logs_communication})</a>&nbsp;|&nbsp;
+<a class="link" href="?filter=DIPLOMACY">{t}Diplomacy{/t} ({$logs_diplomacy})</a>&nbsp;|&nbsp;
+<a class="link" href="?filter=SYSTEM">{t}System{/t} ({$logs_system})</a>
+</b>
+
+<br />
+</div>
+<br/>
+		{$content} <br />
+		
+		</td>
+	</tr>
+</table>

@@ -1,0 +1,3284 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: SolarImperium GAME\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-19 23:14-0500\n"
+"PO-Revision-Date: 2008-06-11 17:08-0500\n"
+"Last-Translator: Yanick Bourbeau <ybourbeau@mrgtech.ca>\n"
+"Language-Team: fr_CA <ybourbeau@mrgtech.ca>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: CANADA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: battle_guerilla.php:12
+#: battle_invasion.php:14
+#: battle_nuclearwarfare.php:15
+msgid "No attack until out of protection!"
+msgstr ""
+
+#: battle_guerilla.php:18
+#: battle_invasion.php:20
+#: battle_nuclearwarfare.php:21
+#: battle_pirate.php:14
+msgid "Sorry, only one attack per turn!"
+msgstr ""
+
+#: battle_guerilla.php:37
+#: battle_invasion.php:55
+#: battle_nuclearwarfare.php:44
+#: covert.php:53
+#: covert.php:458
+#: covert.php:461
+#: covert.php:467
+msgid "Invalid empire ID !"
+msgstr ""
+
+#: battle_guerilla.php:44
+#: battle_pirate.php:46
+#: trade.php:79
+#: trade.php:84
+msgid "Invalid soldiers quantity!"
+msgstr ""
+
+#: battle_guerilla.php:48
+#: battle_guerilla.php:52
+#: battle_invasion.php:59
+#: battle_invasion.php:63
+#: battle_nuclearwarfare.php:48
+#: battle_nuclearwarfare.php:52
+msgid "You can't attack a ally!"
+msgstr ""
+
+#: battle_guerilla.php:73
+#: battle_pirate.php:86
+msgid "Attacking with"
+msgstr ""
+
+#: battle_guerilla.php:73
+#: battle_pirate.php:87
+#: battle_pirate.php:143
+#: battle_pirate.php:148
+#: battle_pirate.php:230
+#: battle_pirate.php:235
+#: battle_pirate.php:316
+#: manage.php:265
+#: manage.php:272
+#: tpl_gettext.php:1718
+#: tpl_gettext.php:1751
+#: tpl_gettext.php:1886
+#: tpl_gettext.php:1901
+#: tpl_gettext.php:2003
+msgid "soldiers"
+msgstr ""
+
+#: battle_guerilla.php:108
+msgid "Battle lost"
+msgstr ""
+
+#: battle_guerilla.php:115
+#: battle_guerilla.php:127
+#: battle_pirate.php:143
+#: battle_pirate.php:230
+msgid "Your casualties"
+msgstr ""
+
+#: battle_guerilla.php:115
+#: battle_guerilla.php:127
+msgid "Enemy casualties"
+msgstr ""
+
+#: battle_guerilla.php:121
+msgid "Battle won"
+msgstr ""
+
+#: battle_guerilla.php:142
+msgid "You have weakened the enemy but revealed your identity!"
+msgstr ""
+
+#: battle_guerilla.php:169
+msgid "You have weakened the enemy without revealing your identity!"
+msgstr ""
+
+#: battle_guerilla.php:184
+msgid "Riots break out"
+msgstr ""
+
+#: battle_invasion.php:31
+#: battle_invasion.php:32
+#: battle_invasion.php:35
+#: battle_invasion.php:36
+#: battle_invasion.php:39
+#: battle_invasion.php:40
+#: battle_invasion.php:43
+#: battle_invasion.php:44
+#: battle_invasion.php:48
+#: globalmarket.php:54
+#: globalmarket.php:89
+msgid "Invalid quantity!"
+msgstr ""
+
+#: battle_invasion.php:74
+msgid "Not enough carriers!"
+msgstr ""
+
+#: battle_invasion.php:284
+msgid "Invasion convoy sent!"
+msgstr ""
+
+#: battle_nuclearwarfare.php:27
+msgid "You don't have any nukes!"
+msgstr ""
+
+#: battle.php:159
+msgid "Invasion convoy"
+msgstr ""
+
+#: battle.php:161
+msgid "Defense convoy"
+msgstr ""
+
+#: battle.php:167
+msgid "Retreating"
+msgstr ""
+
+#: battle.php:171
+msgid "Retreat"
+msgstr ""
+
+#: battle_pirate.php:26
+#: diplomacy.php:39
+#: diplomacy.php:46
+#: diplomacy.php:149
+#: diplomacy.php:314
+#: diplomacy.php:318
+#: show_empire.php:12
+#: trade.php:136
+msgid "Invalid empire ID!"
+msgstr ""
+
+#: battle_pirate.php:51
+#: trade.php:91
+#: trade.php:96
+msgid "Invalid fighters quantity!"
+msgstr ""
+
+#: battle_pirate.php:56
+#: trade.php:103
+#: trade.php:108
+msgid "Invalid light cruisers quantity!"
+msgstr ""
+
+#: battle_pirate.php:61
+#: trade.php:115
+#: trade.php:120
+msgid "Invalid heavy cruisers quantity!"
+msgstr ""
+
+#: battle_pirate.php:71
+msgid "Pirate fled the attack"
+msgstr ""
+
+#: battle_pirate.php:88
+#: battle_pirate.php:144
+#: battle_pirate.php:149
+#: battle_pirate.php:231
+#: battle_pirate.php:236
+#: battle_pirate.php:317
+#: manage.php:266
+#: manage.php:273
+#: tpl_gettext.php:1721
+#: tpl_gettext.php:1754
+#: tpl_gettext.php:1889
+#: tpl_gettext.php:1904
+#: tpl_gettext.php:2006
+msgid "fighters"
+msgstr ""
+
+#: battle_pirate.php:90
+#: battle_pirate.php:145
+#: battle_pirate.php:150
+#: battle_pirate.php:232
+#: battle_pirate.php:237
+#: battle_pirate.php:318
+#: manage.php:276
+#: tpl_gettext.php:1724
+#: tpl_gettext.php:1757
+#: tpl_gettext.php:1892
+#: tpl_gettext.php:1907
+#: tpl_gettext.php:2009
+msgid "light cruisers"
+msgstr ""
+
+#: battle_pirate.php:91
+#: battle_pirate.php:146
+#: battle_pirate.php:151
+#: battle_pirate.php:233
+#: battle_pirate.php:238
+#: battle_pirate.php:319
+#: manage.php:269
+#: manage.php:277
+#: tpl_gettext.php:1727
+#: tpl_gettext.php:1760
+#: tpl_gettext.php:1895
+#: tpl_gettext.php:1910
+#: tpl_gettext.php:2012
+msgid "heavy cruisers"
+msgstr ""
+
+#: battle_pirate.php:148
+#: battle_pirate.php:235
+msgid "Pirate casualties"
+msgstr ""
+
+#: battle_pirate.php:195
+msgid "Pirate prevailed, new army effectiveness"
+msgstr ""
+
+#: battle_pirate.php:240
+msgid "Pirate gang lost"
+msgstr ""
+
+#: battle_pirate.php:312
+#: battle_pirate.php:313
+#: battle_pirate.php:314
+#: battle_pirate.php:315
+#: battle_pirate.php:316
+#: battle_pirate.php:317
+#: battle_pirate.php:318
+#: battle_pirate.php:319
+#: battle_pirate.php:320
+#: battle_pirate.php:321
+#: battle_pirate.php:322
+#: battle_pirate.php:323
+#: battle_pirate.php:324
+#: battle_pirate.php:325
+#: battle_pirate.php:326
+#: battle_pirate.php:327
+#: battle_pirate.php:328
+#: battle_pirate.php:329
+#: battle_pirate.php:330
+msgid "reclaimed"
+msgstr ""
+
+#: battle_pirate.php:312
+msgid "credits"
+msgstr ""
+
+#: battle_pirate.php:313
+msgid "food"
+msgstr ""
+
+#: battle_pirate.php:314
+#: manage.php:268
+#: manage.php:275
+msgid "covert agents"
+msgstr ""
+
+#: battle_pirate.php:315
+#: manage.php:267
+#: manage.php:274
+msgid "stations"
+msgstr ""
+
+#: battle_pirate.php:320
+#: manage.php:270
+#: manage.php:278
+#: tpl_gettext.php:1763
+#: tpl_gettext.php:1898
+msgid "carriers"
+msgstr ""
+
+#: battle_pirate.php:321
+msgid "food planets"
+msgstr ""
+
+#: battle_pirate.php:322
+msgid "ore planets"
+msgstr ""
+
+#: battle_pirate.php:323
+msgid "tourism planets"
+msgstr ""
+
+#: battle_pirate.php:324
+msgid "supply planets"
+msgstr ""
+
+#: battle_pirate.php:325
+msgid "gov. planets"
+msgstr ""
+
+#: battle_pirate.php:326
+msgid "edu. planets"
+msgstr ""
+
+#: battle_pirate.php:327
+msgid "urban planets"
+msgstr ""
+
+#: battle_pirate.php:328
+msgid "research planets"
+msgstr ""
+
+#: battle_pirate.php:329
+msgid "petroleum planets"
+msgstr ""
+
+#: battle_pirate.php:330
+msgid "anti-pollution planets"
+msgstr ""
+
+#: blackmarket.php:21
+msgid "Invalid light cruisers quantity !"
+msgstr ""
+
+#: blackmarket.php:25
+#: blackmarket.php:66
+#: blackmarket.php:93
+#: covert.php:46
+msgid "No enough credits !"
+msgstr ""
+
+#: blackmarket.php:34
+msgid "light cruisers bought!"
+msgstr ""
+
+#: blackmarket.php:44
+msgid "You are already under protection!"
+msgstr ""
+
+#: blackmarket.php:47
+#: trade.php:181
+msgid "No enough credits!"
+msgstr ""
+
+#: blackmarket.php:54
+msgid "Extra protection bought!"
+msgstr ""
+
+#: blackmarket.php:69
+msgid "You already have nukes!"
+msgstr ""
+
+#: blackmarket.php:83
+msgid "Nuke bought!"
+msgstr ""
+
+#: blackmarket.php:118
+msgid "Teleportation successfully done!"
+msgstr ""
+
+#: covert.php:12
+msgid "No covert operations available while being under protection"
+msgstr ""
+
+#: covert.php:17
+msgid "You don't have any covert agents!"
+msgstr ""
+
+#: covert.php:36
+msgid "Invalid covert operation !"
+msgstr ""
+
+#: covert.php:41
+msgid "No enough covert points !"
+msgstr ""
+
+#: covert.php:59
+msgid "Empire under protection"
+msgstr ""
+
+#: covert.php:65
+msgid "Unable to load enemy empire object"
+msgstr ""
+
+#: covert.php:82
+msgid "Impossible"
+msgstr ""
+
+#: covert.php:83
+msgid "Nearly impossible!"
+msgstr ""
+
+#: covert.php:84
+msgid "Unlikely!"
+msgstr ""
+
+#: covert.php:85
+msgid "Fair!"
+msgstr ""
+
+#: covert.php:86
+msgid "Nearly safe!"
+msgstr ""
+
+#: covert.php:87
+msgid "Safe!"
+msgstr ""
+
+#: covert.php:89
+msgid "Success rate"
+msgstr ""
+
+#: covert.php:150
+#: hall_of_fame.php:16
+msgid "Active"
+msgstr ""
+
+#: covert.php:154
+msgid "Break Pending"
+msgstr ""
+
+#: covert.php:158
+msgid "Accept  Pending"
+msgstr ""
+
+#: covert.php:341
+msgid "carriers destroyed!"
+msgstr ""
+
+#: covert.php:342
+msgid "This empire have no carriers !"
+msgstr ""
+
+#: covert.php:516
+msgid "Your covert agents were caught !"
+msgstr ""
+
+#: diplomacy.php:18
+msgid "You need to be the owner!"
+msgstr ""
+
+#: diplomacy.php:21
+msgid "You are already the owner!"
+msgstr ""
+
+#: diplomacy.php:24
+msgid "Coalition ownership successfully transfered"
+msgstr ""
+
+#: diplomacy.php:33
+#: diplomacy.php:182
+#: messages.php:26
+#: shoutbox.php:10
+msgid "You need to be in a coalition!"
+msgstr ""
+
+#: diplomacy.php:36
+#: diplomacy.php:144
+#: diplomacy.php:185
+msgid "You need to be the coalition owner!"
+msgstr ""
+
+#: diplomacy.php:42
+msgid "You can't kick a coalition owner!"
+msgstr ""
+
+#: diplomacy.php:49
+msgid "Empire kicked from coalition"
+msgstr ""
+
+#: diplomacy.php:59
+#: diplomacy.php:62
+#: show_coalition.php:13
+msgid "Invalid coalition ID!"
+msgstr ""
+
+#: diplomacy.php:68
+#: diplomacy.php:160
+msgid "Sorry, this coalition is full!"
+msgstr ""
+
+#: diplomacy.php:107
+msgid "Coalition invitation accepted"
+msgstr ""
+
+#: diplomacy.php:133
+msgid "Coalition invitation refused"
+msgstr ""
+
+#: diplomacy.php:154
+msgid "This empire is already in another coalition!"
+msgstr ""
+
+#: diplomacy.php:173
+msgid "Invitation sent!"
+msgstr ""
+
+#: diplomacy.php:188
+msgid "Coalition disbanded!"
+msgstr ""
+
+#: diplomacy.php:195
+msgid "You are already member of a coalition!"
+msgstr ""
+
+#: diplomacy.php:200
+msgid "Invalid coalition name!"
+msgstr ""
+
+#: diplomacy.php:211
+msgid "New coalition created!"
+msgstr ""
+
+#: diplomacy.php:219
+msgid "Invalid treaty ID!"
+msgstr ""
+
+#: diplomacy.php:226
+msgid "You can't break a pending treaty proposal!"
+msgstr ""
+
+#: diplomacy.php:243
+msgid "Treaty successfully broken!"
+msgstr ""
+
+#: diplomacy.php:273
+msgid "Treaty successfully accepted!"
+msgstr ""
+
+#: diplomacy.php:309
+msgid "No empire selected!"
+msgstr ""
+
+#: diplomacy.php:324
+msgid "Invalid treaty type!"
+msgstr ""
+
+#: diplomacy.php:331
+msgid "Another treaty is active!"
+msgstr ""
+
+#: diplomacy.php:335
+msgid "Treaty proposition sent!"
+msgstr ""
+
+#: diplomacy.php:382
+msgid "Unknown"
+msgstr ""
+
+#: diplomacy.php:383
+msgid "Accept pending"
+msgstr ""
+
+#: diplomacy.php:384
+msgid "Accepted"
+msgstr ""
+
+#: diplomacy.php:385
+msgid "Break pending"
+msgstr ""
+
+#: diplomacy.php:454
+msgid "Member"
+msgstr ""
+
+#: diplomacy.php:455
+msgid "Owner"
+msgstr ""
+
+#: edit_production.php:51
+msgid "Invalid supply numbers!"
+msgstr ""
+
+#: edit_production.php:55
+msgid "Invalid tax rate entered !"
+msgstr ""
+
+#: edit_production.php:58
+#: edit_production.php:61
+#: edit_production.php:64
+#: edit_production.php:67
+msgid "Invalid sell rate entered!"
+msgstr ""
+
+#: edit_production.php:73
+msgid "Preferences saved"
+msgstr ""
+
+#: globalmarket.php:48
+#: globalmarket.php:84
+msgid "Already traded resource!"
+msgstr ""
+
+#: globalmarket.php:65
+msgid "Resource sold: {qty} {resource} for {credits}"
+msgstr ""
+
+#: globalmarket.php:102
+msgid "Resource bought: {qty} {resource} for {credits}"
+msgstr ""
+
+#: hall_of_fame.php:16
+msgid "Ended"
+msgstr ""
+
+#: hall_of_fame.php:19
+msgid "Started"
+msgstr ""
+
+#: img_research.php:26
+#: research.php:70
+msgid "Fundamental research"
+msgstr ""
+
+#: last_invasions.php:15
+msgid "Invalid invasion ID!"
+msgstr ""
+
+#: last_invasions.php:21
+#: last_invasions.php:22
+#: last_invasions.php:23
+#: tpl_gettext.php:1625
+#: tpl_gettext.php:1778
+msgid "Yes"
+msgstr ""
+
+#: last_invasions.php:21
+#: last_invasions.php:22
+#: last_invasions.php:23
+msgid "No"
+msgstr ""
+
+#: last_invasions.php:352
+#: last_invasions.php:389
+#: last_invasions.php:417
+msgid "Invasion won"
+msgstr ""
+
+#: last_invasions.php:370
+msgid "Invasion failed!"
+msgstr ""
+
+#: last_invasions.php:388
+msgid "Invasion failed"
+msgstr ""
+
+#: last_invasions.php:395
+msgid "Invading empire"
+msgstr ""
+
+#: last_invasions.php:397
+msgid "Invading ally"
+msgstr ""
+
+#: last_invasions.php:409
+msgid "Defending empire"
+msgstr ""
+
+#: last_invasions.php:411
+msgid "Defending ally"
+msgstr ""
+
+#: lastturn.php:24
+#: lastturn.php:33
+#: lastturn.php:34
+msgid "No turn found"
+msgstr ""
+
+#: logo_editor_coalition.php:64
+#: logo_editor.php:64
+msgid "New logo saved"
+msgstr ""
+
+#: logo_editor_coalition.php:71
+msgid "You need to be the coalition owner to do that!"
+msgstr ""
+
+#: lottery.php:21
+msgid "Invalid tickets amount!"
+msgstr ""
+
+#: lottery.php:35
+msgid "Ticket(s) bought: {qty} for {credits}"
+msgstr ""
+
+#: lottery.php:68
+msgid "How many tickets?"
+msgstr ""
+
+#: lottery.php:68
+#: trade.php:129
+#: tpl_gettext.php:32
+#: tpl_gettext.php:38
+#: tpl_gettext.php:44
+#: tpl_gettext.php:50
+#: tpl_gettext.php:56
+#: tpl_gettext.php:62
+#: tpl_gettext.php:2312
+#: tpl_gettext.php:2318
+#: tpl_gettext.php:2327
+#: tpl_gettext.php:2339
+#: tpl_gettext.php:2345
+#: tpl_gettext.php:2351
+msgid "MAX"
+msgstr ""
+
+#: manage.php:40
+#: manage.php:146
+msgid "Invalid units quantity!"
+msgstr ""
+
+#: manage.php:66
+msgid "units bought"
+msgstr ""
+
+#: manage.php:88
+#: manage.php:176
+msgid "Invalid planets quantity!"
+msgstr ""
+
+#: manage.php:122
+msgid "planets bought!"
+msgstr ""
+
+#: manage.php:161
+msgid "units sold"
+msgstr ""
+
+#: manage.php:185
+msgid "planets released"
+msgstr ""
+
+#: manage.php:265
+#: manage.php:266
+#: manage.php:267
+#: manage.php:268
+#: manage.php:269
+#: manage.php:270
+#: manage.php:289
+msgid "buy"
+msgstr ""
+
+#: manage.php:265
+#: manage.php:266
+#: manage.php:267
+#: manage.php:268
+#: manage.php:269
+#: manage.php:270
+#: manage.php:272
+#: manage.php:273
+#: manage.php:274
+#: manage.php:275
+#: manage.php:276
+#: manage.php:277
+#: manage.php:278
+#: manage.php:289
+msgid "each"
+msgstr ""
+
+#: manage.php:265
+#: manage.php:266
+#: manage.php:267
+#: manage.php:268
+#: manage.php:269
+#: manage.php:270
+#: manage.php:272
+#: manage.php:273
+#: manage.php:274
+#: manage.php:275
+#: manage.php:276
+#: manage.php:277
+#: manage.php:278
+#: manage.php:289
+#: manage.php:290
+msgid "max"
+msgstr ""
+
+#: manage.php:272
+#: manage.php:273
+#: manage.php:274
+#: manage.php:275
+#: manage.php:276
+#: manage.php:277
+#: manage.php:278
+msgid "sell"
+msgstr ""
+
+#: manage.php:289
+#: manage.php:290
+#: tpl_gettext.php:413
+#: tpl_gettext.php:1208
+msgid "planets"
+msgstr ""
+
+#: manage.php:290
+msgid "release"
+msgstr ""
+
+#: messages.php:32
+msgid "Empty message subject!"
+msgstr ""
+
+#: messages.php:36
+msgid "Empty message content!"
+msgstr ""
+
+#: messages.php:39
+msgid "Public"
+msgstr ""
+
+#: messages.php:40
+#: tpl_gettext.php:2492
+msgid "Coalition"
+msgstr ""
+
+#: messages.php:79
+msgid "Message successfully sent!"
+msgstr ""
+
+#: newturn.php:28
+msgid "No more turns for now!"
+msgstr ""
+
+#: newturn.php:35
+msgid "You are out of protection!"
+msgstr ""
+
+#: research.php:22
+#: research.php:34
+#: research.php:59
+msgid "Current research changed"
+msgstr ""
+
+#: research.php:38
+msgid "Invalid research ID"
+msgstr ""
+
+#: research.php:41
+msgid "Research already done!"
+msgstr ""
+
+#: research.php:51
+msgid "You need to complete previous unit level before!"
+msgstr ""
+
+#: research.php:71
+msgid "Its required to do some fundamental research to raise your level of intelligence, if you complete all the 8 fundamental research levels, you win by evolving into pure energy (If research race is enabled)"
+msgstr ""
+
+#: research.php:147
+msgid "Done"
+msgstr ""
+
+#: scoreboard.php:20
+msgid "Limited by credits"
+msgstr ""
+
+#: scoreboard.php:55
+msgid "collapsed"
+msgstr ""
+
+#: show_active.php:32
+msgid "Nobody"
+msgstr ""
+
+#: show_empire.php:19
+msgid "Emperor"
+msgstr ""
+
+#: show_empire.php:19
+msgid "Emperess"
+msgstr ""
+
+#: show_empire.php:37
+msgid "NEVER PLAYED"
+msgstr ""
+
+#: show_empire.php:39
+msgid "No biography"
+msgstr ""
+
+#: solarbank.php:72
+#: solarbank.php:109
+#: trade.php:42
+#: trade.php:48
+msgid "Invalid credits amount!"
+msgstr ""
+
+#: solarbank.php:77
+msgid "Invalid number of turns"
+msgstr ""
+
+#: solarbank.php:81
+msgid "Too many active loans"
+msgstr ""
+
+#: solarbank.php:90
+msgid "{credits} loaned at a rate of {percent}%"
+msgstr ""
+
+#: solarbank.php:114
+msgid "Too many active bonds"
+msgstr ""
+
+#: solarbank.php:123
+#, c-format
+msgid "{credits} invested at a rate of {percent}% for {turns} turn(s)"
+msgstr ""
+
+#: starmap.php:10
+msgid "No game selected!"
+msgstr ""
+
+#: stats.php:107
+#: stats.php:145
+#: stats.php:183
+#: stats.php:241
+msgid "others"
+msgstr ""
+
+#: trade.php:16
+msgid "Too much pending trade convoys!"
+msgstr ""
+
+#: trade.php:55
+#: trade.php:60
+msgid "Invalid food amount!"
+msgstr ""
+
+#: trade.php:67
+#: trade.php:72
+msgid "Invalid covert agents quantity!"
+msgstr ""
+
+#: trade.php:129
+msgid "Can't trade this quantity:"
+msgstr ""
+
+#: trade.php:141
+msgid "Can't trade with enemy empire!"
+msgstr ""
+
+#: trade.php:148
+msgid "Can't trade while being under protection!"
+msgstr ""
+
+#: trade.php:157
+msgid "Can't trade with a empire under protection!"
+msgstr ""
+
+#: trade.php:176
+msgid "Empty trade deal!"
+msgstr ""
+
+#: trade.php:185
+#: tpl_gettext.php:371
+#: tpl_gettext.php:707
+#: tpl_gettext.php:710
+msgid "Credits"
+msgstr ""
+
+#: trade.php:187
+#: tpl_gettext.php:380
+#: tpl_gettext.php:713
+#: tpl_gettext.php:716
+#: tpl_gettext.php:1172
+msgid "Food"
+msgstr ""
+
+#: trade.php:189
+#: tpl_gettext.php:140
+#: tpl_gettext.php:389
+#: tpl_gettext.php:1181
+msgid "Covert agents"
+msgstr ""
+
+#: trade.php:191
+#: tpl_gettext.php:95
+#: tpl_gettext.php:395
+#: tpl_gettext.php:1025
+#: tpl_gettext.php:1187
+#: tpl_gettext.php:1568
+#: tpl_gettext.php:1580
+#: tpl_gettext.php:1601
+msgid "Soldiers"
+msgstr ""
+
+#: trade.php:193
+#: tpl_gettext.php:110
+#: tpl_gettext.php:398
+#: tpl_gettext.php:1190
+#: tpl_gettext.php:1604
+msgid "Fighters"
+msgstr ""
+
+#: trade.php:195
+#: tpl_gettext.php:155
+#: tpl_gettext.php:404
+#: tpl_gettext.php:1196
+msgid "Light cruisers"
+msgstr ""
+
+#: trade.php:197
+#: tpl_gettext.php:161
+#: tpl_gettext.php:407
+#: tpl_gettext.php:1199
+msgid "Heavy cruisers"
+msgstr ""
+
+#: trade.php:226
+msgid "Trade convoy sent!"
+msgstr ""
+
+#: trade.php:258
+#: tpl_gettext.php:779
+msgid "hours"
+msgstr ""
+
+#: trade.php:390
+msgid "No active trade(s) pending."
+msgstr ""
+
+#: tpl_gettext.php:2
+#: tpl_gettext.php:470
+#: tpl_gettext.php:2204
+#: tpl_gettext.php:2288
+msgid "Solar Bank"
+msgstr ""
+
+#: tpl_gettext.php:5
+#: tpl_gettext.php:473
+#: tpl_gettext.php:2207
+#: tpl_gettext.php:2291
+msgid "Global Market"
+msgstr ""
+
+#: tpl_gettext.php:8
+#: tpl_gettext.php:476
+#: tpl_gettext.php:2210
+#: tpl_gettext.php:2294
+msgid "Lottery"
+msgstr ""
+
+#: tpl_gettext.php:11
+#: tpl_gettext.php:479
+#: tpl_gettext.php:2213
+#: tpl_gettext.php:2297
+msgid "Trade Center"
+msgstr ""
+
+#: tpl_gettext.php:14
+#: tpl_gettext.php:542
+msgid "Type"
+msgstr ""
+
+#: tpl_gettext.php:17
+msgid "Buy Price"
+msgstr ""
+
+#: tpl_gettext.php:20
+msgid "Sell Price"
+msgstr ""
+
+#: tpl_gettext.php:23
+msgid "Your Stock / In Stock"
+msgstr ""
+
+#: tpl_gettext.php:26
+#: tpl_gettext.php:1448
+#: tpl_gettext.php:2444
+#: tpl_gettext.php:2510
+msgid "Action"
+msgstr ""
+
+#: tpl_gettext.php:29
+#: tpl_gettext.php:41
+#: tpl_gettext.php:53
+msgid "How much to buy?"
+msgstr ""
+
+#: tpl_gettext.php:35
+#: tpl_gettext.php:47
+#: tpl_gettext.php:59
+msgid "How much to sell?"
+msgstr ""
+
+#: tpl_gettext.php:65
+#: tpl_gettext.php:449
+#: tpl_gettext.php:494
+#: tpl_gettext.php:1271
+#: tpl_gettext.php:1331
+#: tpl_gettext.php:1469
+#: tpl_gettext.php:2108
+#: tpl_gettext.php:2360
+msgid "Manage"
+msgstr ""
+
+#: tpl_gettext.php:68
+#: tpl_gettext.php:452
+#: tpl_gettext.php:497
+#: tpl_gettext.php:1274
+#: tpl_gettext.php:1334
+#: tpl_gettext.php:1472
+#: tpl_gettext.php:2111
+msgid "Performance"
+msgstr ""
+
+#: tpl_gettext.php:71
+#: tpl_gettext.php:455
+#: tpl_gettext.php:500
+#: tpl_gettext.php:1277
+#: tpl_gettext.php:1337
+#: tpl_gettext.php:1475
+#: tpl_gettext.php:2114
+msgid "Activity Logs"
+msgstr ""
+
+#: tpl_gettext.php:74
+#: tpl_gettext.php:458
+#: tpl_gettext.php:503
+#: tpl_gettext.php:1280
+#: tpl_gettext.php:1340
+#: tpl_gettext.php:1478
+#: tpl_gettext.php:2117
+#: tpl_gettext.php:2498
+msgid "Edit Logo"
+msgstr ""
+
+#: tpl_gettext.php:77
+#: tpl_gettext.php:461
+#: tpl_gettext.php:506
+#: tpl_gettext.php:1283
+#: tpl_gettext.php:1343
+#: tpl_gettext.php:1481
+#: tpl_gettext.php:2120
+msgid "Turn Summary"
+msgstr ""
+
+#: tpl_gettext.php:80
+#: tpl_gettext.php:464
+#: tpl_gettext.php:509
+#: tpl_gettext.php:1286
+#: tpl_gettext.php:1346
+#: tpl_gettext.php:1484
+#: tpl_gettext.php:2123
+msgid "Research Map"
+msgstr ""
+
+#: tpl_gettext.php:83
+#: tpl_gettext.php:467
+#: tpl_gettext.php:512
+#: tpl_gettext.php:1289
+#: tpl_gettext.php:1349
+#: tpl_gettext.php:1487
+#: tpl_gettext.php:2126
+msgid "Production"
+msgstr ""
+
+#: tpl_gettext.php:86
+#: tpl_gettext.php:191
+msgid "Qty."
+msgstr ""
+
+#: tpl_gettext.php:89
+#: tpl_gettext.php:194
+msgid "Buy / Sell"
+msgstr ""
+
+#: tpl_gettext.php:92
+#: tpl_gettext.php:197
+msgid "Actions"
+msgstr ""
+
+#: tpl_gettext.php:98
+#: tpl_gettext.php:113
+#: tpl_gettext.php:128
+#: tpl_gettext.php:143
+#: tpl_gettext.php:164
+#: tpl_gettext.php:179
+#: tpl_gettext.php:203
+#: tpl_gettext.php:218
+#: tpl_gettext.php:233
+#: tpl_gettext.php:248
+#: tpl_gettext.php:263
+#: tpl_gettext.php:278
+#: tpl_gettext.php:293
+#: tpl_gettext.php:308
+#: tpl_gettext.php:323
+#: tpl_gettext.php:338
+#: tpl_gettext.php:1382
+#: tpl_gettext.php:1391
+#: tpl_gettext.php:1400
+#: tpl_gettext.php:1409
+msgid "Buy"
+msgstr ""
+
+#: tpl_gettext.php:101
+#: tpl_gettext.php:116
+#: tpl_gettext.php:131
+#: tpl_gettext.php:146
+#: tpl_gettext.php:167
+#: tpl_gettext.php:182
+#: tpl_gettext.php:206
+#: tpl_gettext.php:221
+#: tpl_gettext.php:236
+#: tpl_gettext.php:251
+#: tpl_gettext.php:266
+#: tpl_gettext.php:281
+#: tpl_gettext.php:296
+#: tpl_gettext.php:311
+#: tpl_gettext.php:326
+#: tpl_gettext.php:341
+msgid "Buy Maximum LUMP PURCHASE?"
+msgstr ""
+
+#: tpl_gettext.php:104
+#: tpl_gettext.php:119
+#: tpl_gettext.php:134
+#: tpl_gettext.php:149
+#: tpl_gettext.php:170
+#: tpl_gettext.php:185
+#: tpl_gettext.php:209
+#: tpl_gettext.php:224
+#: tpl_gettext.php:239
+#: tpl_gettext.php:254
+#: tpl_gettext.php:269
+#: tpl_gettext.php:284
+#: tpl_gettext.php:299
+#: tpl_gettext.php:314
+#: tpl_gettext.php:329
+#: tpl_gettext.php:344
+msgid "Max"
+msgstr ""
+
+#: tpl_gettext.php:107
+#: tpl_gettext.php:122
+#: tpl_gettext.php:137
+#: tpl_gettext.php:152
+#: tpl_gettext.php:158
+#: tpl_gettext.php:173
+#: tpl_gettext.php:188
+msgid "Sell"
+msgstr ""
+
+#: tpl_gettext.php:125
+msgid "Defense stations"
+msgstr ""
+
+#: tpl_gettext.php:176
+#: tpl_gettext.php:410
+#: tpl_gettext.php:1202
+msgid "Carriers"
+msgstr ""
+
+#: tpl_gettext.php:200
+msgid "Food planets"
+msgstr ""
+
+#: tpl_gettext.php:212
+#: tpl_gettext.php:227
+#: tpl_gettext.php:242
+#: tpl_gettext.php:257
+#: tpl_gettext.php:272
+#: tpl_gettext.php:287
+#: tpl_gettext.php:302
+#: tpl_gettext.php:317
+#: tpl_gettext.php:332
+#: tpl_gettext.php:347
+msgid "Drop"
+msgstr ""
+
+#: tpl_gettext.php:215
+msgid "Ore planets"
+msgstr ""
+
+#: tpl_gettext.php:230
+msgid "Tourism planets"
+msgstr ""
+
+#: tpl_gettext.php:245
+msgid "Supply planets"
+msgstr ""
+
+#: tpl_gettext.php:260
+msgid "Government planets"
+msgstr ""
+
+#: tpl_gettext.php:275
+msgid "Education planets"
+msgstr ""
+
+#: tpl_gettext.php:290
+msgid "Research planets"
+msgstr ""
+
+#: tpl_gettext.php:305
+msgid "Urban planets"
+msgstr ""
+
+#: tpl_gettext.php:320
+msgid "Petroleum planets"
+msgstr ""
+
+#: tpl_gettext.php:335
+msgid "Anti-pollution planets"
+msgstr ""
+
+#: tpl_gettext.php:350
+#: tpl_gettext.php:1142
+msgid "Start new turn"
+msgstr "Commencer un nouveau tour"
+
+#: tpl_gettext.php:353
+msgid "Ready for next turn?"
+msgstr "Pr&ecirc;t pour un prochain tour?"
+
+#: tpl_gettext.php:356
+#: tpl_gettext.php:1148
+#: tpl_gettext.php:1226
+msgid "Empire name:"
+msgstr "Nom de l'empire:"
+
+#: tpl_gettext.php:359
+#: tpl_gettext.php:1151
+#: tpl_gettext.php:1235
+msgid "name:"
+msgstr "nom:"
+
+#: tpl_gettext.php:362
+#: tpl_gettext.php:1154
+#: tpl_gettext.php:1244
+msgid "Created on:"
+msgstr "Cr&eacute;er le:"
+
+#: tpl_gettext.php:365
+#: tpl_gettext.php:1157
+#: tpl_gettext.php:1253
+msgid "Net. Worth"
+msgstr ""
+
+#: tpl_gettext.php:368
+#: tpl_gettext.php:1160
+#: tpl_gettext.php:1256
+msgid "Ranking:"
+msgstr ""
+
+#: tpl_gettext.php:374
+#: tpl_gettext.php:1166
+#: tpl_gettext.php:1262
+msgid "Population"
+msgstr ""
+
+#: tpl_gettext.php:377
+#: tpl_gettext.php:1169
+msgid "Insurgency"
+msgstr ""
+
+#: tpl_gettext.php:383
+#: tpl_gettext.php:719
+#: tpl_gettext.php:722
+#: tpl_gettext.php:1175
+msgid "Ore"
+msgstr ""
+
+#: tpl_gettext.php:386
+#: tpl_gettext.php:725
+#: tpl_gettext.php:728
+#: tpl_gettext.php:1178
+msgid "Petroleum"
+msgstr ""
+
+#: tpl_gettext.php:392
+msgid "Military effectiveness"
+msgstr ""
+
+#: tpl_gettext.php:401
+#: tpl_gettext.php:1193
+msgid "Defense Stations"
+msgstr ""
+
+#: tpl_gettext.php:416
+#: tpl_gettext.php:1211
+msgid "Research Level:"
+msgstr ""
+
+#: tpl_gettext.php:419
+#: tpl_gettext.php:695
+#: tpl_gettext.php:1214
+#: tpl_gettext.php:1247
+msgid "Turns played:"
+msgstr ""
+
+#: tpl_gettext.php:422
+#: tpl_gettext.php:698
+#: tpl_gettext.php:1217
+msgid "Turns left:"
+msgstr ""
+
+#: tpl_gettext.php:425
+msgid "Protection<"
+msgstr ""
+
+#: tpl_gettext.php:428
+msgid "turns remaining:"
+msgstr ""
+
+#: tpl_gettext.php:431
+msgid "Coalition LOGO Editor"
+msgstr ""
+
+#: tpl_gettext.php:434
+#: tpl_gettext.php:518
+msgid "Current color"
+msgstr ""
+
+#: tpl_gettext.php:437
+#: tpl_gettext.php:521
+msgid "Save logo"
+msgstr ""
+
+#: tpl_gettext.php:440
+#: tpl_gettext.php:524
+msgid "Fill"
+msgstr ""
+
+#: tpl_gettext.php:443
+#: tpl_gettext.php:527
+msgid "Import / Export logo data"
+msgstr ""
+
+#: tpl_gettext.php:446
+#: tpl_gettext.php:530
+msgid "Update logo"
+msgstr ""
+
+#: tpl_gettext.php:482
+msgid "Current jackpot:"
+msgstr ""
+
+#: tpl_gettext.php:485
+msgid "Tickets sold:"
+msgstr ""
+
+#: tpl_gettext.php:488
+msgid "Ticket price:"
+msgstr ""
+
+#: tpl_gettext.php:491
+msgid "A new winner every day!"
+msgstr ""
+
+#: tpl_gettext.php:515
+msgid "Empire LOGO Editor"
+msgstr ""
+
+#: tpl_gettext.php:533
+msgid "Relations Spying"
+msgstr ""
+
+#: tpl_gettext.php:536
+#: tpl_gettext.php:1463
+msgid "From"
+msgstr ""
+
+#: tpl_gettext.php:539
+msgid "To"
+msgstr ""
+
+#: tpl_gettext.php:545
+#: tpl_gettext.php:2441
+#: tpl_gettext.php:2507
+msgid "Status"
+msgstr ""
+
+#: tpl_gettext.php:548
+msgid "*** No active relations ***"
+msgstr ""
+
+#: tpl_gettext.php:551
+msgid "Hostages taken, received"
+msgstr ""
+
+#: tpl_gettext.php:554
+msgid "Military units deserted:"
+msgstr ""
+
+#: tpl_gettext.php:557
+#: tpl_gettext.php:620
+#: tpl_gettext.php:767
+#: tpl_gettext.php:953
+#: tpl_gettext.php:992
+#: tpl_gettext.php:1013
+#: tpl_gettext.php:1538
+#: tpl_gettext.php:2150
+#: tpl_gettext.php:2330
+msgid "Soldiers:"
+msgstr ""
+
+#: tpl_gettext.php:560
+#: tpl_gettext.php:566
+#: tpl_gettext.php:572
+#: tpl_gettext.php:578
+#: tpl_gettext.php:584
+#: tpl_gettext.php:590
+#: tpl_gettext.php:1748
+msgid "Reclaimed:"
+msgstr ""
+
+#: tpl_gettext.php:563
+#: tpl_gettext.php:623
+#: tpl_gettext.php:770
+#: tpl_gettext.php:956
+#: tpl_gettext.php:995
+#: tpl_gettext.php:1028
+#: tpl_gettext.php:1541
+#: tpl_gettext.php:2153
+#: tpl_gettext.php:2336
+msgid "Fighters:"
+msgstr ""
+
+#: tpl_gettext.php:569
+#: tpl_gettext.php:626
+msgid "Defense stations:"
+msgstr ""
+
+#: tpl_gettext.php:575
+#: tpl_gettext.php:629
+#: tpl_gettext.php:773
+#: tpl_gettext.php:1547
+#: tpl_gettext.php:2342
+msgid "Light cruisers:"
+msgstr ""
+
+#: tpl_gettext.php:581
+#: tpl_gettext.php:632
+#: tpl_gettext.php:776
+#: tpl_gettext.php:1550
+#: tpl_gettext.php:2348
+msgid "Heavy cruisers:"
+msgstr ""
+
+#: tpl_gettext.php:587
+#: tpl_gettext.php:617
+#: tpl_gettext.php:764
+#: tpl_gettext.php:1544
+#: tpl_gettext.php:2165
+msgid "Covert agents:"
+msgstr ""
+
+#: tpl_gettext.php:593
+msgid "Your spy was successful."
+msgstr ""
+
+#: tpl_gettext.php:596
+msgid "Spy results are..."
+msgstr ""
+
+#: tpl_gettext.php:599
+msgid "Empire status"
+msgstr ""
+
+#: tpl_gettext.php:602
+#: tpl_gettext.php:1532
+#: tpl_gettext.php:2309
+msgid "Money:"
+msgstr ""
+
+#: tpl_gettext.php:605
+msgid "Population:"
+msgstr ""
+
+#: tpl_gettext.php:608
+#: tpl_gettext.php:761
+#: tpl_gettext.php:1535
+#: tpl_gettext.php:2315
+msgid "Food:"
+msgstr ""
+
+#: tpl_gettext.php:611
+msgid "Insurgency:"
+msgstr ""
+
+#: tpl_gettext.php:614
+msgid "Military Effectiveness:"
+msgstr ""
+
+#: tpl_gettext.php:635
+#: tpl_gettext.php:965
+#: tpl_gettext.php:2162
+msgid "Carriers:"
+msgstr ""
+
+#: tpl_gettext.php:638
+msgid "Food planets:"
+msgstr ""
+
+#: tpl_gettext.php:641
+msgid "Ore planets:"
+msgstr ""
+
+#: tpl_gettext.php:644
+msgid "Tourism planets:"
+msgstr ""
+
+#: tpl_gettext.php:647
+msgid "Supply planets:"
+msgstr ""
+
+#: tpl_gettext.php:650
+msgid "Government planets:"
+msgstr ""
+
+#: tpl_gettext.php:653
+msgid "Education planets:"
+msgstr ""
+
+#: tpl_gettext.php:656
+msgid "Research planets:"
+msgstr ""
+
+#: tpl_gettext.php:659
+msgid "Urban planets:"
+msgstr ""
+
+#: tpl_gettext.php:662
+msgid "Petroleum planets:"
+msgstr ""
+
+#: tpl_gettext.php:665
+msgid "Anti-pollution planets:"
+msgstr ""
+
+#: tpl_gettext.php:668
+msgid "Food bombed"
+msgstr ""
+
+#: tpl_gettext.php:671
+msgid "New effectiveness"
+msgstr ""
+
+#: tpl_gettext.php:674
+msgid "Carriers sabotaged"
+msgstr ""
+
+#: tpl_gettext.php:677
+msgid "Pirates report"
+msgstr ""
+
+#: tpl_gettext.php:680
+msgid "Active Players"
+msgstr ""
+
+#: tpl_gettext.php:683
+msgid "Logged as:"
+msgstr ""
+
+#: tpl_gettext.php:686
+msgid "of"
+msgstr ""
+
+#: tpl_gettext.php:689
+msgid "player(s) online"
+msgstr ""
+
+#: tpl_gettext.php:692
+msgid "Net Worth:"
+msgstr ""
+
+#: tpl_gettext.php:701
+msgid "Protection turns left:"
+msgstr ""
+
+#: tpl_gettext.php:704
+msgid "Pop.:"
+msgstr ""
+
+#: tpl_gettext.php:731
+#: tpl_gettext.php:734
+msgid "Planets total / Planets cap"
+msgstr ""
+
+#: tpl_gettext.php:737
+#: tpl_gettext.php:740
+msgid "Army effectiveness"
+msgstr ""
+
+#: tpl_gettext.php:743
+msgid "Back to top"
+msgstr ""
+
+#: tpl_gettext.php:746
+#: tpl_gettext.php:1457
+msgid "This game is a creation of"
+msgstr ""
+
+#: tpl_gettext.php:749
+msgid "Tradeconvoy"
+msgstr ""
+
+#: tpl_gettext.php:752
+msgid "Sender:"
+msgstr ""
+
+#: tpl_gettext.php:755
+#: tpl_gettext.php:1529
+msgid "Destination:"
+msgstr ""
+
+#: tpl_gettext.php:758
+#: tpl_gettext.php:1061
+#: tpl_gettext.php:2168
+#: tpl_gettext.php:2249
+#: tpl_gettext.php:2282
+msgid "Credits:"
+msgstr ""
+
+#: tpl_gettext.php:782
+#: tpl_gettext.php:869
+#: tpl_gettext.php:2384
+msgid "Scoreboard"
+msgstr ""
+
+#: tpl_gettext.php:785
+#: tpl_gettext.php:872
+msgid "Hall Of Fame"
+msgstr ""
+
+#: tpl_gettext.php:788
+msgid "Current game:"
+msgstr ""
+
+#: tpl_gettext.php:791
+msgid "Game restart in:"
+msgstr ""
+
+#: tpl_gettext.php:794
+msgid "minutes"
+msgstr ""
+
+#: tpl_gettext.php:797
+msgid "Game:"
+msgstr ""
+
+#: tpl_gettext.php:800
+msgid "Date:"
+msgstr ""
+
+#: tpl_gettext.php:803
+msgid "Elapsed:"
+msgstr ""
+
+#: tpl_gettext.php:806
+msgid "days"
+msgstr ""
+
+#: tpl_gettext.php:809
+msgid "Game Winner:"
+msgstr ""
+
+#: tpl_gettext.php:812
+msgid "Victory condition:"
+msgstr ""
+
+#: tpl_gettext.php:815
+msgid "Best coalition:"
+msgstr ""
+
+#: tpl_gettext.php:818
+msgid "No game finished yet!"
+msgstr ""
+
+#: tpl_gettext.php:821
+#: tpl_gettext.php:935
+#: tpl_gettext.php:1040
+#: tpl_gettext.php:1430
+msgid "Battle Command"
+msgstr ""
+
+#: tpl_gettext.php:824
+#: tpl_gettext.php:938
+#: tpl_gettext.php:1043
+#: tpl_gettext.php:1049
+#: tpl_gettext.php:1433
+msgid "Covert Operations"
+msgstr ""
+
+#: tpl_gettext.php:827
+#: tpl_gettext.php:941
+#: tpl_gettext.php:1046
+#: tpl_gettext.php:1436
+msgid "Last Invasions"
+msgstr ""
+
+#: tpl_gettext.php:830
+#: tpl_gettext.php:1439
+#: tpl_gettext.php:2438
+#: tpl_gettext.php:2504
+msgid "Date"
+msgstr ""
+
+#: tpl_gettext.php:833
+#: tpl_gettext.php:845
+msgid "Summary"
+msgstr ""
+
+#: tpl_gettext.php:836
+#: tpl_gettext.php:863
+msgid "Before attack"
+msgstr ""
+
+#: tpl_gettext.php:839
+msgid "Assault"
+msgstr ""
+
+#: tpl_gettext.php:842
+msgid "After attack"
+msgstr ""
+
+#: tpl_gettext.php:848
+msgid "Deep space battles won?"
+msgstr ""
+
+#: tpl_gettext.php:851
+msgid "Orbital battles won?"
+msgstr ""
+
+#: tpl_gettext.php:854
+msgid "Ground battles won?"
+msgstr ""
+
+#: tpl_gettext.php:857
+msgid "How many attackers?"
+msgstr ""
+
+#: tpl_gettext.php:860
+msgid "How many defenders?"
+msgstr ""
+
+#: tpl_gettext.php:866
+msgid "Attackers side:"
+msgstr ""
+
+#: tpl_gettext.php:875
+msgid "Top Players"
+msgstr ""
+
+#: tpl_gettext.php:878
+msgid "Current Galaxy Master:"
+msgstr ""
+
+#: tpl_gettext.php:881
+msgid "Current Planets Master:"
+msgstr ""
+
+#: tpl_gettext.php:884
+msgid "Current Galactic\tWarlord:"
+msgstr ""
+
+#: tpl_gettext.php:887
+msgid "Current Technology Master:"
+msgstr ""
+
+#: tpl_gettext.php:890
+msgid "Current Population Zealot:"
+msgstr ""
+
+#: tpl_gettext.php:893
+msgid "Current Food Master:"
+msgstr ""
+
+#: tpl_gettext.php:896
+msgid "Current Credits Overlord:"
+msgstr ""
+
+#: tpl_gettext.php:899
+msgid "Coalitions score"
+msgstr ""
+
+#: tpl_gettext.php:902
+#: tpl_gettext.php:923
+msgid "Rank"
+msgstr ""
+
+#: tpl_gettext.php:905
+msgid "Name"
+msgstr ""
+
+#: tpl_gettext.php:908
+msgid "Members"
+msgstr ""
+
+#: tpl_gettext.php:911
+#: tpl_gettext.php:929
+#: tpl_gettext.php:1265
+#: tpl_gettext.php:1310
+msgid "Planets"
+msgstr ""
+
+#: tpl_gettext.php:914
+#: tpl_gettext.php:932
+msgid "Net Worth"
+msgstr ""
+
+#: tpl_gettext.php:917
+msgid "No coalitions"
+msgstr ""
+
+#: tpl_gettext.php:920
+msgid "Players score"
+msgstr ""
+
+#: tpl_gettext.php:926
+#: tpl_gettext.php:2432
+#: tpl_gettext.php:2501
+msgid "Empire"
+msgstr ""
+
+#: tpl_gettext.php:944
+msgid "From:"
+msgstr ""
+
+#: tpl_gettext.php:947
+msgid "Target:"
+msgstr ""
+
+#: tpl_gettext.php:950
+msgid "Retreating will affect troops morale if your convoy is far from your empire, do it?"
+msgstr ""
+
+#: tpl_gettext.php:959
+#: tpl_gettext.php:998
+#: tpl_gettext.php:1031
+msgid "Light Cruisers:"
+msgstr ""
+
+#: tpl_gettext.php:962
+#: tpl_gettext.php:1001
+#: tpl_gettext.php:1034
+#: tpl_gettext.php:2159
+msgid "Heavy Cruisers:"
+msgstr ""
+
+#: tpl_gettext.php:968
+msgid "Time remaining:"
+msgstr ""
+
+#: tpl_gettext.php:971
+msgid "Nuclear Warfare"
+msgstr ""
+
+#: tpl_gettext.php:974
+#: tpl_gettext.php:989
+#: tpl_gettext.php:1010
+#: tpl_gettext.php:1052
+#: tpl_gettext.php:2306
+#: tpl_gettext.php:2453
+#: tpl_gettext.php:2528
+msgid "Empire:"
+msgstr ""
+
+#: tpl_gettext.php:977
+msgid "Warning: If you get caught by the galactic coordinator, your empire will collapse!"
+msgstr ""
+
+#: tpl_gettext.php:980
+msgid "PUSH THE RED BUTTON"
+msgstr ""
+
+#: tpl_gettext.php:983
+msgid "Conventional Invasion"
+msgstr ""
+
+#: tpl_gettext.php:986
+#, c-format
+msgid "Attacking weaker empires (lesser or 33% of your net worth) make your population ashamed and your insurgency level will undoubtly increase."
+msgstr ""
+
+#: tpl_gettext.php:1004
+msgid "Launch invasion"
+msgstr ""
+
+#: tpl_gettext.php:1007
+msgid "Guerilla Warfare"
+msgstr ""
+
+#: tpl_gettext.php:1016
+msgid "Launch Attack"
+msgstr ""
+
+#: tpl_gettext.php:1019
+msgid "Pirate Bust"
+msgstr ""
+
+#: tpl_gettext.php:1022
+msgid "Pirate:"
+msgstr ""
+
+#: tpl_gettext.php:1037
+msgid "Launch attack"
+msgstr ""
+
+#: tpl_gettext.php:1055
+msgid "Operation:"
+msgstr ""
+
+#: tpl_gettext.php:1058
+msgid "Setup with:"
+msgstr ""
+
+#: tpl_gettext.php:1064
+msgid "Covert points:"
+msgstr ""
+
+#: tpl_gettext.php:1067
+msgid "Launch operation"
+msgstr ""
+
+#: tpl_gettext.php:1070
+msgid "What each operation do:"
+msgstr ""
+
+#: tpl_gettext.php:1073
+msgid "Send Spy:"
+msgstr ""
+
+#: tpl_gettext.php:1076
+msgid "You can get information about another empire, simular but less detailed than your own status screen. Spying may not always be successful, but you can guarantee that you can get a spy report by bribing a spy in the other empire. You can spy as many times as you like."
+msgstr ""
+
+#: tpl_gettext.php:1079
+msgid "Insurgent Aid:"
+msgstr ""
+
+#: tpl_gettext.php:1082
+msgid "By sending rebellious troublemakers and pamphlets an opponent empire, you can increase the internal violence in that empire. To restore peace may be costly or impossible for the other emperor, and may cause civil war. The violence in the other empire will cause tourism profits to decrease and the population to drop. It's harder to do Insurgent Aid if the other empire is already in civil disorder"
+msgstr ""
+
+#: tpl_gettext.php:1085
+msgid "Support Dissension:"
+msgstr ""
+
+#: tpl_gettext.php:1088
+msgid "You try to convince enemy troops to leave or flee the army. ( They might join your army)"
+msgstr ""
+
+#: tpl_gettext.php:1091
+msgid "Demoralize Troops:"
+msgstr ""
+
+#: tpl_gettext.php:1094
+msgid "By sending distractions and interruptions to the target empire, you can redecue the training efficiency of their soldiers and reduce the effectiveness of the army."
+msgstr ""
+
+#: tpl_gettext.php:1097
+msgid "Bombing Operations:"
+msgstr ""
+
+#: tpl_gettext.php:1100
+msgid "Your spies can booby-trap the target's food supplies. Some or all of the food may be blown up. This is useful in starving another empire to death."
+msgstr ""
+
+#: tpl_gettext.php:1103
+msgid "Relations Spying:"
+msgstr ""
+
+#: tpl_gettext.php:1106
+msgid "Your agents didscover the treaties held by another empire."
+msgstr ""
+
+#: tpl_gettext.php:1109
+msgid "Take Hostages:"
+msgstr ""
+
+#: tpl_gettext.php:1112
+msgid "Your terrorist spies capture a prominent official from the other empire and demand a sum of money for his or her return. The opponent emperor is forced to pay the fee, and you will receive the money."
+msgstr ""
+
+#: tpl_gettext.php:1115
+msgid "Carriers Sabotage:"
+msgstr ""
+
+#: tpl_gettext.php:1118
+msgid "Destroying carriers can ground a big empire for some turns, use it as a defensive tactic"
+msgstr ""
+
+#: tpl_gettext.php:1121
+msgid "Communication Spying:"
+msgstr ""
+
+#: tpl_gettext.php:1124
+msgid "Allow you to read the 5 last received messages of an empire"
+msgstr ""
+
+#: tpl_gettext.php:1127
+msgid "Setup Coup:"
+msgstr ""
+
+#: tpl_gettext.php:1130
+msgid "Send a failed covert operation notice to a target empire and make it look the covert operation was coming from another empire."
+msgstr ""
+
+#: tpl_gettext.php:1133
+msgid "Your empire collapsed! Sadly, the game is now over for you. We hope you liked this game! You can create a new empire and start again, "
+msgstr ""
+
+#: tpl_gettext.php:1136
+msgid "Click here to destroy this collapsed empire"
+msgstr ""
+
+#: tpl_gettext.php:1139
+msgid "You can consult your statistics before destroying your empire"
+msgstr ""
+
+#: tpl_gettext.php:1145
+msgid "Welcome back!"
+msgstr ""
+
+#: tpl_gettext.php:1163
+msgid "Money"
+msgstr ""
+
+#: tpl_gettext.php:1184
+msgid ""
+"Military\n"
+"\t\t\t\teffectiveness"
+msgstr ""
+
+#: tpl_gettext.php:1205
+msgid "Planets count:"
+msgstr ""
+
+#: tpl_gettext.php:1220
+msgid "Protection"
+msgstr ""
+
+#: tpl_gettext.php:1223
+msgid ""
+"turns\n"
+"\t\t\t\tremaining:"
+msgstr ""
+
+#: tpl_gettext.php:1229
+msgid "Empire logo:"
+msgstr ""
+
+#: tpl_gettext.php:1232
+msgid "Coalition:"
+msgstr ""
+
+#: tpl_gettext.php:1238
+msgid "avatar:"
+msgstr ""
+
+#: tpl_gettext.php:1241
+msgid "Emperor Biography:"
+msgstr ""
+
+#: tpl_gettext.php:1250
+msgid "Last turn played:"
+msgstr ""
+
+#: tpl_gettext.php:1259
+msgid "Fundamental research level"
+msgstr ""
+
+#: tpl_gettext.php:1268
+#: tpl_gettext.php:2417
+msgid "Send Message"
+msgstr ""
+
+#: tpl_gettext.php:1292
+msgid "Stats"
+msgstr ""
+
+#: tpl_gettext.php:1295
+msgid "Rankings"
+msgstr ""
+
+#: tpl_gettext.php:1298
+msgid "Credits flow"
+msgstr ""
+
+#: tpl_gettext.php:1301
+msgid "Food Storage"
+msgstr ""
+
+#: tpl_gettext.php:1304
+msgid "Networth"
+msgstr ""
+
+#: tpl_gettext.php:1307
+msgid "Military Might"
+msgstr ""
+
+#: tpl_gettext.php:1313
+msgid "Population Growth"
+msgstr ""
+
+#: tpl_gettext.php:1316
+msgid "Pollution"
+msgstr ""
+
+#: tpl_gettext.php:1319
+msgid "Rankings by credits"
+msgstr ""
+
+#: tpl_gettext.php:1322
+msgid "Rankings by networth"
+msgstr ""
+
+#: tpl_gettext.php:1325
+msgid "Rankings by population"
+msgstr ""
+
+#: tpl_gettext.php:1328
+msgid "Rankings by military strength"
+msgstr ""
+
+#: tpl_gettext.php:1352
+msgid "All Activities"
+msgstr ""
+
+#: tpl_gettext.php:1355
+#: tpl_gettext.php:2180
+#: tpl_gettext.php:2378
+msgid "Warfare"
+msgstr ""
+
+#: tpl_gettext.php:1358
+#: tpl_gettext.php:2183
+msgid "Communication"
+msgstr ""
+
+#: tpl_gettext.php:1361
+#: tpl_gettext.php:2186
+msgid "Diplomacy"
+msgstr ""
+
+#: tpl_gettext.php:1364
+#: tpl_gettext.php:2177
+msgid "System"
+msgstr ""
+
+#: tpl_gettext.php:1367
+msgid "You really want to destroy your beautiful empire?"
+msgstr ""
+
+#: tpl_gettext.php:1370
+msgid "YES I DO"
+msgstr ""
+
+#: tpl_gettext.php:1373
+msgid "Forget it, no."
+msgstr ""
+
+#: tpl_gettext.php:1376
+msgid "You can always trust a ferengi trader to provide you the most illegal goods known in the universe. Remember that we disappear at the end of this turn. Don't waste my precious time, let's trade now!"
+msgstr ""
+
+#: tpl_gettext.php:1379
+msgid "Buy stolen light cruisers, they come cheap!"
+msgstr ""
+
+#: tpl_gettext.php:1385
+msgid "Buy nuclear bombs, a nice surprise for your foes but remember that if you get caught by the galactic coordinator using it, you are dead! Ha! Ha! Ha! Ha!"
+msgstr ""
+
+#: tpl_gettext.php:1388
+#: tpl_gettext.php:1397
+#: tpl_gettext.php:1406
+#: tpl_gettext.php:2447
+#: tpl_gettext.php:2495
+#: tpl_gettext.php:2513
+msgid "Are you sure?"
+msgstr ""
+
+#: tpl_gettext.php:1394
+#, c-format
+msgid "Teleport your entire empire to a random spot, the money is good but remember that you will loose 50% of your population in the process."
+msgstr ""
+
+#: tpl_gettext.php:1403
+msgid "We can hack into galactic coordinator computers and give you 5 extra protection turns"
+msgstr ""
+
+#: tpl_gettext.php:1412
+#: tpl_gettext.php:2486
+msgid "Coalition name:"
+msgstr ""
+
+#: tpl_gettext.php:1415
+msgid "Coalition logo:"
+msgstr ""
+
+#: tpl_gettext.php:1418
+#: tpl_gettext.php:1427
+msgid "Members:"
+msgstr ""
+
+#: tpl_gettext.php:1421
+msgid "Planets:"
+msgstr ""
+
+#: tpl_gettext.php:1424
+msgid "Networth:"
+msgstr ""
+
+#: tpl_gettext.php:1442
+msgid "Type<"
+msgstr ""
+
+#: tpl_gettext.php:1445
+msgid "Outcome"
+msgstr ""
+
+#: tpl_gettext.php:1451
+msgid "Details"
+msgstr ""
+
+#: tpl_gettext.php:1454
+msgid "*** No invasions yet."
+msgstr ""
+
+#: tpl_gettext.php:1460
+msgid "ago"
+msgstr ""
+
+#: tpl_gettext.php:1466
+msgid "Reply"
+msgstr ""
+
+#: tpl_gettext.php:1490
+msgid "turn(s) remaining"
+msgstr ""
+
+#: tpl_gettext.php:1493
+msgid "Description:"
+msgstr ""
+
+#: tpl_gettext.php:1496
+msgid "Focus the starmap on empire:"
+msgstr ""
+
+#: tpl_gettext.php:1499
+msgid "Zoom"
+msgstr ""
+
+#: tpl_gettext.php:1502
+msgid "Reset"
+msgstr ""
+
+#: tpl_gettext.php:1505
+msgid "New coalition created"
+msgstr ""
+
+#: tpl_gettext.php:1508
+#: tpl_gettext.php:1520
+#: tpl_gettext.php:1559
+#: tpl_gettext.php:1634
+#: tpl_gettext.php:1646
+#: tpl_gettext.php:1739
+#: tpl_gettext.php:1946
+msgid "of Empire"
+msgstr ""
+
+#: tpl_gettext.php:1511
+msgid "created coalition"
+msgstr ""
+
+#: tpl_gettext.php:1514
+msgid "Empire collapsed!"
+msgstr ""
+
+#: tpl_gettext.php:1517
+msgid "Goodbye"
+msgstr ""
+
+#: tpl_gettext.php:1523
+msgid "Trade convoy at destination"
+msgstr ""
+
+#: tpl_gettext.php:1526
+msgid "Origin:"
+msgstr ""
+
+#: tpl_gettext.php:1553
+msgid "A New Empire has risen from stardust."
+msgstr ""
+
+#: tpl_gettext.php:1556
+msgid "Long live to"
+msgstr ""
+
+#: tpl_gettext.php:1562
+#: tpl_gettext.php:1571
+msgid "Guerilla assault crushed"
+msgstr ""
+
+#: tpl_gettext.php:1565
+msgid "try to ambush you but failed! Your losts:"
+msgstr ""
+
+#: tpl_gettext.php:1574
+msgid "***UNKNOWN EMPIRE***"
+msgstr ""
+
+#: tpl_gettext.php:1577
+msgid "tried to ambush you but failed! Your losts:"
+msgstr ""
+
+#: tpl_gettext.php:1583
+msgid "Credits produced"
+msgstr ""
+
+#: tpl_gettext.php:1586
+msgid "Population cost"
+msgstr ""
+
+#: tpl_gettext.php:1589
+msgid "Army convoy retreating"
+msgstr ""
+
+#: tpl_gettext.php:1592
+msgid "Convoy from"
+msgstr ""
+
+#: tpl_gettext.php:1595
+msgid "is retreating back"
+msgstr ""
+
+#: tpl_gettext.php:1598
+msgid "A empire sent a defense convoy toward your empire!"
+msgstr ""
+
+#: tpl_gettext.php:1607
+msgid "Light Cruisers"
+msgstr ""
+
+#: tpl_gettext.php:1610
+msgid "Heavy Cruisers"
+msgstr ""
+
+#: tpl_gettext.php:1613
+msgid "ELIMINATED"
+msgstr ""
+
+#: tpl_gettext.php:1616
+msgid "Empire violently eliminated"
+msgstr ""
+
+#: tpl_gettext.php:1619
+msgid "send you a treaty proposal"
+msgstr ""
+
+#: tpl_gettext.php:1622
+msgid "Accept the treaty proposal?"
+msgstr ""
+
+#: tpl_gettext.php:1628
+#: tpl_gettext.php:1781
+msgid "Hell no!"
+msgstr ""
+
+#: tpl_gettext.php:1631
+msgid "Invitation refused"
+msgstr ""
+
+#: tpl_gettext.php:1637
+msgid "refused your invitation"
+msgstr ""
+
+#: tpl_gettext.php:1640
+msgid "New research completed:"
+msgstr ""
+
+#: tpl_gettext.php:1643
+msgid "New coalition member!"
+msgstr ""
+
+#: tpl_gettext.php:1649
+msgid "joined your coalition"
+msgstr ""
+
+#: tpl_gettext.php:1652
+msgid "Someone won the daily lottery!"
+msgstr ""
+
+#: tpl_gettext.php:1655
+#: tpl_gettext.php:2018
+msgid "of empire"
+msgstr ""
+
+#: tpl_gettext.php:1658
+msgid "won the jackpot of"
+msgstr ""
+
+#: tpl_gettext.php:1661
+msgid "Initial petroleum:"
+msgstr ""
+
+#: tpl_gettext.php:1664
+#: tpl_gettext.php:1796
+#: tpl_gettext.php:1955
+#: tpl_gettext.php:2066
+#: tpl_gettext.php:2084
+msgid "Final:"
+msgstr ""
+
+#: tpl_gettext.php:1667
+#: tpl_gettext.php:2087
+msgid "Used for army maintenance:"
+msgstr ""
+
+#: tpl_gettext.php:1670
+#: tpl_gettext.php:2072
+#: tpl_gettext.php:2090
+msgid "Produced:"
+msgstr ""
+
+#: tpl_gettext.php:1673
+#: tpl_gettext.php:2078
+#: tpl_gettext.php:2093
+msgid "Sold:"
+msgstr ""
+
+#: tpl_gettext.php:1676
+msgid "refused your treaty proposal!"
+msgstr ""
+
+#: tpl_gettext.php:1679
+msgid "Turn"
+msgstr ""
+
+#: tpl_gettext.php:1682
+msgid "completed."
+msgstr ""
+
+#: tpl_gettext.php:1685
+msgid "reached fundamental research level"
+msgstr ""
+
+#: tpl_gettext.php:1688
+msgid "Do you smell the nukes?"
+msgstr ""
+
+#: tpl_gettext.php:1691
+msgid "Someone has just joined the nuclear family, build your shelters and practice drop and cover!"
+msgstr ""
+
+#: tpl_gettext.php:1694
+msgid "started."
+msgstr ""
+
+#: tpl_gettext.php:1697
+msgid "Nuclear attack detected!"
+msgstr ""
+
+#: tpl_gettext.php:1700
+msgid "This empire lost"
+msgstr ""
+
+#: tpl_gettext.php:1703
+msgid "of everything!"
+msgstr ""
+
+#: tpl_gettext.php:1706
+msgid "New bond released, time to grab profits"
+msgstr ""
+
+#: tpl_gettext.php:1709
+msgid "You earned"
+msgstr ""
+
+#: tpl_gettext.php:1712
+msgid "with a bond!"
+msgstr ""
+
+#: tpl_gettext.php:1715
+msgid "A empire sent a invasion war convoy toward your empire!"
+msgstr ""
+
+#: tpl_gettext.php:1730
+msgid "tried to"
+msgstr ""
+
+#: tpl_gettext.php:1733
+msgid "but got caught!"
+msgstr ""
+
+#: tpl_gettext.php:1736
+msgid "Kicked from coalition"
+msgstr ""
+
+#: tpl_gettext.php:1742
+msgid "kicked from  coalition"
+msgstr ""
+
+#: tpl_gettext.php:1745
+msgid "One of our army convoy is back"
+msgstr ""
+
+#: tpl_gettext.php:1766
+msgid "INVADED"
+msgstr ""
+
+#: tpl_gettext.php:1769
+msgid "Evil empire got busted!"
+msgstr ""
+
+#: tpl_gettext.php:1772
+msgid "Galactic Coordinator busted and jailed the entire governement for illegal nuclear activities. So, the empire collapsed!"
+msgstr ""
+
+#: tpl_gettext.php:1775
+msgid "invited you to join coalition"
+msgstr ""
+
+#: tpl_gettext.php:1784
+msgid "Current civil status:"
+msgstr ""
+
+#: tpl_gettext.php:1787
+msgid "Guerilla ambush detected:"
+msgstr ""
+
+#: tpl_gettext.php:1790
+msgid "ATTACKED"
+msgstr ""
+
+#: tpl_gettext.php:1793
+msgid "Initial population:"
+msgstr ""
+
+#: tpl_gettext.php:1799
+msgid "Born:"
+msgstr ""
+
+#: tpl_gettext.php:1802
+msgid "Dead:"
+msgstr ""
+
+#: tpl_gettext.php:1805
+msgid "Immigration:"
+msgstr ""
+
+#: tpl_gettext.php:1808
+msgid "Emmigration:"
+msgstr ""
+
+#: tpl_gettext.php:1811
+msgid "Pollution level:"
+msgstr ""
+
+#: tpl_gettext.php:1814
+msgid "Invasion report"
+msgstr ""
+
+#: tpl_gettext.php:1817
+msgid "Click here fo a advanced report"
+msgstr ""
+
+#: tpl_gettext.php:1820
+msgid "Space"
+msgstr ""
+
+#: tpl_gettext.php:1823
+msgid "Orbital"
+msgstr ""
+
+#: tpl_gettext.php:1826
+msgid "Ground"
+msgstr ""
+
+#: tpl_gettext.php:1829
+msgid "Attacker(s) successfully invaded the empire!"
+msgstr ""
+
+#: tpl_gettext.php:1832
+msgid "Food planets taken:"
+msgstr ""
+
+#: tpl_gettext.php:1835
+msgid "Ore planets taken:"
+msgstr ""
+
+#: tpl_gettext.php:1838
+msgid "Tourism planets taken:"
+msgstr ""
+
+#: tpl_gettext.php:1841
+msgid "Supply planets taken:"
+msgstr ""
+
+#: tpl_gettext.php:1844
+msgid "Gov. planets taken:"
+msgstr ""
+
+#: tpl_gettext.php:1847
+msgid "Education planets taken:"
+msgstr ""
+
+#: tpl_gettext.php:1850
+msgid "Urban planets taken:"
+msgstr ""
+
+#: tpl_gettext.php:1853
+msgid "Research planets taken:"
+msgstr ""
+
+#: tpl_gettext.php:1856
+msgid "Petroleum planets taken:"
+msgstr ""
+
+#: tpl_gettext.php:1859
+msgid "Anti-Pollution planets taken:"
+msgstr ""
+
+#: tpl_gettext.php:1862
+msgid "Population killed:"
+msgstr ""
+
+#: tpl_gettext.php:1865
+msgid "Credits stolen:"
+msgstr ""
+
+#: tpl_gettext.php:1868
+msgid "New civil status:"
+msgstr ""
+
+#: tpl_gettext.php:1871
+msgid "New military effectiveness:"
+msgstr ""
+
+#: tpl_gettext.php:1874
+msgid "Attacker(s) got defeated by defending empire(s)!"
+msgstr ""
+
+#: tpl_gettext.php:1877
+msgid "Attacker(s)"
+msgstr ""
+
+#: tpl_gettext.php:1880
+msgid "Defender(s)"
+msgstr ""
+
+#: tpl_gettext.php:1883
+msgid "Casualties"
+msgstr ""
+
+#: tpl_gettext.php:1913
+msgid "defense stations"
+msgstr ""
+
+#: tpl_gettext.php:1916
+msgid "broke the treaty we had!"
+msgstr ""
+
+#: tpl_gettext.php:1919
+msgid "Pirate attacked one of your trade convoy!"
+msgstr ""
+
+#: tpl_gettext.php:1922
+msgid "Stolen food:"
+msgstr ""
+
+#: tpl_gettext.php:1925
+msgid "Stolen credits:"
+msgstr ""
+
+#: tpl_gettext.php:1928
+msgid "Stolen covert Agents:"
+msgstr ""
+
+#: tpl_gettext.php:1931
+msgid "Stolen soldiers:"
+msgstr ""
+
+#: tpl_gettext.php:1934
+msgid "Stolen fighters:"
+msgstr ""
+
+#: tpl_gettext.php:1937
+msgid "Stolen light Cruisers:"
+msgstr ""
+
+#: tpl_gettext.php:1940
+msgid "Stolen heavy Cruisers:"
+msgstr ""
+
+#: tpl_gettext.php:1943
+msgid "Coalition disbanded"
+msgstr ""
+
+#: tpl_gettext.php:1949
+msgid "disbanded coalition"
+msgstr ""
+
+#: tpl_gettext.php:1952
+msgid "Initial:"
+msgstr ""
+
+#: tpl_gettext.php:1958
+msgid "Pop. taxes:"
+msgstr ""
+
+#: tpl_gettext.php:1961
+msgid "Tourism:"
+msgstr ""
+
+#: tpl_gettext.php:1964
+msgid "Food production:"
+msgstr ""
+
+#: tpl_gettext.php:1967
+msgid "Research converted:"
+msgstr ""
+
+#: tpl_gettext.php:1970
+msgid "Ore production:"
+msgstr ""
+
+#: tpl_gettext.php:1973
+msgid "Planets support:"
+msgstr ""
+
+#: tpl_gettext.php:1976
+msgid "Petro. production:"
+msgstr ""
+
+#: tpl_gettext.php:1979
+msgid "Urban trade taxes:"
+msgstr ""
+
+#: tpl_gettext.php:1982
+msgid "Army support:"
+msgstr ""
+
+#: tpl_gettext.php:1985
+msgid "Loans payment:"
+msgstr ""
+
+#: tpl_gettext.php:1988
+msgid "TOTAL INCOMES:"
+msgstr ""
+
+#: tpl_gettext.php:1991
+msgid "TOTAL PAYMENTS:"
+msgstr ""
+
+#: tpl_gettext.php:1994
+msgid "Coalition ownership changed!"
+msgstr ""
+
+#: tpl_gettext.php:1997
+msgid "is the new owner of coalition"
+msgstr ""
+
+#: tpl_gettext.php:2000
+msgid "You send a defense convoy toward this empire:"
+msgstr ""
+
+#: tpl_gettext.php:2015
+msgid "Empire release all planets!"
+msgstr ""
+
+#: tpl_gettext.php:2021
+msgid "released"
+msgstr ""
+
+#: tpl_gettext.php:2024
+msgid "FOOD:"
+msgstr ""
+
+#: tpl_gettext.php:2027
+msgid "ORE:"
+msgstr ""
+
+#: tpl_gettext.php:2030
+msgid "TOURISM:"
+msgstr ""
+
+#: tpl_gettext.php:2033
+msgid "SUPPLY:"
+msgstr ""
+
+#: tpl_gettext.php:2036
+msgid "GOV:"
+msgstr ""
+
+#: tpl_gettext.php:2039
+msgid "EDU:"
+msgstr ""
+
+#: tpl_gettext.php:2042
+msgid "RESEARCH:"
+msgstr ""
+
+#: tpl_gettext.php:2045
+msgid "URBAN:"
+msgstr ""
+
+#: tpl_gettext.php:2048
+msgid "PETRO:"
+msgstr ""
+
+#: tpl_gettext.php:2051
+msgid "ANTIPOLLU:"
+msgstr ""
+
+#: tpl_gettext.php:2054
+msgid "Hostages was taken by a unknown group of terrorists, you were forced to paid"
+msgstr ""
+
+#: tpl_gettext.php:2057
+msgid "for the safe release of the hostages."
+msgstr ""
+
+#: tpl_gettext.php:2060
+msgid "accepted your treaty proposal!"
+msgstr ""
+
+#: tpl_gettext.php:2063
+msgid "Initial food:"
+msgstr ""
+
+#: tpl_gettext.php:2069
+msgid "Eaten by population:"
+msgstr ""
+
+#: tpl_gettext.php:2075
+msgid "Eaten by army:"
+msgstr ""
+
+#: tpl_gettext.php:2081
+msgid "Initial ore:"
+msgstr ""
+
+#: tpl_gettext.php:2096
+msgid "Teleported empire!"
+msgstr ""
+
+#: tpl_gettext.php:2099
+msgid "got teleported by a unknown galaxy phenomenon, scientists said."
+msgstr ""
+
+#: tpl_gettext.php:2102
+msgid "Covert agents foiled nuclear attack!"
+msgstr ""
+
+#: tpl_gettext.php:2105
+msgid "Who said recruiting covert agents was a waste of money?"
+msgstr ""
+
+#: tpl_gettext.php:2129
+msgid "Tax rate and Production"
+msgstr ""
+
+#: tpl_gettext.php:2132
+msgid "Tax rate"
+msgstr ""
+
+#: tpl_gettext.php:2135
+msgid "Food auto-sell rate"
+msgstr ""
+
+#: tpl_gettext.php:2138
+msgid "Ore auto-sell rate"
+msgstr ""
+
+#: tpl_gettext.php:2141
+msgid "Petroleum auto-sell rate"
+msgstr ""
+
+#: tpl_gettext.php:2144
+msgid "Research converted into credits"
+msgstr ""
+
+#: tpl_gettext.php:2147
+msgid "Supply / Production"
+msgstr ""
+
+#: tpl_gettext.php:2156
+msgid "Defense Stations:"
+msgstr ""
+
+#: tpl_gettext.php:2171
+msgid "Save preferences"
+msgstr ""
+
+#: tpl_gettext.php:2174
+msgid "Back to game"
+msgstr ""
+
+#: tpl_gettext.php:2189
+#: tpl_gettext.php:2393
+#: tpl_gettext.php:2420
+msgid "Messages"
+msgstr ""
+
+#: tpl_gettext.php:2192
+#: tpl_gettext.php:2396
+#: tpl_gettext.php:2423
+msgid "Diplomatic Ties"
+msgstr ""
+
+#: tpl_gettext.php:2195
+#: tpl_gettext.php:2399
+#: tpl_gettext.php:2426
+msgid "Coalition Shoutbox"
+msgstr ""
+
+#: tpl_gettext.php:2198
+msgid "Message:"
+msgstr ""
+
+#: tpl_gettext.php:2201
+msgid "Refresh"
+msgstr ""
+
+#: tpl_gettext.php:2216
+msgid "LOANS"
+msgstr ""
+
+#: tpl_gettext.php:2219
+msgid "Current loan interests rate: "
+msgstr ""
+
+#: tpl_gettext.php:2222
+msgid "Loans available:"
+msgstr ""
+
+#: tpl_gettext.php:2225
+msgid "Credits available:"
+msgstr ""
+
+#: tpl_gettext.php:2228
+msgid "Max turns per loan:"
+msgstr ""
+
+#: tpl_gettext.php:2231
+#: tpl_gettext.php:2237
+#: tpl_gettext.php:2270
+msgid "turn(s)"
+msgstr ""
+
+#: tpl_gettext.php:2234
+#: tpl_gettext.php:2273
+msgid "remaining"
+msgstr ""
+
+#: tpl_gettext.php:2240
+msgid "No active loans"
+msgstr ""
+
+#: tpl_gettext.php:2243
+#: tpl_gettext.php:2279
+msgid "Current credits:"
+msgstr ""
+
+#: tpl_gettext.php:2246
+msgid "Total amount loaned:"
+msgstr ""
+
+#: tpl_gettext.php:2252
+msgid "Turns:"
+msgstr ""
+
+#: tpl_gettext.php:2255
+msgid "Take loan"
+msgstr ""
+
+#: tpl_gettext.php:2258
+msgid "GALACTIC BONDS"
+msgstr ""
+
+#: tpl_gettext.php:2261
+msgid "Current bond interests rate:"
+msgstr ""
+
+#: tpl_gettext.php:2264
+msgid "Bonds available:"
+msgstr ""
+
+#: tpl_gettext.php:2267
+msgid "Turns per bond:"
+msgstr ""
+
+#: tpl_gettext.php:2276
+msgid "No\tactive bonds"
+msgstr ""
+
+#: tpl_gettext.php:2285
+msgid "Take bond"
+msgstr ""
+
+#: tpl_gettext.php:2300
+msgid "Current tax rate:"
+msgstr ""
+
+#: tpl_gettext.php:2303
+msgid "Available carriers:"
+msgstr ""
+
+#: tpl_gettext.php:2321
+msgid "megatons"
+msgstr ""
+
+#: tpl_gettext.php:2324
+msgid "Covert Agents:"
+msgstr ""
+
+#: tpl_gettext.php:2333
+msgid ">MAX"
+msgstr ""
+
+#: tpl_gettext.php:2354
+msgid "Send convoy"
+msgstr ""
+
+#: tpl_gettext.php:2357
+msgid "Control all the aspects of your empire"
+msgstr ""
+
+#: tpl_gettext.php:2363
+msgid "Solar bank, lottery and trading"
+msgstr ""
+
+#: tpl_gettext.php:2366
+msgid "Economy"
+msgstr ""
+
+#: tpl_gettext.php:2369
+msgid "Send/Read messages, diplomacy are done here"
+msgstr ""
+
+#: tpl_gettext.php:2372
+msgid "Comm. Center"
+msgstr ""
+
+#: tpl_gettext.php:2375
+msgid "This page give you access to invasions, covert ops, guerilla warfare, nuclear warfare and pirates bust."
+msgstr ""
+
+#: tpl_gettext.php:2381
+msgid "Competition without scoreboard is tasteless. Display top score players and hall of fame."
+msgstr ""
+
+#: tpl_gettext.php:2387
+msgid "Complete the current turn, a turn is 1 year of production."
+msgstr ""
+
+#: tpl_gettext.php:2390
+msgid "Finish Turn"
+msgstr ""
+
+#: tpl_gettext.php:2402
+msgid "Subject:"
+msgstr ""
+
+#: tpl_gettext.php:2405
+msgid "To:"
+msgstr ""
+
+#: tpl_gettext.php:2408
+msgid "### Coalition members ###"
+msgstr ""
+
+#: tpl_gettext.php:2411
+msgid "*** Everyone / All ***"
+msgstr ""
+
+#: tpl_gettext.php:2414
+msgid "Content:"
+msgstr ""
+
+#: tpl_gettext.php:2429
+msgid "Active Diplomatic Treaties"
+msgstr ""
+
+#: tpl_gettext.php:2435
+msgid "Treaty"
+msgstr ""
+
+#: tpl_gettext.php:2450
+msgid "Break"
+msgstr ""
+
+#: tpl_gettext.php:2456
+msgid "Treaty:"
+msgstr ""
+
+#: tpl_gettext.php:2459
+msgid "Send"
+msgstr ""
+
+#: tpl_gettext.php:2462
+msgid "What each treaty do (All the treaties allow trading):"
+msgstr ""
+
+#: tpl_gettext.php:2465
+msgid "Neutrality Treaty:"
+msgstr ""
+
+#: tpl_gettext.php:2468
+msgid ""
+"This is a\n"
+"\t\t\t\ttreaty with another empire that will prevent you from being attacked\n"
+"\t\t\t\tby the other empire."
+msgstr ""
+
+#: tpl_gettext.php:2471
+msgid "Minor Alliance:"
+msgstr ""
+
+#: tpl_gettext.php:2474
+msgid ""
+"This treaty not\n"
+"\t\t\t\tonly protect you from the other empire's attacks, but the other\n"
+"\t\t\t\tempire will also send you defensive forces when you are attacked.\n"
+"\t\t\t\tYou will automatically send him or her forces when he/she is\n"
+"\t\t\t\tattacked also."
+msgstr ""
+
+#: tpl_gettext.php:2477
+msgid "Total Defense:"
+msgstr ""
+
+#: tpl_gettext.php:2480
+msgid ""
+"This is the same\n"
+"\t\t\t\tas the Minor Alliance, but each of you will send more forces in\n"
+"\t\t\t\tdefense than in a Minor Alliance."
+msgstr ""
+
+#: tpl_gettext.php:2483
+msgid "Create a coalition"
+msgstr ""
+
+#: tpl_gettext.php:2489
+msgid "Create"
+msgstr ""
+
+#: tpl_gettext.php:2516
+msgid "Kick"
+msgstr ""
+
+#: tpl_gettext.php:2519
+msgid "Are you sure? You will loose the ownership of this coalition"
+msgstr ""
+
+#: tpl_gettext.php:2522
+msgid "Set Owner"
+msgstr ""
+
+#: tpl_gettext.php:2525
+msgid "Invite someone"
+msgstr ""
+
+#: tpl_gettext.php:2531
+msgid "Send Invitation"
+msgstr ""
+
+#: tpl_gettext.php:2534
+msgid "Joining a coalition will give you a total defense treaty with every members"
+msgstr ""
+

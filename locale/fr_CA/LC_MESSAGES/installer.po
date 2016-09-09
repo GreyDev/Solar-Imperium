@@ -1,0 +1,116 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-19 23:14-0500\n"
+"PO-Revision-Date: 2007-11-20 00:08-0500\n"
+"Last-Translator: Yanick Bourbeau <ybourbeau@mrgtech.ca>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: CANADA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+msgid "*** Please fix theses isssues before continuing ***"
+msgstr "*** Veuillez réparer les problèmes avant de continuer ***"
+
+msgid "Confirm password"
+msgstr "Confirmer mot de passe"
+
+msgid "Database configuration"
+msgstr "Configure de la base de donnée"
+
+msgid ""
+"Database correctly configured. Click on continue button to complete "
+"installation."
+msgstr ""
+"Base de donnée correctement configuré. Appuyez sur le bouton \"Continue\" "
+"pour compléter l'installation."
+
+msgid "Database name"
+msgstr "Nom de la base de donnée"
+
+msgid "Driver"
+msgstr "Pilote"
+
+msgid ""
+"Everything look fine, your installation is now complete and working. Please "
+"notice thats the first player registered become the administrator."
+msgstr ""
+"L'installation est maintenant terminé et fonctionnel. N'oubliez pas que le "
+"premier usager créer dans le système devient l'administrateur."
+
+msgid ""
+"First thing first, thank you installing Solar Imperium, I hope the process "
+"will be painless as possible but you\n"
+"\t\thave to meet basic requirements: A web server <i>(APACHE recommended)</"
+"i>, PHP 4 or 5 <i>(5 recommended)</i> and an access to\n"
+"\t\ta database <i>(MySQL recommended)</i>.<br/><br/>If its fine with you, "
+"click on the continue button below."
+msgstr ""
+"Premièrement, merci d'essayez Solar Imperium. Je vous souhaite une "
+"installation sans problème. \n"
+"\t\tVous devez possèder certains prérequis pour mener à bien l'installation: "
+"Un serveur Web <i>(APACHE recommandé)</i>, PHP 4 ou 5 <i>(5 recommandé)</i> "
+"ainsi qu'un accès à\n"
+"\t\t une base de donnée <i>(MySQL recommandé)</i>.<br/><br/>Si cela vous "
+"convient, appuyez sur le bouton \"Continuer\"."
+
+msgid "Hostname"
+msgstr "Adresse réseau"
+
+msgid "Installer (Page 1/4)"
+msgstr "Installateur (Page 1/4)"
+
+msgid "Installer (Page 1/4) :: Introduction"
+msgstr "Installateur (Page 1/4) :: Introduction"
+
+msgid "Installer (Page 2/4)"
+msgstr "Installateur (Page 2/4)"
+
+msgid "Installer (Page 2/4) :: File permissions and SQL configuration"
+msgstr ""
+"Installateur (Page 2/4) :: Permissions des fichiers et configuration SQL"
+
+msgid "Installer (Page 3/4)"
+msgstr "Installateur (Page 3/4)"
+
+msgid "Installer (Page 3/4) :: Database test"
+msgstr "Installateur (Page 3/4) :: Vérifications de la base de donnée"
+
+msgid "Installer (Page 4/4)"
+msgstr "Installateur (Page 4/4)"
+
+msgid "Installer (Page 4/4) :: Installation completed"
+msgstr "Installateur (Page 4/4) :: Installation terminé"
+
+msgid "Not Found but created!"
+msgstr "Introuvable mais créer!"
+
+msgid "Not Found!"
+msgstr "Introuvable!"
+
+msgid "Not Writable"
+msgstr "Incapable d'écrire"
+
+msgid "Not found! Unable to create!"
+msgstr "Introuvable! Incapable de créer!"
+
+msgid "Password"
+msgstr "Mot de passe"
+
+msgid "Username"
+msgstr "Usager"
+
+msgid "Writable"
+msgstr "Écriture possible"
+
+msgid ""
+"You have to manually remove install.php (or try <a style=\"color:blue\" href="
+"\"install.php?REMOVE\">automatic removal</a>) then click here:"
+msgstr ""
+"Vous devez manuellement enlever le fichier install.php (ou essayez <a style="
+"\"color:blue\" href=\"install.php?REMOVE\">la procédure automatique</a>), "
+"par la suite cliquez ici:"

@@ -1,0 +1,34 @@
+		<table width="400" align="center" bgcolor="darkred" cellspacing="1" cellpadding="0" border="0">
+		<tr><td>
+		<table width="100%" align="center" cellspacing="0" cellpadding="5" border="0" bgcolor="#333333">
+		<tr>
+			<td width="120" align="right">{t}Coalition name:{/t} </td><td width="280"><b style="color:#ffcaca">{$info_coalition_name}</b></td>
+		</tr>
+		<tr>
+			<td align="right">{t}Coalition logo:{/t} </td><td><b style="color:#ffcaca"><img src="img_logo.php?data={$info_coalition_logo}" style="border-color:white" bordercolor="white" border="1"></b></td>
+		</tr>
+		<tr>
+			<td valign="top" align="right">{t}Members:{/t} </td><td><b style="color:#ffcaca">{$info_coalition_members|number_format}</b></td>
+		</tr>
+		<tr>
+			<td valign="top" align="right">{t}Planets:{/t} </td><td><b style="color:#ffcaca">{$info_coalition_planets|number_format}</b></td>
+		</tr>
+		<tr>
+			<td align="right">{t}Networth:{/t} </td><td><b style="color:#ffcaca">{$info_coalition_networth|number_format}</b></td>
+		</tr>
+		
+		<tr>
+<td colspan="2">
+<b>{t}Members:{/t}</b></br>
+<div style="color:white">
+{section name="m" loop=$members}
+<b>{$members[m].name}</b><br/>
+{/section}
+</div>
+</td>
+</tr>
+
+		</table>
+		</td>
+		</tr>
+		</table>

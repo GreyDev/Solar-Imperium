@@ -1,0 +1,247 @@
+<xml>
+
+    <MilitaryUnits>
+        <Soldiers>
+            <Level>{$soldiers_level}</Level>
+            <Quantity>{$soldiers}</Quantity>
+            <Cost>
+                <Buy>{$buy_soldiers|strip_credits}</Buy>
+                <Sell>{$sell_soldiers|strip_credits}</Sell>
+                <BuyMax>{$buy_max_soldiers}</BuyMax>
+            </Cost>
+            <Labels>
+                <Buy>{$soldiers_buy_label}</Buy>
+                <Sell>{$soldiers_sell_label}</Sell>
+            </Labels>
+        </Soldiers>
+
+        <Fighters>
+            <Level>{$fighters_level}</Level>
+            <Quantity>{$fighters}</Quantity>
+            <Cost>
+                <Buy>{$buy_fighters|strip_credits}</Buy>
+                <Sell>{$sell_fighters|strip_credits}</Sell>
+                <BuyMax>{$buy_max_fighters}</BuyMax>
+            </Cost>
+            <Labels>
+                <Buy>{$fighters_buy_label}</Buy>
+                <Sell>{$fighters_sell_label}</Sell>
+            </Labels>
+        </Fighters>
+
+
+        <Stations>
+            <Level>{$stations_level}</Level>
+            <Quantity>{$stations}</Quantity>
+            <Cost>
+                <Buy>{$buy_stations|strip_credits}</Buy>
+                <Sell>{$sell_stations|strip_credits}</Sell>
+                <BuyMax>{$buy_max_stations}</BuyMax>
+            </Cost>
+            <Labels>
+                <Buy>{$stations_buy_label}</Buy>
+                <Sell>{$stations_sell_label}</Sell>
+            </Labels>
+        </Stations>
+
+        <CovertAgents>
+            <Level>{$covertagents_level}</Level>
+            <Quantity>{$covertagents}</Quantity>
+            <Cost>
+                <Buy>{$buy_covertagents|strip_credits}</Buy>
+                <Sell>{$sell_covertagents|strip_credits}</Sell>
+                <BuyMax>{$buy_max_covertagents}</BuyMax>
+            </Cost>
+            <Labels>
+                <Buy>{$covertagents_buy_label}</Buy>
+                <Sell>{$covertagents_sell_label}</Sell>
+            </Labels>
+        </CovertAgents>
+
+        <LightCruisers>
+            <Level>{$lightcruisers_level}</Level>
+            <Quantity>{$light_cruisers}</Quantity>
+            <Cost>
+                <Sell>{$sell_lightcruisers|strip_credits}</Sell>
+            </Cost>
+            <Labels>
+                <Sell>{$lightcruisers_sell_label}</Sell>
+            </Labels>
+        </LightCruisers>
+
+
+        <HeavyCruisers>
+            <Level>{$heavycruisers_level}</Level>
+            <Quantity>{$heavy_cruisers}</Quantity>
+            <Cost>
+                <Buy>{$buy_heavycruisers|strip_credits}</Buy>
+                <Sell>{$sell_heavycruisers|strip_credits}</Sell>
+                <BuyMax>{$buy_max_heavycruisers}</BuyMax>
+            </Cost>
+            <Labels>
+                <Buy>{$heavycruisers_buy_label}</Buy>
+                <Sell>{$heavycruisers_sell_label}</Sell>
+            </Labels>
+        </HeavyCruisers>
+
+        <Carriers>
+            <Level>{$carriers_level}</Level>
+            <Quantity>{$carriers}</Quantity>
+            <Cost>
+                <Buy>{$buy_carriers|strip_credits}</Buy>
+                <Sell>{$sell_carriers|strip_credits}</Sell>
+                <BuyMax>{$buy_max_carriers}</BuyMax>
+            </Cost>
+            <Labels>
+                <Buy>{$carriers_buy_label}</Buy>
+                <Sell>{$carriers_sell_label}</Sell>
+            </Labels>
+        </Carriers>
+    </MilitaryUnits>
+
+    <Planets>
+
+        <Food>
+            <Efficency>{$food_short_xml}</Efficiency>
+                <Quantity>{$food_planets}</Quantity>
+                <Cost>
+                    <Buy>{$cost_planet_food|strip_credits}</Buy>
+                    <BuyMax>{$buy_max_planet_food}</BuyMax>
+                </Cost>
+
+                <Labels>
+                    <Buy>{$food_planets_buy_label}</Buy>
+                    <Release>{$food_planets_sell_label}</Release>
+                </Labels>
+        </Food>
+
+        <Ore>
+            <Efficency>{$ore_short_xml}</Efficiency>
+                <Quantity>{$ore_planets}</Quantity>
+                <Cost>
+                    <Buy>{$cost_planet_ore|strip_credits}</Buy>
+                    <BuyMax>{$buy_max_planet_ore}</BuyMax>
+                </Cost>
+
+                <Labels>
+                    <Buy>{$ore_planets_buy_label}</Buy>
+                    <Release>{$ore_planets_sell_label}</Release>
+                </Labels>
+        </Ore>
+
+
+        <Tourism>
+            <Efficency>{$tourism_short_xml}</Efficiency>
+                <Quantity>{$tourism_planets}</Quantity>
+                <Cost>
+                    <Buy>{$cost_planet_tourism|strip_credits}</Buy>
+                    <BuyMax>{$buy_max_planet_tourism}</BuyMax>
+                </Cost>
+
+                <Labels>
+                    <Buy>{$tourism_planets_buy_label}</Buy>
+                    <Release>{$tourism_planets_sell_label}</Release>
+                </Labels>
+        </Tourism>
+
+        <Supply>
+            <Efficency>{$supply_short_xml}</Efficiency>
+                <Quantity>{$supply_planets}</Quantity>
+                <Cost>
+                    <Buy>{$cost_planet_supply|strip_credits}</Buy>
+                    <BuyMax>{$buy_max_planet_supply}</BuyMax>
+                </Cost>
+
+                <Labels>
+                    <Buy>{$supply_planets_buy_label}</Buy>
+                    <Release>{$supply_planets_sell_label}</Release>
+                </Labels>
+        </Supply>
+
+        <Government>
+            <Efficency>{$gov_short_xml}</Efficiency>
+                <Quantity>{$gov_planets}</Quantity>
+                <Cost>
+                    <Buy>{$cost_planet_gov|strip_credits}</Buy>
+                    <BuyMax>{$buy_max_planet_gov}</BuyMax>
+                </Cost>
+
+                <Labels>
+                    <Buy>{$gov_planets_buy_label}</Buy>
+                    <Release>{$gov_planets_sell_label}</Release>
+                </Labels>
+        </Government>
+
+        <Education>
+            <Efficency>{$edu_short_xml}</Efficiency>
+                <Quantity>{$edu_planets}</Quantity>
+                <Cost>
+                    <Buy>{$cost_planet_edu|strip_credits}</Buy>
+                    <BuyMax>{$buy_max_planet_edu}</BuyMax>
+                </Cost>
+
+                <Labels>
+                    <Buy>{$edu_planets_buy_label}</Buy>
+                    <Release>{$edu_planets_sell_label}</Release>
+                </Labels>
+        </Education>
+
+        <Research>
+            <Efficency>{$research_short_xml}</Efficiency>
+                <Quantity>{$research_planets}</Quantity>
+                <Cost>
+                    <Buy>{$cost_planet_research|strip_credits}</Buy>
+                    <BuyMax>{$buy_max_planet_research}</BuyMax>
+                </Cost>
+
+                <Labels>
+                    <Buy>{$research_planets_buy_label}</Buy>
+                    <Release>{$research_planets_sell_label}</Release>
+                </Labels>
+        </Research>
+
+        <Urban>
+            <Efficency>{$urban_short_xml}</Efficiency>
+                <Quantity>{$urban_planets}</Quantity>
+                <Cost>
+                    <Buy>{$cost_planet_urban|strip_credits}</Buy>
+                    <BuyMax>{$buy_max_planet_urban}</BuyMax>
+                </Cost>
+
+                <Labels>
+                    <Buy>{$urban_planets_buy_label}</Buy>
+                    <Release>{$urban_planets_sell_label}</Release>
+                </Labels>
+        </Urban>
+
+        <Petroleum>
+            <Efficency>{$petro_short_xml}</Efficiency>
+                <Quantity>{$petro_planets}</Quantity>
+                <Cost>
+                    <Buy>{$cost_planet_petro|strip_credits}</Buy>
+                    <BuyMax>{$buy_max_planet_petro}</BuyMax>
+                </Cost>
+
+                <Labels>
+                    <Buy>{$petro_planets_buy_label}</Buy>
+                    <Release>{$petro_planets_sell_label}</Release>
+                </Labels>
+        </Petroleum>
+
+        <AntiPollution>
+            <Efficency>{$antipollu_short_xml}</Efficiency>
+                <Quantity>{$antipollu_planets}</Quantity>
+                <Cost>
+                    <Buy>{$cost_planet_antipollu|strip_credits}</Buy>
+                    <BuyMax>{$buy_max_planet_antipollu}</BuyMax>
+                </Cost>
+
+                <Labels>
+                    <Buy>{$antipollu_planets_buy_label}</Buy>
+                    <Release>{$antipollu_planets_sell_label}</Release>
+                </Labels>
+        </AntiPollution>
+
+    </Planets>
+
+</xml>

@@ -1,0 +1,163 @@
+<html>
+
+<head>
+<title>Solar Imperium {$version} ({$game_name}) {$page_title}</title>
+<link rel="stylesheet" type="text/css" href="../css/system/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/game/styles.css" />
+
+
+<script language="javascript" src="../scripts/game/common.js"></script>
+<script type="text/javascript" src="../scripts/game/ajax-dynamic-content.js"></script>
+<script type="text/javascript" src="../scripts/game/ajax.js"></script>
+<script type="text/javascript" src="../scripts/game/ajax-tooltip.js">
+/************************************************************************************************************
+(C) www.dhtmlgoodies.com, June 2006
+
+This is a script from www.dhtmlgoodies.com. You will find this and a lot of other scripts at our website.	
+
+Terms of use:
+You are free to use this script as long as the copyright message is kept intact. However, you may not
+redistribute, sell or repost it without our permission.
+	
+Thank you!
+	
+www.dhtmlgoodies.com
+Alf Magne Kalleland
+	
+************************************************************************************************************/	
+</script>	
+<link rel="stylesheet" href="../css/game/ajax-tooltip.css" media="screen" type="text/css">
+
+</head>
+
+
+<body bgcolor="black" link="white" vlink="white" alink="white" text="white" style="background-attachment:fixed"  background="../images/game/background.gif" >
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr><td>
+
+{$events_data}
+
+<a name=top>
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td style="height:1px" bgcolor="#333333"  colspan="2"><img src="../images/game/placeholder.gif" width="100%" style="height:1px"></td>
+</tr>
+</table>
+
+<table width="100%" cellspacing="0" cellpadding="5" border="0" height="100%">
+<tr><td valign="top" rowspan="2" width="120" height="100%" bgcolor="#333333" background="../images/game/background/hull.jpg" >
+
+
+
+	<table cellspacing="0" cellpadding="0" border="0">
+		<tr>
+		
+			<td align="center"> 
+			<a href="starmap.php" target="_NEW">
+			<img src="../images/game/starmap.jpg" border="0" style="border:1px solid darkred" width="110" height="50">
+			</a>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+                <b>
+			<font style="color:#ffffff">{$emperor_short}</font>
+			<font style="color:#cacaca"> {t}of{/t} </font>
+			<font style="color:#ffffff">{$empire_short}</font>
+			</b>
+			<br/><br/>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+			<b><a class="link" href="show_active.php" TARGET="_NEW">{$online_players} {t}player(s) online{/t}</a></b>
+			<br/>
+			</td>
+		</tr>		
+	</table>
+	<br/>
+
+
+{include file="menu.html"}
+
+<br/>
+    <!-- PBBGExchange Code Begin -->
+    <div align="center">
+<SCRIPT language="JavaScript">
+document.write('<S'+'CRIPT language="JavaScript" src="http://www.pbbgexchange.com/work.php?n=73&size=2&j=1&nl=0&c=&code='+new Date().getTime()+'"></S'+'CRIPT>');
+</SCRIPT>
+<NOSCRIPT><IFRAME SRC="http://www.pbbgexchange.com/work.php?n=73&size=2&nl=0&c=" width=100 height=107 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling="no"></IFRAME></NOSCRIPT>
+<!-- PBBGExchange Code End -->
+    </div>
+</td>
+<td align="left" width="100%" valign="top">
+
+<script>
+var content_top = '<table width="100%" cellspacing="0" cellpadding="0" border="0">\
+			<tr>\
+				<td>\
+				<table>\
+					<tr>\
+						<td>{t}Net Worth:{/t} <b style="color:#ff9999">{$networth|number_format}</b>,\
+							{t}Turns played:{/t} <b\
+							style="color:#ff9999">{$turns_played}</b>, {t}Turns left:{/t} <b\
+							style="color:#ff9999">{$turns_left}</b>, {t}Protection turns left:{/t} <b\
+							style="color:#ff9999">{$protection_turns_left}</b>, {t}Pop.:{/t} <b style="color:#ff9999">{$population|number_format}</b> <b>({$civil_status})</b></td>\
+					</tr>\
+					<tr>\
+						<td>\
+<table cellspacing="0" cellpadding="0" border="0"><tr>\
+<td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Credits{/t}" title="{t}Credits{/t}" src="../images/game/icon_credits.png"></td><td><b>{$credits|number_format}</b></td>\
+<td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Food{/t}" title="{t}Food{/t}" src="../images/game/icon_food.png"></td><td><b>{$food|number_format}</b></td>\
+<td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Ore{/t}" title="{t}Ore{/t}" src="../images/game/icon_ore.png"></td><td><b>{$ore|number_format}</b></td>\
+<td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Petroleum{/t}" title="{t}Petroleum{/t}" src="../images/game/icon_petro.png"></td><td><b>{$petroleum|number_format}</b></td>\
+<td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Planets total / Planets cap{/t}" title="{t}Planets total / Planets cap{/t}" src="../images/game/icon_planets.png"></td><td><b>{$total_planets|number_format} / {$max_planets|number_format}</b></td>\
+<td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Army effectiveness{/t}" title="{t}Army effectiveness{/t}" src="../images/game/icon_army.png"></td><td><b>{$effectiveness|number_format} %</b></td>\
+</tr></table></td>\
+					</tr>\
+				</table>\
+				</td>\
+				<td align="right"><a href="logo_editor.php"><img src="{$logo}?{$timestamp}"\
+					style="border:1px solid #cacaca; margin:0 10 0 0"></a></td>\
+			</tr>\
+		</table>\
+';
+
+Round(content_top,'gradient_grey','720px','');
+
+
+</script>
+
+{$page_content}
+
+<table>
+<tr>
+<td><a href=#top><img src="../images/game/uparrow.gif" border="0"></a></td>
+<td>
+<a href=#top class="link"><b>{t}Back to top{/t}</b></a>
+</td>
+</tr>
+</table>
+<br />
+<br/>
+
+
+<div align="center">
+<table align="center" style="font-size:10px">
+<tr><td><img src="../images/game/mrgtech.gif" border="0"></td><td>{t}This game is a creation of{/t} <a class="link" href="http://www.mrgtech.ca" target="_NEW"><b>MRG Technologies</b></a></td></tr>
+</table>
+</div>
+<br />
+</td>
+</tr>
+</table>
+<table width="100%" style="border:0px solid yellow"  cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td style="height:1px" bgcolor="#333333"  colspan="2"><img src="../images/game/placeholder.gif" width="100%" style="height:1px"></td>
+</tr>
+</table>
+<script language="javascript" src="../scripts/game/wz_tooltip.js"></script>
+</td></tr>
+</table>
+</body>
+</html>

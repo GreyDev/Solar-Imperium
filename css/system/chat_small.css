@@ -1,0 +1,38 @@
+#chatfrm input {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	width: 100%;
+}
+
+
+#chatfrm #td_left_small {
+	background-color: #333333;
+        background-image: url(../../images/system/chat/bg_small.png);
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	border: 1px solid #CCCCCC;
+	color: #FFFFFF;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+}
+
+.textfield_form {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-color: #E8E8E8;
+	border: 1px solid #FFFFFF;
+	width: 100%;
+}
+body {
+	background-color: #333333;
+}
+
+.scrolling_div {
+width: 100%;
+height: 100%;
+overflow: auto;
+border: 1px solid #666;
+padding: 0px;
+margin: 0px;
+}

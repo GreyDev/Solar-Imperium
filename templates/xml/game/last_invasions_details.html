@@ -1,0 +1,395 @@
+		<table  cellspacing="0" cellpadding="0" border="0">
+		<tr>	
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666" style="padding:0px 5px 0px 5px"><a  class="link" href="battle.php"><b>{t}Battle Command{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="covert.php"><b>{t}Covert Operations{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+
+		<td nowrap><img src="../images/game/tab_left.gif" border="0"></td>
+		<td nowrap bgcolor="darkred"  style="padding:0px 5px 0px 5px"><a  style="text-decoration:none;color:white" href="last_invasions.php"><b>{t}Last Invasions{/t}</b></a></td> 
+		<td><img src="../images/game/tab_right.gif" border="0"></td>
+
+		</table>
+		<table width="720" bgcolor="darkred" cellspacing="1" cellpadding="0" border="0">
+		<tr><td>
+		<table background="../images/game/background1.jpg" bgcolor="#333333" width="100%" cellpadding="5" cellspacing="0">
+		<tr>
+		<td>
+
+
+		<b style="font-size:14px">Invasion details</b><b> ({t}Date{/t}: {$invasion_date|date_format}), <a href="last_invasions.php">Back to invasions list</a></b><br/>
+
+
+
+<b><a  style="color:lightcyan" href="#summary">{t}Summary{/t}</a> | 
+<a style="color:lightcyan" href="#before_attack">{t}Before attack{/t}</a> | 
+<a style="color:lightcyan" href="#assault">{t}Assault{/t}</a> | 
+<a style="color:lightcyan" href="#after_attack">{t}After attack{/t}</a></b>
+<br/>
+<br/>
+
+<table style="border:1px solid red" width="100%">
+<tr><td bgcolor="darkred"><a name="summary"><b>{t}Summary{/t}</b></a></td></tr>
+<tr><td bgcolor="#333333" background="../images/game/invasion_background1.png">
+
+<table>
+<tr>
+	<td>{t}Deep space battles won?{/t}</td>
+	<td><b>{$space_battles_won}</b></td>
+</tr>
+
+<tr>
+	<td>{t}Orbital battles won?{/t}</td>
+	<td><b>{$orbital_battles_won}</b></td>
+</tr>
+
+<tr>
+	<td>{t}Ground battles won?{/t}</td>
+	<td><b>{$ground_battles_won}</b></td>
+</tr>
+
+<tr>
+	<td>{t}How many attackers?{/t}</td>
+	<td><b>{$attackers_count}</b></td>
+</tr>
+
+<tr>
+	<td>{t}How many defenders?{/t}</td>
+	<td><b>{$defenders_count}</b></td>
+</tr>
+
+</table>
+
+</td></tr>
+</table>
+<br/>
+
+<table style="border:1px solid red" width="100%">
+<tr><td bgcolor="darkred"><a name="before_attack"><b>{t}Before attack{/t}</b></a></td></tr>
+<tr><td bgcolor="#333333">
+
+<table width="100%">
+<tr><td valign="top">
+<b>{t}Attackers side:{/t}</b><br/>
+{section name="a" loop=$attackers}
+
+<table bgcolor="#4a4a4a" style="border:1px solid #cacaca;padding:5px" cellspacing="0" cellpadding="2" width="330px">
+<tr><td nowrap><img width="32" height="32" style="border:1px solid darkred" src="../images/game/empires/{$attackers[a].game_id}/{$attackers[a].empire_id}.jpg"></td><td nowrap>{t}Empire:{/t}</td><td width="100%"><b>{$attackers[a].empire_name}</b></td></tr>
+<tr><td nowrap>&nbsp;</td><td nowrap>Effectiveness:</td><td width="100%"><b>{$attackers[a].effectiveness} %</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/soldiers_{$attackers[a].soldiers_level}.gif"></td><td>{t}Soldiers:{/t}</td><td><b>{$attackers[a].soldiers}</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/fighters_{$attackers[a].fighters_level}.gif"></td><td>{t}Fighters:{/t}</td><td><b>{$attackers[a].fighters}</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/lightcruisers_{$attackers[a].lightcruisers_level}.gif"></td><td>{t}Light&nbsp;Cruisers:{/t}</td><td><b>{$attackers[a].lightcruisers}</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/heavycruisers_{$attackers[a].heavycruisers_level}.gif"></td><td>{t}Heavy&nbsp;Cruisers:{/t}</td><td><b>{$attackers[a].heavycruisers}</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/carriers_{$attackers[a].carriers_level}.gif"></td><td>{t}Carriers:{/t}</td><td><b>{$attackers[a].carriers}</b></b></td></tr>
+</table>
+<br/>
+{sectionelse}
+{t}No attackers!{/t}
+{/section}
+</td>
+<td valign="top">
+<b>{t}Defenders side:{/t}</b><br/>
+{section name="d" loop=$defenders}
+
+<table bgcolor="#4a4a4a" style="border:1px solid #cacaca;padding:5px" cellspacing="0" cellpadding="2" width="330px">
+<tr><td nowrap><img width="32" height="32" style="border:1px solid darkred" src="../images/game/empires/{$defenders[d].game_id}/{$defenders[d].empire_id}.jpg"></td><td nowrap>{t}Empire:{/t}</td><td width="100%"><b>{$defenders[d].empire_name}</b></td></tr>
+<tr><td nowrap>&nbsp;</td><td nowrap>Effectiveness:</td><td width="100%"><b>{$defenders[d].effectiveness} %</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/soldiers_{$defenders[d].soldiers_level}.gif"></td><td>{t}Soldiers:{/t}</td><td><b>{$defenders[d].soldiers}</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/fighters_{$defenders[d].fighters_level}.gif"></td><td>{t}Fighters:{/t}</td><td><b>{$defenders[d].fighters}</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/stations_{$defenders[d].stations_level}.gif"></td><td>{t}Stations:{/t}</td><td><b>{$defenders[d].stations}</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/lightcruisers_{$defenders[d].lightcruisers_level}.gif"></td><td>{t}Light&nbsp;Cruisers:{/t}</td><td><b>{$defenders[d].lightcruisers}</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/heavycruisers_{$defenders[d].heavycruisers_level}.gif"></td><td>{t}Heavy&nbsp;Cruisers:{/t}</td><td><b>{$defenders[d].heavycruisers}</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/carriers_{$defenders[d].carriers_level}.gif"></td><td>{t}Carriers:{/t}</td><td><b>{$defenders[d].carriers}</b></b></td></tr>
+</table>
+<br/>
+{sectionelse}
+{t}No defenders!{/t}
+{/section}
+
+</td>
+</tr></table>
+<br/>
+<b>{t}Overall power:{/t}</b>
+<table width="100%" style="border:1px solid #cacaca;padding:5px;margin:10px" bgcolor="#4a4a4a">
+<tr>
+<tr><td width="100"><b>{t}Unit type{/t}</b></td>
+<td><b>{t}Attackers{/t}</b></td>
+<td><b>{t}Defenders{/t}</b></td>
+<td><b>{t}Balance{/t}</b></td>
+</tr>
+<tr>
+<td>{t}Soldiers{/t}</td>
+<td>{$attackers_soldiers}</td>
+<td>{$defenders_soldiers}</td>
+<td>
+<table width="100%" height="24">
+<tr>
+<td bgcolor="red" width="{$attackers_soldiers_percent}%"><img src="../images/game/placeholder.gif"></td>
+<td bgcolor="darkblue" width="{$defenders_soldiers_percent}%"><img src="../images/game/placeholder.gif"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>{t}Fighters{/t}</td>
+<td>{$attackers_fighters}</td>
+<td>{$defenders_fighters}</td>
+<td>
+<table width="100%" height="24">
+<tr>
+<td bgcolor="red" width="{$attackers_fighters_percent}%"><img src="../images/game/placeholder.gif"></td>
+<td bgcolor="darkblue" width="{$defenders_fighters_percent}%"><img src="../images/game/placeholder.gif"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>{t}Defense Stations{/t}</td>
+<td>{$attackers_stations}</td>
+<td>{$defenders_stations}</td>
+<td>
+<table width="100%" height="24">
+<tr>
+<td bgcolor="red" width="{$attackers_stations_percent}%"><img src="../images/game/placeholder.gif"></td>
+<td bgcolor="darkblue" width="{$defenders_stations_percent}%"><img src="../images/game/placeholder.gif"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>{t}Light Cruisers{/t}</td>
+<td>{$attackers_lightcruisers}</td>
+<td>{$defenders_lightcruisers}</td>
+<td>
+<table width="100%" height="24">
+<tr>
+<td bgcolor="red" width="{$attackers_lightcruisers_percent}%"><img src="../images/game/placeholder.gif"></td>
+<td bgcolor="darkblue" width="{$defenders_lightcruisers_percent}%"><img src="../images/game/placeholder.gif"></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>{t}Heavy Cruisers{/t}</td>
+<td>{$attackers_heavycruisers}</td>
+<td>{$defenders_heavycruisers}</td>
+<td>
+<table width="100%" height="24">
+<tr>
+<td bgcolor="red" width="{$attackers_heavycruisers_percent}%"><img src="../images/game/placeholder.gif"></td>
+<td bgcolor="darkblue" width="{$defenders_heavycruisers_percent}%"><img src="../images/game/placeholder.gif"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br/><br/>
+</td></tr>
+</table>
+<br/>
+
+<table style="border:1px solid red" width="100%">
+<tr><td bgcolor="darkred"><a name="assault"><b>{t}Assault{/t}</b></a></td></tr>
+<tr><td bgcolor="#333333">
+
+<table width="100%" cellspacing="1" cellpadding="2">
+<tr>
+<td><img style="border:1px solid darkred" src="../images/game/space.png"></td>
+<td width="100%" bgcolor="#330000"><b style="color:#FF9999">Deep Space Battles</b></td>
+</tr>
+</table>
+
+{section name="sr" loop=$space_rounds}
+
+<table style="margin:5px" width="100%" bgcolor="darkred" >
+<tr>
+<td nowrap align="center"><b>{t}Round{/t}<br/></b><b style="font-size:22px">{$space_rounds[sr].round}</b></td>
+<td width="100%">
+<table width="100%">
+<tr>
+<td width="50%" valign="top" bgcolor="#220000">{$space_rounds[sr].img_attack}</td>
+<td bgcolor="darkred"><b>VS<b/></td>
+<td width="50%" valign="top" bgcolor="#000022">{$space_rounds[sr].img_defense}</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+{sectionelse}
+<b>{t}No battle!{/t}</b>
+{/section}
+<br/><br/>
+
+<table width="100%" cellspacing="1" cellpadding="2">
+<tr>
+<td><img style="border:1px solid darkred" src="../images/game/orbital.png"></td>
+<td width="100%" bgcolor="#330000"><b style="color:#FF9999">{t}Orbital Battles{/t}</b></td>
+</tr>
+</table>
+
+{section name="or" loop=$orbital_rounds}
+
+<table style="margin:5px" width="100%" bgcolor="darkred" >
+<tr>
+<td nowrap align="center"><b>{t}Round{/t}<br/></b><b style="font-size:22px">{$orbital_rounds[or].round}</b></td>
+<td width="100%">
+<table width="100%">
+<tr>
+<td width="50%" valign="top" bgcolor="#220000">{$orbital_rounds[or].img_attack}</td>
+<td bgcolor="darkred"><b>VS<b/></td>
+<td width="50%" valign="top" bgcolor="#000022">{$orbital_rounds[or].img_defense}</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+{sectionelse}
+<b>{t}No battle!{/t}</b>
+{/section}
+
+<br/><br/>
+<table width="100%" cellspacing="1" cellpadding="2">
+<tr>
+<td><img style="border:1px solid darkred" src="../images/game/ground.png"></td>
+<td width="100%" bgcolor="#330000"><b style="color:#FF9999">{t}Ground Battles{/t}</b></td>
+</tr>
+</table>
+
+{section name="gr" loop=$ground_rounds}
+
+<table style="margin:5px" width="100%" bgcolor="darkred" >
+<tr>
+<td nowrap align="center"><b>{t}Round{/t}<br/></b><b style="font-size:22px">{$ground_rounds[gr].round}</b></td>
+<td width="100%">
+<table width="100%">
+<tr>
+<td width="50%" valign="top" bgcolor="#220000">{$ground_rounds[gr].img_attack}</td>
+<td bgcolor="darkred"><b>VS<b/></td>
+<td width="50%" valign="top" bgcolor="#000022">{$ground_rounds[gr].img_defense}</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+{sectionelse}
+<b>{t}No battle!{/t}</b>
+{/section}
+
+<br/><br/>
+</td></tr>
+</table>
+<br/>
+
+<table style="border:1px solid red" width="100%">
+<tr><td bgcolor="darkred"><a name="after_attack"><b>{t}After attack{/t}</b></a></td></tr>
+<tr><td bgcolor="#333333">
+
+<table width="100%">
+<tr><td valign="top">
+<b>Attackers side:</b><br/>
+{section name="a2"  loop=$attackers2}
+
+<table bgcolor="#4a4a4a" style="border:1px solid #cacaca;padding:5px" cellspacing="0" cellpadding="2" width="330px">
+<tr><td nowrap><img width="32" height="32" style="border:1px solid darkred" src="../images/game/empires/{$attackers2[a2].game_id}/{$attackers2[a2].empire_id}.jpg"></td><td nowrap>{t}Empire:{/t}</td><td width="100%"><b>{$attackers2[a2].empire_name}</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/soldiers_{$attackers2[a2].soldiers_level}.gif"></td><td>{t}Soldiers:{/t}</td><td><b>{$attackers2[a2].soldiers2} / {$attackers2[a2].soldiers} </b><b style="color:#FF9999">(-{$attackers2[a2].casualties_soldiers})</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/fighters_{$attackers2[a2].fighters_level}.gif"></td><td>{t}Fighters:{/t}</td><td><b>{$attackers2[a2].fighters2} / {$attackers2[a2].fighters} </b><b style="color:#FF9999">(-{$attackers2[a2].casualties_fighters})</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/lightcruisers_{$attackers2[a2].lightcruisers_level}.gif"></td><td>{t}Light&nbsp;Cruisers:{/t}</td><td><b>{$attackers2[a2].lightcruisers2} / {$attackers2[a2].lightcruisers} </b><b style="color:#FF9999">(-{$attackers2[a2].casualties_lightcruisers})</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/heavycruisers_{$attackers2[a2].heavycruisers_level}.gif"></td><td>{t}Heavy&nbsp;Cruisers:{/t}</td><td><b>{$attackers2[a2].heavycruisers2} / {$attackers2[a2].heavycruisers} </b><b style="color:#FF9999">(-{$attackers2[a2].casualties_heavycruisers})</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/carriers_{$attackers2[a2].carriers_level}.gif"></td><td>{t}Carriers:{/t}</td><td><b>{$attackers2[a2].carriers2} / {$attackers2[a2].carriers} </b><b style="color:#FF9999">(-{$attackers2[a2].casualties_carriers})</b></td></tr>
+</table>
+<br/>
+{sectionelse}
+{t}No attackers!{/t}
+{/section}
+
+</td>
+<td valign="top">
+<b>{t}Defenders side:{/t}</b><br/>
+{section name="d2" loop=$defenders2}
+
+<table bgcolor="#4a4a4a" style="border:1px solid #cacaca;padding:5px" cellspacing="0" cellpadding="2" width="330px">
+<tr><td nowrap><img width="32" height="32" style="border:1px solid darkred" src="../images/game/empires/{$defenders2[d2].game_id}/{$defenders2[d2].empire_id}.jpg"></td><td nowrap>{t}Empire:{/t}</td><td width="100%"><b>{$defenders2[d2].empire_name}</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/soldiers_{$defenders2[d2].soldiers_level}.gif"></td><td>{t}Soldiers:{/t}</td><td><b>{$defenders2[d2].soldiers2} / {$defenders2[d2].soldiers} </b><b style="color:#FF9999">(-{$defenders2[d2].casualties_soldiers})</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/fighters_{$defenders2[d2].fighters_level}.gif"></td><td>{t}Fighters:{/t}</td><td><b>{$defenders2[d2].fighters2} / {$defenders2[d2].fighters} </b><b style="color:#FF9999">(-{$defenders2[d2].casualties_fighters})</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/stations_{$defenders2[d2].stations_level}.gif"></td><td>{t}Stations:{/t}</td><td><b>{$defenders2[d2].stations2} / {$defenders2[d2].stations} </b><b style="color:#FF9999">(-{$defenders2[d2].casualties_stations})</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/lightcruisers_{$defenders2[d2].lightcruisers_level}.gif"></td><td>{t}Light&nbsp;Cruisers:{/t}</td><td><b>{$defenders2[d2].lightcruisers2} / {$defenders2[d2].lightcruisers} </b><b style="color:#FF9999">(-{$defenders2[d2].casualties_lightcruisers})</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/heavycruisers_{$defenders2[d2].heavycruisers_level}.gif"></td><td>{t}Heavy&nbsp;Cruisers:{/t}</td><td><b>{$defenders2[d2].heavycruisers2} / {$defenders2[d2].heavycruisers} </b><b style="color:#FF9999">(-{$defenders2[d2].casualties_heavycruisers})</b></td></tr>
+<tr><td><img width="32" height="32" style="border:1px solid darkred" src="../images/game/icons/army/carriers_{$defenders2[d2].carriers_level}.gif"></td><td>{t}Carriers:{/t}</td><td><b>{$defenders2[d2].carriers2} / {$defenders2[d2].carriers} </b></td></tr>
+</table>
+<br/>
+
+{sectionelse}
+{t}No defenders!{/t}
+{/section}
+</td>
+</tr></table>
+
+<table>
+<tr>
+	{if $invasion_won eq false}
+	<td>{t}Outcome:{/t}</td>
+	<td><b>{t}Invasion failed!{/t}</b></td></tr>
+	{else}
+	<td>{t}Outcome:{/t}</td>
+	<td><b>{t}Invasion won!{/t}</b></td></tr>
+
+	<tr>
+		<td>{t}Food planets taken:{/t}</td><td><b>{$outcome_lost_food_planets}</b></td>
+	</tr>
+	<tr>
+		<td>{t}Ore planets taken:{/t}</td><td><b>{$outcome_lost_ore_planets}</b></td>
+	</tr>
+	<tr>
+		<td>{t}Tourism planets taken:{/t}</td><td><b>{$outcome_lost_tourism_planets}</b></td>
+	</tr>
+	<tr>
+		<td>{t}Supply planets taken:{/t}</td><td><b>{$outcome_lost_supply_planets}</b></td>
+	</tr>
+	<tr>
+		<td>{t}Gov. planets taken:{/t}</td><td><b>{$outcome_lost_gov_planets}</b></td>
+	</tr>
+	<tr>
+		<td>{t}Education planets taken:{/t}</td><td><b>{$outcome_lost_edu_planets}</b></td>
+	</tr>
+	<tr>
+		<td>{t}Urban planets taken:{/t}</td><td><b>{$outcome_lost_urban_planets}</b></td>
+	</tr>
+	<tr>
+		<td>{t}Research planets taken:{/t}</td><td><b>{$outcome_lost_research_planets}</b></td>
+	</tr>
+	<tr>
+		<td>{t}Petroleum planets taken:{/t}</td><td><b>{$outcome_lost_petro_planets}</b></td>
+	</tr>
+	<tr>
+		<td>{t}Anti-pollu. planets taken:{/t}</td><td><b>{$outcome_lost_antipollu_planets}</b></td>
+	</tr>
+	<tr>
+		<td>{t}Population killed:{/t}</td><td><b>{$outcome_lost_population}</b></td>
+	</tr>
+	<tr>
+		<td>{t}Credits stolen:{/t}</td><td><b>{$outcome_lost_credits}</b></td>
+	</tr>
+	{/if}
+	
+</tr>
+</table>
+
+</td></tr>
+</table>
+<br/>
+
+
+		</td></tr></table>
+		</td></tr></table>
+
+		<br/><br/>
+
+		<br/> <br/>
+

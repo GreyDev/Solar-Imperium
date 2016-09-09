@@ -1,0 +1,122 @@
+# Solar Imperium HUN installer_full_hun.po
+# Copyright (C) 2007 Nabba
+# This file is distributed under the same license as the Solar Imperium HUN package.
+# Nabba <gombos3@gmail.com>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: gombos3@gmail.com\n"
+"POT-Creation-Date: 2007-11-23 00:31-0500\n"
+"PO-Revision-Date: 2007-11-23 07:31+0100\n"
+"Last-Translator: Nabba <gombos3@gmail.com>\n"
+"Language-Team: HUN <gombos3@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: install.php:125
+msgid "Writable"
+msgstr "Írható"
+
+#: install.php:127
+msgid "Not Writable"
+msgstr "Nem írható"
+
+#: install.php:140
+msgid "Not found! Unable to create!"
+msgstr "Nem található! Nem lehet létrehozni!"
+
+#: install.php:144
+msgid "Not Found!"
+msgstr "Nem található!"
+
+#: install.php:146
+msgid "Not Found but created!"
+msgstr "Nem található, de létrehozva!"
+
+#: install.php:155
+msgid "*** Please fix theses isssues before continuing ***"
+msgstr "*** Kérlek ellenőrizd ezeket, mielőtt folytatod ***"
+
+#: install.php:190
+msgid "Database correctly configured. Click on continue button to complete installation."
+msgstr "Adatbázis sikeresen beállítva. Kattints a folytatás gombra, hogy befejezd a telepítést."
+
+#: installer.c:2
+msgid "Installer (Page 1/4)"
+msgstr "Telepítő (1/4 oldal)"
+
+#: installer.c:5
+msgid "Installer (Page 1/4) :: Introduction"
+msgstr "Telepítő (1/4 oldal) :: Bevezetés"
+
+#: installer.c:8
+msgid ""
+"First thing first, thank you installing Solar Imperium, I hope the process will be painless as possible but you\n"
+"\t\thave to meet basic requirements: A web server <i>(APACHE recommended)</i>, PHP 4 or 5 <i>(5 recommended)</i> and an access to\n"
+"\t\ta database <i>(MySQL recommended)</i>.<br/><br/>If its fine with you, click on the continue button below."
+msgstr ""
+"Előszőr is, köszönjük, hogy telepíted a Solar Imperium-ot, remélem a telepítés zökkenőmentesen fog működni, de ehhez szükséges,\n"
+"\t\thogy meg legyenek a következők: Egy webszerver <i>(APACHE ajánlott)</i>, PHP 4 vagy 5 <i>(5 ajánlott)</i> és egy adatbázis <i>(MySQL ajánlott)</i>.<br/><br/>Ha ezek meg vannak,kattints a folytatás gombra."
+
+#: installer.c:11
+msgid "Installer (Page 2/4)"
+msgstr "Telepítő (2/4 oldal)"
+
+#: installer.c:14
+msgid "Installer (Page 2/4) :: File permissions and SQL configuration"
+msgstr "Telepítő (2/4 oldal) :: Állományok és SQL beállítás"
+
+#: installer.c:17
+msgid "Database configuration"
+msgstr "Adatbázis beállítás"
+
+#: installer.c:20
+msgid "Driver"
+msgstr "Meghajtó"
+
+#: installer.c:23
+msgid "Hostname"
+msgstr "Kiszolgálónév"
+
+#: installer.c:26
+msgid "Database name"
+msgstr "Adatbázisnév"
+
+#: installer.c:29
+msgid "Username"
+msgstr "Felhasználónév"
+
+#: installer.c:32
+msgid "Password"
+msgstr "Jelszó"
+
+#: installer.c:35
+msgid "Confirm password"
+msgstr "Jelszó megerősítés"
+
+#: installer.c:38
+msgid "Installer (Page 3/4)"
+msgstr "Telepítő (3/4 oldal)"
+
+#: installer.c:41
+msgid "Installer (Page 3/4) :: Database test"
+msgstr "Telepítő (3/4 oldal) :: Adatbázis teszt"
+
+#: installer.c:44
+msgid "Installer (Page 4/4)"
+msgstr "Telepítő (4/4 oldal)"
+
+#: installer.c:47
+msgid "Installer (Page 4/4) :: Installation completed"
+msgstr "Telepítő (4/4 oldal) :: Sikeres telepítés"
+
+#: installer.c:50
+msgid "Everything look fine, your installation is now complete and working. Please notice thats the first player registered become the administrator."
+msgstr "Minden rendben, a telepítésed sikeres és működik. Ne felejtsd el, hogy az első játékos lesz az adminisztrátor."
+
+#: installer.c:53
+msgid "You have to manually remove install.php (or try <a style=\"color:blue\" href=\"install.php?REMOVE\">automatic removal</a>) then click here:"
+msgstr "El kell távolítanod az install.php-t (vagy próbáld az <a style=\"color:blue\" href=\"install.php?REMOVE\">automatikus eltávolítás</a>-t) aztán kattints ide:"
+

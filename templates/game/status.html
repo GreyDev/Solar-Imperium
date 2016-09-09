@@ -1,0 +1,74 @@
+<script>
+
+    var content_top = '<table width="100%" cellspacing="0" cellpadding="0" border="0">\
+                                                       <tr>\
+                                                               <td>\
+                                                               <table>\
+                                                                       <tr>\
+                                                                               <td>{t}Net Worth:{/t} <b style="color:#ff9999">{$networth|number_format}</b>,\
+                                                                                       {t}Turns played:{/t} <b\
+                                                                                       style="color:#ff9999">{$turns_played}</b>, {t}Turns left:{/t} <b\
+                                                                                       style="color:#ff9999">{$turns_left}</b>, {t}Protection turns left:{/t} <b\
+                                                                                       style="color:#ff9999">{$protection_turns_left}</b>, {t}Pop.:{/t} <b style="color:#ff9999">{$population|number_format}</b> <b>({$civil_status})</b></td>\
+                                                                       </tr>\
+                                                                       <tr>\
+                                                                               <td>\
+                               <table cellspacing="0" cellpadding="0" border="0"><tr>\
+                               <td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Credits{/t}" title="{t}Credits{/t}" src="../images/game/icon_credits.png"></td><td><b>{$credits|number_format}</b></td>\
+                               <td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Food{/t}" title="{t}Food{/t}" src="../images/game/icon_food.png"></td><td><b>{$food|number_format}</b></td>\
+                               <td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Ore{/t}" title="{t}Ore{/t}" src="../images/game/icon_ore.png"></td><td><b>{$ore|number_format}</b></td>\
+                               <td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Petroleum{/t}" title="{t}Petroleum{/t}" src="../images/game/icon_petro.png"></td><td><b>{$petroleum|number_format}</b></td>\
+                               <td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Planets total / Planets cap{/t}" title="{t}Planets total / Planets cap{/t}" src="../images/game/icon_planets.png"></td><td><b>{$total_planets|number_format} / {$max_planets|number_format}</b></td>\
+                               <td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Army effectiveness{/t}" title="{t}Army effectiveness{/t}" src="../images/game/icon_army.png"></td><td><b>{$effectiveness|number_format} %</b></td>\
+                               </tr></table></td>\
+                                                                       </tr>\
+                                                               </table>\
+                                                               </td>\
+                                                               <td align="right"><a href="logo_editor.php"><img src="{$logo}?{$timestamp}"\
+                                                                       style="border:1px solid #cacaca; margin:0 10 0 0"></a></td>\
+                                                       </tr>\
+                                               </table><img style=\"display:none\" src=\"update.php?{$timestamp}\" border=\"0\">\
+                               ';
+
+    document.getElementById('div_status').innerHTML = Round(content_top,'gradient_grey','860px','');
+
+    empires = new Array(
+    {section name="ed" loop=$empires_data}
+    ['{$empires_data[ed].emperor}','{$empires_data[ed].empire}','{$empires_data[ed].networth|number_format}','{$empires_data[ed].population|number_format}',{$empires_data[ed].radius},{$empires_data[ed].x},{$empires_data[ed].y},{$empires_data[ed].turns_played},'{$empires_data[ed].img}']{$empires_data[ed].separator}
+    {/section}
+);
+
+    var lines = new Array(
+    {section name="ld" loop=$lines_data}
+    [{$lines_data[ld].start_x},
+     {$lines_data[ld].start_y},
+     {$lines_data[ld].end_x},
+     {$lines_data[ld].end_y},
+     {$lines_data[ld].convoy_type}]{$lines_data[ld].separator}
+    {/section}
+);
+
+
+    var x = grid.get_x();
+    var y = grid.get_y();
+    var sx = grid.get_xscale();
+    var sy = grid.get_yscale();
+    draw(false);
+    grid.set_x(x);
+    grid.set_y(y);
+    grid.set_xscale(sx);
+    grid.set_yscale(sy);
+
+    {literal}
+    var select = document.getElementById('empires_select');
+
+    for (i = select.length; i > 0; i = i - 1) {
+        
+        select.remove(select.length-1);
+    }
+    
+    select.options[select.options.length] = new Option('---', '-1');
+    for (j=0;j<empires.length;j++)
+        select.options[j+1] = new Option(empires[j][0]+'@'+empires[j][1],empires[j][5]+"x"+empires[j][6]);
+    {/literal}
+</script>

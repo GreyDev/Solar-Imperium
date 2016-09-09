@@ -1,0 +1,537 @@
+<?php
+// Solar Imperium is licensed under GPL2, Check LICENSE.TXT for mode details //
+
+
+class Template
+{
+	var $DB;
+	var $TPL;
+	var $page_name;
+	var $events_data;
+	var $notices_data;
+	var $coord;	
+	var $events_count;
+	var $events_height;
+	var $ingame;
+	var $game_id;
+	
+	//////////////////////////////////////////////////////////////////////
+	// Constructor
+	//////////////////////////////////////////////////////////////////////
+	function Template($DB,$game_id)
+	{
+		$this->DB = $DB;
+                $this->game_id = $game_id;
+		$this->TPL = new Smarty();
+
+                if (isset($_GET["XML"])) {
+                    $this->TPL->template_dir = "../templates/xml/game/";
+                    $this->TPL->compile_dir = "../templates_c/xml/game/";
+                } else {
+                    $this->TPL->template_dir = "../templates/game/";
+                    $this->TPL->compile_dir = "../templates_c/game/";
+                }
+
+		$this->events_data = array();
+		$this->events_data["SYSTEM"] =  "";
+		$this->events_data["WARFARE"] =  "";
+		$this->events_data["COMMUNICATION"] =  "";
+		$this->events_data["DIPLOMACY"] =  "";
+
+		$this->events_count = array();
+		$this->events_count["SYSTEM"] = 0;
+		$this->events_count["WARFARE"] = 0;
+		$this->events_count["COMMUNICATION"] = 0;
+		$this->events_count["DIPLOMACY"] = 0;
+
+		$this->notices_data = "";
+		$this->coord = $this->DB->Execute("SELECT * FROM game".$this->game_id."_tb_coordinator");
+		if (!$this->coord) trigger_error($this->DB->ErrorMsg());
+		$this->coord = $this->coord->fields;
+		$this->ingame = true;
+	}
+
+	//////////////////////////////////////////////////////////////////////
+	// Set Page
+	//////////////////////////////////////////////////////////////////////
+	function setPage($page_name)
+{	
+		$this->page_name = $page_name;
+
+		$file = explode("/",$_SERVER["SCRIPT_FILENAME"]);
+		$file = $file[count($file)-1];
+
+                if (($file == "ingame_starmap.php") || ($file == "destroy_empire.php"))
+                $this->ingame = true;
+                else
+                $this->ingame = false;
+//
+//
+//		if ((isset($_SESSION["empire_id"])) &&
+//		($file != "scoreboard.php")&&
+//		($file != "starmap.php")&&
+//		($file != "destroy_empire.php")&&
+//		($file != "show_active.php")&&
+//		($file != "show_empire.php")&&
+//		($file != "show_coalition.php")&&
+//		($file != "hall_of_fame.php")) $this->ingame = true; else $this->ingame = false;
+
+	}
+
+
+	//////////////////////////////////////////////////////////////////////
+	// Render the page
+	//////////////////////////////////////////////////////////////////////
+	function render()
+	{
+	
+		if (isset($_GET["NOTICE"])) $this->showNotice($_GET["NOTICE"],false);
+		if (isset($_GET["WARNING"])) $this->showNotice($_GET["WARNING"],true);
+
+		
+		$file = explode("/",$_SERVER["SCRIPT_FILENAME"]);
+		$file = $file[count($file)-1];
+		
+		if (($file == "show_empire.php") || 
+		($file == "show_active.php") || 
+		($file == "galaxypedia.php")) $render_banners = false;
+	
+		
+		
+		$this->TPL->assign("color_normal",TPL_COLOR_NORMAL);
+		$this->TPL->assign("color_highlight",TPL_COLOR_HIGHLIGHT);
+
+		// dynamic variables
+
+		$this->TPL->assign("game_date",date("m/d/y",$this->coord["date"]));
+			
+		$date = time(NULL) - $this->coord["date"];
+		$this->TPL->assign("game_life",floor($date / (60*60*24)));
+
+		$online_players = $this->DB->Execute("SELECT COUNT(*) FROM game".$this->game_id."_tb_session");
+		$this->TPL->assign("online_players",$online_players->fields[0]);
+
+		$total_players = $this->DB->Execute("SELECT COUNT(*) FROM game".$this->game_id."_tb_empire WHERE active=1");
+		$this->TPL->assign("total_players",$total_players->fields[0]);
+		$this->TPL->assign("events_script","");
+                
+		if ($this->notices_data != "") {
+			//$this->TPL->assign("events_data",$this->notices_data);
+
+                        $script = "<script>
+                            CustomAlert('$this->notices_data');
+                        </script>
+                        ";
+                        $this->TPL->assign("events_script",$script);
+		} else {
+                        
+//			$smarty = new Smarty();
+//			$smarty->template_dir = "../templates/game/";
+//			$smarty->compile_dir = "../templates_c/game/";
+
+			if ($this->events_height > 500) $this->events_height = 500;
+
+	//		$smarty->assign("events_div_size",$this->events_height+50);
+	//		$smarty->assign("events_content_size",$this->events_height."px");
+			
+//			$smarty->assign("events_data_content_system",$this->events_data["SYSTEM"]);
+//			$smarty->assign("events_data_content_warfare",$this->events_data["WARFARE"]);
+//			$smarty->assign("events_data_content_communication",$this->events_data["COMMUNICATION"]);
+//			$smarty->assign("events_data_content_diplomacy",$this->events_data["DIPLOMACY"]);
+//			$smarty->assign("events_count_content_system",$this->events_count["SYSTEM"]);
+//			$smarty->assign("events_count_content_warfare",$this->events_count["WARFARE"]);
+//			$smarty->assign("events_count_content_communication",$this->events_count["COMMUNICATION"]);
+//			$smarty->assign("events_count_content_diplomacy",$this->events_count["DIPLOMACY"]);
+//
+//			if ($this->events_count["DIPLOMACY"] != 0) $smarty->assign("script_code","onClickDiplomacy();");
+//			if ($this->events_count["COMMUNICATION"] != 0) $smarty->assign("script_code","onClickCommunication();");
+//			if ($this->events_count["WARFARE"] != 0) $smarty->assign("script_code","onClickWarfare();");
+//			if ($this->events_count["SYSTEM"] != 0) $smarty->assign("script_code","onClickSystem();");
+
+//			if (($this->events_count["DIPLOMACY"] + $this->events_count["COMMUNICATION"] + $this->events_count["WARFARE"] + $this->events_count["SYSTEM"]) == 0)
+//				$this->TPL->assign("events_data","");
+//			else
+//				$this->TPL->assign("events_data",$smarty->fetch("events_data.html").$this->notices_data);
+
+                        $script = "<script>
+                            
+
+                            events_data_content_system = Base64.decode('".base64_encode(stripslashes($this->events_data["SYSTEM"]))."');
+                            events_data_content_warfare =  Base64.decode('".base64_encode(stripslashes($this->events_data["WARFARE"]))."');
+                            events_data_content_communication =  Base64.decode('".base64_encode(stripslashes($this->events_data["COMMUNICATION"]))."');
+                            events_data_content_diplomacy =  Base64.decode('".base64_encode(stripslashes($this->events_data["DIPLOMACY"]))."');
+                            document.getElementById('events_count_content_system').innerHTML = '".$this->events_count["SYSTEM"]."';
+                            document.getElementById('events_count_content_warfare').innerHTML = '".$this->events_count["WARFARE"]."';
+                            document.getElementById('events_count_content_communication').innerHTML = '".$this->events_count["COMMUNICATION"]."';
+                            document.getElementById('events_count_content_diplomacy').innerHTML = '".$this->events_count["DIPLOMACY"]."';
+                            renderEvents(".($this->events_height+50).");
+                        </script>
+                        ";
+                
+                        $this->TPL->assign("events_script",$script);
+		}
+
+
+		// EMBED in a page
+		if ($this->ingame) {
+
+			$this->TPL->assign("page_content",$this->TPL->fetch($this->page_name));
+			$this->TPL->assign("page_title",$file);
+			$this->TPL->assign("version",CONF_GAME_VERSION);
+			$this->TPL->assign("game_name",CONF_GAME_NAME);
+
+			return $this->TPL->fetch("ingame.html");
+			
+
+		} else {
+			
+
+			$this->TPL->assign("page_content",$this->TPL->fetch($this->page_name));
+			$this->TPL->assign("page_title",$file);
+			$this->TPL->assign("version",CONF_GAME_VERSION);
+			$this->TPL->assign("game_name",CONF_GAME_NAME);
+	
+			
+			return $this->TPL->fetch("simple_frame.html");
+		}
+
+	}
+
+
+
+	//////////////////////////////////////////////////////////////////////
+	// Show notice
+	//////////////////////////////////////////////////////////////////////
+	function showNotice($msg,$isWarning = false)
+	{
+//		$smarty = new Smarty();
+//		$smarty->template_dir = "../templates/game/";
+//		$smarty->compile_dir = "../templates_c/game/";
+//
+//		$smarty->assign("msg",stripslashes($msg));
+//		if ($isWarning)
+//			$this->notices_data .= $smarty->fetch("warning".($this->ingame==true?"_ingame":"").".html");
+//		else
+//			$this->notices_data .= $smarty->fetch("notice".($this->ingame==true?"_ingame":"").".html");
+
+//		$this->notices_data = str_replace("\n","",$this->notices_data);
+//		$this->notices_data = str_replace("\r","",$this->notices_data);
+		$this->notices_data = str_replace("\n","",stripslashes($msg));
+		$this->notices_data = str_replace("\r","",$this->notices_data);
+
+//		unset($smarty);
+		
+
+	}
+
+	//////////////////////////////////////////////////////////////////////
+	// Show event
+	//////////////////////////////////////////////////////////////////////
+	function showEvent($msg,$isWarning = false, $filter = "SYSTEM")
+	{
+		$smarty = new Smarty();
+		$smarty->template_dir = "../templates/game/";
+		$smarty->compile_dir = "../templates_c/game/";
+
+		$tpl_filename = "";
+		
+		if ($isWarning)
+			$tpl_filename = "warning".($this->ingame==true?"_ingame":"").".html";
+		else
+			$tpl_filename = "notice".($this->ingame==true?"_ingame":"").".html";
+
+		$smarty->assign("msg",stripslashes($msg));
+
+		$data = $smarty->fetch($tpl_filename);
+		
+		$data = str_replace("\n","",$data);
+		$data = str_replace("\r","",$data);
+		$data = str_replace("'","\'",$data);
+
+		$this->events_data[$filter] .= $data;
+
+		$this->events_count[$filter]++;
+		
+	}
+
+
+
+	//////////////////////////////////////////////////////////////////////
+	// Show notice
+	//////////////////////////////////////////////////////////////////////
+	function getNotice($msg,$isWarning = false)
+	{
+		$smarty = new Smarty();
+		$smarty->template_dir = "../templates/game/";
+		$smarty->compile_dir = "../templates_c/game/";
+		$msg = $msg[1];
+		
+		$smarty->assign("msg",stripslashes($msg));
+		$notice_data = "";
+		
+		if ($isWarning)
+			$notice_data = $smarty->fetch("warning".($this->ingame==true?"_ingame":"").".html");
+		else
+			$notice_data = $smarty->fetch("notice".($this->ingame==true?"_ingame":"").".html");
+
+		unset($smarty);
+		
+		return $notice_data;
+
+	}
+
+
+
+	//////////////////////////////////////////////////////////////////////
+	// Show file
+	//////////////////////////////////////////////////////////////////////
+	function showFile($file)
+	{
+		return $this->TPL->fetch($file);
+
+	}
+	
+	//////////////////////////////////////////////////////////////////////
+	// Set variable
+	//////////////////////////////////////////////////////////////////////
+	function setVar($name,$value)
+	{
+		$this->TPL->assign($name,$value);
+	}
+
+	//////////////////////////////////////////////////////////////////////
+	// Set loop
+	//////////////////////////////////////////////////////////////////////
+	function setLoop($name,$value)
+	{
+		$this->TPL->assign($name,$value);
+	}
+
+	//////////////////////////////////////////////////////////////////////
+	//
+	//////////////////////////////////////////////////////////////////////
+	function formatNumber($number)
+	{
+		$output = number_format($number);	
+		
+		return $output;
+	}
+
+
+
+	//////////////////////////////////////////////////////////////////////
+	//
+	//////////////////////////////////////////////////////////////////////
+	function formatCredits($number,$html=true)
+	{
+		$output = $this->formatNumber($number);
+		
+		if ($html)
+			return "<b style=\"color:".TPL_COLOR_NORMAL."\">$output</b>".
+			"&nbsp;<b style=\"color:".TPL_COLOR_HIGHLIGHT."\">Cr.</b>";
+		else
+			return $output." Cr.";
+
+	}
+
+
+	//////////////////////////////////////////////////////////////////////
+	//
+	//////////////////////////////////////////////////////////////////////
+	function formatFood($number,$html=true)
+	{
+		$output = $this->formatNumber($number);
+		
+		if ($html)
+			return "<b style=\"color:".TPL_COLOR_NORMAL."\">$output</b>".
+			"&nbsp;<b style=\"color:".TPL_COLOR_HIGHLIGHT."\">Mgt.</b>";
+		else
+			return $output." Mgt.";
+
+	}
+	
+	//////////////////////////////////////////////////////////////////////
+	//
+	//////////////////////////////////////////////////////////////////////
+	function formatPopulation($number,$html=true)
+	{
+		$output = $this->formatNumber($number);
+		
+		if ($html)
+			return "<b style=\"color:".TPL_COLOR_NORMAL."\">$output</b>".
+			"&nbsp;<b style=\"color:".TPL_COLOR_HIGHLIGHT."\">M</b>";
+		else
+			return $output." M";
+
+	}
+
+	//////////////////////////////////////////////////////////////////////
+	//
+	//////////////////////////////////////////////////////////////////////
+	function formatTime($date)
+	{
+		$days = floor($date / (60*60*24));
+		$date -= ($days * 60*60*24);
+		$hours = str_pad(floor($date / (60*60)),2,"0",STR_PAD_LEFT);
+		$date -= ($hours * 60*60);
+		$minutes = str_pad(floor($date / (60)),2,"0",STR_PAD_LEFT);
+		return $days."d ".$hours.":".$minutes;
+	}	
+	
+	
+	//////////////////////////////////////////////////////////////////////
+	//
+	//////////////////////////////////////////////////////////////////////
+	function displayEmpireHTML($id,$emperor,$empire,$your_networth)
+	{
+
+			
+		global $DB,$CONF_PREMIUM_MEMBERS;
+
+		$emperor = stripslashes($emperor);
+		$empire = stripslashes($empire);
+		$text = "<table style=\"margin-bottom: 0px;display:inline;\" border=0 cellspacing=0 cellpadding=1><tr>";
+		
+		
+		$text .= "<td><img src=\"img_logo.php?empire=$id\" border=\"1\" width=\"32\" height=\"32\" bordercolor=\"white\" style=\"border-color:white\"></td>";
+		
+		$query = "SELECT game".$this->game_id."_tb_coalition.logo,game".$this->game_id."_tb_member.* FROM game".$this->game_id."_tb_coalition,game".$this->game_id."_tb_member WHERE game".$this->game_id."_tb_member.empire='$id' AND game".$this->game_id."_tb_coalition.id = game".$this->game_id."_tb_member.coalition";
+		$rs = $DB->Execute($query);
+		if (!$rs) trigger_error($query . "<br/><br/>".$DB->ErrorMsg());
+		
+		if (!$rs->EOF)
+		{
+			$text .= "<td><img src=\"img_logo.php?data=".$rs->fields["logo"]."\" border=\"1\" width=\"32\" height=\"32\" bordercolor=\"white\" style=\"border-color:white\"></td>";
+		}
+
+	
+		$text .= "<td>&nbsp;<a href=\"javascript:show_info($id);\" style=\"text-decoration:none\"><b style=\"color:white\">$emperor</b><b style=\"color:#ff9999\">@</b><b style=\"color:#CACACA\">$empire</b></a>";
+
+		if ($your_networth!="") {
+		
+			$rs = $DB->Execute("SELECT networth FROM game".$this->game_id."_tb_empire WHERE id='".intval($id)."'");
+			$enemy_networth = $rs->fields["networth"];
+			if ($enemy_networth == 0) $enemy_networth = 1;
+			if ($your_networth == 0) $your_networth = 1;
+			
+			$percent = round(($enemy_networth / $your_networth)*100,3);
+			
+			$star = "<img src=\"../images/common/star.gif\" border=\"0\">";
+			$stars = $star.$star.$star;
+			
+			if ($percent <= 80) $stars = $star.$star;
+			if ($percent <= 40) $stars = $star;
+			if ($percent >= 120) $stars = $star.$star.$star.$star;
+			if ($percent >= 140) $stars = $star.$star.$star.$star.$star;
+			
+		   		$text .= "&nbsp;$stars";
+		
+		}
+
+		$text .="</td></tr></table>";
+		return $text;
+	}
+
+
+	//////////////////////////////////////////////////////////////////////
+	//
+	//////////////////////////////////////////////////////////////////////
+	function displayEmpire($emperor,$empire,$your_networth)
+	{
+		global $DB,$CONF_PREMIUM_MEMBERS;
+	
+		$emperor = stripslashes($emperor);
+		$empire = stripslashes($empire);
+		$text = $emperor ."@".$empire." ";
+	
+	
+
+		if ($your_networth!="") {
+		
+			$rs = $DB->Execute("SELECT networth FROM game".$this->game_id."_tb_empire WHERE emperor='".addslashes($emperor)."'");
+			$enemy_networth = $rs->fields["networth"];
+			if ($enemy_networth == 0) $enemy_networth = 1;
+			if ($your_networth == 0) $your_networth = 1;
+			
+			$percent = round(($enemy_networth / $your_networth)*100,3);
+			$star = "*";
+			$stars = $star.$star.$star;
+			
+			if ($percent <= 80) $stars = $star.$star;
+			if ($percent <= 40) $stars = $star;
+			if ($percent >= 120) $stars = $star.$star.$star.$star;
+			if ($percent >= 140) $stars = $star.$star.$star.$star.$star;
+			
+		
+		   		$text .= " $stars";
+		
+		}
+
+
+		return $text;
+	}
+	
+
+	//////////////////////////////////////////////////////////////////////
+	//
+	//////////////////////////////////////////////////////////////////////
+	function showMessage($msg_data)
+	{
+		$params = unserialize($msg_data["params"]);
+		
+		$smarty = new Smarty();
+		$smarty->template_dir = "../templates/game/";
+		$smarty->compile_dir = "../templates_c/game/";
+	
+		$smarty->assign("subject",stripslashes($params["subject"]));
+		$smarty->assign("content",stripslashes($params["content"]));
+		$smarty->assign("date",$this->formatTime(time(NULL) - $msg_data["date"]));
+		
+		
+		$rs = $this->DB->Execute("SELECT * FROM game".$this->game_id."_tb_empire WHERE id='".$msg_data["event_from"]."'");
+		$smarty->assign("author",$this->displayEmpireHTML($rs->fields["id"],$rs->fields["emperor"],$rs->fields["name"],""));
+
+		$smarty->assign("id",$msg_data["id"]);
+
+		
+		if ($rs->fields["id"] == $_SESSION["empire_id"])
+			$smarty->assign("bgcolor","#336666");
+		else
+			$smarty->assign("bgcolor","#447777");
+		
+		$msg_content = $smarty->fetch("message/body.html");
+		unset($smarty);
+		return $msg_content;
+	}
+	
+	//////////////////////////////////////////////////////////////////////
+	//
+	//////////////////////////////////////////////////////////////////////
+	function ShowProductionLevel($percentage) {
+
+		$p = floor($percentage / 20);
+		
+		$html = "<table onmouseover=\"return escape('".T_("Current production level").": $percentage %');\" style=\"display: inline;margin:0px;padding:0px;border:0px solid black\" cellspacing=1 cellpadding=0><tr>";
+		
+		for ($i=0;$i<10;$i++) {
+			$bgcolor = "#333333";
+			if ($i <= $p) {
+				$bgcolor = "white";				
+				if ($p <= 5) $bgcolor = "blue";	
+				if ($p <= 5) $bgcolor = "#00FF00";	
+				if ($p < 4) $bgcolor = "yellow";	
+				if ($p < 2) $bgcolor = "red";	
+			}
+			
+			$html .= "<td bgcolor=\"$bgcolor\"><img src=\"../images/game/placeholder.gif\" width=\"2\" height=\"10\" border=\"0\"></td>";
+		}
+		
+		$html .= "</tr></table>";
+		
+		return $html;
+		
+	}
+}
+
+
+?>

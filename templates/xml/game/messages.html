@@ -1,0 +1,65 @@
+		<table  cellspacing="0" cellpadding="0" border="0">
+		<tr>	
+		<td nowrap><img src="../images/game/tab_left.gif" border="0"></td>
+		<td nowrap bgcolor="darkred" style="padding:0px 5px 0px 5px"><a  style="text-decoration:none;color:white" href="messages.php"><b>{t}Messages{/t}</b></a></td> 
+		<td><img src="../images/game/tab_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="diplomacy.php"><b>{t}Diplomatic Ties{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="shoutbox.php"><b>{t}Coalition Shoutbox{/t}</b></a></td>
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		</table>
+
+
+<form method="post" action="messages.php">
+<table cellpadding="1" cellspacing="0" border="0" bgcolor="darkred"
+	width="720">
+	
+	<tr>
+		<td>
+		<table style="font-size:11pt" background="../images/game/background1.jpg"
+			bgcolor="#333333" width="100%" cellspacing="0" cellpadding="5"
+			border="0" align="center">
+			<tr><td><br/></td></tr>
+			<tr>
+				<td align="right">{t}Subject:{/t}</td>
+				<td><input
+					style="width:500px;" class="input_text" 
+					type="text" name="subject" value="{$msg_re_subject}"></td>
+			</tr>
+			<tr>
+				<td align="right">{t}To:{/t}</td>
+				<td><select name="recipient"  class="select_box" 
+					style="width:500px">
+					<option value="-3">---</option>
+					<option value="-2">{t}### Coalition members ###{/t}</option>
+					<option value="-1">{t}*** Everyone / All ***{/t}</option>
+					{section name="r" loop=$recipients}
+					<option {$recipients[r].selected} value="{$recipients[r].id}">{$recipients[r].name}</option>
+					{/section}
+				</select></td>
+			</tr>
+			<tr>
+				<td align="right" valign="top">{t}Content:{/t}</td>
+				<td><textarea name="content"  class="text_area"  rows="12" cols="60"
+					style="width:500px;">{$msg_content}</textarea></td>
+			</tr>
+			<tr>
+				<td align="right">&nbsp;</td>
+				<td><input type="submit" value="{t}Send Message{/t}"></td>
+			</tr>
+			<tr><td><br/></td></tr>
+
+			
+		</table>
+		</td>
+	</tr>
+</table>
+</form>
+<br />
+{$messages}
+<br />

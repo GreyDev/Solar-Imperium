@@ -1,0 +1,353 @@
+{capture name=page_title}
+{t}Games Browser{/t}
+{/capture}
+
+{include file="frame_header.html" title=$smarty.capture.page_title}
+
+
+
+<div align="center" style="background-image:url(images/system/div_bg.jpg);background-color:darkred;padding:10px;border:1px solid red">
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="login.php"  style="color:yellow"><b>{t}PLAY NOW{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="take_a_tour.php"><b>{t}TAKE A TOUR{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="scoreboard.php"><b>{t}SCOREBOARD{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="server_status.php"><b>{t}SERVER STATUS{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="forum.php"><b>{t}FORUM{/t}</b></a></div>
+</div>
+<br/>
+
+
+<!-- begin content -->
+
+
+<div align="center">
+
+<table width="720px" cellspacing="0" cellpadding="0" border="0" class="text_normal">
+<tr>
+<td bgcolor="darkred" style="padding:5px" nowrap><b><a class="link" href="preferences.php">Player Profile</a></b></td>
+<td bgcolor="#ca3333" style="padding:5px" nowrap>
+
+     <table cellspacing="0" cellpadding="0" border="0">
+        <tr><td><img src="images/common/star.gif" border="0">&nbsp;</td><td><b style="color:yellow">Browse Available Games</b></td></tr>
+     </table>
+
+</td>
+<td width="100%">&nbsp;</td>
+</tr>
+</table>
+
+<div style="background-image:url(images/common/alpha1.png);border:1px solid darkred; padding:5px;color:#eaeaea;width:720px" align="left">
+
+<div class="text_big" style="color:white;padding:10px;margin:5px"><b>{t}Pick a game (You can play on each ones): {/t}</b></div>
+
+
+{section name="game" loop=$games}
+
+<div align="center">
+<table class="text_normal" style="border:1px solid red; background-color:darkred;padding:6px;margin:5px" cellspacing="0" cellpadding="4" width="700" align="center">
+<tr>
+<td rowspan="3"><img src="images/system/{$games[game].logo_img}.png" style="border:1px solid black"></td>
+<td nowrap><b>{t}Game Name:{/t}</b></td>
+<td  width="100%" colspan="3"><b>{$games[game].name}</b></td>
+</tr>
+<tr>
+<td nowrap valign="top">{t}Description:{/t}</td><td  colspan="3" style="margin:5px"><b>{$games[game].description}</b></td>
+</tr>
+<tr>
+<td nowrap>{t}Connected players:{/t}</td><td nowrap><b>{$games[game].connected_players} / {$games[game].players_slot}</b></td>
+<td nowrap>&nbsp;{t}Reg'd players:{/t}</td><td width="100%"><b>{$games[game].empires_count} / {$games[game].max_players}</b></td>
+</tr>
+
+{if $games[game].need_restart eq 1}
+<tr>
+<TD colspan="5" class="text_big"><b style="color:yellow">*** {t}The current game has ended, the winner is:{/t} <b style="color:yellow">{$games[game].winner}</b>{t}, you can still visit the scoreboard and the starmap,
+A new game will start in:{/t} <b style="color:yellow">{$games[game].restart_date/60|round} {t}minutes{/t}</b> ***</b></TD>
+</tr>
+{/if}
+
+<tr>
+
+{if $games[game].need_login eq 1}
+<td colspan="5" align="right" style="padding:0px;color:black">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+
+<table style="margin:5px;padding:2px" cellspacing="0" cellpadding="0" border="0">
+<tr><td>
+<img src="images/system/icon_button_scoreboard.png" style="border:1px solid white;padding:0px">
+</td>
+<td><b><a class="link" style="margin:5px" target="_NEW" href="game/scoreboard.php?GAME={$games[game].id}">
+{t}Scoreboard{/t}
+</a></b>
+</td></tr>
+</table>
+
+</td>
+
+<td>
+
+<table style="margin:5px;padding:2px"  cellspacing="0" cellpadding="0" border="0">
+<tr><td>
+<img src="images/system/icon_button_starmap.png" style="border:1px solid white;padding:0px">
+</td>
+<td><b><a class="link" style="margin:5px" target="_NEW" href="game/starmap.php?GAME={$games[game].id}">
+{t}Starmap{/t}
+</a></b>
+</td></tr>
+</table>
+
+</td>
+
+
+<td>
+{if $games[game].need_restart eq 0}
+
+<table style="margin:5px;padding:2px"  cellspacing="0" cellpadding="0" border="0">
+<tr><td>
+<img src="images/system/icon_button_continuegame.png" style="border:1px solid white;padding:0px">
+</td>
+<td><b><a class="link" style="margin:5px" href="login.php">
+{t}Login to play{/t}
+</a></b>
+</td></tr>
+</table>
+{/if}
+</td>
+
+
+</tr>
+</table>
+
+</td>
+
+</td>
+{/if}
+
+{if $games[game].join_game eq 1}
+<td colspan="5" align="right" style="padding:0px;color:black">
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+
+<table style="margin:5px;padding:2px" cellspacing="0" cellpadding="0" border="0">
+<tr><td>
+<img src="images/system/icon_button_scoreboard.png" style="border:1px solid white;padding:0px">
+</td>
+<td><b><a class="link" style="margin:5px" target="_NEW" href="game/scoreboard.php?GAME={$games[game].id}">
+{t}Scoreboard{/t}
+</a></b>
+</td></tr>
+</table>
+
+</td>
+
+<td>
+
+<table style="margin:5px;padding:2px"  cellspacing="0" cellpadding="0" border="0">
+<tr><td>
+<img src="images/system/icon_button_starmap.png" style="border:1px solid white;padding:0px">
+</td>
+<td><b><a class="link" style="margin:5px" target="_NEW" href="game/starmap.php?GAME={$games[game].id}">
+{t}Starmap{/t}
+</a></b>
+</td></tr>
+</table>
+
+</td>
+
+
+<td>
+
+{if $games[game].need_restart eq 0}
+
+<table style="margin:5px;padding:2px" cellspacing="0" cellpadding="0" border="0">
+<tr><td>
+<img src="images/system/icon_button_continuegame.png" style="border:1px solid white;padding:0px">
+</td>
+<td><b><a class="link" style="margin:5px" href="joingame.php?GAME={$games[game].id}">
+{t}Join game{/t}
+</a></b>
+</td></tr>
+</table>
+{/if}
+
+</td>
+
+
+</tr>
+</table>
+
+</td>
+
+{/if}
+
+
+{if $games[game].continue_game eq 1}
+<td align="right" style="color:yellow" colspan="5">
+{t}<i>{$games[game].gender} <b>{$games[game].emperor}</b> {t}of empire{/t} <b>{$games[game].empire}</b>, {t}Networth:{/t} <b>{$games[game].networth|number_format}</b>, {t}Rank:{/t} <b>{$games[game].game_rank}</b></i>{/t}
+</td>
+
+</tr><tr>
+<td colspan="5" align="right" style="padding:0px;color:black">
+<table  cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td>
+
+<table style="margin:5px;padding:2px"  cellspacing="0" cellpadding="0" border="0">
+<tr><td>
+<img src="images/system/icon_button_scoreboard.png" style="border:1px solid white;padding:0px">
+</td>
+<td><b><a class="link" style="margin:5px" target="_NEW" href="game/scoreboard.php?GAME={$games[game].id}">
+{t}Scoreboard{/t}
+</a></b>
+</td></tr>
+</table>
+
+</td>
+
+<td>
+
+<table style="margin:5px;padding:2px" cellspacing="0" cellpadding="0" border="0">
+<tr><td>
+<img src="images/system/icon_button_starmap.png" style="border:1px solid white;padding:0px">
+</td>
+<td><b><a class="link" style="margin:5px" target="_NEW" href="game/starmap.php?GAME={$games[game].id}">
+{t}Starmap{/t}
+</a></b>
+</td></tr>
+</table>
+
+</td>
+
+
+<td>
+{if $games[game].need_restart eq 0}
+
+<table style="margin:5px;padding:2px" cellspacing="0" cellpadding="0" border="0">
+<tr><td>
+<img src="images/system/icon_button_continuegame.png" style="border:1px solid white;padding:0px">
+</td>
+<td><b><a class="link" style="margin:5px" href="#" onclick="window.open('continuegame.php?GAME={$games[game].id}','game','titlebar=no,status=no,toolbar=no,location=no,menubar=no,resizable=yes');return false;">
+{t}Continue game{/t}
+</a></b>
+</td></tr>
+</table>
+{/if}
+</td>
+
+
+
+<td>
+{if $games[game].need_restart eq 0}
+
+<table style="margin:5px;padding:2px"  cellspacing="0" cellpadding="0" border="0">
+<tr><td>
+<img src="images/system/icon_button_destroyempire.png" style="border:1px solid white;padding:0px">
+</td>
+<td><b><a class="link" style="margin:5px" href="gamesbrowser.php?DESTROY_EMPIRE&GAME={$games[game].id}">
+{t}Destroy your empire{/t}
+</a></b>
+</td></tr>
+</table>
+{/if}
+</td>	
+
+</tr>
+</table>
+
+</td>
+{/if}
+
+
+</tr>
+
+{if $games[game].history_game eq 1}
+<a name="history_{$games[game].id}"></a>
+<tr>
+<td colspan="6">
+<a class="link" href="#history_{$games[game].id}"
+onclick="ToggleLastScores('game{$games[game].id}_score_label','game{$games[game].id}_score_details');">
+<div id="game{$games[game].id}_score_label" style="border:1px solid #999999;background-color:#333333;padding:3px">
++ {t}Show/Hide Your Last Scores{/t}</div></a>
+<div  id="game{$games[game].id}_score_details" style="display:none;visibility:hidden;height:0px;" cellspacing="0" cellpadding="5" border="0">
+<table class="text_small" 
+	style="margin:5px;border:1px solid #cacaca;background-color:#330000;padding:5px;color:#999999"
+	 cellspacing="0" cellpadding="5" width="660">
+<tr>
+<td><b>{t}Date{/t}</b></td>
+<td><b>{t}Rank{/t}</b></td>
+<td><b>{t}Empire name{/t}</b></td>
+<td><b>{t}Networth{/t}</b></td>
+<td><b>{t}Military{/t}</b></td>
+<td><b>{t}Planets{/t}</b></td>
+<td><b>{t}Population{/t}</b></td>
+<td><b>{t}Turns{/t}</b></td>
+</tr>
+
+{section name="hist" loop=$games[game].history}
+<tr style="color:white">
+	<td>{$games[game].history[hist].date|date_format}</td>
+	<td>{$games[game].history[hist].rank}</td>
+	<td>{$games[game].history[hist].empire_name}</td>
+	<td>{$games[game].history[hist].networth}</td>
+	<td>{$games[game].history[hist].military_might}</td>
+	<td>{$games[game].history[hist].planets}</td>
+	<td>{$games[game].history[hist].population}</td>
+	<td>{$games[game].history[hist].turns_played}</td>
+</tr>
+{sectionelse}
+<tr>
+	<td colspan="8"  style="color:white">{t}No games finished yet!{/t}</td>
+</tr>
+{/section}
+</table>
+</div>
+
+</td>
+</tr>
+{/if}
+
+<tr>
+<td colspan="6">
+<a name="details_{$games[game].id}"></a>
+
+<a class="link" href="#details_{$games[game].id}"
+	onclick="ToggleDetails('game{$games[game].id}_label','game{$games[game].id}_details');">
+<div id="game{$games[game].id}_label" 
+	style="border:1px solid #999999;background-color:#333333;padding:3px">
+	+ {t}Show/Hide Game Details{/t}
+</div>
+</a>
+
+<div  id="game{$games[game].id}_details" style="display:none;visibility:hidden;height:0px;" cellspacing="0" cellpadding="5" border="0">
+<table class="text_small" 
+	style="margin:5px;border:1px solid #cacaca;background-color:#330000;padding:5px;color:#999999"
+	 cellspacing="0" cellpadding="5">
+<tr><td nowrap>{t}Victory Condition:{/t}</td><td style="color:white"><b>{$games[game].victory_condition}</b></td></tr>
+<tr><td>{t}Maximum Game Duration:{/t}</td><td style="color:white"><b>{$games[game].lifetime}</b></td></tr>
+<tr><td>{t}Time Elapsed:{/t}</td><td style="color:white"><b>{$games[game].time_elapsed}</b></td></tr>
+<tr><td>{t}Premium Membership Required:{/t}</td><td style="color:white"><b>{$games[game].premium_only}</b></td></tr>
+<tr><td>{t}Turns Per Day:{/t}</td><td style="color:white"><b>{$games[game].turns_per_day}</b></td></tr>
+<tr><td>{t}Protection Turns:{/t}</td><td style="color:white"><b>{$games[game].protection_turns}</b></td></tr>
+<tr><td>{t}Connected Players:{/t}</td><td style="color:white"><b>{$games[game].connected_players}</b></td></tr>
+<tr><td>{t}Max Players Slots:{/t}</td><td style="color:white"><b>{$games[game].players_slot}</b></td></tr>
+<tr><td>{t}Empires registered:{/t}</td><td style="color:white"><b>{$games[game].empires_count}</b></td></tr>
+<tr><td>{t}Maximum Empires Limit:{/t}</td><td style="color:white"><b>{$games[game].max_players}</b></td></tr>
+<tr><td>{t}Completed games:{/t}</td><td style="color:white"><b>{$games[game].count}</b></td></tr>
+</table>
+</div>
+
+</td>
+</tr>
+</table>
+</div>
+
+{sectionelse}
+<b class="text_big" style="color:yellow">&nbsp;{t}*** No game available for now, the administrator have to create at least one game.{/t}</b><br/><br/>
+{/section}
+<!-- end loop -->
+<br/>
+
+</div>
+
+{include file="frame_footer.html"}

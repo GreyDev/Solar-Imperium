@@ -1,0 +1,102 @@
+{capture name=page_title}
+{t}Register Now{/t}
+{/capture}
+
+{include file="frame_header.html" title=$smarty.capture.page_title}
+
+<div align="center" style="background-image:url(images/system/div_bg.jpg);background-color:darkred;padding:10px;border:1px solid red">
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="login.php"><b>{t}PLAY NOW{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="take_a_tour.php"><b>{t}TAKE A TOUR{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="scoreboard.php"><b>{t}SCOREBOARD{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="server_status.php"><b>{t}SERVER STATUS{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="forum.php"><b>{t}FORUM{/t}</b></a></div>
+</div>
+
+<br/>
+<table cellspacing="0" cellpadding="0" border="0" align="center" width="720"  background="images/common/alpha1.png" style="border:1px solid darkred">
+
+<tr>
+<td valign="top">
+<img src="images/propaganda/poster1.png" style="padding:20px" border="0">
+</td>
+<td valign="top">
+<br/>
+<b class="text_big" style="color:white;padding:10px">{t}New Player Registration{/t}</b>
+<br/>
+
+				<form method="post" name="signup_form" action="registernow.php?SIGNUP">
+				
+				<table cellspacing="0" cellpadding="2" border="0" style="margin:20px;color:#eaeaea" width="100%">
+				<tr>
+					<td nowrap class="text_normal">{t}Email address{/t}:</td>
+					<td><input type="text" maxlength="255" style="width:250px" class="input_text" name="email"></td>
+				</tr>
+				<tr>
+					<td nowrap class="text_normal">{t}Real name{/t}:</td>
+					<td><input type="text" maxlength="75" style="width:150px" class="input_text" name="real_name"></td>
+				</tr>
+				<tr>
+					<td nowrap class="text_normal">{t}Country{/t}:</td>
+					<td><input type="text" maxlength="35" style="width:150px" class="input_text" name="country"></td>
+				</tr>
+				<tr>
+					<td nowrap class="text_normal">{t}Nickname to use{/t}:</td> 
+					<td><input type="text" maxlength="15" style="width:100px" class="input_text" name="nickname"></td>
+				</tr>
+				<tr>
+					<td nowrap class="text_normal">{t}Password{/t}:</td>
+					<td><input type="password" maxlength="35" style="width:80px" class="input_text" name="password1"></td>
+				</tr>
+				<tr>
+					<td nowrap class="text_normal">{t}Confirm password{/t}:</td>
+					<td><input type="password" maxlength="35" style="width:80px"  class="input_text" name="password2"></td>
+				</tr>
+				
+				<tr>
+				<td colspan="2">
+                <br/>
+				<div style="border:1px solid white;background-color:#cacaca;color:black;padding:10px;width:500px" class="text_small">
+				
+				<b><u>{t}By joining in the game you agree to the following Code of Conduct:{/t}</b></u><br/><br/>
+
+{t}1. Foul language in any form in the public messages, forums and galaxypedia is grounds for immediate termination of your account{/t}<br/><br/>
+
+{t}2. Foul language in any form in the IRC channel and you are banned immediately.{/t}<br/><br/>
+
+{t}3. Any form of disorderly conduct ( except attacking empires ) is not tolerated.{/t}<br/><br/>
+
+{t}4. More than 2 accounts from the same IP address must be cleared thru the Galactic Coordinator either via the forums, email or in the IRC channel. Violation of this is clearly cheating and will not be tolerated. Unless cleared with the Galactic Coordinator BEFORE creating account, the accounts may be terminated.{/t}<br/><br/>
+
+<b>{t}We reserves the right to terminate any account and reset any game at any time. Multiple violations of the code of conduct will result in your host mask being banned.{/t}</b><br/>
+
+				</div>
+				
+				</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td nowrap style="color:white" class="text_normal"><b><input type="checkbox" name="agree_checkbox">{t}I agree with the rules{/t}</b></td>
+				</tr>
+				<tr>					
+					<td>&nbsp;</td>
+					<td width="100%">
+<input type="button" class="input_button" value="{t}Signup{/t}" onClick="ajax_request_signup();return false">&nbsp;
+<input type="button" class="input_button" value="{t}Cancel{/t}" onClick="window.location='welcome.php';">
+</td>
+				</tr>
+				
+				
+				</table>
+				
+				<script language="javascript">
+					document.signup_form.email.focus();
+				</script>
+				</form>
+			
+	</td>
+</tr>
+</table>
+		
+<!-- end content -->
+
+{include file="frame_footer.html"}

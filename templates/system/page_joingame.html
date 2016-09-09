@@ -1,0 +1,65 @@
+{capture name=page_title}
+{t}Join Game{/t}
+{/capture}
+
+{include file="frame_header.html" title=$smarty.capture.page_title}
+
+<div align="center">
+<div align="center" style="background-image:url(images/system/div_bg.jpg);background-color:darkred;padding:10px;border:1px solid red">
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="login.php"  style="color:yellow"><b>{t}PLAY NOW{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="take_a_tour.php"><b>{t}TAKE A TOUR{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="scoreboard.php"><b>{t}SCOREBOARD{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="server_status.php"><b>{t}SERVER STATUS{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="forum.php"><b>{t}FORUM{/t}</b></a></div>
+</div>
+<br/>
+
+<div style="background-image:url(images/common/alpha1.png);border:1px solid darkred; padding:5px;color:#eaeaea;width:720px" align="left">
+<b class="text_big" style="color:white">Join Game</b>
+				<form enctype="multipart/form-data" method="post" name="join_form" action="joingame.php?JOINNOW&GAME={$game_id}">
+				<input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+				<table cellspacing="0" cellpadding="2" border="0" style="margin:20px" width="100%">
+				<tr>
+					<td nowrap class="text_normal">{t}Emperor/Emperess name:{/t}</td>
+					<td><input type="text" maxlength="100" style="width:200px" class="input_text" name="emperor_name" value="">&nbsp;<input type="button" class="input_button" value="{t}Random{/t}" onClick="randomizeEmperor()"></td>
+				</tr>
+				<tr>
+					<td nowrap class="text_normal">{t}Gender:{/t}</td>
+					<td><select name="gender" class="input_text">
+					<option value="M">{t}Emperor{/t}</option>
+					<option value="F">{t}Emperess{/t}</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td nowrap class="text_normal">{t}Empire name:{/t}</td>
+					<td><input type="text" maxlength="100" style="width:200px" class="input_text" name="empire_name" value="">&nbsp;<input type="button" class="input_button" value="{t}Random{/t}" onClick="randomizeEmpire()"></td>
+				</tr>
+
+				<tr>
+					<td nowrap class="text_normal" valign="top">{t}Autobiography:{/t}</td>
+					<td><textarea class="input_text" name="autobiography" style="width:300px;height:100px">{t}Say something about youself here.{/t}</textarea></td>
+				</tr>
+				<tr>					
+					<td>&nbsp;</td>
+					<td width="100%"><input type="submit" class="input_button" value="{t}Continue{/t}">&nbsp;
+					<input type="button" class="input_button" onClick="window.location='gamesbrowser.php'" "value="{t}Cancel{/t}"></td>
+				</tr>
+				
+				
+				</table>
+				
+				<script language="javascript">
+					document.signup_form.email.focus();
+				</script>
+				</form>
+								
+			
+			</div>
+			
+			
+			</td></tr>
+				</table>
+			
+<!-- end content -->
+
+{include file="frame_footer.html"}

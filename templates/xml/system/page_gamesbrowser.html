@@ -1,0 +1,59 @@
+<xml>
+
+    <Games>
+        {section name="game" loop=$games}
+        <Entry>
+            <Id>{$games[game].id}</Id>
+            <GameName>{$games[game].name}</GameName>
+            <Description>{$games[game].description}</Description>
+            <ConnectedPlayers>{$games[game].connected_players}</ConnectedPlayers>
+            <MaxPlayerSlots>{$games[game].players_slot}</MaxPlayerSlots>
+            <RegisteredPlayers>{$games[game].empires_count}</RegisteredPlayers>
+            <MaxPlayersRegister>{$games[game].max_players}</MaxPlayersRegister>
+            <VictoryCondition>{$games[game].victory_condition}</VictoryCondition>
+            <MaxGameDuration>{$games[game].lifetime}</MaxGameDuration>
+            <TimeElapsed>{$games[game].time_elapsed}</TimeElapsed>
+            <PremiumRequired>{$games[game].premium_only}</PremiumRequired>
+            <TurnsPerDay>{$games[game].turns_per_day}</TurnsPerDay>
+            <ProtectionTurns>{$games[game].protection_turns}</ProtectionTurns>
+            <CompletedGames>{$games[game].count}</CompletedGames>
+
+
+            {if $games[game].need_restart eq 1}
+            <NeedRestart>{t}The current game has ended, the winner is:{/t} {$games[game].winner} {t}, you can still visit the scoreboard and the starmap,
+                A new game will start in:{/t} {$games[game].restart_date/60|round} {t}minutes{/t}</NeedRestart>
+            {else}
+            {if $games[game].need_login eq 1}
+            <PlayerStatus>NeedLogin</PlayerStatus>
+            {elseif $games[game].join_game eq 1}
+            <PlayerStatus>JoinGame</PlayerStatus>
+            {elseif $games[game].continue_game eq 1}
+            <PlayerStatus>Continue</PlayerStatus>
+            {/if}
+            {/if}
+
+            <History>
+                {if $games[game].history_game eq 1}
+
+                {section name="hist" loop=$games[game].history}
+                <Entry>
+                    <Date>{$games[game].history[hist].date}</Date>
+                    <Rank>{$games[game].history[hist].rank}</Rank>
+                    <EmpireName>{$games[game].history[hist].empire_name}</EmpireName>
+                    <Networth>{$games[game].history[hist].networth}</Networth>
+                    <MilitaryMight>{$games[game].history[hist].military_might}</MilitaryMight>
+                    <Planets>{$games[game].history[hist].planets}</Planets>
+                    <Population>{$games[game].history[hist].population}</Population>
+                    <TurnsPlayed>{$games[game].history[hist].turns_played}</TurnsPlayed>
+                </Entry>
+                {/section}
+                {/if}
+
+            </History>
+
+
+
+        </Entry>
+        {/section}
+    </Games>
+</xml>

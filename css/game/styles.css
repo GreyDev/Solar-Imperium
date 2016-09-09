@@ -1,0 +1,147 @@
+/*
+-----------------------------------------------
+Solarquest Default Stylesheet (screen)
+----------------------------------------------- 
+*/
+
+/* global styling */
+
+body {
+	margin: 0px;
+}
+
+div,b,p, td, li, input, select, textarea,font {
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	line-height: 20px;
+	font-size: 14px;
+}
+
+form, h1, h2, h3, h4, h5 {
+	margin: 0px;
+	padding: 0px;
+}
+
+.menu {
+	font-size:12px;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	color: #999999;
+	text-decoration: none;
+	
+}
+
+.menu:hover {
+	font-size:12px;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	color: white;
+	text-decoration: none;
+
+	
+}
+
+.menu2 {
+	font-size:12px;
+	padding: 2px;
+	border:1px solid #333333;
+	background-color: #999999;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-decoration: none;
+	font-weight: bold;	
+}
+
+.menu2:hover {
+	font-size:12px;
+	padding: 2px;
+	border:1px solid white;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	color: white;
+	text-decoration: none;
+    font-weight: bold;
+}
+
+
+.input_text {
+	border: 1px solid #666666;
+	background-color: #333333;
+	color: white;
+	font-size: 14px;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	background-attachment: fixed;	
+	height: 20px;
+}
+
+.text_area {
+	border: 1px solid #666666;
+	background-color: #333333;
+	color: white;
+	font-size: 14px;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	
+	
+}
+
+.select_box {
+
+	border: 1px solid #666666;
+	background-color: #333333;
+	color: white;
+	font-size: 14px;
+	font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	
+}
+
+
+#transbox { width:300px; background:#000099; filter:alpha(opacity=60); -moz-opacity:0.6; opacity:0.6; -khtml-opacity:0.6;} 
+#transbox * {position: relative;}
+#transbox td {color: #FFFFFF; font-weight: bold; } 
+
+.table_bulletin {
+	border: 1px solid white;
+	color: white;
+	
+}
+
+.floating_events {
+
+position: absolute;
+top: 40px;
+left: 40px;
+font-size: 12px;
+font-family: sans-serif;
+width: 760;
+height: 350;
+z-index: 500;
+}
+
+.events_content {
+	
+	border:1px solid black;
+	overflow: auto;
+	padding: 5px;
+
+}
+
+a.menu{
+    position:relative; /*this is the key*/
+    z-index:24;
+    
+ }
+
+
+a.menu span{display: none}
+
+
+a.menu:hover span{ /*the span will display just on :hover state*/
+    display:block;
+    position:absolute;
+    color: white;
+    font-size:14px;
+    padding: 10px;
+    font-weight: bold;
+    font-family:verdana,sans-serif;
+    top:0px; left:85px; width:250px;
+    border:1px solid black;
+    background-color:#505050;
+    text-align: justify}
+    
+}

@@ -1,0 +1,17 @@
+<br/><b style="color:yellow">{t}Relations Spying{/t}</b><br/><br/>
+<table width="640" style="font-size:13px;font-family:verdana;color:white">
+<tr><td><b>{t}From{/t}</b></td><td><b>{t}To{/t}</b></td><td><b>{t}Type{/t}</b></td><td><b>{t}Status{/t}</b></td></tr>
+{section name="rel" loop=$relations}
+<tr>
+<td style="color:cyan">{$relations[rel].from}</td>
+<td style="color:cyan">{$relations[rel].to}</td>
+<td style="color:cyan">{$relations[rel].type}</td>
+<td style="color:cyan">{$relations[rel].status}</td>
+</tr>
+{sectionelse}
+<tr><td colspan="4">
+<b>{t}*** No active relations ***{/t}</b>
+</td></tr>
+{/section}
+
+</table><br/><br/>

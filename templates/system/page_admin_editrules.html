@@ -1,0 +1,43 @@
+{capture name=page_title}
+{t}Admin :: Edit game rules{/t}
+{/capture}
+
+{include file="frame_header.html" title=$smarty.capture.page_title}
+
+
+
+
+<div align="center">
+<div align="center" style="background-image:url(images/system/div_bg.jpg);background-color:darkred;padding:10px;border:1px solid red">
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="login.php"  style="color:yellow"><b>{t}PLAY NOW{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="take_a_tour.php"><b>{t}TAKE A TOUR{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="scoreboard.php"><b>{t}SCOREBOARD{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="server_status.php"><b>{t}SERVER STATUS{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="forum.php"><b>{t}FORUM{/t}</b></a></div>
+</div>
+<br/>
+
+<div class="text_normal" style="margin:10px;padding:10px">
+
+<form method="post" action="?UPDATERULES={$game_id}">
+
+<b style="color:white" class="text_big">Edit game rules</b><br/>
+<table class="text_normal">
+<tr><td>
+<textarea wrap="off" style="width:860px;height:660px;font-size:16px" class="input_text" name="filedata">
+{$file_content}
+</textarea>
+</td>
+</tr>
+<tr><td><input class="input_button" type="submit" value="Save">&nbsp;<input class="input_button" type="button" value="Cancel" onclick="window.location='admin.php';"></td></tr>
+</table>
+</form>
+
+<br/>
+
+</div>
+</div>
+
+<!-- end content -->
+
+{include file="frame_footer.html"}

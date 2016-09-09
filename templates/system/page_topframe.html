@@ -1,0 +1,88 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/system/common.css" />
+<script language="javascript" type="text/javascript" src="scripts/system/common.js"></script>
+<script language="javascript" type="text/javascript" src="scripts/system/topframe.js"></script>
+
+{literal}
+<SCRIPT LANGUAGE = "JavaScript">
+<!--
+var secs;
+var timerID = null;
+var timerRunning = false;
+var delay = 1000;
+
+function InitializeTimer()
+{
+    // Set the length of the timer, in seconds
+    secs = 60;
+    StopTheClock();
+    StartTheTimer();
+	ajax_request_update_onlinecount();
+	
+}
+
+function StopTheClock()
+{
+    if(timerRunning)
+        clearTimeout(timerID);
+    timerRunning = false;
+}
+
+function StartTheTimer()
+{
+
+    if (secs==0)
+    {
+        StopTheClock();
+		InitializeTimer();
+    }
+    else
+    {
+        self.status = secs;
+        secs = secs - 1;
+        timerRunning = true;
+        timerID = self.setTimeout("StartTheTimer()", delay);
+    }
+}
+
+function CloseChatPanel()
+{
+	parent.document.getElementById('frameset1').rows="25px,*,25px";
+
+	parent.frame_chat.location.href = 'nochat.php';
+}
+
+var chatwnd = null;
+
+function OpenOnlineChat()
+{
+	chatwnd = window.open('chat.php','chat','width=800,height=600');
+	CloseChatPanel();
+}
+
+function CloseOnlineChat()
+{
+	if (chatwnd && chatwnd.open && !chatwnd.closed) chatwnd.close();
+}
+
+//-->
+</SCRIPT>
+{/literal}
+
+</head>
+<body  background="images/system/topframe_background.png"  onload="InitializeTimer()" bgcolor="#acacac" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table class="text_normal" cellspacing="0" cellpadding="0" border="0" height="25px">
+<tr>
+<td height="24px"><img src="images/common/star.gif" border="0" class="topframe_image"></td>
+<td valign="middle" width="90%" style="color:white">
+<b style="color:#cacaca">Solar Imperium</b><b> ({$game_name})</b></td>
+<td nowrap><a class="topframe_link" href="gamesbrowser.php" target="_TOP"><b>{t}Leave Game{/t}</b></a><a class="topframe_link" href="http://galaxypedia.mrgtech.ca" target="_NEW"><b>{t}Help{/t}</b></a><a class="topframe_link" href="#" onclick="OpenOnlineChat()"><b>{t}Online Chat{/t}(<b id="online_count">0</b>)</a></td>
+<td nowrap width="20px">&nbsp;</td>
+</tr>
+<tr>
+    <td colspan="4" width="100%" bgcolor="orange">a</td>
+</tr>
+</table>
+</body>
+</html>

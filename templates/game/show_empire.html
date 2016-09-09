@@ -1,0 +1,56 @@
+<table width="400" align="center" bgcolor="darkred" cellspacing="1" cellpadding="0" border="0">
+    <tr><td>
+            <table width="100%" align="center" cellspacing="0" cellpadding="5" border="0" bgcolor="#333333" background="../images/game/background1.jpg"  >
+                <tr>
+                    <td align="right">{t}Empire name:{/t} </td><td><b style="color:#ff9999">{$info_empire}</b></td>
+                </tr>
+                <tr>
+                    <td align="right">{t}Empire logo:{/t} </td><td><b style="color:#ff9999"><img src="img_logo.php?empire={$info_empire_id}" style="border-color:white" bordercolor="white" border="1"></b></td>
+                </tr>
+                <tr>
+                    <td align="right">{t}Coalition:{/t} </td><td><b style="color:#ff9999">{$info_coalition}</b></td>
+                </tr>
+                <tr>
+                    <td align="right">{$gender} {t}name:{/t} </td><td><b style="color:#ff9999">{$info_emperor}</b></td>
+                </tr>
+                <tr>
+                    <td align="right">{$gender} {t}avatar:{/t} </td><td><b style="color:#ff9999"><img src="{$img_avatar}" border="1" borderoclor="white" style="border-color:white"></b></td>
+                </tr>
+                <tr>
+                    <td valign="top" align="right">{t}Emperor Biography:{/t} </td><td><b style="color:#ff9999">{$info_biography}</b></td>
+                </tr>
+                <tr>
+                    <td align="right">{t}Created on:{/t} </td><td><b style="color:#ff9999">{$info_date|date_format}</b></td>
+                </tr>
+                <tr>
+                    <td align="right">{t}Turns played:{/t} </td><td><b style="color:#ff9999">{$info_turns|number_format}</b></td>
+                </tr>
+                <tr>
+                    <td align="right">{t}Last turn played:{/t} </td><td><b style="color:#ff9999">{$info_lastturn|date_format}</b></td>
+                </tr>
+                <tr>
+                    <td align="right"><a  class="link" href=javascript:show_help('networth')>{t}Net. Worth{/t}</a>: </td><td><b style="color:#ff9999">{$info_networth|number_format}</b></td>
+                </tr>
+                <tr>
+                    <td align="right">{t}Ranking:{/t} </td><td><b style="color:#ff9999">{$info_ranking} / {$info_playerscount}</b></td>
+                </tr>
+                <tr>
+                    <td align="right">{t}Fundamental research level{/t}: </td><td><b style="color:#ff9999">{$info_research}</b></td>
+                </tr>
+                <tr>
+                    <td align="right"><a  class="link"  href=javascript:show_help('population')>{t}Population{/t}</a>: </td><td><b style="color:#ff9999">{$info_population|number_format}</b></td>
+                </tr>
+
+
+                <tr>
+                    <td align="right"><a class="link" href=javascript:show_help('food')>{t}Planets{/t}</a>: </td><td><b style="color:#ff9999">{$info_planets|number_format}</b></td>
+                </tr>
+                <!--
+                <tr>
+                    <td align="right" colspan="2"><a href="messages.php?empire_id={$info_id}" class="link" TARGET="_NEW">{t}Send Message{/t}</a></td>
+                </tr>
+-->
+            </table>
+        </td>
+    </tr>
+</table>

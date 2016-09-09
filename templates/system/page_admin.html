@@ -1,0 +1,183 @@
+{capture name=page_title}
+{t}Admin Section{/t}
+{/capture}
+
+{include file="frame_header.html" title=$smarty.capture.page_title}
+
+
+
+<div align="center">
+<div align="center" style="background-image:url(images/system/div_bg.jpg);background-color:darkred;padding:10px;border:1px solid red">
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="login.php"  style="color:yellow"><b>{t}PLAY NOW{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="take_a_tour.php"><b>{t}TAKE A TOUR{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="scoreboard.php"><b>{t}SCOREBOARD{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="server_status.php"><b>{t}SERVER STATUS{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="forum.php"><b>{t}FORUM{/t}</b></a></div>
+</div>
+<br/>
+
+<div style="background-image:url(images/common/alpha1.png);border:1px solid darkred; padding:5px;color:#eaeaea;width:720px" align="left">
+
+<div class="text_normal" style="margin:10px;padding:10px">
+
+<b class="text_big">{t}Games list{/t}</b><br/>
+{section name="game" loop=$games}
+
+<table class="text_normal" style="color:white;border:1px solid red; background-color:darkred;padding:5px;margin:5px" width="100%">
+<tr>
+<td style="color:#dedede">{t}Game name:{/t}</td><td><b>{$games[game].name}</b></td>
+<td style="color:#dedede">{t}Victory condition:{/t}</td><td><b>{$games[game].victory_condition}</b></td>
+<td style="color:#dedede">{t}Life time:{/t}</td><td><b>{$games[game].lifetime} days</b></td>
+</tr>
+<tr>
+<td style="color:#dedede">{t}Premium only:{/t}</td><td><b>{$games[game].premium_only}</b></td>
+<td style="color:#dedede">{t}Turns per day:{/t}</td><td><b>{$games[game].turns_per_day}</b></td>
+<td style="color:#dedede">{t}Protection turns:{/t}</td><td><b>{$games[game].protection_turns}</b></td>
+</tr>
+<tr>
+<td style="color:#dedede">{t}Max Players:{/t}</td><td><b>{$games[game].max_players}</b></td>
+<td style="color:#dedede">{t}Players Slot:{/t}</td><td><b>{$games[game].players_slot}</b></td>
+<td style="color:#dedede">{t}Reg'd empires:{/t}</td><td><b>{$games[game].empires_count}</b></td>
+</tr>
+<tr>
+<td style="color:#dedede">Time elapsed:</td><td><b>{$games[game].time_elapsed}</b></td>
+<td colspan="4">
+<a class="link" href="admin.php?DELETEGAME={$games[game].id}" onClick="return confirm('{t}Are you sure?{/t}');"><b>{t}Delete{/t}</b></a>&nbsp;
+<a class="link" href="admin.php?RESETGAME={$games[game].id}" onClick="return confirm('{t}Are you sure?{/t}');"><b>{t}Reset Game{/t}</b></a>&nbsp;
+<a class="link" href="admin.php?RESETRULES={$games[game].id}" onClick="return confirm('{t}Are you sure?{/t}');"><b>{t}Reset Rules{/t}</b></a>&nbsp;
+<a class="link" href="admin.php?EDITRULES={$games[game].id}"><b>{t}Edit rules{/t}</b></a>&nbsp;
+</td>
+</tr>
+
+<tr>
+<td  style="color:#dedede" valign="top">{t}Description:{/t}</td>
+<td colspan="4">
+<form method="post" action="admin.php?UPDATE_DESCRIPTION={$games[game].id}">
+<textarea style="width:440px;height:60px" class="input_text" name="description">{$games[game].description}
+</textarea><br/>
+<input class="input_button" type="submit" value="Update">
+</form>
+
+</td>
+</tr>
+
+<tr>
+<td colspan="6">
+<b>{t}Empires list{/t}</b>
+<table style="background-color:#660000;color:white" class="text_small" cellspacing="1" cellpadding="2" border="0" width="100%">
+<tr>
+<td><b>{t}Empire{/t}</b></td>
+<td bgcolor="#662222"><b>{t}Emperor/ess{/t}</b></td>
+<td><b>{t}Life span{/t}</b></td>
+<td bgcolor="#662222"><b>{t}Ranking{/t}</b></td>
+<td><b>{t}Active{/t}</b></td>
+<td bgcolor="#662222"><b>{t}Networth{/t}</b></td>
+<td><b>{t}Turns played{/t}</b></td>
+<td bgcolor="#662222"><b>{t}Prot. Turns{/t}</b></td>
+<td><b>{t}Last Turn{/t}</b></td>
+<td bgcolor="#662222"><b>{t}Tracking{/t}</b></td>
+</tr>
+
+{section name="empire" loop=$games[game].empires}
+
+<tr style="background-color:#eaeaea;color:black">
+{if $games[game].empires[empire].player_id == -1}
+<td style="color:darkred">*AI*&nbsp;{$games[game].empires[empire].name} ({$games[game].empires[empire].ai_level}/10)</td>
+{else}
+<td>{$games[game].empires[empire].name}</td>
+{/if}
+
+<td>{$games[game].empires[empire].emperor}</td>
+<td>{$games[game].empires[empire].lifespan}</td>
+<td>{$games[game].empires[empire].rank}</td>
+<td>{$games[game].empires[empire].active}</td>
+<td>{$games[game].empires[empire].networth|number_format}</td>
+<td>{$games[game].empires[empire].turns_played|number_format}</td>
+<td>{$games[game].empires[empire].protection_turns_left|number_format}</td>
+<td>{$games[game].empires[empire].last_turn_date|date_format}</td>
+<td>
+<a href="admin_trace.php?GAME={$games[game].id}&EMPIRE={$games[game].empires[empire].id}">{t}View{/t}</a>
+</td>
+</tr>
+
+
+{sectionelse}
+<tr>
+<td colspan="10" style="background-color:#eaeaea;color:black">
+{t}No empires registered in this game{/t}
+</td>
+</tr>
+{/section}
+
+
+
+
+</table>
+<table class="text_normal">
+    <form method="post" action="admin.php?ADDAI={$games[game].id}">
+    <tr>
+
+        <td nowrap>Add a computer opponent:</td>
+        <td>
+        <select name="ai_level">
+        <option value="1">Easy</option>
+        <option value="5">Medium</option>
+        <option value="10">Hard</option>
+        </select>
+        </td>
+        <td><input type="submit" value="Add"></td>
+    </tr>
+    </form>
+</table>
+</td>
+</tr>
+</table>
+
+
+{sectionelse}
+<b style="color:yellow">{t}*** No games for now{/t}</b><br/>
+{/section}
+
+<br/><br/>
+<b class="text_big">{t}Create Game{/t}</b><br/>
+<form method="post" action="?ADDGAME">
+<table class="text_normal" cellspacing="0" cellpadding="2" border="0" style="color:#dedede">
+<tr><td>{t}Game name:{/t}</td><td><input class="input_text" type="text" name="game_name" value="{t}Change Me{/t}" size=25></td></tr>
+<tr><td>{t}Victory condition:{/t}</td><td><select class="input_text" name="victory_condition">
+<option value="classic">{t}Classic Game{/t}</option>
+<option value="research">{t}Research Game{/t}</option>
+</select>
+</td></tr>
+<tr><td>{t}Premium only?:{/t}</td><td><input class="input_text" name="premium_only"  size="5" type="checkbox"></td></tr>
+<tr><td>{t}Lifetime (days):{/t}</td><td><input class="input_text" name="lifetime" value="30" size="5" type="text"></td></tr>
+<tr><td>{t}Turns per day:{/t}</td><td><input class="input_text" name="turns_per_day"  value="25" size="5" type="text"></td></tr>
+<tr><td>{t}Protection turns:{/t}</td><td><input class="input_text" name="protection_turns"  value="30" size="5" type="text"></td></tr>
+<tr><td>{t}Max Players:{/t}</td><td><input class="input_text" name="maxplayers"  size="5" value="100" type="text"></td></tr>
+<tr><td>{t}Players slot:{/t}</td><td><input class="input_text" name="players_slot" size="5" value="10" type="text"></td></tr>
+<!--<tr><td>{t}Custom prefix:{/t}</td><td><input class="input_text" name="prefix" size="20" value="" type="text"> (Leave empty for default)</td></tr>-->
+<tr><td>&nbsp;</td><td><input type="submit" class="input_button" value="{t}Create Game{/t}"></td></tr>
+
+</table>
+</form>
+<form method="post" action="?POSTMSG">
+
+<br/><br/>
+<b class="text_big">{t}Post system message{/t}</b><br/>
+<table class="text_normal">
+<tr><td colspan="2">
+<textarea rows="7" cols="80" class="input_text" name="message">
+</textarea>
+</td>
+</tr>
+<tr><td colspan="2"><input class="input_button" type="submit" value="{t}Send message{/t}"></td></tr>
+</table>
+</form>
+
+<br/>
+
+</div>
+</div>
+</div>
+
+<!-- end content -->
+{include file="frame_footer.html"}

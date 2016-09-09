@@ -1,0 +1,111 @@
+{capture name=page_title}
+{t}Server Status{/t}
+{/capture}
+
+{include file="frame_header.html" title=$smarty.capture.page_title}
+<!-- begin content -->
+<div align="center" style="background-image:url(images/system/div_bg.jpg);background-color:darkred;padding:10px;border:1px solid red">
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="login.php"><b>{t}PLAY NOW{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="take_a_tour.php"><b>{t}TAKE A TOUR{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="scoreboard.php"><b>{t}SCOREBOARD{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" style="color:yellow" href="server_status.php"><b>{t}SERVER STATUS{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="forum.php"><b>{t}FORUM{/t}</b></a></div>
+</div>
+
+<br/>
+
+<table cellspacing="0" cellpadding="0" border="0" align="center" width="720"  background="images/common/alpha1.png" style="border:1px solid darkred">
+
+<tr>
+<td width="100%">
+
+<div style="padding:10px">
+<b class="text_big" style="color:white">
+<img src="images/system/icon_button_continuegame.png" style="border:1px solid white">
+{t}Server Status{/t}</b>
+<br/>
+<br/>
+
+<div align="center" class="text_small">
+<table cellpadding="3" width="620" cellspacing="1" border="0" style="color:#ffffff;padding:10px;border:1px solid #3a3a3a" class="text_normal" background="images/common/alpha2.png">
+
+<tr>
+	<td align="right" style="color:#dcdcdc">{t}Server name:{/t}</td>
+	<td>{$server_name}</td>
+</tr>
+
+<tr>
+	<td align="right" style="color:#dcdcdc">{t}Server version:{/t}</td>
+	<td>{$game_version}</td>
+</tr>
+
+<tr>
+	<td align="right" style="color:#dcdcdc">{t}Server uptime:{/t}</td>
+	<td>{$server_uptime} {t}day(s){/t}</td>
+</tr>
+
+<tr>
+	<td align="right" style="color:#dcdcdc">{t}Connected player(s):{/t}</td>
+	<td>{$online_players|number_format}</td>
+</tr>
+
+<tr>
+	<td align="right" style="color:#dcdcdc">{t}Premium player(s):{/t}</td>
+	<td>{$premium_accounts|number_format}</td>
+</tr>
+
+<tr>
+	<td align="right" style="color:#dcdcdc">{t}Registered player(s):{/t}</td>
+	<td>{$registered_players|number_format}</td>
+</tr>
+
+<tr>
+	<td align="right" style="color:#dcdcdc">{t}Available game(s):{/t}</td>
+        <td>{$available_games|number_format} / <a class="link" href="gamesbrowser.php">Browse</a></td>
+</tr>
+
+</table>
+<br/><br/>
+<table class="text_small" style="color:#cacaca;border:1px solid #6a6a6a" width="440px" cellspacing="0" cellpadding="5">
+<tr>
+    <td style="color:#eaeaea" background="images/system/div_bg.jpg"><b>Date</b></td>
+    <td style="color:#eaeaea" background="images/system/div_bg.jpg" width="120px">{t}<b>New Players{/t}</b></td>
+    <td style="color:#eaeaea" background="images/system/div_bg.jpg"><b>{t}Players Connected{/t}</b></td>
+</tr>
+
+{section name=s loop=$stats}
+
+<tr style="color:black">
+    <td bgcolor="#cacaca" background="images/common/alpha2.png">{$stats[s].timestamp|date_format}</td>
+    <td bgcolor="#dadada" background="images/common/alpha2.png" align="right">{$stats[s].signup_count}</td>
+    <td bgcolor="#cacaca" background="images/common/alpha2.png" align="right">{$stats[s].login_count}</td>
+</tr>
+
+{sectionelse}
+
+<tr>
+    <td colspan="3" background="images/common/alpha2.png">
+        No statistics yet!
+    </td>
+</tr>
+
+{/section}
+
+
+</table>
+
+<br/><br/>
+
+</div>
+
+</div>
+
+</td>
+</tr>
+
+</table>
+
+
+<!-- end content -->
+
+{include file="frame_footer.html"}

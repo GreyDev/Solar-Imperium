@@ -1,0 +1,305 @@
+<table  cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td nowrap><img src="../images/game/tab_left.gif" border="0"></td>
+        <td nowrap bgcolor="darkred" style="padding:0px 5px 0px 5px"><a  style="text-decoration:none;color:white" href="#" onclick="open_page('battle.php')"><b>{t}Battle Command{/t}</b></a></td>
+        <td><img src="../images/game/tab_right.gif" border="0"></td>
+
+        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+        <td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="#" onClick="open_page('covert.php')"><b>{t}Covert Operations{/t}</b></a></td>
+        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+        <td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="#" onclick="open_page('last_invasions.php')"><b>{t}Last Invasions{/t}</b></a></td>
+        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+    </tr>
+</table>
+
+
+<table width="780"  bgcolor="darkred" cellspacing="1" cellpadding="0" border="0">
+    <tr>
+        <td>
+
+
+            {if $do_nuclear_warfare eq true }
+            <form action="#" method="post" onsubmit="ajax_submit_form('battle_nuclearwarfare.php',this);return false;" name="form_nuke">
+
+                <table>
+                    <tr><td colspan="3">
+                            <b style="color:yellow"><a href="javascript:show_help('battle_nuclear')">{t}Nuclear Warfare{/t}</a></b></td></tr>
+
+                    <tr><td>&nbsp;</td></tr>
+                    <tr>
+                        <td align="right">{t}Empire:{/t}</td>
+                        <td colspan="2">
+                            <b style="color:#ffcaca">
+                                <select name="nuke_empire" style="width:400px" class="select_box">
+                                    <option value="-1">---</option>
+		{section name="e" loop=$empires}
+                                    <option value="{$empires[e].id}">{$empires[e].name}</option>
+		{/section}
+                                </select>
+                            </b>
+                        </td></tr>
+
+                    <tr>
+                        <td align="right">
+                            <img src="../images/game/nuclear_warfare.jpg" style="border:1px solid yellow">
+                        </td>
+                        <td><b style="color:yellow">{t}Warning: If you get caught by the galactic coordinator, your empire will collapse!{/t}</b>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><input type="submit" value="{t}PUSH THE RED BUTTON{/t}" style="color:yellow;font-weight:bold;background-color:red;border:1px solid yellow" onClick="return confirm('ARE YOU REALLY REALLY SURE?');"></td>
+                    </tr>
+                    <tr><td><br/></td></tr>
+                </table>
+            </form>
+
+            {/if}
+
+            <form action="#" onsubmit="ajax_submit_form('battle_invasion.php',this); return false;" method="post" name="form1">
+                <table width="100%" align="center" cellspacing="0"
+                       cellpadding="5" border="0" style="font-size:11pt" bgcolor="#333333"
+                       background="../images/game/background1.jpg">
+
+                    <tr>
+                        <td colspan="3">
+
+
+
+{section name="c" loop=$convoys}
+
+<table style="margin:0 0 10 0" width="720"  bgcolor="red" cellspacing="1" cellpadding="0" border="0">
+    <tr><td>
+            <table width="100%" align="center" cellspacing="0" cellpadding="5" border="0" style="font-size:11pt;" bgcolor="#333333" background="../images/game/background/{$convoys[c].background}">
+                <tr><td>
+
+                        <table width="100%" cellspacing="0" cellpadding="3">
+                            <tr>
+                                <td background="../images/game/warbar.gif" style="color:#6a6a6a" width="80" align="right"><b>{t}From:{/t}</b></td>
+                                <td background="../images/game/warbar.gif" style="color:black" width="250"><b>{$convoys[c].from_empire}</b></td>
+                                <td background="../images/game/warbar.gif" style="color:#6a6a6a" width="80" align="right"><b>{t}Target:{/t}</b></td>
+                                <td background="../images/game/warbar.gif" style="color:black" width="250"><b>{$convoys[c].target_empire}</b></td>
+                            </tr>
+                            <tr>
+                                <td align="right" nowrap>{t}Convoy Type:{/t}</td>
+                                <td><b>{$convoys[c].convoy_type}</b></td>
+                                <td colspan="2" align="right"><b><a href="#" class="link" onClick="if (confirm('{t}Retreating will affect troops morale if your convoy is far from your empire, do it?{/t}')) open_page('battle.php?retreat={$convoys[c].id}')">{$convoys[c].retreat}</a></b></td>
+                            </tr>
+                            <tr>
+                                <td align="right" nowrap>{t}Soldiers:{/t}</td>
+                                <td><b>{$convoys[c].soldiers|number_format}</b></td>
+                                <td align="right" nowrap>{t}Fighters:{/t}</td>
+                                <td><b>{$convoys[c].fighters|number_format}</b></td></tr>
+                            <tr><td align="right" nowrap>{t}Light Cruisers:{/t}</td><td><b>{$convoys[c].lightcruisers|number_format}</b></td>
+                                <td align="right" nowrap>{t}Heavy Cruisers:{/t}</td><td><b>{$convoys[c].heavycruisers|number_format}</b></td></tr>
+                            <tr>
+                                <td align="right" nowrap>{t}Carriers:{/t}</td>
+                                <td><b>{$convoys[c].carriers|number_format}</b></td>
+                                <td align="right" nowrap>{t}Time remaining:{/t}</td>
+                                <td><b>{$convoys[c].time_left}</b></td>
+
+                            </tr>
+                        </table>
+
+                    </td></tr>
+            </table>
+        </td></tr>
+</table>
+
+{/section}
+
+
+
+                            <b style="color:yellow">
+                                <a href="javascript:show_help('battle_invasion')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=battle_invasion',this);return false" onmouseout="ajax_hideTooltip()">
+                                    {t}Conventional Invasion{/t}
+                                </a>
+                            </b>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3">
+
+                            <div style="color:#999999;border:1px dashed #999999;background-color:#333333;padding:10px;margin:10px">
+			{t}Attacking weaker empires (lesser or 33% of your net worth) make your population ashamed and your insurgency level will undoubtly increase.{/t}
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="120" align="right">{t}Empire:{/t}</td>
+                        <td colspan="2">
+                            <b style="color:#ffcaca">
+                                <select name="invasion_empire" style="width:400px" class="select_box">
+                                    <option value="-1">---</option>
+		{section name="e" loop=$empires}
+                                    <option value="{$empires[e].id}">{$empires[e].name}</option>
+		{/section}
+                                </select>
+                            </b>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">{t}Soldiers:{/t}</td>
+                        <td><input type="text" name="invasion_soldiers" style="width:100px" class="input_text" value="0">
+                            <b><a class="link" href="#"  onClick="document.form1.invasion_soldiers.value=Math.floor({$invasion_soldiers}/4);return false;">25%</a>
+                                <a class="link" href="#"  onClick="document.form1.invasion_soldiers.value=Math.floor({$invasion_soldiers}/2);return false;">50%</a>
+                                <a class="link" href="#"  onClick="document.form1.invasion_soldiers.value=Math.floor(({$invasion_soldiers}/4)*3);return false;">75%</a>
+                                <a class="link" href="#"  onClick="document.form1.invasion_soldiers.value={$invasion_soldiers};return false;">MAX</a>: {$invasion_soldiers|number_format}</b></td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">{t}Fighters:{/t}</td>
+                        <td><input type="text" name="invasion_fighters"    style="width:100px" class="input_text" value="0">
+                            <b>
+                                <a class="link" href="#"  onClick="document.form1.invasion_fighters.value=Math.floor({$invasion_fighters}/4);return false;">25%</a>
+                                <a class="link" href="#"  onClick="document.form1.invasion_fighters.value=Math.floor({$invasion_fighters}/2);return false;">50%</a>
+                                <a class="link" href="#"  onClick="document.form1.invasion_fighters.value=Math.floor(({$invasion_fighters}/4)*3);return false;">75%</a>
+                                <a class="link" href="#"  onClick="document.form1.invasion_fighters.value={$invasion_fighters};return false;">MAX</a>: {$invasion_fighters|number_format}</b></td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">{t}Light Cruisers:{/t}</td>
+                        <td><input type="text" name="invasion_lightcruisers"    style="width:100px" class="input_text" value="0">
+                            <b>
+                                <a class="link" href="#"  onClick="document.form1.invasion_lightcruisers.value=Math.floor({$invasion_lightcruisers}/4);return false;">25%</a>
+                                <a class="link" href="#"  onClick="document.form1.invasion_lightcruisers.value=Math.floor({$invasion_lightcruisers}/2);return false;">50%</a>
+                                <a class="link" href="#"  onClick="document.form1.invasion_lightcruisers.value=Math.floor(({$invasion_lightcruisers}/4)*3);return false;">75%</a>
+                                <a class="link" href="#" onClick="document.form1.invasion_lightcruisers.value={$invasion_lightcruisers};return false;">MAX</a>: {$invasion_lightcruisers|number_format}</b></td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">{t}Heavy Cruisers:{/t}</td>
+                        <td><input type="text" name="invasion_heavycruisers"    style="width:100px" class="input_text" value="0">
+                            <b>
+                                <a class="link" href="#"  onClick="document.form1.invasion_heavycruisers.value=Math.floor({$invasion_heavycruisers}/4);return false;">25%</a>
+                                <a class="link" href="#"  onClick="document.form1.invasion_heavycruisers.value=Math.floor({$invasion_heavycruisers}/2);return false;">50%</a>
+                                <a class="link" href="#"  onClick="document.form1.invasion_heavycruisers.value=Math.floor(({$invasion_heavycruisers}/4)*3);return false;">75%</a>
+                                <a class="link" href="#" onClick="document.form1.invasion_heavycruisers.value={$invasion_heavycruisers};return false;">MAX</a>: {$invasion_heavycruisers|number_format}</b></td>
+                    </tr>
+
+
+
+                    <tr><td>&nbsp;</td><td colspan="2"><input type="submit" value="{t}Launch invasion{/t}"></td></tr>
+                </table>
+            </form>
+
+            <form  action="#" onsubmit="ajax_submit_form('battle_guerilla.php',this); return false;"  method="post" name="form2">
+                <table width="100%" align="center" cellspacing="0"
+                       cellpadding="5" border="0" style="font-size:11pt" bgcolor="#333333"
+                       background="../images/game/background1.jpg">
+
+                    <tr><td colspan="3"><br/></td></tr>
+                    <tr><td colspan="3">
+                            <b style="color:yellow"><a href="javascript:show_help('battle_guerilla')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=battle_guerilla',this);return false" onmouseout="ajax_hideTooltip()">{t}Guerilla Warfare{/t}</a></b></td></tr>
+
+                    <tr><td colspan="3">&nbsp;</td></tr>
+                    <tr>
+                        <td width="120" align="right">{t}Empire:{/t}</td>
+                        <td colspan="2">
+                            <b style="color:#ffcaca">
+                                <select name="guerilla_empire" style="width:400px" class="select_box">
+                                    <option value="-1">---</option>
+		{section name="e" loop=$empires}
+                                    <option value="{$empires[e].id}">{$empires[e].name}</option>
+		{/section}
+                                </select>
+                            </b>
+                        </td></tr>
+                    <tr>
+                        <td align="right">{t}Soldiers:{/t}</td>
+                        <td><input type="text" name="guerilla_soldiers"  style="width:100px" class="input_text"  value="0">
+                            <b>
+                                <a class="link" href="#"  onClick="form2.guerilla_soldiers.value=Math.floor({$guerilla_soldiers}/4);return false;">25%</a>
+                                <a class="link" href="#"  onClick="form2.guerilla_soldiers.value=Math.floor({$guerilla_soldiers}/2);return false;">50%</a>
+                                <a class="link" href="#"  onClick="form2.guerilla_soldiers.value=Math.floor(({$guerilla_soldiers}/4)*3);return false;">75%</a>
+                                <a class="link" href="#" onClick="form2.guerilla_soldiers.value={$guerilla_soldiers};return false;">MAX</a>: {$guerilla_soldiers|number_format}</b></td>
+                    </tr>
+                    <tr><td>&nbsp;</td><td colspan="2"><input type="submit" value="{t}Launch Attack{/t}"></td></tr>
+                    <tr><td colspan="3"><br/></td></tr>
+
+                </table>
+            </form>
+
+
+            <form action="#" onsubmit="ajax_submit_form('battle_pirate.php',this); return false;" method="post" name="form3">
+                <table width="100%" align="center" cellspacing="0"
+                       cellpadding="5" border="0" style="font-size:11pt" bgcolor="#333333"
+                       background="../images/game/background1.jpg">
+
+                    <tr><td colspan="3">
+                            <b style="color:yellow"><a href="javascript:show_help('battle_pirate')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=battle_pirate',this);return false" onmouseout="ajax_hideTooltip()">{t}Pirate Bust{/t}</a></b></td></tr>
+
+                    <tr><td>&nbsp;</td></tr>
+
+                    <tr>
+                        <td width="120" align="right">{t}Pirate:{/t}</td>
+                        <td colspan="2">
+                            <b style="color:#ffcaca">
+                                <select name="battle_pirate" style="width:300px" class="select_box">
+                                    <option value="-1">---</option>
+		{section name="p" loop=$pirates}
+                                    <option value="{$pirates[p].id}">{$pirates[p].name}</option>
+		{/section}
+                                </select>
+                        </td></tr>
+
+
+                    <tr>
+                        <td align="right">{t}Soldiers{/t}:</td>
+                        <td><input type="text" name="pirate_soldiers"    style="width:100px" class="input_text" value="0">
+                            <b>
+
+                                <a class="link" href="#"  onClick="document.form3.pirate_soldiers.value=Math.floor({$invasion_soldiers}/4);return false;">25%</a>
+                                <a class="link" href="#"  onClick="document.form3.pirate_soldiers.value=Math.floor({$invasion_soldiers}/2);return false;">50%</a>
+                                <a class="link" href="#"  onClick="document.form3.pirate_soldiers.value=Math.floor(({$invasion_soldiers}/4)*3);return false;">75%</a>
+                                <a class="link" href="#"  onClick="document.form3.pirate_soldiers.value={$invasion_soldiers};return false;">MAX</a>: {$invasion_soldiers|number_format}</b></td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">{t}Fighters:{/t}</td>
+                        <td><input type="text" name="pirate_fighters"    style="width:100px" class="input_text" value="0">
+                            <b>
+                                <a class="link" href="#"  onClick="document.form3.pirate_fighters.value=Math.floor({$invasion_fighters}/4);return false;">25%</a>
+                                <a class="link" href="#"  onClick="document.form3.pirate_fighters.value=Math.floor({$invasion_fighters}/2);return false;">50%</a>
+                                <a class="link" href="#"  onClick="document.form3.pirate_fighters.value=Math.floor(({$invasion_fighters}/4)*3);return false;">75%</a>
+                                <a class="link" href="#"  onClick="document.form3.pirate_fighters.value={$invasion_fighters};return false;">MAX</a>: {$invasion_fighters|number_format}</b></td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">{t}Light Cruisers:{/t}</td>
+                        <td><input type="text" name="pirate_lightcruisers"    style="width:100px" class="input_text" value="0">
+                            <b>
+                                <a class="link" href="#"  onClick="document.form3.pirate_lightcruisers.value=Math.floor({$invasion_lightcruisers}/4);return false;">25%</a>
+                                <a class="link" href="#"  onClick="document.form3.pirate_lightcruisers.value=Math.floor({$invasion_lightcruisers}/2);return false;">50%</a>
+                                <a class="link" href="#"  onClick="document.form3.pirate_lightcruisers.value=Math.floor(({$invasion_lightcruisers}/4)*3);return false;">75%</a>
+                                <a class="link" href="#" onClick="document.form3.pirate_lightcruisers.value={$invasion_lightcruisers};return false;">MAX</a>: {$invasion_lightcruisers|number_format}</b></td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">{t}Heavy Cruisers:{/t}</td>
+                        <td><input type="text" name="pirate_heavycruisers"    style="width:100px" class="input_text" value="0">
+                            <b>
+                                <a class="link" href="#"  onClick="document.form3.pirate_heavycruisers.value=Math.floor({$invasion_heavycruisers}/4);return false;">25%</a>
+                                <a class="link" href="#"  onClick="document.form3.pirate_heavycruisers.value=Math.floor({$invasion_heavycruisers}/2);return false;">50%</a>
+                                <a class="link" href="#"  onClick="document.form3.pirate_heavycruisers.value=Math.floor(({$invasion_heavycruisers}/4)*3);return false;">75%</a>
+                                <a class="link" href="#" onClick="document.form3.pirate_heavycruisers.value={$invasion_heavycruisers};return false;">MAX</a>: {$invasion_heavycruisers|number_format}</b></td>
+                    </tr>
+
+
+                    <tr><td>&nbsp;</td><td colspan="2"><input type="submit" value="{t}Launch attack{/t}"></td></tr>
+                    <tr><td colspan="3"><br/><img src="../images/game/battle.jpg" style="border:1px solid darkred">
+                        </td></tr>
+
+                </table>
+            </form>
+
+</table>
+
+<br/>
+

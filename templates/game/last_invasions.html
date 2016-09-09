@@ -1,0 +1,48 @@
+<table  cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+        <td nowrap bgcolor="#666666" style="padding:0px 5px 0px 5px"><a  class="link" href="#" onclick="open_page('battle.php')"><b>{t}Battle Command{/t}</b></a></td>
+        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+        <td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="#" onclick="open_page('covert.php')"><b>{t}Covert Operations{/t}</b></a></td>
+        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+
+        <td nowrap><img src="../images/game/tab_left.gif" border="0"></td>
+        <td nowrap bgcolor="darkred"  style="padding:0px 5px 0px 5px"><a  style="text-decoration:none;color:white" href="#" onclick="open_page('last_invasions.php')"><b>{t}Last Invasions{/t}</b></a></td>
+        <td><img src="../images/game/tab_right.gif" border="0"></td>
+    </tr>
+</table>
+
+
+<form method="post" name="form1">
+    <table width="780" bgcolor="darkred" cellspacing="1" cellpadding="0" border="0">
+        <tr><td>
+
+                <table cellpadding="6" bgcolor="#333333" width="100%" background="../images/game/background1.jpg">
+                    <tr>
+                        <td><b>{t}Date{/t}</b></td>
+                        <td><b>{t}Type{/t}</b></td>
+                        <td><b>{t}Outcome{/t}</b></td>
+                        <td><b>{t}Action{/t}</b></td>
+                    </tr>
+		{section name="i" loop=$invasions}
+                    <tr style="background-color:{$invasions[i].bgcolor}">
+                        <td>{$invasions[i].date}</td>
+                        <td>{$invasions[i].type}</td>
+                        <td>{$invasions[i].outcome}</td>
+                        <td><b><a href="#" class="link" onClick="open_page('last_invasions.php?invasion={$invasions[i].id}')">{t}Details{/t}</a></b></td>
+                    </tr>
+
+		{sectionelse}
+                    <tr><td colspan="4"><b>{t}*** No invasions yet.{/t}</b></td></tr>
+		{/section}
+                </table>
+
+            </td></tr></table>
+
+    <br/><br/>
+
+</form>
+

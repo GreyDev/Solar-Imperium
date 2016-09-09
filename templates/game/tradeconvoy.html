@@ -1,0 +1,17 @@
+<b style="color:white">{t}Tradeconvoy{/t} #{$count}</b>&nbsp;
+<b style="color:#aaaaaa">{t}Sender:{/t}</b><b style="color:white">{$sender}</b>, 
+<b style="color:#aaaaaa">{t}Destination:{/t}</b><b style="color:white">{$destination}</b>
+<table bgcolor="#333333" cellpadding="3" background="../images/game/background/trade.jpg" width="740" style="border:1px solid darkred;font-size:13px;font-family:verdana">
+    <tr><td nowrap width="100" align="right"><b style="color:yellow">{t}Credits:{/t}</b></td><td width="220"><b>{$trade_money}</b></td>
+        <td nowrap width="100" align="right"><b style="color:yellow">{t}Food:{/t}</b></td><td><b>{$trade_food}</b></td></tr>
+    <tr><td align="right" nowrap>{t}Covert agents:{/t}</td><td><b>{$trade_covertagents}</b></td></tr>
+    <tr><td align="right" nowrap>{t}Soldiers:{/t}</td><td><b>{$trade_soldiers}</b></td>
+        <td align="right" nowrap>{t}Fighters:{/t}</td><td><b>{$trade_fighters}</b></td></tr>
+    <tr><td align="right" nowrap>{t}Light cruisers:{/t}</td><td><b>{$trade_lightcruisers}</b></td>
+        <td align="right" nowrap>{t}Heavy cruisers:{/t}</td><td><b>{$trade_heavycruisers}</b></td></tr>
+    <tr>
+        <td colspan="4" align="right">
+            <b style="color:#aaaaaa">Carriers used: </b><b style="color:white">{$carriers_used}</b><b style="color:#aaaaaa">, Time left: </b><b style="color:white">{$time_left}</b><br/>
+        </td>
+    </tr>
+</table>

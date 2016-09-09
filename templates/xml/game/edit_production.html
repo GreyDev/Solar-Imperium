@@ -1,0 +1,165 @@
+<form method="post" name="prefsfrm" action="edit_production.php"
+	enctype="multipart/form-data">
+
+		<table  cellspacing="0" cellpadding="0" border="0">
+		<tr>	
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666" style="padding:0px 5px 0px 5px"><a  class="link" href="manage.php"><b>{t}Manage{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="stats.php"><b>{t}Performance{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="logs.php"><b>{t}Activity Logs{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="logo_editor.php"><b>{t}Edit Logo{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="lastturn.php"><b>{t}Turn Summary{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="research.php"><b>{t}Research Map{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab_left.gif" border="0"></td>
+		<td nowrap bgcolor="darkred"  style="padding:0px 5px 0px 5px"><a  style="text-decoration:none;color:white" href="edit_production.php"><b>{t}Production{/t}</b></a></td> 
+		<td><img src="../images/game/tab_right.gif" border="0"></td>
+
+
+		</table>
+
+
+<table width="720"  bgcolor="darkred" cellspacing="1"
+	cellpadding="0" border="0">
+	<tr>
+		<td>
+		<table background="../images/game/background1.jpg" width="100%" align="center"
+			cellspacing="0" cellpadding="5" border="0"
+			style="font-size:13px;font-family:verdana" bgcolor="#333333">
+			<tr>
+				<td colspan="3"><b style="color:white">{t}Tax rate and Production{/t}</b></td>
+			</tr>
+			<tr>
+				<td align="right"><a href="javascript:show_help('taxrate')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=taxrate',this);return false" onmouseout="ajax_hideTooltip()">{t}Tax rate{/t}</a>:</td>
+				<td colspan="2"><input maxlength=3
+					class="input_text" style="width:60px" 
+					type="text" name="taxrate" value="{$taxrate}"> %</td>
+			</tr>
+			<tr>
+				<td align="right"><a href="javascript:show_help('sellrate')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=sellrate',this);return false" onmouseout="ajax_hideTooltip()">{t}Food auto-sell rate{/t}
+				</a>:</td>
+				<td colspan="2"><input maxlength=3
+					class="input_text" style="width:60px" 
+					type="text" name="food_rate" value="{$food_rate}"> %</td>
+			</tr>
+			<tr>
+				<td align="right"><a href="javascript:show_help('sellrate')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=sellrate',this);return false" onmouseout="ajax_hideTooltip()">{t}Ore auto-sell rate{/t}
+				</a>:</td>
+				<td colspan="2"><input maxlength=3
+					class="input_text" style="width:60px" 
+					type="text" name="ore_rate" value="{$ore_rate}"> %</td>
+			</tr>
+
+			<tr>
+				<td align="right"><a href="javascript:show_help('sellrate')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=sellrate',this);return false" onmouseout="ajax_hideTooltip()">{t}Petroleum auto-sell rate{/t}
+				</a>:</td>
+				<td colspan="2"><input maxlength=3
+					class="input_text" style="width:60px" 
+					type="text" name="petroleum_rate" value="{$petroleum_rate}"> %</td>
+			</tr>
+
+			<tr>
+				<td align="right"><a href="javascript:show_help('sellrate')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=sellrate',this);return false" onmouseout="ajax_hideTooltip()">{t}Research converted into credits{/t}
+				</a>:</td>
+				<td colspan="2"><input maxlength=3
+					class="input_text" style="width:60px" 
+					type="text" name="research_rate" value="{$research_rate}"> %</td>
+			</tr>
+			
+			<tr>
+				<td colspan="3">
+				<hr color="darkred" size="1" border="0">
+				<br />
+				<b style="color:white">{t}Supply / Production{/t}</b></td>
+			</tr>
+			<tr>
+				<td align="right">{t}Soldiers:{/t}</td>
+				<td><input maxlength=3
+					class="input_text" style="width:60px" 
+					type="text" name="rate_soldier" value="{$rate_soldier}"> %</td>
+				<td style="color:#ff6666"><b>+{$prod_soldier}</b></td>
+			</tr>
+			<tr>
+				<td align="right">{t}Fighters:{/t}</td>
+				<td><input maxlength=3
+					class="input_text" style="width:60px" 
+					type="text" name="rate_fighter" value="{$rate_fighter}"> %</td>
+				<td style="color:#ff6666"><b>+{$prod_fighter}</b></td>
+			</tr>
+
+			<tr>
+				<td align="right">{t}Defense Stations:{/t}</td>
+				<td><input maxlength=3
+					class="input_text" style="width:60px" 
+					type="text" name="rate_station" value="{$rate_station}"> %</td>
+				<td style="color:#ff6666"><b>+{$prod_station}</b></td>
+			</tr>
+
+			<tr>
+				<td align="right">{t}Heavy Cruisers:{/t}</td>
+				<td><input maxlength=3
+					class="input_text" style="width:60px" 
+					type="text" name="rate_heavycruiser" value="{$rate_heavycruiser}">
+				%</td>
+				<td style="color:#ff6666"><b>+{$prod_heavycruiser}</b></td>
+			</tr>
+
+			<tr>
+				<td align="right">{t}Carriers:{/t}</td>
+				<td><input maxlength=3
+					class="input_text" style="width:60px" 
+					type="text" name="rate_carrier" value="{$rate_carrier}"> %</td>
+				<td style="color:#ff6666"><b>+{$prod_carrier}</b></td>
+			</tr>
+
+			<tr>
+				<td align="right">{t}Covert agents:{/t}</td>
+				<td><input maxlength=3
+					class="input_text" style="width:60px" 
+					type="text" name="rate_covert" value="{$rate_covert}"> %</td>
+				<td style="color:#ff6666"><b>+{$prod_covert}</b></td>
+			</tr>
+
+			<tr>
+				<td align="right">{t}Credits:{/t}</td>
+				<td><input maxlength=3
+					class="input_text" style="width:60px" 
+					type="text" name="rate_credits" value="{$rate_credits}"> %</td>
+				<td style="color:#ff6666"><b>+{$prod_credits}</b></td>
+			</tr>
+
+
+			<tr>
+				<td>&nbsp;</td>
+				<td colspan="2"><input type="submit" value="{t}Save preferences{/t}">&nbsp;
+				<input type="button" value="{t}Back to game{/t}"
+					onClick="window.location='manage.php';"></td>
+			</tr>
+			<tr>
+				<td><br />
+				</td>
+			</tr>
+
+		</table>
+		</td>
+	</tr>
+</table>
+
+</form>
+

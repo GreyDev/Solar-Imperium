@@ -1,0 +1,120 @@
+<script>
+
+var events_data_content_system = '{$events_data_content_system}';
+var events_data_content_warfare = '{$events_data_content_warfare}';
+var events_data_content_communication = '{$events_data_content_communication}';
+var events_data_content_diplomacy = '{$events_data_content_diplomacy}';
+
+
+{literal}
+function onClickSystem()
+{
+	document.getElementById('link_system').style.color = 'white';
+	document.getElementById('link_warfare').style.color = '#999999';
+	document.getElementById('link_communication').style.color = '#999999';
+	document.getElementById('link_diplomacy').style.color = '#999999';
+	document.getElementById('events_content').innerHTML = events_data_content_system;
+}
+
+function onClickWarfare()
+{
+	document.getElementById('link_system').style.color = '#999999';
+	document.getElementById('link_warfare').style.color = 'white';
+	document.getElementById('link_communication').style.color = '#999999';
+	document.getElementById('link_diplomacy').style.color = '#999999';
+	document.getElementById('events_content').innerHTML = events_data_content_warfare;
+}
+
+function onClickCommunication()
+{
+	document.getElementById('link_system').style.color = '#999999';
+	document.getElementById('link_warfare').style.color = '#999999';
+	document.getElementById('link_communication').style.color = 'white';
+	document.getElementById('link_diplomacy').style.color = '#999999';
+	document.getElementById('events_content').innerHTML = events_data_content_communication;
+}
+
+function onClickDiplomacy()
+{
+	document.getElementById('link_system').style.color = '#999999';
+	document.getElementById('link_warfare').style.color = '#999999';
+	document.getElementById('link_communication').style.color = '#999999';
+	document.getElementById('link_diplomacy').style.color = 'white';
+	document.getElementById('events_content').innerHTML = events_data_content_diplomacy;
+}
+
+{/literal}
+
+</script>
+
+
+<div id="events_data" class="floating_events" style="height:{$events_div_size}">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td background="../images/game/popup/events/pixmaps.active_top_left.png"><img src="../images/game/placeholder.gif" border="0" width="6" height="1"></td>
+		<td background="../images/game/popup/events/pixmaps.active_top.png" valign="top" width="100%">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td><img src="../images/game/popup/events/icon.png" border="0"></td>
+<td width="100%">
+&nbsp;
+
+</td>
+<td align="right"><a href="#" onclick="document.getElementById('events_data').style.display='none';"><img src="../images/game/popup/events/buttons.close.png" border="0"></A>
+</td>
+</tr>
+</table>
+
+</td>
+		<td background="../images/game/popup/events/pixmaps.active_top_right.png" valign="top"><img src="../images/game/placeholder.gif" border="0" width="6" height="1"></td>
+	</tr>
+
+
+	<tr><td colspan="3" width="100%">
+	<table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+	<td style="width:4px" background="../images/game/popup/events/pixmaps.active_left.png"><img src="../images/game/placeholder.gif" border="0" width="4" height="1"></td>
+	<td bgcolor="#333333">
+			&nbsp;
+			<b style="color:#999999">
+			<a href="#" style="color:#999999" id="link_system" onClick="onClickSystem();return false;">{t}System{/t} ({$events_count_content_system})</a>
+			&nbsp;|&nbsp;
+			<a href="#" style="color:#999999" id="link_warfare" onClick="onClickWarfare();return false;">{t}Warfare{/t} ({$events_count_content_warfare})</a>		
+			&nbsp;|&nbsp;
+			<a href="#" style="color:#999999" id="link_communication" onClick="onClickCommunication();return false;">{t}Communication{/t} ({$events_count_content_communication})</a>		
+			&nbsp;|&nbsp;
+			<a href="#" style="color:#999999" id="link_diplomacy" onClick="onClickDiplomacy();return false;">{t}Diplomacy{/t} ({$events_count_content_diplomacy})</a>		
+			</b>
+	</td>
+	<td style="width:4px" background="../images/game/popup/events/pixmaps.active_right.png"><img src="../images/game/placeholder.gif" border="0" width="4" height="1"></td>
+	
+	</tr>
+	<tr>
+		<td style="width:4px" background="../images/game/popup/events/pixmaps.active_left.png"><img src="../images/game/placeholder.gif" border="0" width="4" height="1"></td>
+		<td valign="top" width="100%" height="{$events_content_size}" bgcolor="black" background="../images/game/background5.gif">
+			
+			<div class="events_content" style="height:{$events_content_size};border:0px" id="events_content">
+			</div>
+			</td>
+		<td style="width:4px" background="../images/game/popup/events/pixmaps.active_right.png"><img src="../images/game/placeholder.gif" border="0" width="4" height="1"></td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+
+	<tr><td colspan="3" width="100%">
+	<table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td background="../images/game/popup/events/pixmaps.active_bottom_left.png"><img src="../images/game/placeholder.gif" border="0" width="4" height="6"></td>
+		<td width="100%" background="../images/game/popup/events/pixmaps.active_bottom.png"><img src="../images/game/placeholder.gif" border="0" width="4" height="6"></td>
+		<td background="../images/game/popup/events/pixmaps.active_bottom_right.png"><img src="../images/game/placeholder.gif" border="0" width="4" height="6"></td>
+	</tr>
+	</table>
+	</td>
+	</tr>
+</table>
+
+</div>
+<script>
+{$script_code}
+</script>

@@ -1,0 +1,147 @@
+
+CREATE TABLE IF NOT EXISTS `system_tb_chat_log` (
+  `id` int(11) NOT NULL auto_increment,
+  `timestamp` int(11) NOT NULL default '0',
+  `message` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+
+/***/
+
+
+CREATE TABLE IF NOT EXISTS `system_tb_chat_sessions` (
+  `id` int(11) NOT NULL auto_increment,
+  `nickname` varchar(15) NOT NULL default '',
+  `hostname` varchar(255) NOT NULL default '',
+  `timestamp` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `system_tb_forum` (
+  `id` int(11) NOT NULL auto_increment,
+  `player` int(11) NOT NULL default '0',
+  `date_creation` int(11) NOT NULL default '0',
+  `date_update` int(11) NOT NULL default '0',
+  `last_seen_by` int(11) NOT NULL,
+  `date_seen` int(11) NOT NULL,
+  `title` varchar(65) NOT NULL default '',
+  `content` text NOT NULL,
+  `views` int(11) NOT NULL default '0',
+  `parent` int(11) NOT NULL default '-1',
+  `forum_name` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `system_tb_games` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(35) NOT NULL default '',
+  `victory_condition` varchar(35) NOT NULL default '',
+  `premium_only` int(11) NOT NULL default '0',
+  `lifetime` int(11) NOT NULL default '0',
+  `turns_per_day` int(11) NOT NULL default '0',
+  `protection_turns` int(11) NOT NULL default '0',
+  `max_players` int(11) NOT NULL default '0',
+  `players_slot` int(11) NOT NULL default '0',
+  `count` int(11) NOT NULL default '0',
+  `description` text,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `system_tb_hall_of_fame` (
+  `id` int(11) NOT NULL auto_increment,
+  `player_name` varchar(255) NOT NULL,
+  `game_name` varchar(255) NOT NULL,
+  `date` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `system_tb_history` (
+  `id` int(11) NOT NULL auto_increment,
+  `game_id` int(11) NOT NULL default '0',
+  `player_id` int(11) NOT NULL default '0',
+  `date` int(11) NOT NULL default '0',
+  `rank` int(11) NOT NULL default '0',
+  `empire_name` varchar(255) NOT NULL default '',
+  `networth` bigint(20) NOT NULL default '0',
+  `military_might` bigint(20) NOT NULL default '0',
+  `planets` bigint(20) NOT NULL default '0',
+  `population` bigint(20) NOT NULL default '0',
+  `turns_played` bigint(20) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `system_tb_messages` (
+  `id` int(11) NOT NULL auto_increment,
+  `player_id` int(11) NOT NULL default '0',
+  `date` int(11) NOT NULL default '0',
+  `message` text NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `system_tb_players` (
+  `id` int(11) NOT NULL auto_increment,
+  `admin` int(11) NOT NULL default '0',
+  `email` varchar(255) NOT NULL default '',
+  `nickname` varchar(15) NOT NULL default '',
+  `password` varchar(32) NOT NULL default '',
+  `premium` int(11) NOT NULL default '0',
+  `real_name` varchar(70) NOT NULL default '',
+  `country` varchar(35) NOT NULL default '',
+  `last_login_hostname` varchar(255) default NULL,
+  `last_login_date` int(11) default NULL,
+  `games_won` int(11) NOT NULL default '0',
+  `games_lost` int(11) NOT NULL default '0',
+  `active` tinyint(4) NOT NULL default '0',
+  `creation_date` int(11) NOT NULL default '0',
+  `avatar_img` blob,
+  `score` int(11) NOT NULL default '0',
+  `daily_bulletin` int(11) NOT NULL default '0',
+  `flash` int(11) NOT NULL default '1',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+
+CREATE TABLE IF NOT EXISTS `system_tb_sessions` (
+  `id` int(11) NOT NULL auto_increment,
+  `player` int(11) NOT NULL default '0',
+  `date` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `system_tb_stats` (
+  `id` int(11) NOT NULL auto_increment,
+  `timestamp` int(11) NOT NULL,
+  `login_count` int(11) NOT NULL,
+  `signup_count` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `system_tb_warrant` (
+  `id` int(11) NOT NULL auto_increment,
+  `kind` varchar(35) NOT NULL,
+  `player` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+

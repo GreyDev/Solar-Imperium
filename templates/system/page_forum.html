@@ -1,0 +1,75 @@
+{capture name=page_title}
+{t}Forum{/t}
+{/capture}
+
+{include file="frame_header.html" title=$smarty.capture.page_title}
+
+
+<div align="center">
+<div align="center" style="background-image:url(images/system/div_bg.jpg);background-color:darkred;padding:10px;border:1px solid red">
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="login.php"><b>{t}PLAY NOW{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="take_a_tour.php"><b>{t}TAKE A TOUR{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="scoreboard.php"><b>{t}SCOREBOARD{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="server_status.php"><b>{t}SERVER STATUS{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="forum.php" style="color:yellow"><b>{t}FORUM{/t}</b></a></div>
+</div>
+<br/>
+
+<table cellpadding="1" cellspacing="0" border="0" width="100%" >
+	<tr>
+		<td>
+		<table class="text_small" 
+			 width="100%" cellspacing="10" cellpadding="5"
+			border="0" align="center" >
+			<tr>
+				<td>
+
+<div align="center">
+<div style="width:800px;background-image:url(images/common/alpha1.png);border:1px solid darkred;padding:10px">
+
+<form onSubmit="window.location ='forum_search.php?KEYWORDS='+keywords.value; return false;">
+<table cellspacing="0" width="760" align="center" cellpadding="5" border="0">
+<tr>
+<td width="100%" align="right" style="color:white">Search:&nbsp;</td>
+<td><input class="input_text" type="text" name="keywords"></td>
+</tr>
+</table><br/>
+</form>
+				<table align="center" class="text_small" style="border:1px solid #6a6a6a;background-color:darkred;color:white" width="760" cellspacing="0"
+					cellpadding="10" border="0">
+					<tr>
+						<td background="images/system/div_bg.jpg"><b>{t}Description{/t}</b></td>
+						<td background="images/system/div_bg.jpg"><b>{t}Posts{/t}</b></td>
+						<td background="images/system/div_bg.jpg"><b>{t}Replies{/t}</b></td>
+						<td background="images/system/div_bg.jpg" nowrap><b>{t}Last Reply{/t}</b></td>
+						<td background="images/system/div_bg.jpg" nowrap><b>{t}Last Post{/t}</b></td>
+
+					</tr>
+
+					{section name="item" loop=$items}
+					<tr style="height:32px;color:{$items[item].fgcolor}">
+						<td width="100%" bgcolor="{$items[item].bgcolor}"><a
+							style="color:{$items[item].fgcolor};text-decoration:none" class="text_normal" href="{$items[item].url}">{$items[item].description}</a></td>
+						<td align="center" bgcolor="{$items[item].bgcolor}">{$items[item].posts}</td>
+						<td align="center" bgcolor="{$items[item].bgcolor}">{$items[item].replies}</td>
+						<td nowrap bgcolor="{$items[item].bgcolor}">{$items[item].lastreply}</td>
+						<td nowrap bgcolor="{$items[item].bgcolor}">{$items[item].lastpost}</td>
+					</tr>
+
+					{/section}					
+					
+				</table>
+<br/>
+</div>
+</div>
+
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+<br />
+
+
+{include file="frame_footer.html"}

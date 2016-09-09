@@ -1,0 +1,141 @@
+{capture name=page_title}
+{t}Forum{/t}
+{/capture}
+
+{include file="frame_header.html" title=$smarty.capture.page_title}
+
+
+
+<div align="center">
+<div align="center" style="background-image:url(images/system/div_bg.jpg);background-color:darkred;padding:10px;border:1px solid red">
+    <div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="login.php"><b>{t}PLAY NOW{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+    <div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="take_a_tour.php"><b>{t}TAKE A TOUR{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+    <div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="scoreboard.php"><b>{t}SCOREBOARD{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+    <div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="server_status.php"><b>{t}SERVER STATUS{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+    <div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="forum.php" style="color:yellow"><b>{t}FORUM{/t}</b></a></div>
+</div>
+<br/>
+
+
+<div align="center">
+    <div style="width:800px;background-image:url(images/common/alpha1.png);border:1px solid darkred;padding:10px">
+
+
+        <table cellpadding="1" cellspacing="0" border="0" width="760">
+            <tr>
+                <td>
+                    <table class="text_small"
+                     width="100%" cellspacing="0" cellpadding="0"
+                     border="0" align="center">
+                        <tr>
+                            <td>
+
+                                <div class="text_normal" style="padding:5px;color:white">
+
+                                    <table width="100%" cellspacing="0" cellpadding="0">
+                                        <tr><td width="100%" nowrap>
+                                                <b>{t}Current forum:{/t}</b> <b style="color:yellow">{$current_forum}</b>
+                                            </td><td nowrap><a class="link" href="forum.php?BACK"><b>{t}Back To Forums{/t}</b></a></td>
+                                    </tr></table>
+
+                                </div>
+
+                                <table class="text_small" style="background-color:darkred;color:white" width="100%" cellspacing="1"
+                           cellpadding="10" border="0">
+                                    <tr>
+                                        <td background="images/system/div_bg.jpg"><b>{t}Topic{/t}</b></td>
+                                        <td background="images/system/div_bg.jpg"><b>{t}Views{/t}</b></td>
+                                        <td background="images/system/div_bg.jpg"><b>{t}Replies{/t}</b></td>
+                                        <td background="images/system/div_bg.jpg"><b>{t}Author{/t}</b></td>
+                                        <td background="images/system/div_bg.jpg"><b>{t}Life{/t}</b></td>
+                                        <td background="images/system/div_bg.jpg"><b>{t}Last Seen{/t}</b></td>
+                                        <td background="images/system/div_bg.jpg"><b>{t}Last Reply{/t}</b></td>
+
+                                    </tr>
+
+                                    {section name="item" loop=$items}
+                                    <tr style="height:32px;color:{$items[item].fgcolor}">
+                                        <td width="100%" bgcolor="{$items[item].bgcolor}">{$items[item].new}<a
+                                            style="color:{$items[item].fgcolor}" class="text_normal" href="{$items[item].url}">{$items[item].title}</a></td>
+                                        <td align="center" bgcolor="{$items[item].bgcolor}">{$items[item].views}</td>
+                                        <td align="center" bgcolor="{$items[item].bgcolor}">{$items[item].replies}</td>
+                                        <td nowrap bgcolor="{$items[item].bgcolor}">{$items[item].author}</td>
+                                        <td nowrap bgcolor="{$items[item].bgcolor}">{$items[item].date}</td>
+                                        <td nowrap bgcolor="{$items[item].bgcolor}">{$items[item].lastseen}</td>
+                                        <td nowrap bgcolor="{$items[item].bgcolor}">{$items[item].lastreply}</td>
+
+                                    </tr>
+
+                                    {sectionelse}
+                                    <tr>
+                                        <td bgcolor="#dadaea" colspan="7" style="color:#333333" background="images/common/alpha1.png" class="text_normal">{t}Forum is empty!{/t}</td>
+                                    </tr>
+                                    {/section}
+                                    <tr>
+                                        <td colspan="7"  align="right">{$pages}</td>
+                                    </tr>
+                                </table>
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br />
+</div></div>
+<br/>
+{if $player_connected eq 1}
+<div style="width:800px;background-image:url(images/common/alpha3.png);border:1px solid darkred;padding:10px">
+
+    <form method="post" action="forum.php?POST_TOPIC">
+        <table cellpadding="1" cellspacing="0" border="0" width="100%">
+            <tr>
+                <td class="text_normal" style="color:white"><b>&nbsp;{t}Post a new
+                topic{/t}</b></td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="text_small" width="100%" cellspacing="10" cellpadding="5"
+                     border="0" align="center" style="color:#dedede">
+                        <tr>
+                            <td align="right">{t}Subject:{/t}</td>
+                            <td><input
+                                    class="input_text" id="subject" style="width:500px"
+                                type="text" name="subject" value=""></td>
+                        </tr>
+                        <tr>
+                            <td align="right">{t}BB Codes allowed:{/t}</td>
+                            <td style="color:white"><b>[list] [b] [u] [i] [code] [quote]</b></td>
+                        </tr>
+                        <tr>
+                            <td align="right" valign="top">{t}Content:{/t}</td>
+                            <td><textarea name="content" rows="12" cols="80"
+                              class="input_text"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td align="right">&nbsp;</td>
+                            <td><input type="submit" name="forum_newtopic"
+                           value="{t}Post topic{/t}" class="input_button"></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"><br />
+                                <b class="text_small" style="color:yellow">{t}Please do not spam or
+                                your account will be terminated.{/t}</b> <br />
+                                <br />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script>
+    document.getElementById('subject').focus();
+ </script>
+{/if}
+
+<br/>
+{include file="frame_footer.html"}

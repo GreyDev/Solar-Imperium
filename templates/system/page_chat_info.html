@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Chat Information</title>
+<link rel="stylesheet" type="text/css" href="css/system/chat.css" />
+<link rel="stylesheet" type="text/css" href="css/system/common.css" />
+
+</head>
+
+<body>
+
+<table class="text_small" bgcolor="#cacaca" cellspacing="0" cellpadding="5" width="320px">
+<tr>
+<td width="120">{t}Nickname{/t}:</td>
+<td><b>{$nickname|stripslashes}</b></td>
+</tr><tr>
+<td>{t}Real Name{/t}:</td>
+<td><b>{$real_name|stripslashes}</b></td>
+</tr><tr>
+<td>{t}Country{/t}:</td>
+<td><b>{$country|stripslashes}</b></td>
+</tr><tr>
+<td>{t}Rank{/t}:</td>
+<td><b>{$rank|number_format}</b></td>
+</tr><tr>
+<td>{t}Score{/t}:</td>
+<td><b>{$score|number_format}</b></td>
+</tr><tr>
+<td>{t}Last Login{/t}:</td>
+<td><b>{$last_login_date|date_format}</b></td>
+</tr><tr>
+<td>{t}Created on{/t}</td>
+<td><b>{$creation_date|date_format}</b></td>
+</tr><tr>
+<td>{t}Games won{/t}</td>
+<td><b>{$games_won|number_format}</b></td>
+</tr><tr>
+<td>{t}Games lost{/t}</td>
+<td><b>{$games_lost|number_format}</b></td>
+</tr>
+</table>
+
+<br/>
+
+<table class="text_small">
+{section name="e" loop="$empires"}
+<tr><td style="color:blue"><b>{$empires[e].emperor}@{$empires[e].name}</b> {t} on game{/t} <b>{$empires[e].game_name}</b></td><td></td></tr>
+{sectionelse}
+{/section}
+
+</table>
+</body>
+</html>

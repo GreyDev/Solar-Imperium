@@ -1,0 +1,332 @@
+<table  cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td nowrap><img src="../images/game/tab_left.gif" border="0"></td>
+        <td nowrap bgcolor="darkred" style="padding:0px 5px 0px 5px"><a  style="text-decoration:none;color:white" href="#" onClick="open_page('manage.php')"><b>{t}Manage{/t}</b></a></td>
+        <td><img src="../images/game/tab_right.gif" border="0"></td>
+
+        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+        <td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link"  href="#" onClick="open_page('stats.php')"><b>{t}Performance{/t}</b></a></td>
+        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+        <td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="#"  onClick="open_page('logs.php')"><b>{t}Activity Logs{/t}</b></a></td>
+        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+        <td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link"  href="#" onClick="open_page('logo_editor.php')"><b>{t}Edit Logo{/t}</b></a></td>
+        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+        <td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link"  href="#" onClick="open_page('lastturn.php')"><b>{t}Turn Summary{/t}</b></a></td>
+        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+        <td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link"  href="#" onClick="open_page('research.php')"><b>{t}Research Map{/t}</b></a></td>
+        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+        <td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link"  href="#" onClick="open_page('edit_production.php')"><b>{t}Production{/t}</b></a></td>
+        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+    </tr>
+</table>
+
+
+<table bgcolor="black" 
+       cellspacing="1" cellpadding="2" border="0" width="780px"
+       style="font-size:11pt;font-family:verdana;border:1px solid darkred">
+
+    <tr>
+        <td colspan="4">
+            <table cellspacing="0" cellpadding="5" border="0"><tr>
+                    <td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Credits{/t}" title="{t}Credits{/t}" src="../images/game/icon_credits.png"></td><td><b>{$credits|number_format}</b></td>
+                    <td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Food{/t}" title="{t}Food{/t}" src="../images/game/icon_food.png"></td><td><b>{$food|number_format}</b></td>
+                    <td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Ore{/t}" title="{t}Ore{/t}" src="../images/game/icon_ore.png"></td><td><b>{$ore|number_format}</b></td>
+                    <td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Petroleum{/t}" title="{t}Petroleum{/t}" src="../images/game/icon_petro.png"></td><td><b>{$petroleum|number_format}</b></td>
+                    <td><img style="border:1px solid #666666;margin:0 5 0 5;" alt="{t}Planets total / Planets cap{/t}" title="{t}Planets total / Planets cap{/t}" src="../images/game/icon_planets.png"></td><td><b>{$total_planets|number_format} / {$max_planets|number_format}</b></td>
+                </tr></table>
+        </td>
+
+    </tr>
+    <tr>
+        <td bgcolor="#333333" background="../images/game/background/topbar.jpg" width="250">&nbsp;</td>
+        <td bgcolor="#333333" background="../images/game/background/topbar.jpg" width="150"><b style="color:#999999">{t}Qty.{/t}</b></td>
+        <td bgcolor="#333333" background="../images/game/background/topbar.jpg" width="250"><b style="color:#999999">{t}Buy / Sell{/t}</b></td>
+        <td bgcolor="#333333" background="../images/game/background/topbar.jpg" width="100"><b style="color:#999999">{t}Actions{/t}</b></td>
+    </tr>
+    <tr>
+        <td background="../images/game/bar3.jpg">
+
+            <table cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <img src="../images/game/icons/army/soldiers_{$soldiers_level}.gif" width="32" height="32" style="border:1px solid black;margin:0 5 0 0">
+                    </td>
+                    <td>
+                        <a href="javascript:show_help('soldiers')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=soldiers',this);return false" onmouseout="ajax_hideTooltip()">{t}Soldiers{/t}</a>:
+                    </td>
+                </tr>
+            </table>
+
+        </td>
+        <td background="../images/game/bar4.jpg" align="right">{$soldiers|number_format}</td>
+        <td background="../images/game/bar3.jpg" align="right"><b>{$buy_soldiers} / {$sell_soldiers}</b></td>
+        <td background="../images/game/bar3.jpg" >
+            <a class="menu2" href="#" onclick="buy('soldiers','{$soldiers_buy_label}')">{t}Buy{/t}</a>
+            <a class="menu2"href="#"
+               onClick="if (!confirm('{t}Buy Maximum LUMP PURCHASE?{/t}')) return false; else open_page('manage.php?buy=soldiers&quantity={$buy_max_soldiers}')" class="link" onmouseover="return escape('Maximum LUMP PURCHASE: {$buy_max_soldiers}');">{t}Max{/t}</a>
+            <a  class="menu2" href="javascript:sell('soldiers','{$soldiers_sell_label}')">{t}Sell{/t}</a></td>
+    </tr>
+    <tr>
+        <td  background="../images/game/bar3.jpg">
+            <table cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <img src="../images/game/icons/army/fighters_{$fighters_level}.gif" width="32" height="32" style="border:1px solid black;margin:0 5 0 0">
+                    </td>
+                    <td>
+                        <a href="javascript:show_help('fighters')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=fighters',this);return false" onmouseout="ajax_hideTooltip()">{t}Fighters{/t}</a>:
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td background="../images/game/bar4.jpg" align="right">{$fighters|number_format}</td>
+        <td background="../images/game/bar3.jpg" align="right"><b>{$buy_fighters} / {$sell_fighters}</b></td>
+        <td background="../images/game/bar3.jpg" ><a  class="menu2"href="javascript:buy('fighters','{$fighters_buy_label}')">{t}Buy{/t}</a> <a
+                class="menu2" href="#"
+                onClick="if (!confirm('{t}Buy Maximum LUMP PURCHASE?{/t}')) return false; else open_page('manage.php?buy=fighters&quantity={$buy_max_fighters}');" class="link" onmouseover="return escape('Maximum LUMP PURCHASE: {$buy_max_fighters}');">{t}Max{/t}</a> <a  class="menu2" href="javascript:sell('fighters','{$fighters_sell_label}')">{t}Sell{/t}</a></td>
+    </tr>
+    <tr>
+        <td background="../images/game/bar3.jpg">
+
+            <table cellspacing="0" border="0">
+                <tr><td>
+
+                        <img src="../images/game/icons/army/stations_{$stations_level}.gif" width="32" height="32" style="border:1px solid black;margin:0 5 0 0"></td>
+                    <td><a href="javascript:show_help('defense stations')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=stations',this);return false" onmouseout="ajax_hideTooltip()">{t}Defense stations{/t}</a>:</td></tr></table></td>
+        <td background="../images/game/bar4.jpg" align="right">{$stations|number_format}</td>
+        <td background="../images/game/bar3.jpg" align="right"><b>{$buy_stations} / {$sell_stations}</b></td>
+        <td background="../images/game/bar3.jpg" >
+            <a  class="menu2" href="javascript:buy('stations','{$stations_buy_label}')">{t}Buy{/t}</a>
+            <a  class="menu2" href="#"
+                onClick="if (!confirm('{t}Buy Maximum LUMP PURCHASE?{/t}')) return false; else open_page('manage.php?buy=stations&quantity={$buy_max_stations}');" class="link" onmouseover="return escape('Maximum LUMP PURCHASE: {$buy_max_stations}');">{t}Max{/t}</a> <a  class="menu2" href="javascript:sell('stations','{$stations_sell_label}')">{t}Sell{/t}</a></td>
+
+
+    </tr>
+    <tr>
+        <td background="../images/game/bar3.jpg">
+
+
+            <table cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <img src="../images/game/icons/army/covertagents_{$covertagents_level}.gif" width="32" height="32" style="border:1px solid black;margin:0 5 0 0">
+                    </td>
+                    <td><a href="javascript:show_help('covert_agents')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=covert_agents',this);return false" onmouseout="ajax_hideTooltip()">{t}Covert agents{/t}</a>:</td>
+                </tr></table></td>
+
+        <td background="../images/game/bar4.jpg" align="right">{$covertagents|number_format}</td>
+        <td background="../images/game/bar3.jpg" align="right"><b>{$buy_covertagents} / {$sell_covertagents}</b></td>
+        <td background="../images/game/bar3.jpg"><a
+                href="javascript:buy('covertagents','{$covertagents_buy_label}')"  class="menu2">{t}Buy{/t}</a> <a
+                href="#" class="menu2"
+                onClick="if (!confirm('{t}Buy Maximum LUMP PURCHASE?{/t}')) return false; else open_page('manage.php?buy=covertagents&quantity={$buy_max_covertagents}');" class="link" onmouseover="return escape('Maximum LUMP PURCHASE: {$buy_max_covertagents}');">{t}Max{/t}</a> <a
+                href="javascript:sell('covertagents','{$covertagents_sell_label}')"  class="menu2">{t}Sell{/t}</a></td>
+    </tr>
+    <tr>
+        <td background="../images/game/bar3.jpg">
+
+
+            <table cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <img src="../images/game/icons/army/lightcruisers_{$lightcruisers_level}.gif" width="32" height="32" style="border:1px solid black;margin:0 5 0 0"></td>
+                    <td><a href="javascript:show_help('lightcruisers')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=lightcruisers',this);return false" onmouseout="ajax_hideTooltip()">{t}Light cruisers{/t}</a>:</td></tr></table></td>
+        <td background="../images/game/bar4.jpg" align="right">{$light_cruisers|number_format}</td>
+        <td background="../images/game/bar3.jpg" align="right"><b>{$sell_lightcruisers}</b></td>
+
+
+        <td background="../images/game/bar3.jpg"><a  class="menu2"
+                                                     href="javascript:sell('lightcruisers','{$lightcruisers_sell_label}')">{t}Sell{/t}</a></td>
+    </tr>
+    <tr>
+        <td background="../images/game/bar3.jpg">
+
+            <table cellspacing="0" border="0">
+                <tr>
+                    <td>
+
+                        <img
+                            src="../images/game/icons/army/heavycruisers_{$heavycruisers_level}.gif" width="32" height="32"
+                            style="border:1px solid black;margin:0 5 0 0"></td>
+                    <td><a href="javascript:show_help('heavycruisers')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=heavycruisers',this);return false" onmouseout="ajax_hideTooltip()">{t}Heavy cruisers{/t}</a>:</td></tr></table></td>
+        <td background="../images/game/bar4.jpg" align="right">{$heavy_cruisers|number_format}</td>
+        <td background="../images/game/bar3.jpg" align="right"><b>{$buy_heavycruisers} / {$sell_heavycruisers}</b></td>
+        <td background="../images/game/bar3.jpg"><a
+                href="javascript:buy('heavycruisers','{$heavycruisers_buy_label}')"  class="menu2">{t}Buy{/t}</a> <a
+                href="#"  class="menu2"
+                onClick="if (!confirm('{t}Buy Maximum LUMP PURCHASE?{/t}')) return false; else open_page('manage.php?buy=heavycruisers&quantity={$buy_max_heavycruisers}');" class="link" onmouseover="return escape('Maximum LUMP PURCHASE: {$buy_max_heavycruisers}');">{t}Max{/t}</a> <a  class="menu2"
+                href="javascript:sell('heavycruisers','{$heavycruisers_sell_label}')">{t}Sell{/t}</a></td>
+    </tr>
+    <tr>
+        <td background="../images/game/bar3.jpg">
+
+            <table cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <img src="../images/game/icons/army/carriers_{$carriers_level}.gif"  width="32" height="32" style="border:1px solid black;margin:0 5 0 0"></td>
+                    <td><a href="javascript:show_help('carriers')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=carriers',this);return false" onmouseout="ajax_hideTooltip()">{t}Carriers{/t}</a>:</td>
+                </tr></table></td>
+        <td background="../images/game/bar4.jpg" align="right">{$carriers|number_format}</td>
+        <td background="../images/game/bar3.jpg" align="right"><b>{$buy_carriers} / {$sell_carriers}</b></td>
+        <td background="../images/game/bar3.jpg"><a  class="menu2" href="javascript:buy('carriers','{$carriers_buy_label}')">{t}Buy{/t}</a> <a
+                href="#"  class="menu2"
+                onClick="if (!confirm('{t}Buy Maximum LUMP PURCHASE?{/t}')) return false; else open_page('manage.php?buy=carriers&quantity={$buy_max_carriers}')" class="link" onmouseover="return escape('Maximum LUMP PURCHASE: {$buy_max_carriers}');">{t}Max{/t}</a> <a href="javascript:sell('carriers','{$carriers_sell_label}')"  class="menu2">{t}Sell{/t}</a></td>
+    </tr>
+
+    <tr>
+        <td bgcolor="#333333" background="../images/game/background/topbar.jpg">&nbsp;</td>
+        <td bgcolor="#333333" background="../images/game/background/topbar.jpg"><b style="color:#999999">{t}Qty.{/t}</b></td>
+        <td bgcolor="#333333" background="../images/game/background/topbar.jpg"><b style="color:#999999">{t}Buy / Sell{/t}</b></td>
+        <td bgcolor="#333333" background="../images/game/background/topbar.jpg"><b style="color:#999999">{t}Actions{/t}</b></td>
+    </tr>
+
+    <tr>
+        <td background="../images/game/bar3.jpg" >
+
+
+
+            <table cellspacing="0" border="0">
+                <tr>
+                    <td><img src="../images/game/icons/planets/food.jpg" width="32" height="32"
+                             style="border:1px solid black;margin:0 5 0 0"></td>
+                    <td>{$food_short} <a href="javascript:show_help('food_planets')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=food_planets',this);return false" onmouseout="ajax_hideTooltip()">{t}Food planets{/t}</a></td></tr></table></td>
+        <td background="../images/game/bar4.jpg" align="right">{$food_planets|number_format}</td>
+        <td background="../images/game/bar3.jpg" align="right"><b>{$cost_planet_food}</b></td>
+        <td background="../images/game/bar3.jpg" width="110px">
+            <a href="javascript:buy('food_planets','{$food_planets_buy_label}')"  class="menu2">{t}Buy{/t}</a>
+            <a href="#"  class="menu2" onclick="if (confirm('{t}Buy Maximum LUMP PURCHASE?{/t}')) open_page('manage.php?buy=food_planets&quantity={$buy_max_planet_food}');" class="link" onmouseover="return escape('Maximum LUMP PURCHASE: {$buy_max_planet_food}');">{t}Max{/t}</a>
+            <a href="javascript:sell('food_planets','{$food_planets_sell_label}')"  class="menu2">{t}Drop{/t}</a>
+        </td>
+    </tr>
+    <tr>
+        <td background="../images/game/bar3.jpg" >
+
+            <table cellspacing="0" border="0">
+                <tr>
+                    <td><img src="../images/game/icons/planets/ore.jpg" width="32" height="32"
+                             style="border:1px solid black;margin:0 5 0 0"></td>
+                    <td>{$ore_short} <a href="javascript:show_help('ore_planets')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=ore_planets',this);return false" onmouseout="ajax_hideTooltip()">{t}Ore planets{/t}</a></td></tr></table></td>
+        <td background="../images/game/bar4.jpg"  align="right">{$ore_planets|number_format}</td>
+        <td background="../images/game/bar3.jpg" align="right"><b>{$cost_planet_ore}</b></td>
+        <td background="../images/game/bar3.jpg" >
+            <a href="javascript:buy('ore_planets','{$ore_planets_buy_label}')"  class="menu2">{t}Buy{/t}</a>
+            <a href="#"  class="menu2" onclick="if (confirm('{t}Buy Maximum LUMP PURCHASE?{/t}')) open_page('manage.php?buy=ore_planets&quantity={$buy_max_planet_ore}');"  class="link" onmouseover="return escape('Maximum LUMP PURCHASE: {$buy_max_planet_ore}');">{t}Max{/t}</a>
+            <a href="javascript:sell('ore_planets','{$ore_planets_sell_label}')"  class="menu2">{t}Drop{/t}</a></td>
+    </tr>
+    <tr>
+        <td background="../images/game/bar3.jpg">
+            <table cellspacing="0" border="0">
+                <tr>
+                    <td><img
+                            src="../images/game/icons/planets/tourism.jpg" width="32" height="32" style="border:1px solid black;margin:0 5 0 0"></td>
+                    <td>{$tourism_short} <a href="javascript:show_help('tourism_planets')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=tourism_planets',this);return false" onmouseout="ajax_hideTooltip()">{t}Tourism planets{/t}</a></td></tr></table></td>
+        <td background="../images/game/bar4.jpg" align="right">{$tourism_planets|number_format}</td>
+        <td background="../images/game/bar3.jpg" align="right"><b>{$cost_planet_tourism}</b></td>
+        <td background="../images/game/bar3.jpg">
+            <a href="javascript:buy('tourism_planets','{$tourism_planets_buy_label}')"  class="menu2">{t}Buy{/t}</a>
+            <a href="#"  class="menu2" onclick="if (confirm('{t}Buy Maximum LUMP PURCHASE?{/t}')) open_page('manage.php?buy=tourism_planets&quantity={$buy_max_planet_tourism}')" class="link" onmouseover="return escape('Maximum LUMP PURCHASE: {$buy_max_planet_tourism}');">{t}Max{/t}</a>
+            <a href="javascript:sell('tourism_planets','{$tourism_planets_sell_label}')"  class="menu2">{t}Drop{/t}</a></td>
+    </tr>
+    <tr>
+        <td background="../images/game/bar3.jpg" >			<table cellspacing="0" border="0">
+                <tr>
+                    <td><img
+                            src="../images/game/icons/planets/supply.jpg" width="32" height="32" style="border:1px solid black;margin:0 5 0 0"></td>
+                    <td>{$supply_short} <a href="javascript:show_help('supply_planets')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=supply_planets',this);return false" onmouseout="ajax_hideTooltip()">{t}Supply planets{/t}</a></td></tr></table></td>
+        <td background="../images/game/bar4.jpg" align="right">{$supply_planets|number_format}</td>
+        <td background="../images/game/bar3.jpg" align="right"><b>{$cost_planet_supply}</b></td>
+        <td background="../images/game/bar3.jpg" >
+            <a href="javascript:buy('supply_planets','{$supply_planets_buy_label}')"  class="menu2">{t}Buy{/t}</a>
+            <a href="#"  class="menu2" onclick="if (confirm('{t}Buy Maximum LUMP PURCHASE?{/t}')) open_page('manage.php?buy=supply_planets&quantity={$buy_max_planet_supply}');"  class="link" onmouseover="return escape('Maximum LUMP PURCHASE: {$buy_max_planet_supply}');">{t}Max{/t}</a>
+            <a href="javascript:sell('supply_planets','{$supply_planets_sell_label}')"  class="menu2">{t}Drop{/t}</a></td>
+    </tr>
+    <tr>
+        <td background="../images/game/bar3.jpg" >			<table cellspacing="0" border="0">
+                <tr>
+                    <td><img src="../images/game/icons/planets/gov.jpg" width="32" height="32"
+                             style="border:1px solid black;margin:0 5 0 0"></td>
+                    <td>{$gov_short} <a href="javascript:show_help('gov_planets')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=gov_planets',this);return false" onmouseout="ajax_hideTooltip()">{t}Government planets{/t}</a></td></tr></table></td>
+        <td background="../images/game/bar4.jpg" align="right">{$gov_planets|number_format}</td>
+        <td background="../images/game/bar3.jpg" align="right"><b>{$cost_planet_gov}</b></td>
+        <td background="../images/game/bar3.jpg" >
+            <a href="javascript:buy('gov_planets','{$gov_planets_buy_label}')"  class="menu2">{t}Buy{/t}</a>
+            <a href="#" class="menu2" onclick="if (confirm('{t}Buy Maximum LUMP PURCHASE?{/t}')) open_page('manage.php?buy=gov_planets&quantity={$buy_max_planet_gov}');"  class="link" onmouseover="return escape('Maximum LUMP PURCHASE: {$buy_max_planet_gov}');">{t}Max{/t}</a>
+            <a href="javascript:sell('gov_planets','{$gov_planets_sell_label}')"  class="menu2">{t}Drop{/t}</a></td>
+    </tr>
+    <tr>
+        <td background="../images/game/bar3.jpg" >			<table cellspacing="0" border="0">
+                <tr>
+                    <td><img src="../images/game/icons/planets/edu.jpg" width="32" height="32"
+                             style="border:1px solid black;margin:0 5 0 0"></td>
+                    <td>{$edu_short} <a href="javascript:show_help('edu_planets')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=edu_planets',this);return false" onmouseout="ajax_hideTooltip()">{t}Education planets{/t}</a></td></tr></table></td>
+        <td background="../images/game/bar4.jpg" align="right">{$edu_planets|number_format}</td>
+        <td background="../images/game/bar3.jpg" align="right"><b>{$cost_planet_edu}<b></td>
+                    <td background="../images/game/bar3.jpg" >
+                        <a href="javascript:buy('edu_planets','{$edu_planets_buy_label}')"  class="menu2">{t}Buy{/t}</a>
+                        <a href="#" class="menu2" onclick="if (confirm('{t}Buy Maximum LUMP PURCHASE?{/t}')) open_page('manage.php?buy=edu_planets&quantity={$buy_max_planet_edu}');" class="link" onmouseover="return escape('Maximum LUMP PURCHASE: {$buy_max_planet_edu}');" >{t}Max{/t}</a>
+                        <a href="javascript:sell('edu_planets','{$edu_planets_sell_label}')"  class="menu2">{t}Drop{/t}</a></td>
+                    </tr>
+                    <tr>
+                        <td background="../images/game/bar3.jpg" >			<table cellspacing="0" border="0">
+                                <tr>
+                                    <td><img
+                                            src="../images/game/icons/planets/research.jpg" width="32" height="32" style="border:1px solid black;margin:0 5 0 0"></td>
+                                    <td>{$research_short} <a href="javascript:show_help('research_planets')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=research_planets',this);return false" onmouseout="ajax_hideTooltip()">{t}Research planets{/t}</a></td></tr></table></td>
+                        <td background="../images/game/bar4.jpg" align="right">{$research_planets|number_format}</td>
+                        <td background="../images/game/bar3.jpg" align="right"><b>{$cost_planet_research}</b></td>
+                        <td background="../images/game/bar3.jpg" >
+                            <a href="javascript:buy('research_planets','{$research_planets_buy_label}')"  class="menu2">{t}Buy{/t}</a>
+                            <a href="#" class="menu2" onclick="if (confirm('{t}Buy Maximum LUMP PURCHASE?{/t}')) open_page('manage.php?buy=research_planets&quantity={$buy_max_planet_research}');"  class="link" onmouseover="return escape('Maximum LUMP PURCHASE: {$buy_max_planet_research}');">{t}Max{/t}</a>
+                            <a href="javascript:sell('research_planets','{$research_planets_sell_label}')"  class="menu2">{t}Drop{/t}</a></td>
+                    </tr>
+                    <tr>
+                        <td background="../images/game/bar3.jpg" >			<table cellspacing="0" border="0">
+                                <tr>
+                                    <td><img
+                                            src="../images/game/icons/planets/urban.jpg" width="32" height="32" style="border:1px solid black;margin:0 5 0 0"></td>
+                                    <td >{$urban_short} <a href="javascript:show_help('urban_planets')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=urban_planets',this);return false" onmouseout="ajax_hideTooltip()">{t}Urban planets{/t}</a></td></tr></table></td>
+                        <td background="../images/game/bar4.jpg" align="right">{$urban_planets|number_format}</td>
+                        <td background="../images/game/bar3.jpg" align="right"><b>{$cost_planet_urban}</b></td>
+                        <td background="../images/game/bar3.jpg" >
+                            <a href="javascript:buy('urban_planets','{$urban_planets_buy_label}')"  class="menu2">{t}Buy{/t}</a>
+                            <a href="#" class="menu2" onclick="if (confirm('{t}Buy Maximum LUMP PURCHASE?{/t}')) open_page('manage.php?buy=urban_planets&quantity={$buy_max_planet_urban}');"  class="link" onmouseover="return escape('Maximum LUMP PURCHASE: {$buy_max_planet_urban}');">{t}Max{/t}</a>
+                            <a href="javascript:sell('urban_planets','{$urban_planets_sell_label}')"  class="menu2">{t}Drop{/t}</a></td>
+                    </tr>
+                    <tr>
+                        <td background="../images/game/bar3.jpg" >			<table cellspacing="0" border="0">
+                                <tr>
+                                    <td><img
+                                            src="../images/game/icons/planets/petro.jpg" width="32" height="32" style="border:1px solid black;margin:0 5 0 0"></td>
+                                    <td>{$petro_short} <a href="javascript:show_help('petro_planets')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=petroleum_planets',this);return false" onmouseout="ajax_hideTooltip()">{t}Petroleum planets{/t}</a></td></tr></table></td>
+                        <td background="../images/game/bar4.jpg" align="right">{$petro_planets|number_format}</td>
+                        <td background="../images/game/bar3.jpg" align="right"><b>{$cost_planet_petro}</b></td>
+                        <td background="../images/game/bar3.jpg" >
+                            <a href="javascript:buy('petro_planets','{$petro_planets_buy_label}')"  class="menu2">{t}Buy{/t}</a>
+                            <a href="#" class="menu2" onclick="if (confirm('{t}Buy Maximum LUMP PURCHASE?{/t}')) open_page('manage.php?buy=petro_planets&quantity={$buy_max_planet_petro}');" class="link" onmouseover="return escape('Maximum LUMP PURCHASE: {$buy_max_planet_petro}');" >{t}Max{/t}</a>
+                            <a href="javascript:sell('petro_planets','{$petro_planets_sell_label}')"  class="menu2">{t}Drop{/t}</a></td>
+                    </tr>
+                    <tr>
+                        <td background="../images/game/bar3.jpg"  style="height: 32px">			<table cellspacing="0" border="0">
+                                <tr>
+                                    <td><img
+                                            src="../images/game/icons/planets/antipollu.jpg" width="32" height="32" style="border:1px solid black;margin:0 5 0 0"></td>
+                                    <td>{$antipollu_short} <a href="javascript:show_help('antipollu_planets')" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=antipollu_planets',this);return false" onmouseout="ajax_hideTooltip()">{t}Anti-pollution planets{/t}</a></td></tr></table></td>
+                        <td background="../images/game/bar4.jpg"  align="right">{$antipollu_planets|number_format}</td>
+                        <td background="../images/game/bar3.jpg"  align="right"><b>{$cost_planet_antipollu}</b></td>
+                        <td background="../images/game/bar3.jpg">
+                            <a href="javascript:buy('antipollu_planets','{$antipollu_planets_buy_label}')"  class="menu2">{t}Buy{/t}</a>
+                            <a href="#" onclick="if (confirm('{t}Buy Maximum LUMP PURCHASE?{/t}')) open_page('manage.php?buy=antipollu_planets&quantity={$buy_max_planet_antipollu}');" class="menu2"  class="link" onmouseover="return escape('Maximum LUMP PURCHASE: {$buy_max_planet_antipollu}');">{t}Max{/t}</a>
+                            <a href="javascript:sell('antipollu_planets','{$antipollu_planets_sell_label}')"  class="menu2">{t}Drop{/t}</a></td>
+                    </tr>
+
+                    </table>

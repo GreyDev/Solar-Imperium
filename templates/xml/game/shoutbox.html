@@ -1,0 +1,55 @@
+		<table  cellspacing="0" cellpadding="0" border="0">
+		<tr>	
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666" style="padding:0px 5px 0px 5px"><a  class="link" href="messages.php"><b>{t}Messages{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="diplomacy.php"><b>{t}Diplomatic Ties{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab_left.gif" border="0"></td>
+		<td nowrap bgcolor="darkred"  style="padding:0px 5px 0px 5px"><a   style="text-decoration:none;color:white" href="shoutbox.php"><b>{t}Coalition Shoutbox{/t}</b></a></td>
+		<td><img src="../images/game/tab_right.gif" border="0"></td>
+
+		</table>
+
+
+<script>
+{literal}
+function sf() {
+document.form1.chatbox.focus();
+}
+
+
+var timer1 = null;
+{/literal}
+</script>
+
+<table style="border:1px solid darkred" bgcolor="#333333" width="90%">
+<form method="POST" name="form1">
+{section name="i" loop=$items}
+<tr>
+<td><img src="../images/game/empires/{$items[i].game_id}/{$items[i].empire_id}.jpg" width="16" height="16" style="border:1px solid white"></td>
+<td nowrap style="color:white"><b>{$items[i].timedate}</b></td>
+<td nowrap style="color:red">|</td>
+<td nowrap><b style="color:white">{$items[i].player}</b></td>
+<td nowrap style="color:red">|</td>
+<td width="100%" style="color:{$items[i].color}">{$items[i].message}</td>
+</tr>
+{/section}
+
+</table>
+<table>
+<tr>
+<td><b>{t}Message:{/t}&nbsp;</b></td>
+<td><input type="text" onkeypress="clearTimeout(timer1)" name="chatbox" class="input_text" style="width:500px"></td>
+<td><input type="button" value="{t}Refresh{/t}" onclick="window.location='shoutbox.php'"></td>
+</tr>
+</table>
+</form>
+<script>
+sf();
+
+timer1 = setTimeout("window.location='shoutbox.php';", Math.ceil(parseFloat(10) * 1000));
+</script>

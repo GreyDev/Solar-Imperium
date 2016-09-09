@@ -1,0 +1,62 @@
+<table  cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+        <td nowrap bgcolor="#666666" style="padding:0px 5px 0px 5px"><a  class="link" href="#" onclick="open_page('messages.php')"><b>{t}Messages{/t}</b></a></td>
+        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+        <td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="#" onclick="open_page('diplomacy.php')"><b>{t}Diplomatic Ties{/t}</b></a></td>
+        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+        <td nowrap><img src="../images/game/tab_left.gif" border="0"></td>
+        <td nowrap bgcolor="darkred"  style="padding:0px 5px 0px 5px"><a   style="text-decoration:none;color:white" href="#" onclick="open_page('shoutbox.php')"><b>{t}Coalition Shoutbox{/t}</b></a></td>
+        <td><img src="../images/game/tab_right.gif" border="0"></td>
+    </tr>
+</table>
+
+
+<form method="POST" name="form1" onsubmit="ajax_submit_form('shoutbox.php',this); return false;">
+    <table id="table_shoutbox" style="border:1px solid darkred" bgcolor="#111111" width="780">
+        {section name="i" loop=$items}
+        <tr>
+            <td><img src="../images/game/empires/{$items[i].game_id}/{$items[i].empire_id}.jpg" width="16" height="16" style="border:1px solid white"></td>
+            <td nowrap style="color:white"><b>{$items[i].timedate}</b></td>
+            <td nowrap style="color:red">|</td>
+            <td nowrap><b style="color:white">{$items[i].player}</b></td>
+            <td nowrap style="color:red">|</td>
+            <td width="100%" style="color:{$items[i].color}">{$items[i].message}</td>
+        </tr>
+        {/section}
+    </table>
+    <table>
+        <tr>
+            <td><b>{t}Message:{/t}&nbsp;</b></td>
+            <td><input type="text" onkeypress="clearTimeout(timer1)" name="chatbox" class="input_text" style="width:500px"></td>
+            <td><input type="button" value="{t}Refresh{/t}" onclick="open_page('shoutbox.php')"></td>
+        </tr>
+    </table>
+</form>
+<script>
+    {literal}
+    var timer1 = null;
+
+    function sf() {
+    }
+    document.form1.chatbox.focus();
+
+
+
+    function update_shoutbox() {
+
+        if (document.getElementById('table_shoutbox') == null)
+            clearTimeout(timer1);
+        else
+            open_page('shoutbox.php');
+    }
+
+    {/literal}
+
+    sf();
+
+    timer1 = setTimeout("update_shoutbox();", Math.ceil(parseFloat(10) * 1000));
+</script>

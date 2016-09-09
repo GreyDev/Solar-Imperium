@@ -1,0 +1,21 @@
+<xml>
+
+    <ServerName>{$server_name}</ServerName>
+    <GameVersion>{$game_version}</GameVersion>
+    <ServerUptime>{$server_uptime}</ServerUptime>
+    <ConnectedPlayers>{$online_players}</ConnectedPlayers>
+    <PremiumAccounts>{$premium_accounts}</PremiumAcccounts>
+    <RegisteredPlayers>{$registered_players}</RegisteredPlayers>
+    <AvailableGames>{$available_games}</AvailableGames>
+
+    <Stats>
+    {section name=s loop=$stats}
+    <Entry>
+        <Date>{$stats[s].timestamp}</Date>
+        <NewPlayers>{$stats[s].signup_count}</NewPlayers>
+        <ConnectedPlayers>{$stats[s].login_count}</ConnectedPlayers>
+    </Entry>
+    {/section}
+    </Stats>
+
+</xml>

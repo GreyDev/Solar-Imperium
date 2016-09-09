@@ -1,0 +1,203 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-20 13:45-0500\n"
+"PO-Revision-Date: 2007-11-20 13:47-0500\n"
+"Last-Translator: Yanick Bourbeau <ybourbeau@mrgtech.ca>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: CANADA\n"
+
+msgid ", you need to register a free account first!"
+msgstr ", vous devez vous enregistrez d'abord!"
+
+msgid "Accounts logged today:"
+msgstr "Nombre de joueurs connectés aujourd'hui:"
+
+msgid "Admin"
+msgstr "Admin"
+
+msgid "Available games:"
+msgstr "Parties disponibles:"
+
+msgid "Connected as"
+msgstr "Connecté en tant que "
+
+msgid "Connected players:"
+msgstr "Joueurs connectés:"
+
+msgid "Dismiss"
+msgstr "Fermer"
+
+msgid "Forum"
+msgstr "Babillard"
+
+msgid "Games Browser!"
+msgstr "Liste des parties!"
+
+msgid "Grab the last version!"
+msgstr "Téléchargez la dernière version!"
+
+msgid "Hall Of Fame"
+msgstr "Hall de la renommée"
+
+msgid "Host your own games</b>, grab the installation package: "
+msgstr "Possèdez votre propre serveur de jeux</b>: "
+
+msgid "How to play"
+msgstr "Comment jouer"
+
+msgid ""
+"In Solar Imperium, you rule a solar empire. The goal is to become and remain "
+"the most powerful empire. You can gain strength by buying forces, and you "
+"can gain size by colonizing planets. The game is totally FREE !"
+msgstr ""
+"Dans Solar Imperium, vous êtes l'empereur d'une empire galactique. Le but du "
+"jeux est de construire le plus gros empire possible. Vous pouvez devenir "
+"plus fort en recrutant des forces militaires ou en colonisant de nouvelles "
+"planets. Ce jeux est totallement GRATUIT!"
+
+msgid "Invalid username and/or password entered!"
+msgstr "Surnom et/ou mot de passe invalide!"
+
+msgid "Login"
+msgstr "Se connecté"
+
+msgid "Logoff"
+msgstr "Se déconnecter"
+
+msgid "Max players in one day:"
+msgstr "Journée record du nombre de joueurs:"
+
+msgid "Max signup in one day:"
+msgstr "Journée record des enregistrements:"
+
+msgid "New accounts today:"
+msgstr "Nouveaux joueurs aujourd'hui:"
+
+msgid "New empires today:"
+msgstr "Nouvelles empires aujourd'hui:"
+
+msgid "Nickname:"
+msgstr "Surnom:"
+
+msgid "No hall of fames yet"
+msgstr "pas de résultat pour l'instant!"
+
+msgid "No nickname provided."
+msgstr "Pas de surnom spécifié."
+
+msgid "No password provided."
+msgstr "Pas de mot de passe spécifié."
+
+msgid ""
+"No players can be found in the game database, this mean that the first "
+"player who register on this server will be the administrator!"
+msgstr ""
+"Pas de joueurs dans la base de donnée, le premier joueur enregistré "
+"deviendra l'administrateur!"
+
+msgid "Online Chat"
+msgstr "Discution en ligne"
+
+msgid "Optimized for 1024x768 resolution"
+msgstr "Optimisé pour la résolution 1024x768"
+
+msgid "Password:"
+msgstr "Mot de passe:"
+
+msgid "Pick a game!"
+msgstr "Jouer maintenant!"
+
+msgid "Players registered:"
+msgstr "Joueurs enregistrés:"
+
+msgid "Preferences"
+msgstr "Préférences"
+
+msgid "Premium Account!"
+msgstr "Accès PREMIUM!"
+
+msgid "Premium account"
+msgstr "Accès PREMIUM"
+
+msgid "Premium accounts:"
+msgstr "Nombre d'accès PREMIUM:"
+
+msgid "Rank:"
+msgstr "Rang:"
+
+msgid "Register now!"
+msgstr "Enregistrez-vous maintenant!"
+
+msgid "Score:"
+msgstr "Pointage:"
+
+msgid "Some interesting statistics"
+msgstr "Quelques statistiques interessantes"
+
+msgid "This game is a creation of "
+msgstr "Ce jeux est une création de "
+
+msgid ""
+"This game was a port from the original <b><a style=\"color:darkblue\" href="
+"\"http://en.wikipedia.org/wiki/Solar_Realms_Elite\">SOLAR REALMS ELITE</a></"
+"b> made by <b><a style=\"color:darkblue\" href=\"http://amitp.blogspot.com/"
+"\">Amit Patel</a></b>, a pretty popular game back in BBS era (circa 1993). "
+"Since then, the game system evolved alot in specific fields like research "
+"map and real-time/invasion convoys. "
+msgstr ""
+"Ce jeux est une réécriture de <b><a style=\"color:darkblue\" href=\"http://"
+"en.wikipedia.org/wiki/Solar_Realms_Elite\">SOLAR REALMS ELITE</a></b> fait "
+"par  <b><a style=\"color:darkblue\" href=\"http://amitp.blogspot.com/\">Amit "
+"Patel</a></b>, ce jeux était très populaire à l'époque des babillards "
+"électroniques (circa 1993). Depuis le début, ce jeux à dramatiquement "
+"évoluer vers de nouvelles fonctionnalités comme l'arbre de recherche et les "
+"convois d'invasions en temps réel."
+
+msgid "To play"
+msgstr "Pour jouer "
+
+msgid "Too much players use this IP, login prohibited."
+msgstr ""
+"Trop de joueurs utilisent cette adresse Internet, connexion impossible."
+
+msgid "Total empires count:"
+msgstr "Combien d'empires:"
+
+msgid "Total population:"
+msgstr "Population totale:"
+
+msgid "Visit the Galaxypedia!"
+msgstr "Visitez le GalaxyPedia!"
+
+msgid ""
+"Want to learn more about the game?</b> A online documentation  is available:"
+msgstr ""
+"Vous voulez en apprendre un peu plus sur ce jeux?</b> Une documentation en "
+"ligne est disponible:"
+
+msgid "Welcome"
+msgstr "Bienvenue"
+
+msgid "You are a new comer?"
+msgstr "Vous êtes un nouveau joueur?"
+
+msgid "You like the game?"
+msgstr "Vous aimez ce jeux?"
+
+msgid "You received a system message on"
+msgstr "Vous avez reçu un message le "
+
+msgid "online players"
+msgstr "joueurs en ligne"
+
+msgid "you can update to a "
+msgstr "vous pouvez changer pour un "
+
+msgid "you have to choose a game, see the"
+msgstr "vous devez choisir une partie, visionnez la "

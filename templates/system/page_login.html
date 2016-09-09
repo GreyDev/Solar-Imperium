@@ -1,0 +1,89 @@
+{capture name=page_title}
+{t}Login{/t}
+{/capture}
+
+{include file="frame_header.html" title=$smarty.capture.page_title}
+<!-- begin content -->
+
+
+<div align="center">
+
+<div align="center" style="background-image:url(images/system/div_bg.jpg);background-color:darkred;padding:10px;border:1px solid red">
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" style="color:yellow" href="login.php"><b>{t}PLAY NOW{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="take_a_tour.php"><b>{t}TAKE A TOUR{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="scoreboard.php"><b>{t}SCOREBOARD{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="server_status.php"><b>{t}SERVER STATUS{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="forum.php"><b>{t}FORUM{/t}</b></a></div>
+</div>
+
+<br/>
+
+    <div>
+
+            <table  background="images/common/alpha1.png" style="border:1px solid darkred" cellspacing="5" cellpadding="15" border="0" >
+            <tr>
+                <td><img src="images/system/soldier.png" border="0"></td>
+                <td>
+                <form name="login_form" method="post">
+                <table cellspacing="5" cellpadding="5" border="0" class="text_normal" style="color:#cacaca">
+                    <tr>
+                        <td align="right" nowrap>{t}Nickname:{/t}</td>
+                        <td><input id="nickname" class="input_text" name="nickname" type="text"></td>
+                     </tr>
+                    <tr>
+                        <td align="right">{t}Password:{/t}</td>
+                        <td><input class="input_text" name="password" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><br/><input type="submit" class="input_button" value="{t}Continue{/t}" onClick="ajax_request_login(); return false;"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><input type="button" class="input_button" value="{t}Browse Games{/t}" onClick="window.location='gamesbrowser.php';"></td>
+                    </tr>
+                </table>
+                </form>
+<br/><br/>
+                    <a href="registernow.php">
+                    <table width="250px">
+                        <tr>
+                            <td align="left">
+                                <img src="images/system/yellow_arrow.png" border="0">
+                            </td>
+                            <td width="100%">
+                                <b style="color:white" class="text_normal">{t}NO ACCOUNT YET?{/t}</b><br/>
+                                <b style="color:#dadada" class="text_small">{t}Register now!{/t}</b>
+                            </td>
+                        </tr>
+                    </table>
+                    </a>
+<br/>
+ <a href="premiumaccount.php">
+                    <table width="250px">
+                        <tr>
+                            <td align="left">
+                                <img src="images/system/yellow_arrow.png" border="0">
+                            </td>
+                            <td width="100%">
+                                <b style="color:white" class="text_normal">{t}PREMIUM ACCOUNT{/t}</b><br/>
+                                <b style="color:#dadada" class="text_small">{t}More details ...{/t}</b>
+                            </td>
+                        </tr>
+                    </table>
+                    </a>
+                </td>
+            </tr>
+            </table>
+            
+
+    </div>
+</div>
+
+<script>
+document.getElementById('nickname').focus();
+</script>
+
+<!-- end content -->
+
+{include file="frame_footer.html"}

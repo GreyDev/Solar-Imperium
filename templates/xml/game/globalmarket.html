@@ -1,0 +1,113 @@
+
+<script language="javascript">
+{literal}
+		function market_buy(type,label)
+		{
+			
+			var qty = prompt(label,'');
+			if (qty == null) return;
+
+			window.location='globalmarket.php?type='+type+'&buy='+qty;
+		}
+
+		function market_sell(type,label)
+		{
+			
+			var qty = prompt(label,'');
+			if (qty == null) return;
+
+			window.location='globalmarket.php?type='+type+'&sell='+qty;
+		}
+
+{/literal}
+</script>
+<table width="720px"  style="margin:0 0 10 0;border:0px solid darkred;" cellspacing="0" cellpadding="0">
+<tr>
+	<td width="100%" align="left">
+
+		<table  cellspacing="0" cellpadding="0" border="0">
+		<tr>	
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666" style="padding:0px 5px 0px 5px"><a  class="link" href="solarbank.php"><b>{t}Solar Bank{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab_left.gif" border="0"></td>
+		<td nowrap bgcolor="darkred"  style="padding:0px 5px 0px 5px"><a  style="text-decoration:none;color:white" href="globalmarket.php"><b>{t}Global Market{/t}</b></a></td> 
+		<td><img src="../images/game/tab_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="lottery.php"><b>{t}Lottery{/t}</b></a></td>
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="trade.php"><b>{t}Trade Center{/t}</b></a></td>
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		</tr>
+		</table>
+	</td>
+</tr>
+	
+	<tr>
+		<td>
+		<table background="../images/game/background1.jpg" width="100%" align="center"
+			cellspacing="0" cellpadding="10" 
+			style="font-size:11pt;font-family:verdana;border:1px solid darkred" bgcolor="#333333">
+			<tr>
+				<td valign="top" width="100%">
+
+
+				<table cellspacing="0" cellpadding="2" width="100%" border="0">
+					<tr style="background-color:silver;color:black">
+						<td><b>{t}Type{/t}</b></td>
+						<td><b>{t}Buy Price{/t}</b></td>
+						<td><b>{t}Sell Price{/t}</b></td>
+						<td><b>{t}Your Stock / In Stock{/t}</b></td>
+						<td><b>{t}Action{/t}</b></td>
+					</tr>
+
+					<tr>
+						<td><table><tr><td><img style="border:1px solid #666666" src="../images/game/icon_food.png"></td><td><b>Food</b></td></tr></table></td>
+						<td><b>{$food_price_buy}</b></td>
+						<td><b>{$food_price_sell}</b></td>
+						<td><b>{$food_mystock} / {$food_instock}</b></td>
+						<td>
+						<b><a href="javascript:market_buy('food','{t}How much to buy?{/t} [{t}MAX{/t}:{$max_buy_food}]')" class="menu2">Buy</a> 
+						<a href="javascript:market_sell('food','{t}How much to sell?{/t} [{t}MAX{/t}:{$max_sell_food}]')" class="menu2">Sell</a></b>
+						</td>
+					</tr>
+
+					<tr>
+						<td><table><tr><td><img style="border:1px solid #666666" src="../images/game/icon_ore.png"></td><td><b>Ore</b></td></tr></table></td>
+						<td><b>{$ore_price_buy}</b></td>
+						<td><b>{$ore_price_sell}</b></td>
+						<td><b>{$ore_mystock} / {$ore_instock}</b></td>
+						<td>
+						<b><a href="javascript:market_buy('ore','{t}How much to buy?{/t} [{t}MAX{/t}:{$max_buy_ore}]')" class="menu2">Buy</a> 
+						<a href="javascript:market_sell('ore','{t}How much to sell?{/t} [{t}MAX{/t}:{$max_sell_ore}]')" class="menu2">Sell</a></b>
+						</td>
+					</tr>
+
+					<tr>
+						<td><table><tr><td><img style="border:1px solid #666666" src="../images/game/icon_petro.png"></td><td><b>Petroleum</b></td></tr></table></td>
+						<td><b>{$petroleum_price_buy}</b></td>
+						<td><b>{$petroleum_price_sell}</b></td>
+						<td><b>{$petroleum_mystock} / {$petroleum_instock}</b></td>
+						<td>
+						<b><a href="javascript:market_buy('petroleum','{t}How much to buy?{/t} [{t}MAX{/t}:{$max_buy_petroleum}]')" class="menu2">Buy</a> 
+						<a href="javascript:market_sell('petroleum','{t}How much to sell?{/t} [{t}MAX{/t}:{$max_sell_petroleum}]')" class="menu2">Sell</a></b>
+						</td>
+					</tr>
+
+
+
+				</table>
+
+				</td>
+			</tr>
+
+		</table>
+		</td>
+	</tr>
+</table>
+<br/><br/><br/><br/><br/><br/>

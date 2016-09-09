@@ -1,0 +1,73 @@
+
+		<table  cellspacing="0" cellpadding="0" border="0">
+		<tr>	
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666" style="padding:0px 5px 0px 5px"><a  class="link" href="manage.php"><b>{t}Manage{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="stats.php"><b>{t}Performance{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="logs.php"><b>{t}Activity Logs{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="logo_editor.php"><b>{t}Edit Logo{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="lastturn.php"><b>{t}Turn Summary{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab_left.gif" border="0"></td>
+		<td nowrap bgcolor="darkred"  style="padding:0px 5px 0px 5px"><a  style="text-decoration:none;color:white" href="research.php"><b>{t}Research Map{/t}</b></a></td> 
+		<td><img src="../images/game/tab_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="edit_production.php"><b>{t}Production{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		</table>
+
+
+<table width="720"  bgcolor="darkred" cellspacing="1"
+	cellpadding="0" border="0">
+	
+	<tr>
+		<td bgcolor="#333333"><br/>
+
+	<table width="90%" align="center">
+	<tr>
+<td align="right" valign="top"><img style="border:1px solid yellow" src="../images/game/research/{$current_research_image}">&nbsp;</td>
+		<td>
+		<table align="center" cellpadding="2">
+		<tr><td nowrap>Current research:</td><td><b style="color:yellow">{$current_research_name}</b> = <b style="color:#ffcaca">{$current_research_progress}</b> <b style="color:white">[{$current_research_turns_left} {t}turn(s) remaining{/t}]</b></td></tr>
+		<tr><td valign="top">{t}Description:{/t}</td>
+		<td><b style="color:#ff9999">{$current_research_description}</b></td></tr>
+		</table>
+</td></tr></table>
+
+		<br/>
+		<table align="center" border="0" cellpadding="2" cellspacing="2">
+		<tr>
+		<td colspan="18">
+		<a href="research.php?current=-1"><img style="border:1px solid white" src="img_research.php" height="32"></a>
+		</td>
+		</tr>
+		
+		{$research_items}
+		
+		</table>
+	<br/>
+
+		</td>
+	</tr>
+</table>
+
+<br />
+<br />
+
+<br />
+<br />

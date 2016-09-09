@@ -1,0 +1,65 @@
+{capture name=page_title}
+{t}Premium Account{/t}
+{/capture}
+
+{include file="frame_header.html" title=$smarty.capture.page_title}
+
+
+<div align="center" style="background-image:url(images/system/div_bg.jpg);background-color:darkred;padding:10px;border:1px solid red">
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="login.php"><b>{t}PLAY NOW{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="take_a_tour.php"><b>{t}TAKE A TOUR{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="scoreboard.php"><b>{t}SCOREBOARD{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="server_status.php"><b>{t}SERVER STATUS{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="forum.php"><b>{t}FORUM{/t}</b></a></div>
+</div>
+<br/>
+
+<div align="center">
+<div class="text_big" style="color:#dadada;background-image:url(images/common/alpha1.png);border:1px solid darkred;padding:10px;width:720px;margin:10px;text-align:justify">
+
+<b style="color:yellow"><u>{t}20.00$ US For lifetime PREMIUM Membership Account{/t}</u></b>
+<br/><br/>
+<b style="color:white">{t}The PREMIUM Membership account give you:{/t}<br/></b>
+<br/>
+<div style="border:1px solid #3a3a3a;background-image:url(images/common/alpha2.png);padding:10px;margin:10px;color:white" class="text_normal">
+<b>{t}- A non-waiting access to all the games (Even if all the slots are full){/t}</b><br/><br/>
+
+<b>{t}- One extra turn per day per game{/t}</b><br/><br/>
+
+</div>
+
+<br/>
+{t}Every signup will help maintain and develop this project, turning this game into something bigger and better for all the players.{/t}
+{t}The money is direclty used in buying ADS space and hosting capacities.{/t} <br/>
+<br/>
+<b>{t}All the signups are done with PAYPAL by clicking on the 'donation' button below, don't forget to provide a valid email address. Your account will be activated within 48 hours.{/t}<br/></b>
+
+<br/><table cellspacing="0" cellpadding="0" border="0" width="100%">
+<tr><td style="font-size:10pt;font-family:sans-serif;color:#663300;text-align:justify">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="ybourbeau@mrgtech.ca">
+<input type="hidden" name="item_name" value="SolarImperium LIFETIME Premium membership">
+<input type="hidden" name="amount" value="20.00">
+<input type="hidden" name="buyer_credit_promo_code" value="">
+<input type="hidden" name="buyer_credit_product_category" value="">
+<input type="hidden" name="buyer_credit_shipping_method" value="">
+<input type="hidden" name="buyer_credit_user_address_change" value="">
+<input type="hidden" name="no_shipping" value="0">
+<input type="hidden" name="no_note" value="1">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="tax" value="0">
+<input type="hidden" name="lc" value="CA">
+<input type="hidden" name="bn" value="PP-DonationsBF">
+<input type="image" src="https://www.paypal.com/en_US/i/btn/x-click-but21.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</td></tr>
+</table>
+</div>
+				</div>
+
+				
+<!-- end content -->
+
+{include file="frame_footer.html"}

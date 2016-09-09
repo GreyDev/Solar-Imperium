@@ -1,0 +1,1125 @@
+# Solar Imperium HUN installer_full_hun.po
+# Copyright (C) 2007 Nabba
+# This file is distributed under the same license as the Solar Imperium HUN package.
+# Nabba <gombos3@gmail.com>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: gombos3@gmail.com\n"
+"POT-Creation-Date: 2007-11-23 00:31-0500\n"
+"PO-Revision-Date: 2007-11-27 21:11+0100\n"
+"Last-Translator: Nabba <gombos3@gmail.com>\n"
+"Language-Team: HUN <gombos3@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: system.c:2
+#: system.c:635
+msgid "Optimized for 1024x768 resolution"
+msgstr "1024x768-as felbontásra"
+
+#: system.c:5
+msgid "This game is a creation of "
+msgstr "A játékot készítette"
+
+#: system.c:8
+msgid "Admin"
+msgstr "Admin"
+
+#: system.c:11
+#: system.c:650
+msgid "Welcome"
+msgstr "Üdvözlünk"
+
+#: system.c:14
+msgid "Pick a game!"
+msgstr "Válassz játékot!"
+
+#: system.c:17
+#: system.c:362
+msgid "How to play"
+msgstr "Hogyan játsz"
+
+#: system.c:20
+#: system.c:710
+msgid "Register now!"
+msgstr "Regisztrálj most!"
+
+#: system.c:23
+msgid "Premium account"
+msgstr "V.I.P tag"
+
+#: system.c:26
+msgid "Forum"
+msgstr "Fórum"
+
+#: system.c:29
+msgid "Score:"
+msgstr "Pont:"
+
+#: system.c:32
+#: system.c:266
+msgid "Rank:"
+msgstr "Rang:"
+
+#: system.c:35
+msgid "Connected as"
+msgstr "Bejelentkezve"
+
+#: system.c:38
+msgid "online players"
+msgstr "online játékos"
+
+#: system.c:41
+msgid "Online Chat"
+msgstr "Chat"
+
+#: system.c:44
+#: system.c:440
+msgid "Preferences"
+msgstr "Beállítások"
+
+#: system.c:47
+msgid "Logoff"
+msgstr "Kijelentkezés"
+
+#: system.c:50
+msgid "You received a system message on"
+msgstr "Kaptál egy rendszerüzenetet"
+
+#: system.c:53
+msgid "Dismiss"
+msgstr "Töröl"
+
+#: system.c:56
+msgid "Nickname:"
+msgstr "Felhasználónév:"
+
+#: system.c:59
+msgid "Password:"
+msgstr "Jelszó:"
+
+#: system.c:62
+msgid "Login"
+msgstr "Belépés"
+
+#: system.c:65
+msgid "Admin :: Edit game rules"
+msgstr "Admin :: Játékbeállítások"
+
+#: system.c:68
+msgid "Admin Section"
+msgstr "Admin menü"
+
+#: system.c:71
+msgid "Games list"
+msgstr "Játéklista"
+
+#: system.c:74
+#: system.c:131
+msgid "Game name:"
+msgstr "Játék neve:"
+
+#: system.c:77
+#: system.c:137
+msgid "Victory condition:"
+msgstr "Győzelem:"
+
+#: system.c:80
+msgid "Life time:"
+msgstr "Időtartam:"
+
+#: system.c:83
+msgid "Premium only:"
+msgstr "Csak V.I.P:"
+
+#: system.c:86
+#: system.c:152
+msgid "Turns per day:"
+msgstr "Kör naponta:"
+
+#: system.c:89
+#: system.c:155
+msgid "Protection turns:"
+msgstr "Védelmi kör:"
+
+#: system.c:92
+#: system.c:158
+msgid "Max Players:"
+msgstr "Maximum játékos:"
+
+#: system.c:95
+msgid "Players Slot:"
+msgstr "Játékosok:"
+
+#: system.c:98
+msgid "Reg'd empires:"
+msgstr "Regisztrált birodalmak:"
+
+#: system.c:101
+#: system.c:107
+#: system.c:113
+#: forum.php:152
+msgid "Are you sure?"
+msgstr "Biztos vagy benne?"
+
+#: system.c:104
+#: forum.php:152
+msgid "Delete"
+msgstr "Töröl"
+
+#: system.c:110
+msgid "Reset Game"
+msgstr "Játék újraindítása"
+
+#: system.c:116
+msgid "Reset Rules"
+msgstr "Beállítások újraindítása"
+
+#: system.c:119
+msgid "Edit rules"
+msgstr "Beállítások módosítása"
+
+#: system.c:122
+#: system.c:239
+msgid "Description:"
+msgstr "Leírás:"
+
+#: system.c:125
+msgid "*** No games for now"
+msgstr "*** Még nincs játék"
+
+#: system.c:128
+#: system.c:167
+msgid "Create Game"
+msgstr "Játék létrehozás"
+
+#: system.c:134
+msgid "Change Me"
+msgstr "Változtass meg"
+
+#: system.c:140
+msgid "Classic Game"
+msgstr "Klasszikus játék"
+
+#: system.c:143
+msgid "Research Game"
+msgstr "Kifejlesztési játék"
+
+#: system.c:146
+msgid "Premium only?:"
+msgstr "Csak V.I.P?:"
+
+#: system.c:149
+msgid "Lifetime (days):"
+msgstr "Élettartam (nap):"
+
+#: system.c:161
+msgid "Players slot:"
+msgstr "Játékos hely:"
+
+#: system.c:164
+msgid "Custom prefix:"
+msgstr "Előjelző:"
+
+#: system.c:170
+msgid "Post system message"
+msgstr "Rendszerüzenet küldése"
+
+#: system.c:173
+msgid "Send message"
+msgstr "Üzenet küldése"
+
+#: system.c:176
+msgid "Forum Posts"
+msgstr "Fórum üzenet"
+
+#: system.c:179
+msgid "Topic"
+msgstr "Téma"
+
+#: system.c:182
+msgid "Views"
+msgstr "Megnézve"
+
+#: system.c:185
+msgid "Replies"
+msgstr "Válaszok"
+
+#: system.c:188
+msgid "Author"
+msgstr "Szerző"
+
+#: system.c:191
+msgid "Life"
+msgstr "Élet"
+
+#: system.c:194
+msgid "Last Reply"
+msgstr "Utolsó válasz"
+
+#: system.c:197
+msgid "Forum is empty"
+msgstr "A fórum üres"
+
+#: system.c:200
+msgid "Subject:"
+msgstr "Tárgy:"
+
+#: system.c:203
+msgid "BB Codes allowed"
+msgstr "BB kódok engedélyezve"
+
+#: system.c:206
+msgid "Post topic"
+msgstr "Új téma"
+
+#: system.c:209
+#: system.c:227
+msgid ""
+"Please do not spam or\n"
+"\t\t\t\tyour account will be terminated."
+msgstr ""
+"Ne spam-olj vagy\n"
+"\t\t\ttörölve leszel."
+
+#: system.c:212
+msgid "Forum View Topic"
+msgstr "Fórumtéma"
+
+#: system.c:215
+msgid "Pages:"
+msgstr "Oldal:"
+
+#: system.c:218
+msgid "Back to main forum page"
+msgstr "Vissza a fórum főoldalra"
+
+#: system.c:221
+msgid "BB Codes allowed:"
+msgstr "BB kódok engedélyezve:"
+
+#: system.c:224
+msgid "Content:"
+msgstr "Üzenet:"
+
+#: system.c:230
+#: system.c:476
+#: system.c:644
+msgid "Games Browser"
+msgstr "Játékböngésző"
+
+#: system.c:233
+msgid "Pick a game (You can play on each ones): "
+msgstr "Válassz egy játékot (mindegyikben játszhatsz):"
+
+#: system.c:236
+msgid "Game Name:"
+msgstr "Játék neve:"
+
+#: system.c:242
+#: system.c:251
+#: system.c:269
+#: system.c:614
+msgid "Scoreboard"
+msgstr "Pontlista"
+
+#: system.c:245
+#: system.c:254
+#: system.c:272
+msgid "Starmap"
+msgstr "Csillagtérkép"
+
+#: system.c:248
+msgid "Login to play"
+msgstr "Bejelentkezés"
+
+#: system.c:257
+msgid "Join game"
+msgstr "Csatlakozás"
+
+#: system.c:260
+msgid "of empire"
+msgstr "birodalma"
+
+#: system.c:263
+msgid "Networth:"
+msgstr "Érték:"
+
+#: system.c:275
+msgid "Continue game"
+msgstr "Folytatás"
+
+#: system.c:278
+msgid "Destroy your empire"
+msgstr "Birodalom törlése"
+
+#: system.c:281
+#: system.c:287
+msgid "Show Your Last Scores"
+msgstr "Pontjaid mutatása"
+
+#: system.c:284
+msgid "Hide Your Last Scores"
+msgstr "Pontjaid elrejtése"
+
+#: system.c:290
+msgid "Date"
+msgstr "Dátum"
+
+#: system.c:293
+#: system.c:494
+#: system.c:620
+msgid "Rank"
+msgstr "Rang"
+
+#: system.c:296
+msgid "Empire name"
+msgstr "Birodalom neve"
+
+#: system.c:299
+msgid "Networth"
+msgstr "Érték"
+
+#: system.c:302
+msgid "Military"
+msgstr "Katonaság"
+
+#: system.c:305
+msgid "Planets"
+msgstr "Bolygók"
+
+#: system.c:308
+msgid "Population"
+msgstr "Lakosság"
+
+#: system.c:311
+msgid "Turns"
+msgstr "Körök"
+
+#: system.c:314
+msgid "No games finished yet!"
+msgstr "Még nem ért véget játék!"
+
+#: system.c:317
+#: system.c:323
+msgid "Show Game Details"
+msgstr "Játékleírás mutatása"
+
+#: system.c:320
+msgid "Hide Game Details"
+msgstr "Játékleírás elrejtése"
+
+#: system.c:326
+msgid "Victory Condition:"
+msgstr "Győzelem:"
+
+#: system.c:329
+msgid "Maximum Game Duration:"
+msgstr "Játék tart:"
+
+#: system.c:332
+msgid "Time Elapsed:"
+msgstr "Eltelt idő:"
+
+#: system.c:335
+msgid "Premium Membership Required:"
+msgstr "V.I.P szükséges:"
+
+#: system.c:338
+msgid "Turns Per Day:"
+msgstr "Kör naponta:"
+
+#: system.c:341
+msgid "Protection Turns:"
+msgstr "Védelmi kör:"
+
+#: system.c:344
+msgid "Connected Players:"
+msgstr "Csatlakozott játékos:"
+
+#: system.c:347
+msgid "Max Players Slots:"
+msgstr "Maximum játékos:"
+
+#: system.c:350
+msgid "Empires registered:"
+msgstr "Regisztrált birodalom:"
+
+#: system.c:353
+msgid "Maximum Empires Limit:"
+msgstr "Maximum birodalom:"
+
+#: system.c:356
+msgid "Completed games:"
+msgstr "Befejezett játékok:"
+
+#: system.c:359
+msgid "*** No game available for now, the administrator have to create at least one game."
+msgstr "*** Még nincs játék. Az adminisztrátornak létre kell hoznia legalább egy játékot."
+
+#: system.c:365
+msgid "To play Solar Imperium you need a web browser like IE, Firefox, Konqueror or Opera. You also need to create a account first (<a style=\"color:darkblue\" href=\"registernow.php\">Register</a>), Once created and logged in you can browse for available games and join them. When you join a game you have to provide a emperor/emperess name and an empire name, it will be your identity in the game."
+msgstr "Hogy játszhass a Solar Imperiummal, szükséges egy böngésző, mint az IE, Firefox, Konqueror vagy Opera.  Továbbá szükséges a (<a style=\"color:darkblue\" href=\"registernow.php\">regisztráció</a>), ha ezek megvannak, már csak játszanod kell. Ha csatlakozol egy játékhoz meg kell adnod egy uralkodó/uralkodónő nevet. A játékban az lesz a te neved."
+
+#: system.c:368
+msgid "You can join all the games if you want and play a different empire on each one. The goals of each game may slighly differ but its usually 3 kind of goals, you have research race (the first empire that complete all the fundamental research tree), classic goal (The biggest empire after 30 days of playing won) and fast game (The biggest empire after 7 days of playing won). We plan to introduce new goals like 'last man standing' eventually."
+msgstr "Minden játékba csatlakozhatsz, ha szeretnél, különböző birodalmakkal. Minden játékban mások a célok, de nagyjából 3 féle van, a kutatás (aki legelőszőr kifejleszt mindent, az győz), a klasszikus (30 nap elteltével a legnagyobb birodalom győz), és a gyorsjáték (7 nap elteltével a legerősebb nyer). Próbálunk kifejleszteni újabb győzelmeket, mint például a 'ki marad a végén' vagy hasonlók."
+
+#: system.c:371
+msgid "The game is turn-based, for each day you have a specific amount of turns available. You can play all your turns in one straight shot or come several times a day to play few turns since they regenerate every 2-3 hours. All the empire management is turn-based but the attack and trade system is real-time, convoys travelling in space can be seen moving, in case of a invasion convoy you can see the doomsday coming fast to your empire :)"
+msgstr "A játék körökre osztott, minden nap meghatározott számú kört kapsz. A köreidet elhasználhatod egyszerre, vagy napi 2-3 alkalommal különböző adagokban. Minden körökre van osztva, kivéve a kereskedést, az valós idejű, ugyanis a kereskedőid bizonyos idő alatt érnek csak el a kitűzött célponthoz, ugyanez vonatkozik a támadásokra is."
+
+#: system.c:374
+msgid "As an galactic empire, to stay alive you need to keep your population happy about they life and about you. Loosing all your population is the way to go if you want to play a very short game."
+msgstr "Mint galaktikus birodalom, figyelned kell a lakosságodra is. Boldogan kell tartanod őket. Ha a lakossággal valami gond van, a játékot rövid időn belül elveszítheted."
+
+#: system.c:377
+msgid "The primary resource in the game is money (If we dont count population as a resource), to earn money you can raise population taxes, urban taxes, attack others, attack space pirates, exploit ore planets, exploit tourism planets and petroleum planets, you can also turn all the research production to money production. You can also take loans from \"The Solar Bank\" or invest in galactic bonds at a interesting rate. Planets and military maintenance are usually the places where money are spent, you can buy government planets, they reduce overall maintenance costs for planets."
+msgstr "A játék legfőbb nyersanyagja a pénz )ha nem vesszük figyelembe a lakosságot), hogy pénzt szerezz, növelhetsz adókat, megtámadhatsz másokat, kalózokat, eladhatsz érceket, vagy petróleumot, használhatod a turizmust, sőt a kutatási pontjaid is felhasználhatod pénzként. Vehetsz ki kölcsönt a \"Bank\"-ból vagy kamatothaztatod a letéteidet. A bolygók és az egységeid ellátása emészti fel a legtöbb pénzt, vásárolhatsz kormányzati bolygókat, így lecsökken a bolygóid ellátási költsége."
+
+#: system.c:380
+msgid "To reduce army maintenance you can sell your troops (not a good idea), get attacked and loose some (not a good idea either) or send them attacking pirates (pirates are usually a better-than-nothing solution)."
+msgstr "Hogy az egységek ellátási költségeit csökkentsd, eladhatod őket (ami nem túl jó megoldás), megöletheted őket (szintén nem jó ötlet) vagy elküldheted őket kalózokat támadni (így a támadásért jutalom is jár)."
+
+#: system.c:383
+msgid "When you start a new game you have several turns of protection where you can't be attacked, don't stockpile army units if you don't plan to attack pirates"
+msgstr "Ha új játékot kezdessz, kapsz egy csomó védelmi kört, amikor nem tudnak megtámadni, ne halmozd fel már ilyenkor az egségeidet, ha nem tervezed a kalózok megtámadását."
+
+#: system.c:386
+msgid "Solar Imperium is the kind of game that contains too many way to succeed, too many different strategies (good or bad) to describe them all theres, it why at this point I recommend you to actually play a game and learn how to play the good way. The game itself contains integrated help system when you hover your mouse over items. You can also refer to \"Galaxypedia\" at any moments for extra help."
+msgstr "A Solar Imperiumban sok út vezet a győzelem felé. Vannak jó és rossz startégiák, kegyetlen és kíméletes módszerek, de a győzelem felé vezető út nehéz és kiszámíthatatlan. A játékban találhatsz néhány segítséget mint például a \"Galaxypedia\" de mindent nem tud leírni még az sem."
+
+#: system.c:389
+msgid "Have a good game and don't forget the best hint of all: TRUST NOBODY! ;)"
+msgstr "Jó játékot és ne feledd: NE BÍZZ SENKIBEN! ;)"
+
+#: system.c:392
+msgid "If you want to chat, we have our own channel on server: "
+msgstr "Ha chatelni szeretnél, van egy chatszerverünk itt:"
+
+#: system.c:395
+msgid ", called:"
+msgstr ", neve:"
+
+#: system.c:398
+msgid "Useful links to learn more:"
+msgstr "Hasznos linkek, hogy többet tudj:"
+
+#: system.c:401
+msgid "Galaxypedia :: The ultimate answer to all questions to this game"
+msgstr "Galaxypédia :: Az összes kérdésre válaszoló enciklopédia"
+
+#: system.c:404
+msgid "SRE Manual 0.995 :: Reference manual from original SRE, a nice read."
+msgstr "SRE Manual 0.995 :: Eredeti SRE leírás, remek olvasmány."
+
+#: system.c:407
+msgid "If you want more, someones actually wrote stories about SRE"
+msgstr "Ha többet akarsz, sokan írnak történeteket az SRE-ről"
+
+#: system.c:410
+#: system.c:437
+msgid "Join Game"
+msgstr "Csatlakozás"
+
+#: system.c:413
+msgid "Emperor/Emperess name:"
+msgstr "Uralkodó/Uralkodónő neve:"
+
+#: system.c:416
+#: system.c:431
+msgid "Random"
+msgstr "Véletlenszerű"
+
+#: system.c:419
+msgid "Gender:"
+msgstr "Nem:"
+
+#: system.c:422
+#: gamesbrowser.php:123
+msgid "Emperor"
+msgstr "Uralkodó"
+
+#: system.c:425
+#: gamesbrowser.php:123
+msgid "Emperess"
+msgstr "Uralkodónő"
+
+#: system.c:428
+msgid "Empire name:"
+msgstr "Birodalom neve:"
+
+#: system.c:434
+msgid "Autobiography:"
+msgstr "Profil:"
+
+#: system.c:443
+#: system.c:572
+msgid "Email address"
+msgstr "E-mail cím"
+
+#: system.c:446
+#: system.c:575
+msgid "Real name"
+msgstr "Valódi név"
+
+#: system.c:449
+#: system.c:578
+msgid "Country"
+msgstr "Ország"
+
+#: system.c:452
+#: system.c:584
+msgid "Password"
+msgstr "Jelszó"
+
+#: system.c:455
+msgid "Leave it empty to keep old password"
+msgstr "Hagyd üresen, hogy ne változzon"
+
+#: system.c:458
+#: system.c:587
+msgid "Confirm password"
+msgstr "Jelszó megerősítés"
+
+#: system.c:461
+msgid "Avatar image"
+msgstr "Kép"
+
+#: system.c:464
+msgid "Default Emperor/ess name"
+msgstr "Uralkodó/uralkodónő név"
+
+#: system.c:467
+msgid "Default Empire name"
+msgstr "Birodalom név"
+
+#: system.c:470
+msgid "Default Emperor/ess description"
+msgstr "Uralkodó/uralkodónő leírás"
+
+#: system.c:473
+msgid "Update Account"
+msgstr "Felhasználó módosítás"
+
+#: system.c:479
+msgid "Player statistics:"
+msgstr "Játékos statisztika"
+
+#: system.c:482
+msgid "Created on"
+msgstr "Regisztrált"
+
+#: system.c:485
+msgid "Game(s) won"
+msgstr "Megnyert játékok"
+
+#: system.c:488
+msgid "Game(s) lost"
+msgstr "Vesztett játékok"
+
+#: system.c:491
+#: system.c:623
+msgid "Score"
+msgstr "Pont"
+
+#: system.c:497
+msgid "Play"
+msgstr "Játék"
+
+#: system.c:500
+msgid "*** No games joined yet."
+msgstr "*** Még nem csatlakoztál játékhoz."
+
+#: system.c:503
+msgid "UPGRADE TO PREMIUM ACCOUNT"
+msgstr "V.I.P ELŐFIZETÉS"
+
+#: system.c:506
+msgid "Access to PREMIUM games"
+msgstr "V.I.P játékok elérése"
+
+#: system.c:509
+msgid "A non-waiting access to all the games"
+msgstr "Azonnali játékelérés"
+
+#: system.c:512
+msgid "One extra TURN per day per game"
+msgstr "Egy extra kör naponta"
+
+#: system.c:515
+msgid "Click here!"
+msgstr "Katt ide!"
+
+#: system.c:518
+msgid "Last logins"
+msgstr "Utolsó bejelentkezések"
+
+#: system.c:521
+msgid "Premium Account"
+msgstr "V.I.P felhasználó"
+
+#: system.c:524
+msgid "20.00$ US For one year PREMIUM Membership Account"
+msgstr "20.00$ US Egy év V.I.P tagság"
+
+#: system.c:527
+msgid "The PREMIUM Membership account give you:"
+msgstr "A V.I.P tagság nyújtja neked:"
+
+#: system.c:530
+msgid "- Access to PREMIUM games "
+msgstr "- V.I.P játékok elérése"
+
+#: system.c:533
+msgid "(Less crowded, better game quality experience, different game types)"
+msgstr "(Kevésbé zsúfolt, jobb játékélvezet, különböző játéktípusok)"
+
+#: system.c:536
+msgid "- A non-waiting access to all the games (Even if all the slots are full)"
+msgstr "- Azonnali elérés minden játékhoz (Még akkor is, ha tele van)"
+
+#: system.c:539
+msgid "- One extra turn per day per game"
+msgstr "- Egy extra kör naponta"
+
+#: system.c:542
+msgid "Every signup will help maintain and develop this project, turning this game into something bigger and better for all the players."
+msgstr "Minden regisztráció segíti a fejlesztését a játéknak és valami nagyobbá és jobbá teheti azt minden játékos számára."
+
+#: system.c:545
+msgid "The money is direclty used in buying ADS space and hosting capacities."
+msgstr "A pénzt a tárhely költségeire és a reklámozásokra használjuk fel."
+
+#: system.c:548
+msgid "All the signups are done with PAYPAL by clicking on the 'donation' button below, don't forget to provide a valid email address. Your account will be activated within 48 hours."
+msgstr "Minden V.I.P regisztrációt PAYPAL-al lehet intézni. Kattints az 'adományozás' gombra, de ne feledd, hogy valód e-mail címet kell megadnod. A V.I.P számlád 48 órán belül aktiválva lesz."
+
+#: system.c:551
+msgid "Registration completed"
+msgstr "Sikeres regisztráció"
+
+#: system.c:554
+msgid "Congralutation, you are now a Solar Imperium registered player!"
+msgstr "Gratulálunk, mostantól a Solar Imperium regisztrált tagja vagy!"
+
+#: system.c:557
+msgid "To start playing go to "
+msgstr "Hogy játszhass, menj"
+
+#: system.c:560
+msgid "and login with your nickname and password, to learn how to play visit the"
+msgstr "és jelentkezz be a neveddel és jelszavaddal, ha több információt szeretnél, látogass el a"
+
+#: system.c:563
+msgid "how to play page"
+msgstr "hogyan játszak oldalra."
+
+#: system.c:566
+msgid "The year is now 27006. The old Imperium has long since crashed universe-wide, because of the constant battles and the complete chaos caused by over inflation and empires being so big that they imploded from poor management. All that remained were a loosely knit group of traders who chose not to become part of the previous Imperium. These traders and craftsmen have made available bare planets and terraforming equipment to new arrivals in the galaxy. The traders and craftsmen will not rule the Imperium, they are content to see new arrivals and offer their services and collect their profits in the form of taxes. They operate as a group under the guise of the Galactic Coordinator, and appear to be the Supreme Being.<br/><br/><br/>In the event you successfully invade an empire you will receive free terraforming as a reward from the Traders. The Traders put a high value on intelligence and research and will possibly let you win the game with these attributes. You may also win the game by conquest. Welcome new immigrants and begin building your empire. There are new improved methods of communications, more information and methods to manage your empire available to you. The all new GalaxyPedia is now available to you. You may use it and add your own content. The GalaxyPedia is a dynamic tool that is constantly being updated and changed. You might become tempted to do unethical things in this game such as use nuclear weapons, teleport your empire to a new location or other underhanded acts. Do so at your own risk because the Traders frown upon such things."
+msgstr "27006-ot írunk. A régi Birodalom már régen összeomlott a háborúskodások, a belső viszályok és az uralkodó zsarnoksága következtében. Minden ami marad, néhány kereskedő, akik nem akartak a régi Birodalom részei lenni tovább. Ezek a kereskedők elérhetővé tettek néhány kihalt, üres bolygót az új uralkodójelöltek számára. Ők nem akarják uralni a Birodalmat, ők csak az új uralkodókra várnak, hogy a piacuk ismét beinduljon és jöjjön a bevétel. Ők a Galaktikus Koordinátornak dolgoznak. <br/><br/><br/>Ha a játékban lerombolsz egy birodalmat, a kereskedők jutalmat adnak neked. Előnyben részesítik a tudást és a fejlődést, melyek segítségével garantált a győzelem. A másik módszer a hódítás. Szerezz új bevándorlókat és építsd a birodalmadat. Sok információval szolgálhat a Galaxypédia. Használd bölcsen és add hozzá saját tudásod. A játékban néhány szabálytalan, vagyis fekete dolgot is tehetsz, mint a nukleáris bombák, a feketepiac és egyéb rejtett dolgok. Sosem tudhatod, mikor mi fog történni. Minden gondolj át jól és cselekedj bölcsen. A kereskedők bíznak benned!"
+
+#: system.c:569
+msgid "Register Now"
+msgstr "Regisztrálj most"
+
+#: system.c:581
+msgid "Nickname to use"
+msgstr "Felhasználónév"
+
+#: system.c:590
+msgid "By joining in the game you agree to the following by acceptance of this Code of Conduct:"
+msgstr "A játékba való csatlakozáskor elfogadod és betartod az alábbi feltételeket:"
+
+#: system.c:593
+msgid "1. Foul language in any form in the public messages, forums and galaxypedia is grounds for immediate termination of your account"
+msgstr "1. A trágár beszéd bármilyen formája az üzenetekben, fórumokon, vagy a galaxypédiában tilos és törlést von maga után."
+
+#: system.c:596
+msgid "2. Foul language in any form in the IRC channel and you are banned immediately."
+msgstr "2. A trágár beszéd bármilyen formáját a chaten azonnali törléssel jutalmazzuk."
+
+#: system.c:599
+msgid "3. Any form of disorderly conduct ( except attacking empires ) is not tolerated."
+msgstr "3. Bármiféle rendbontás ( kivéve a támadásokat ) nem lesz tolerálva."
+
+#: system.c:602
+msgid "4. More than 2 accounts from the same IP address must be cleared thru the Galactic Coordinator either via the forums, email or in the IRC channel. Violation of this is clearly cheating and will not be tolerated. Unless cleared with the Galactic Coordinator BEFORE creating account, the accounts may be terminated."
+msgstr "4. Több, mint 2 felhasználó egy IP címről való regisztrálása esetén szólni kell az adminisztrátornak a fórumon, vagy e-mailben, esetleg a chaten.Ha egy embernek van több felhasználója, az szabályellenes és nem lesz tolerálva. Ha többen regisztrálnak egy IP-ről, azt regisztráció előtt kell megbeszélni az adminnal."
+
+#: system.c:605
+msgid "We reserves the right to terminate any account and reset any game at any time. Multiple violations of the code of conduct will result in your host mask being banned."
+msgstr "Fenntartjuk a jogot a birodalmak és a felhasználók törlésére bármikor, ha azok szabályt szegnek. A többszöri szabályszegést IP cím tiltással jutalmazzuk."
+
+#: system.c:608
+msgid "I agree with the rules"
+msgstr "Elfogadom a feltételeket"
+
+#: system.c:611
+msgid "Signup"
+msgstr "Regisztrál"
+
+#: system.c:617
+msgid "Top 50 players"
+msgstr "Top 50 játékos"
+
+#: system.c:626
+msgid "Player Name"
+msgstr "Játékos Neve"
+
+#: system.c:629
+msgid "Lifespan"
+msgstr "Élettartam"
+
+#: system.c:632
+msgid "Last Visit"
+msgstr "Utolsó látogatás"
+
+#: system.c:638
+msgid "This game is a creation of"
+msgstr "Készítette"
+
+#: system.c:641
+msgid "Galaxypedia"
+msgstr "Galaxypédia"
+
+#: system.c:647
+msgid "Open chat in new window"
+msgstr "Megnyitás új ablakban"
+
+#: system.c:653
+msgid "No players can be found in the game database, this mean that the first player who register on this server will be the administrator!"
+msgstr "Nincs játékos az adatbázisban, az első ember aki regisztrál, megkapja az adminisztrátor rangot!"
+
+#: system.c:656
+msgid "Hall Of Fame"
+msgstr "Hírességek csarnoka"
+
+#: system.c:659
+msgid "No hall of fames yet"
+msgstr "Még nincsenek hírességek"
+
+#: system.c:662
+msgid "Some interesting statistics"
+msgstr "Néhány érdekes statisztika"
+
+#: system.c:665
+msgid "Available games:"
+msgstr "Elérhető játékok:"
+
+#: system.c:668
+msgid "Total population:"
+msgstr "Össznépesség:"
+
+#: system.c:671
+msgid "Total empires count:"
+msgstr "Birodalmak:"
+
+#: system.c:674
+msgid "New empires today:"
+msgstr "Új birodalmak ma:"
+
+#: system.c:677
+msgid "Players registered:"
+msgstr "Regisztrált játékosok:"
+
+#: system.c:680
+msgid "Premium accounts:"
+msgstr "V.I.P tagok:"
+
+#: system.c:683
+msgid "Connected players:"
+msgstr "Csatlakozott játékosok:"
+
+#: system.c:686
+msgid "New accounts today:"
+msgstr "Mai regisztrációk:"
+
+#: system.c:689
+msgid "Max signup in one day:"
+msgstr "Legtöbb regisztráció:"
+
+#: system.c:692
+msgid "Accounts logged today:"
+msgstr "Bejelentkezett ma:"
+
+#: system.c:695
+msgid "Max players in one day:"
+msgstr "Legtöbb egy nap:"
+
+#: system.c:698
+msgid "In Solar Imperium, you rule a solar empire. The goal is to become and remain the most powerful empire. You can gain strength by buying forces, and you can gain size by colonizing planets. The game is totally FREE !"
+msgstr "A Solar Imperiumban egy galaktikus birodalmat irányítassz. A cél, hogy te légy a legerősebb és ezt meg is tartsd. Erőt az egységekkel, még területet a hódításokkal szerezhetsz. A játék teljesen INGYENES!"
+
+#: system.c:701
+msgid "This game was a port from the original <b><a style=\"color:darkblue\" href=\"http://en.wikipedia.org/wiki/Solar_Realms_Elite\">SOLAR REALMS ELITE</a></b> made by <b><a style=\"color:darkblue\" href=\"http://amitp.blogspot.com/\">Amit Patel</a></b>, a pretty popular game back in BBS era (circa 1993). Since then, the game system evolved alot in specific fields like research map and real-time/invasion convoys. "
+msgstr "Ez a játék egy átirata az eredeti <b><a style=\"color:darkblue\" href=\"http://en.wikipedia.org/wiki/Solar_Realms_Elite\">SOLAR REALMS ELITE</a></b>-nek, amit <b><a style=\"color:darkblue\" href=\"http://amitp.blogspot.com/\">Amit Patel</a></b> készített, egy híres játék volt (1993-ban). Azóta a játék rengeteget lett fejlesztve és sok újdonság került bele."
+
+#: system.c:704
+msgid "You are a new comer?"
+msgstr "Új vagy?"
+
+#: system.c:707
+msgid ", you need to register a free account first!"
+msgstr ", regisztrálnod kell!"
+
+#: system.c:713
+msgid "To play"
+msgstr "Hogy játsz"
+
+#: system.c:716
+msgid "you have to choose a game, see the"
+msgstr "választanod kell egy játékot, nézd meg a"
+
+#: system.c:719
+msgid "Games Browser!"
+msgstr "Játék böngészőt!"
+
+#: system.c:722
+msgid "You like the game?"
+msgstr "Tetszik a játék?"
+
+#: system.c:725
+msgid "you can update to a "
+msgstr "befizethetsz a"
+
+#: system.c:728
+msgid "Premium Account!"
+msgstr "V.I.P tagságra!"
+
+#: system.c:731
+msgid "Want to learn more about the game?</b> A online documentation  is available:"
+msgstr "Többet akarsz megtudni a játékról?</b> Egy dokumántáció található itt:"
+
+#: system.c:734
+msgid "Visit the Galaxypedia!"
+msgstr "Olvasd a Galaxypédiát!"
+
+#: system.c:737
+msgid "Host your own games</b>, grab the installation package: "
+msgstr "Vezess egy saját játékot</b>, töltsd le a forrásokat:"
+
+#: system.c:740
+msgid "Grab the last version!"
+msgstr "A legújabb verzió!"
+
+#: admin.php:47
+msgid "You need to be an admin!"
+msgstr "Adminnak kell lenned!"
+
+#: admin.php:104
+#: admin.php:109
+msgid "Invalid rules sent."
+msgstr "Hibás szabályok."
+
+#: admin.php:337
+msgid "Game name empty!"
+msgstr "Üres játéknév!"
+
+#: admin.php:338
+msgid "Lifetime empty!"
+msgstr "Időtartam üres!"
+
+#: admin.php:339
+msgid "Turns per day empty!"
+msgstr "Körök naponta üres!"
+
+#: admin.php:340
+msgid "Protection turns empty!"
+msgstr "Védelmi körök üres!"
+
+#: admin.php:341
+msgid "Max players empty!"
+msgstr "Max játékos üres!"
+
+#: admin.php:342
+msgid "Players slot empty!"
+msgstr "Játékosok üres!"
+
+#: admin.php:441
+#: gamesbrowser.php:57
+msgid "Need a reset!"
+msgstr "Újra kell indítani!"
+
+#: admin.php:444
+#: forum.php:167
+#: forum.php:178
+#: gamesbrowser.php:60
+#: gamesbrowser.php:61
+msgid "days"
+msgstr "nap"
+
+#: chat.php:60
+msgid "has joined the chatroom."
+msgstr "belépett a chatre."
+
+#: chat.php:127
+msgid "Online Users"
+msgstr "Online felhasználó"
+
+#: continuegame.php:41
+#: joingame.php:43
+#: joingame.php:47
+#: top_frame.php:51
+msgid "Invalid GAME ID!"
+msgstr "Hibás JÁTÉK AZONOSÍTÓ!"
+
+#: continuegame.php:43
+msgid "Invalid session!"
+msgstr "Hibás session!"
+
+#: continuegame.php:49
+msgid "Unable to continue playing. Maybe you have deleted your empire?"
+msgstr "Nem folytathatod a játékot. Talán letörölted a birodalmad?"
+
+#: forum_viewtopic.php:106
+msgid "You can't post until you are registered. Please login!"
+msgstr "Nem írhatsz, míg nem regisztráltál. Jelentkezz be!"
+
+#: forum_viewtopic.php:114
+msgid "Empty reply content!"
+msgstr "Üres válasz!"
+
+#: forum_viewtopic.php:154
+msgid "Unknown"
+msgstr "Ismeretlen"
+
+#: forum_viewtopic.php:211
+msgid " days"
+msgstr " nap"
+
+#: gamesbrowser.php:75
+msgid "No"
+msgstr "Nem"
+
+#: gamesbrowser.php:75
+msgid "Yes"
+msgstr "Igen"
+
+#: gamesbrowser.php:100
+#: gamesbrowser.php:131
+msgid "Collapsed"
+msgstr "Összeomlott"
+
+#: joingame.php:63
+msgid "Invalid empire name!"
+msgstr "Hibás birodalomnév"
+
+#: joingame.php:64
+msgid "Invalid emperor/emperess name!"
+msgstr "Hibás uralkodó/uralkodónő név!"
+
+#: joingame.php:65
+msgid "Invalid gender!"
+msgstr "Hibás nem!"
+
+#: joingame.php:66
+msgid "--- No biography defined ---"
+msgstr "--- Nincs profil ---"
+
+#: joingame.php:72
+msgid "Game not resetted yet!"
+msgstr "Még nem indult újra!"
+
+#: joingame.php:75
+msgid "Emperor/emperess name already in use!"
+msgstr "Már van ilyen játékos!"
+
+#: joingame.php:78
+msgid "Empire name already in use!"
+msgstr "Már van ilyen birodalom!"
+
+#: joingame.php:84
+msgid "You need to be a premium member to join this game!"
+msgstr "V.I.P tagnak kell lenned, hogy beléphess a játékba!"
+
+#: joingame.php:91
+msgid "Too much players, this game is full!"
+msgstr "Túl sok játékos, tele van!"
+
+#: preferences.php:63
+msgid "Passwords does not matches!"
+msgstr "Nem egyeznek a jelszavak!"
+
+#: preferences.php:67
+#: registernow.php:52
+msgid "Empty email field!"
+msgstr "Üres e-mail mező!"
+
+#: preferences.php:68
+msgid "Empty real_name field!"
+msgstr "Üres valódi név mező!"
+
+#: preferences.php:69
+#: registernow.php:54
+msgid "Empty country field!"
+msgstr "Üres ország mező!"
+
+#: preferences.php:84
+msgid "Sorry, only jpeg files are supported! Current type:"
+msgstr "Csak jpeg kiterjesztés! Jelenlegi:"
+
+#: registernow.php:49
+msgid "You must agree with the rules!"
+msgstr "El kell fogadnod a feltételeket!"
+
+#: registernow.php:53
+msgid "Empty real name field!"
+msgstr "Üres valódi név mező!"
+
+#: registernow.php:55
+msgid "Empty nickname field!"
+msgstr "Üres nicknév mező!"
+
+#: registernow.php:56
+msgid "Empty password(first) field!"
+msgstr "Üres jelszó(első) mező!"
+
+#: registernow.php:57
+msgid "Empty password(second) field!"
+msgstr "Üres jelszó(második) mező!"
+
+#: registernow.php:58
+msgid "Passwords entered does not matches!"
+msgstr "A két jelszó nem egyezik!"
+
+#: registernow.php:61
+msgid "This email address is already used by someone else!"
+msgstr "Ezt az e-mail címet már használja valaki!"
+
+#: registernow.php:64
+msgid "This nickname is already used by someone else!"
+msgstr "Már valaki használja ezt a nicknevet!"
+
+#: scoreboard.php:53
+#: scoreboard.php:54
+msgid " Day(s)"
+msgstr " Nap"
+
+#: welcome.php:54
+msgid "has left the chatroom. [logoff] (Stayed for"
+msgstr "elhagyta a chat-et. [logoff] (Itt volt"
+
+#: welcome.php:54
+msgid "minutes"
+msgstr "percig"
+
+#: welcome.php:71
+msgid "No nickname provided."
+msgstr "Nem adtál meg nicknevet."
+
+#: welcome.php:72
+msgid "No password provided."
+msgstr "Nem adtál meg jelszót."
+
+#: welcome.php:79
+msgid "Invalid username and/or password entered!"
+msgstr "Hibás felhasználónév vagy jelszó!"
+
+#: welcome.php:91
+msgid "Too much players use this IP, login prohibited."
+msgstr "Túl sok játékos használja ezt az IP-t, bejelentkezés sikertelen."
+

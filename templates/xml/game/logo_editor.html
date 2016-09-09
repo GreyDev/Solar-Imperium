@@ -1,0 +1,115 @@
+
+		<script language="javascript">
+		{literal}
+		var current_color = '#FFFFFF';
+		
+		
+		function ChangeCurrentcolor(color)
+		{
+			current_color = color;
+			current_color_picker.style.backgroundColor = color;
+		}
+
+		function UpdateCellColor(cell,data)
+		{
+			document.getElementById(cell).style.backgroundColor = current_color;
+			data.value = current_color;
+			
+		}
+
+		function FillWithColor()
+		{
+			var temp = current_color;
+	
+			window.location='logo_editor.php?fill='+escape(temp);
+		}
+		{/literal}
+		</script>
+
+		<table  cellspacing="0" cellpadding="0" border="0">
+		<tr>	
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666" style="padding:0px 5px 0px 5px"><a  class="link" href="manage.php"><b>{t}Manage{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="stats.php"><b>{t}Performance{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="logs.php"><b>{t}Activity Logs{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab_left.gif" border="0"></td>
+		<td nowrap bgcolor="darkred"  style="padding:0px 5px 0px 5px"><a  style="text-decoration:none;color:white" href="logo_editor.php"><b>{t}Edit Logo{/t}</b></a></td> 
+		<td><img src="../images/game/tab_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="lastturn.php"><b>{t}Turn Summary{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="research.php"><b>{t}Research Map{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="edit_production.php"><b>{t}Production{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+
+		</table>
+
+
+<table cellspacing="0" cellpadding="10" border="0" style="border:1px solid darkred" background="../images/game/background1.jpg">
+<tr><td>
+<table align="left" width="720">
+	<tr>
+		<td><b>{t}Empire LOGO Editor{/t}</b> <br />
+		<br />
+
+		<form name="logo_form" method="post">
+		<table width="100%">
+			<tr>
+				<td valign="top">{$logo_data_html}</td>
+				<td valign="top">
+
+				<table bgcolor="darkred" cellpadding="0" cellspacing="1" border="0">
+					<tr>
+						<td>
+						<table name="table_current_color" cellspacing="0" cellpadding="5"
+							border="0">
+							<tr>
+								<td id="current_color_picker" bgcolor="{$current_color}"><font
+									color="black"><b>{t}Current color{/t}</b></font></td>
+							</tr>
+						</table>
+						</td>
+					</tr>
+				</table>
+
+				{$color_palette_html} <br />
+				<br />
+				<img src="img_logo.php?empire={$logo_empire_id}&OVERWRITE" border="1"
+					bordercolor="yellow"><br />
+				<br />
+				<input type="submit" value="{t}Save logo{/t}"> <input type="button"
+					value="{t}Fill{/t}"
+					onclick="FillWithColor()">
+
+				</td>
+		</table>
+		</td>
+	</tr>
+</table>
+</form>
+</td></tr>
+<tr><td>
+<form method="post">
+<b style="color:white">{t}Import / Export logo data{/t}</b><br/>
+<textarea name="logo_data_update" rows="2" cols="80" class="text_area">
+{$logo_data}
+</textarea><br/>
+<input type="submit" value="{t}Update logo{/t}">
+</form>
+</td></tr>
+</table>

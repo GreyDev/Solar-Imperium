@@ -1,0 +1,146 @@
+<form method="post" name="form1" action="#" onsubmit="ajax_submit_form('trade.php',this); return false;">
+
+    <table width="780px"  style="margin:0 0 10 0;border:0px solid darkred;" cellspacing="0" cellpadding="0">
+        <tr>
+            <td width="100%" align="left">
+
+                <table  cellspacing="0" cellpadding="0" border="0">
+                    <tr>
+                        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+                        <td nowrap bgcolor="#666666" style="padding:0px 5px 0px 5px"><a  class="link" href="#" onclick="open_page('solarbank.php')"><b>{t}Solar Bank{/t}</b></a></td>
+                        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+
+                        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+                        <td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="#" onClick="open_page('globalmarket.php')"><b>{t}Global Market{/t}</b></a></td>
+                        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+                        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+                        <td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="#" onClick="open_page('lottery.php')"><b>{t}Lottery{/t}</b></a></td>
+                        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+                        <td nowrap><img src="../images/game/tab_left.gif" border="0"></td>
+                        <td nowrap bgcolor="darkred"  style="padding:0px 5px 0px 5px"><a  style="text-decoration:none;color:white" href="#" onclick="open_page('trade.php')"><b>{t}Trade Center{/t}</b></a></td>
+                        <td><img src="../images/game/tab_right.gif" border="0"></td>
+
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+
+                <table width="100%" align="center" cellspacing="0" cellpadding="5" style="font-size:11pt;border:1px solid darkred" bgcolor="#333333" background="../images/game/background1.jpg">
+
+
+                    <tr>
+                        <td colspan="2">
+
+
+                            <br/>
+                            <table  width="100%" bgcolor="darkred" cellspacing="1" cellpadding="0" border="0">
+                                <tr>
+                                    <td  background="../images/game/header.jpg"><b style="color:yellow">&nbsp;
+                                            {t}Active Trades{/t}</b></td></tr>
+
+                                <tr>
+                                    <td>
+                                        <table width="100%" align="center" cellspacing="0" cellpadding="5" border="0" style="font-size:11pt" bgcolor="#333333">
+                                            <tr><td>{$active_trades}
+                                                </td></tr>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </table>
+                            <br/>
+
+                        </td>
+                    </tr>
+                    <tr><td align="right">{t}Current tax rate:{/t} </td><td><b style="color:#ffcaca">{$trade_taxrate} %</b></td></tr>
+                    <tr><td align="right">{t}Available carriers:{/t} </td><td><b style="color:#ffcaca">{$trade_carriers}</b></td></tr>
+                    <tr>
+                        <td align="right">{t}Empire:{/t}</td>
+                        <td>
+                            <b style="color:#ffcaca">
+                                <select name="empire" style="width:500" class="select_box" >
+                                    <option value="-1">---</option>
+		{section name="emp" loop=$empires}
+                                    <option value="{$empires[emp].id}">{$empires[emp].name}</option>
+		{/section}
+                                </select>
+                            </b>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">{t}Money:{/t}</td>
+                        <td>
+                            <input value="0" type="text" name="trade_money" style="width:200px;" class="input_text">
+                            <b style="font-size:10pt;color:#ffcaca">
+                                <a href="#" style="color:white"  onclick="form1.trade_money.value={$trade_money_max_noformat};">{t}MAX{/t}</a>: {$trade_money_max} cr.</b>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">{t}Food:{/t}</td>
+                        <td><input value="0" type="text" name="trade_food"  class="input_text" style="width:200px">
+                            <b style="font-size:10pt;color:#ffcaca">
+                                <a href="#" style="color:white"  onclick="form1.trade_food.value={$trade_food_max_noformat};">{t}MAX{/t}</a>: {$trade_food_max} {t}megatons{/t}</b>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">{t}Covert Agents:{/t}</td>
+                        <td><input value="0" type="text" name="trade_coverts" class="input_text" style="width:200px">
+                            <b style="font-size:10pt;color:#ffcaca">
+                                <a href="#" style="color:white"  onclick="form1.trade_coverts.value={$trade_coverts_max_noformat};">{t}MAX{/t}</a>: {$trade_coverts_max}</b>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td align="right">{t}Soldiers:{/t}</td>
+                        <td><input value="0" type="text" name="trade_soldiers" class="input_text" style="width:200px">
+                            <b style="font-size:10pt;color:#ffcaca">
+                                <a href="#" style="color:white"  onclick="form1.trade_soldiers.value={$trade_soldiers_max_noformat};"{t}>MAX{/t}</a>: {$trade_soldiers_max}</b>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td align="right">{t}Fighters:{/t}</td>
+                        <td><input value="0" type="text" name="trade_fighters" class="input_text" style="width:200px">
+                            <b style="font-size:10pt;color:#ffcaca">
+                                <a href="#" style="color:white" onclick="form1.trade_fighters.value={$trade_fighters_max_noformat};">{t}MAX{/t}</a>: {$trade_fighters_max}</b>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td align="right">{t}Light cruisers:{/t}</td>
+                        <td><input value="0" type="text" name="trade_lightcruisers" class="input_text" style="width:200px">
+                            <b style="font-size:10pt;color:#ffcaca">
+                                <a href="#" style="color:white" onclick="form1.trade_lightcruisers.value={$trade_lightcruisers_max_noformat};">{t}MAX{/t}</a>: {$trade_lightcruisers_max}</b>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td align="right">{t}Heavy cruisers:{/t}</td>
+                        <td><input value="0" type="text" name="trade_heavycruisers" class="input_text" style="width:200px">
+                            <b style="font-size:10pt;color:#ffcaca">
+                                <a href="#" style="color:white" onclick="form1.trade_heavycruisers.value={$trade_heavycruisers_max_noformat};">{t}MAX{/t}</a>: {$trade_heavycruisers_max}</b>
+                        </td>
+                    </tr>
+
+
+                    <tr><td>&nbsp;</td><td><input type="submit" value="{t}Send convoy{/t}"></td></tr>
+                    <tr><td><br/></td></tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</form>

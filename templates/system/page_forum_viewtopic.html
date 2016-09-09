@@ -1,0 +1,146 @@
+{capture name=page_title}
+{t}Forum View Topic{/t}
+{/capture}
+
+{include file="frame_header.html" title=$smarty.capture.page_title}
+
+
+<div align="center">
+<div align="center" style="background-image:url(images/system/div_bg.jpg);background-color:darkred;padding:10px;border:1px solid red">
+    <div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="login.php"><b>{t}PLAY NOW{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+    <div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="take_a_tour.php"><b>{t}TAKE A TOUR{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+    <div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="scoreboard.php"><b>{t}SCOREBOARD{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+    <div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="server_status.php"><b>{t}SERVER STATUS{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+    <div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="forum.php" style="color:yellow"><b>{t}FORUM{/t}</b></a></div>
+</div>
+<br/>
+
+
+<div align="center">
+    <div style="width:800px;background-image:url(images/common/alpha1.png);border:1px solid darkred;padding:10px">
+
+
+<table cellpadding="5" cellspacing="0" width="100%" style="color:#dedede">
+	<tr>
+		<td class="text_big">
+            <table cellspacing="0" width="100%" cellpadding="0" border="0">
+                <tr><td width="100%">
+            &nbsp;<b>Topic #{$topic_id}: </b><b style="color:white">{$topic_title}</b>
+                </td><td nowrap>
+<a href="forum.php" class="link"><b>{t}Back to forum{/t}</b></a>
+            </td></tr></table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		
+		<table  class="text_small" width="100%" cellspacing="1" cellpadding="1" border="0" align="center">
+			<tr>
+				<td align="right">
+
+                <b>{t}Pages:{/t} </b><b style="color:white">{$pages}</b>
+				<table class="text_normal" width="100%"
+					cellspacing="1" bgcolor="darkred" cellpadding="0">
+
+
+					{if $topic_post eq 1}
+					<tr>
+						<td valign="top">
+						<table cellspacing="0" width="100%" cellpadding="5" border="0">
+
+							<tr bgcolor="#cacada">
+								<td class="text_small" bgcolor="#333333" align="center" valign="top">
+								<div style="width:140px">
+								<b class="text_normal" style="color:#cacaca">{$topic_author_nickname}</b> <br />
+								<br />
+								<img src="{$topic_author_image}" width="32px" style="border:1px solid #000000"><br />
+								<br />
+								{$topic_date}<br/>
+								{t}viewed{/t} {$topic_views} {t}times{/t}
+								</div>
+								</td>
+
+								<td width="100%" valign="top" class="text_normal" style="color:#333333">{$topic_content}</td>
+
+							</tr>
+						</table>
+						</td>
+					</tr>
+					{/if}
+
+					
+					{section name="rep" loop=$replies}
+					<tr>
+						<td>
+						<table width="100%" cellspacing="0" cellpadding="5" border="0" class="text_normal" style="color:#000000">
+							<tr>
+								<td bgcolor="#dadaea" width="100%" valign="top">{$replies[rep].content}</td>
+								<td bgcolor="#606060" valign="top" align="center"><b style="color:#dadada">
+								<div style="width:140px">
+								{$replies[rep].author_nickname}</b> <br />
+								<br />
+								<img width="32px" src="{$replies[rep].author_image}" style="border:1px solid #000000"><br />
+								<br />
+								<font class="text_small" style="color:white">{$replies[rep].author_date}</font>
+								</div>
+								</td>
+							</tr>
+						</table>
+
+						</td>
+					</tr>
+					{sectionelse}
+					{/section}
+				</table>
+				<b>{t}Pages:{/t} </b><b style="color:white">{$pages}</b>
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+
+</div></div><br/>
+{if $player_connected eq 1}
+
+<div style="width:800px;background-image:url(images/common/alpha3.png);border:1px solid darkred;padding:10px">
+<form method="post" action="forum_viewtopic.php?topic={$topic_id}">
+<table cellpadding="1" cellspacing="0" border="0">
+	<tr>
+                <td class="text_normal" style="color:white"><b>&nbsp;{t}Post a new
+                reply{/t}</b></td>
+            </tr>
+	<tr>
+		<td>
+		<table class="text_small"  width="100%"	cellspacing="10" cellpadding="5" border="0" align="center" style="color:#dedede">
+			<tr>
+				<td align="right">{t}BB Codes allowed:{/t}</td>
+				<td><b>[list] [b] [u] [i] [code] [quote]</b></td>
+			</tr>
+			<tr>
+				<td align="right" valign="top">{t}Content:{/t}</td>
+				<td><textarea name="content" rows="12" cols="80"
+					class="input_text"></textarea></td>
+			</tr>
+			<tr>
+				<td align="right">&nbsp;</td>
+				<td><input type="submit" name="forum_newreply"
+					value="Post reply" class="input_button"></td>
+			</tr>
+
+			<tr>
+				<td colspan="2"><br />
+				<b class="text_small" style="color:yellow">{t}Please do not spam or
+				your account will be terminated.{/t}</b> <br />
+				<br />
+				</td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+</form>
+</div>
+{/if}
+
+{include file="frame_footer.html"}

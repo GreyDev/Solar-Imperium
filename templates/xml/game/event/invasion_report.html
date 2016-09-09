@@ -1,0 +1,165 @@
+<table width="100%" bgcolor="black" cellpadding="5" background="../images/game/background1.jpg">
+	<tr>
+		<td width="100%" valign="top">
+		<div style="color:white" align="right" style="margin:0px"><b>{$date} </b></div>
+
+		<table width="100%">
+			<tr>
+				<td>
+				<b style="color:white;font-size:16px">{t}Invasion report{/t} (<a href="last_invasions.php">{t}Click here fo a advanced report{/t}</a>)</b><br/></br>
+
+				<table width="300" align="center" style="border:1px solid white">
+					<tr>
+						<td width="100" align="center" background="{$background_space}" bgcolor="{$color_space}" height="50"><b>{t}Space{/t}</b></td>
+						<td width="100" align="center" background="{$background_orbital}" bgcolor="{$color_orbital}" height="50"><b>{t}Orbital{/t}</b></td>
+						<td width="100" align="center" background="{$background_ground}" bgcolor="{$color_ground}" height="50"><b>{t}Ground{/t}</b></td>
+					</tr>
+				</table>
+				<br/>
+
+				{if $invasion_won eq true}
+				<table background width="100%" bgcolor="darkred" style="border:1px solid white">
+				<tr><td>
+				<b style="color:white">{t}Attacker(s) successfully invaded the empire!{/t}</b><br/>
+
+					<table width="100%">
+					<tr><td valign="top" width="50%" bgcolor="#660000">
+					{t}Food planets taken:{/t} <b>{$lost_food_planets}</b></br>
+					{t}Ore planets taken:{/t} <b>{$lost_ore_planets}</b></br>
+					{t}Tourism planets taken:{/t} <b>{$lost_tourism_planets}</b></br>
+					{t}Supply planets taken:{/t} <b>{$lost_supply_planets}</b></br>
+					{t}Gov. planets taken:{/t} <b>{$lost_gov_planets}</b></br>
+					{t}Education planets taken:{/t} <b>{$lost_edu_planets}</b></br>
+					{t}Urban planets taken:{/t} <b>{$lost_urban_planets}</b></br>
+					{t}Research planets taken:{/t} <b>{$lost_research_planets}</b></br>
+					{t}Petroleum planets taken:{/t} <b>{$lost_petro_planets}</b></br>
+					{t}Anti-Pollution planets taken:{/t} <b>{$lost_antipollu_planets}</b></br>
+					</td><td valign="top">
+					{t}Population killed:{/t} <b>{$lost_population}</b></br>
+					{t}Credits stolen:{/t} <b>{$lost_credits}</b></br>
+					{t}New civil status:{/t} <b>{$civil_status}</b><br/>
+					{t}New military effectiveness:{/t} <b>{$military_effectiveness} %</b><br/>
+					</td></tr>
+					</table>
+				</td></tr>
+				</table>
+				{else}
+				<table width="100%" bgcolor="darkblue" background="../images/game/background/invasion_defense.jpg" style="border:1px solid cyan">
+				<tr><td>
+				<b style="color:white">{t}Attacker(s) got defeated by defending empire(s)!{/t}</b><br/>
+				</td></tr>
+				</table>
+				<br/>
+				{/if}
+				
+
+				<table width="100%" cellspacing="0" cellpadding="0" border="0" style="border:1px solid white">
+				<tr>
+					<td width="50%" height="100%"> <!-- left -->
+					<table width="100%" height="100%" background="../images/game/background/backdrop_attack.jpg">
+					<tr>
+						<td colspan="2"><b style="color:white">{t}Attacker(s){/t}</b></td>
+					</tr>
+					<tr>
+						<td width="40"><img style="border:1px solid white" src="../images/game/empires/{$game_id}/{$attack_empire_id}.jpg"></td>
+						<td width="260"><b style="color:white">{$attack_empires}</b></td>
+					</tr>
+					<tr>
+						<td width="40"><img style="border:1px solid white" width="32" height="32" src="../images/game/icons/army/soldiers_{$attack_soldiers_level}.gif"></td>
+						<td>{$attack_soldiers_qty}</td>
+					</tr>
+					<tr>
+						<td  width="40"><img style="border:1px solid white"  width="32" height="32" src="../images/game/icons/army/fighters_{$attack_fighters_level}.gif"></td>
+						<td >{$attack_fighters_qty}</td>
+					</tr>
+					<tr>
+						<td width="40">&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td width="40"><img style="border:1px solid white"  width="32" height="32" src="../images/game/icons/army/lightcruisers_{$attack_lightcruisers_level}.gif"></td>
+						<td>{$attack_lightcruisers_qty}</td>
+					</tr>
+					<tr>
+						<td width="40"><img style="border:1px solid white"  width="32" height="32" src="../images/game/icons/army/heavycruisers_{$attack_heavycruisers_level}.gif"></td>
+						<td>{$attack_heavycruisers_qty}</td>
+					</tr>
+					</table>
+
+				</td>
+
+				<td width="50%" height="100%"> <!-- right -->
+				<table width="100%" height="100%" background="../images/game/background/backdrop_defense.jpg">
+				<tr>
+					<td colspan="2" ><b style="color:white">{t}Defender(s){/t}</b></td>
+				</tr>
+				<tr>
+					<td  width="40"><img style="border:1px solid white" src="../images/game/empires/{$game_id}/{$defense_empire_id}.jpg"></td>
+					<td  width="260"><b style="color:white">{$defense_empires}</b></td>
+				</tr>
+				<tr>
+					<td  width="40"><img  style="border:1px solid white" width="32" height="32" src="../images/game/icons/army/soldiers_{$defense_soldiers_level}.gif"></td>
+					<td >{$defense_soldiers_qty}</td>
+				</tr>
+				<tr>
+					<td  width="40"><img  style="border:1px solid white" width="32" height="32" src="../images/game/icons/army/fighters_{$defense_fighters_level}.gif"></td>
+					<td >{$defense_fighters_qty}</td>
+				</tr>
+				<tr>
+					<td  width="40"><img  style="border:1px solid white" width="32" height="32" src="../images/game/icons/army/stations_{$defense_stations_level}.gif"></td>
+					<td >{$defense_stations_qty}</td>
+				</tr>
+				<tr>
+					<td  width="40"><img style="border:1px solid white"  width="32" height="32" src="../images/game/icons/army/lightcruisers_{$defense_lightcruisers_level}.gif"></td>
+					<td >{$defense_lightcruisers_qty}</td>
+				</tr>
+				<tr>
+					<td  width="40"><img style="border:1px solid white"  width="32" height="32" src="../images/game/icons/army/heavycruisers_{$defense_heavycruisers_level}.gif"></td>
+					<td >{$defense_heavycruisers_qty}</td>
+				</tr>
+			</table>
+
+			</td>
+		</tr>
+	</table>
+
+
+	<br/>
+	<b style="color:white;font-size:14px">{t}Casualties{/t}</b><br/><br/>
+
+	<table style="border:1px solid white" background="../images/game/background/invasion_attack.jpg" bgcolor="darkred" width="100%">
+	{section name="ac" loop=$attack_casualties}
+	<tr>
+		<td>
+		<b style="color:white">{$attack_casualties[ac].emperor}@{$attack_casualties[ac].name}</b> :: 
+		{t}soldiers{/t}: <b>{$attack_casualties[ac].soldiers}</b>, 
+		{t}fighters{/t}: <b>{$attack_casualties[ac].fighters}</b>, 
+		{t}light cruisers{/t}: <b>{$attack_casualties[ac].lightcruisers}</b>, 
+		{t}heavy cruisers{/t}: <b>{$attack_casualties[ac].heavycruisers}</b>, 
+		{t}carriers{/t}: <b>{$attack_casualties[ac].carriers}</b>
+		</td>
+	</tr>
+	{/section}
+	
+	</table>
+	<br/>
+
+	<table style="border:1px solid cyan" bgcolor="darkblue" background="../images/game/background/invasion_defense.jpg" width="100%">
+	{section name="dc" loop=$defense_casualties}
+	<tr><td>
+	<b style="color:cyan">{$defense_casualties[dc].emperor}@{$defense_casualties[dc].name}</b> :: 
+		{t}soldiers{/t}:<b>{$defense_casualties[dc].soldiers}</b>,
+		{t}fighters{/t}: <b>{$defense_casualties[dc].fighters}</b>,
+		{t}light cruisers{/t}: <b>{$defense_casualties[dc].lightcruisers}</b>, 
+		{t}heavy cruisers{/t}: <b>{$defense_casualties[dc].heavycruisers}</b>, 
+		{t}defense stations{/t}: <b>{$defense_casualties[dc].stations}</b>
+	</td></tr>
+	{/section}
+	</table>
+	<br/>
+
+	</td></tr>
+	</table>
+	</td>
+</tr>
+</table>

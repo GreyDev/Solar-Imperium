@@ -1,0 +1,85 @@
+<table width="720px"  align="center" bgcolor="#333333" background="../images/game/background1.jpg"  style="border:1px solid darkred">
+<tr>
+	<td width="100%" align="center">
+	<a  class="link" href="#" onclick="open_page('scoreboard.php')"><b>{t}Scoreboard{/t}</b></a> |
+	<b style="color:#cacaca">{t}Hall Of Fame{/t}</b>
+	</td>
+</tr>
+</table>
+<br/>
+
+<table width="720" align="center" style="border:1px solid red" background="../images/game/background1.jpg">
+<tr><td align="left" nowrap>{t}Current game:{/t} <b>{$game_status}</b></td>
+<td align="right" nowrap>{t}Game restart in:{/t} <b>{$restart_date/60|round} {t}minutes{/t}</b></td></tr>
+</table><br/>
+
+
+{section name="g" loop=$games}
+
+<table cellpadding="1" cellspacing="0" border="0" bgcolor="darkred"
+	width="720" align="center">
+	<tr>
+		<td background="../images/game/header.jpg"><font
+			color="yellow" style="font-size:13px;"><b>&nbsp;{t}Game:{/t} {$games[g].game_name}, {t}Date:{/t} {$games[g].date}, {t}Elapsed:{/t} {$games[g].elapsed} {t}days{/t}
+		</b></font></td>
+	</tr>
+	<tr>
+		<td>
+		<table background="../images/game/background1.jpg" style="font-size:11pt;"
+			bgcolor="#333333" width="100%" cellspacing="0" cellpadding="3"
+			border="0" align="center">
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+		
+
+			<tr>
+				<td align="right">{t}Game Winner:{/t}
+				</td>
+				<td><b>{$games[g].winner_empire}</b></td>
+			</tr>
+			<tr>
+				<td align="right">{t}Victory condition:{/t}
+				</td>
+				<td><b>{$games[g].victory_condition}</b></td>
+			</tr>
+			
+				<tr>
+				<td align="right">{t}Best coalition:{/t}
+				</td>
+				<td><b>{$games[g].winner_coalition}</b></td>
+			</tr>	
+			
+			<tr><td colspan="2"><hr color="yellow" size="1"></td></tr>
+			
+			<tr>
+				<td width="100%" colspan="2">
+				
+				<table width="100%">
+				<tr>
+				<td align="center">
+				<img src="../images/game/silver.gif" border="0"><br/>
+				<b style="color:silver">{$games[g].silver_empire}</b><br/>({$games[g].silver_networth|number_format})</td>
+				<td align="center">
+				<img src="../images/game/gold.gif" border="0"><br/>
+				<b style="color:gold">{$games[g].gold_empire}</b><br/>({$games[g].gold_networth|number_format})</td>
+				<td align="center">
+				<img src="../images/game/bronze.gif" border="0"><br/>
+				<b style="color:orange">{$games[g].bronze_empire}</b><br/>({$games[g].bronze_networth|number_format})</td>
+				</tr>
+				</table>
+				
+				</td>
+			</tr>
+
+		
+		</table>
+		</td>
+	</tr>
+</table>
+<br/>
+{sectionelse}
+<div align="center">
+<b style="color:yellow">{t}No game finished yet!{/t}</b>
+</div><br/>
+{/section}

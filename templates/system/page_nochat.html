@@ -1,0 +1,25 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/system/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/system/chat.css" />
+<script>
+
+{literal}
+function ShowChatPanel()
+{
+
+//	parent.document.CloseOnlineChat();
+
+	parent.document.getElementById('frameset1').rows="25px,*,100px";
+
+	parent.frame_chat.location.href = 'chat.php?SMALL';
+}
+{/literal}
+
+
+</script>
+</head>
+<body style="margin:0px">
+&nbsp;<a style="font-size:12px;font-family:sans-serif;color:yellow" href="javascript:ShowChatPanel()"><b>Restore chat window</b></a>
+</body>
+</html>

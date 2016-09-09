@@ -1,0 +1,92 @@
+{capture name=page_title}
+{t}Scoreboards{/t}
+{/capture}
+
+{include file="frame_header.html" title=$smarty.capture.page_title}
+<!-- begin content -->
+
+
+<div align="center" style="background-image:url(images/system/div_bg.jpg);background-color:darkred;padding:10px;border:1px solid red">
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="login.php"><b>{t}PLAY NOW{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="take_a_tour.php"><b>{t}TAKE A TOUR{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link"  style="color:yellow" href="scoreboard.php"><b>{t}SCOREBOARD{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="server_status.php"><b>{t}SERVER STATUS{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="forum.php"><b>{t}FORUM{/t}</b></a></div>
+</div>
+
+<br/>
+
+<table cellspacing="0" width="720" cellpadding="0" border="0" align="center" background="images/common/alpha1.png" style="border:1px solid darkred">
+<tr>
+<td  width="100%">
+<div style="padding:10px">
+<b class="text_big" style="color:white">
+<img src="images/system/icon_button_scoreboard.png" style="border:1px solid white">
+{t}Hall Of Fame{/t}</b>
+<br/>
+<br/>
+
+    <div align="center" class="text_small">
+        <table class="text_small" width="700" style="border:1px solid #6a6a6a;color:#eaeaea" cellspacing="0" cellpadding="5">
+        <tr>
+        <td style="color:#eaeaea" background="images/system/div_bg.jpg"><b>{t}Date/Time{/t}</b></td>
+        <td style="color:#eaeaea" background="images/system/div_bg.jpg"><b>{t}Player{/t}</b></td>
+        <td style="color:#eaeaea" background="images/system/div_bg.jpg"><b>{t}Game{/t}</b></td>
+        </tr>
+        {section name="hlf" loop=$hall_of_fame}
+        <tr>
+        <td background="images/common/alpha2.png">{$hall_of_fame[hlf].date|date_format}</td>
+        <td background="images/common/alpha2.png">{$hall_of_fame[hlf].player_name}</td>
+        <td background="images/common/alpha2.png">{$hall_of_fame[hlf].game_name}</td>
+        </tr>
+        {sectionelse}
+        <tr>
+            <td colspan="3"  background="images/common/alpha2.png">{t}No entry found{/t}</td>
+        </tr>
+        {/section}
+        </table>
+    </div>
+</div>
+<br/>
+<br/>
+    <div style="padding:10px">
+    <b class="text_big" style="color:white">
+    <img src="images/system/icon_button_scoreboard.png" style="border:1px solid white">
+    {t}Players score{/t}</b>
+    <br/><br/>
+        <div align="center" class="text_small">
+            <table class="text_small" width="700"  style="color:#cacaca;border:1px solid #6a6a6a" cellspacing="0" cellpadding="5">
+            <tr>
+            <td style="color:#eaeaea" background="images/system/div_bg.jpg"><b>{t}Rank{/t}</b></td>
+            <td style="color:#eaeaea" background="images/system/div_bg.jpg"><b>{t}Player{/t}</b></td>
+            <td style="color:#eaeaea" background="images/system/div_bg.jpg"><b>{t}Score{/t}</b></td>
+            <td style="color:#eaeaea" background="images/system/div_bg.jpg"><b>{t}Last Visit{/t}</b></td>
+            <td style="color:#eaeaea" background="images/system/div_bg.jpg"><b>{t}Elapsed{/t}</b></td>
+            </tr>
+
+            {section name="sc" loop=$scores}
+            <tr>
+            <td  style="color:#cacaca" background="images/common/alpha2.png" align="right">{$scores[sc].rank}</td>
+            <td  style="color:#cacaca" background="images/common/alpha2.png">{$scores[sc].name}</td>
+            <td  style="color:#cacaca" background="images/common/alpha2.png" align="center">{$scores[sc].score|number_format}</td>
+            <td  style="color:#cacaca" background="images/common/alpha2.png">{$scores[sc].lastvisit}</td>
+            <td  style="color:#cacaca" background="images/common/alpha2.png">{$scores[sc].lifespan}</td>
+            </tr>
+            {sectionelse}
+            <tr>
+                <td colspan="5" background="images/common/alpha2.png">{t}No entry found{/t}</td>
+            </tr>
+            {/section}
+
+            </table>
+        </div>
+    </div>
+</td>
+</tr>
+</table>
+
+
+
+<!-- end content -->
+
+{include file="frame_footer.html"}

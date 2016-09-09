@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+
+	<title>Solar Imperium :: {$title}</title>
+	<meta content="MRG Technologies" name="author">
+	<meta content="Rules the universe or prepare for annihilation" name="description">
+
+	<link rel="stylesheet" type="text/css" href="css/system/common.css" />
+	<script language="javascript" type="text/javascript" src="scripts/system/common.js"></script>
+	<script language="javascript" type="text/javascript" src="scripts/system/login.js"></script>
+	<script language="javascript" type="text/javascript" src="scripts/system/gamesbrowser.js"></script>
+	<script language="javascript" type="text/javascript" src="scripts/system/registernow.js"></script>
+	<script language="javascript" type="text/javascript" src="scripts/system/joingame.js"></script>
+	<script language="javascript" type="text/javascript" src="scripts/system/welcome.js"></script>
+
+
+</head>
+
+
+<body>
+
+<div id="bg_image">
+<img style="width: 100%; height: 100%; position: absolute;z-order:-100" src="images/system/background.gif"/>
+</div>
+
+<div id="contents">
+
+<table align="center" width="780" cellspacing="0" cellpadding="0" border="0">
+<tr>
+<td><a href="index.php" style="color:#cacaca;text-decoration:none"><img src="images/common/sword.png" border="0"></a></td>
+<td valign="middle" class="text_verybig" valign="top" style="color:white" width="100%">
+&nbsp;
+<b><a href="index.php" style="color:#cacaca;text-decoration:none">Solar Imperium</a></b>
+</td>
+
+<td nowrap>
+{section name=mysec loop=$LANGUAGES}
+{strip}
+
+<a style="color:black;font-size:11px" href="?LANG={$LANGUAGES[mysec].gettext}">
+{html_image class="img_language" alt="`$LANGUAGES[mysec].name`" file="images/languages/`$LANGUAGES[mysec].name`.png"}
+</a>
+
+{/strip}
+{/section}
+
+</td>
+</tr>
+</table><br/>
+<div align="center" id="warning_message" class="div_warning"></div>
+{if isset($warning_message)}
+<div align="center" class="div_warning_visible">{$warning_message}</div>
+{/if}

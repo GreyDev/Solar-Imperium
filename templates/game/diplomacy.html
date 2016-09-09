@@ -1,0 +1,301 @@
+<table  cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+        <td nowrap bgcolor="#666666" style="padding:0px 5px 0px 5px"><a  class="link" href="#" onclick="open_page('messages.php')"><b>{t}Messages{/t}</b></a></td>
+        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+        <td nowrap><img src="../images/game/tab_left.gif" border="0"></td>
+        <td nowrap bgcolor="darkred"  style="padding:0px 5px 0px 5px"><a  style="text-decoration:none;color:white" href="#" onclick="open_page('diplomacy.php')"><b>{t}Diplomatic Ties{/t}</b></a></td>
+        <td><img src="../images/game/tab_right.gif" border="0"></td>
+
+        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+        <td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="#" onclick="open_page('shoutbox.php')"><b>{t}Coalition Shoutbox{/t}</b></a></td>
+        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+    </tr>
+</table>
+
+
+
+<table cellpadding="5" cellspacing="0" style="border:1px solid darkred" background="../images/game/background1.jpg" width="780">
+    <tr>
+        <td><b>&nbsp;{t}Active Diplomatic Treaties{/t}</b></td>
+    </tr>
+    <tr>
+        <td>
+            <table  bgcolor="#333333" width="100%"
+                    cellspacing="1" cellpadding="5" border="0" align="center"
+                    >
+                <tr>
+                    <td align="left" width="220"><b>{t}Empire{/t}</b></td>
+                    <td align="left" width="100"><b>{t}Treaty{/t}</b></td>
+                    <td align="left"><b>{t}Date{/t}</b></td>
+                    <td align="left"><b>{t}Status{/t}</b></td>
+                    <td align="left"><b>{t}Action{/t}</b></td>
+                </tr>
+
+			{section name="l" loop=$listing}
+                <tr>
+                    <td background="{$listing[l].background}" align="left"
+                        bgcolor="{$listing[l].bgcolor}" style="color:yellow"><b><a
+                                href="javascript:show_info({$listing[l].empire_id})"
+                                style="text-decoration:none;color:black">{$listing[l].empire}</a></b></td>
+                    <td background="{$listing[l].background}" bgcolor="{$listing[l].bgcolor}"
+                        style="color:#333333"><b>{$listing[l].treaty}</a></b></td>
+                    <td background="{$listing[l].background}" align="left"
+                        bgcolor="{$listing[l].bgcolor}" style="color:#333333"><b>{$listing[l].date}</b></td>
+                    <td background="{$listing[l].background}" align="left"
+                        bgcolor="{$listing[l].bgcolor}" style="color:#333333"><b>{$listing[l].status}</b></td>
+                    <td background="{$listing[l].background}" align="left"
+                        bgcolor="{$listing[l].bgcolor}" style="color:#cacaca"><b><a
+                                onClick="if (!confirm('{t}Are you sure?{/t}')) return false; else open_page('diplomacy.php?break={$listing[l].id}');"
+                                href="#" class="link">{t}Break{/t}</a></b></td>
+
+                </tr>
+			{sectionelse}
+                <tr>
+                    <td colspan="5" bgcolor="#666666" style="color:#ffcaca"><b>No
+				active treaty</b></td>
+                </tr>
+			{/section}
+            </table>
+        </td>
+    </tr>
+</table>
+
+<br />
+<form method="post" action="#" onsubmit="ajax_submit_form('diplomacy.php',this); return false;">
+
+    <table cellpadding="1" cellspacing="0" border="0" bgcolor="darkred"
+           width="780">
+        <tr>
+            <td background="../images/game/header.jpg">
+                <b>&nbsp;Send
+		diplomatic proposal</b></td>
+        </tr>
+        <tr>
+            <td>
+                <table style="font-size:11pt;" bgcolor="#333333" width="100%"
+                       cellspacing="5" cellpadding="0" border="0" align="center"
+                       background="../images/game/background1.jpg">
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td align="right">{t}Empire:{/t}</td>
+                        <td><b style="color:#ffcaca"> <select name="empire"
+                                                              class="select_box" style="width:400px">
+                                    <option value="-1">---</option>
+					{section name="e" loop=$empires}
+                                    <option value="{$empires[e].id}">{$empires[e].name}</option>
+					{/section}
+                                </select> </b></td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">{t}Treaty:{/t}</td>
+                        <td><b style="color:#ffcaca"> <select name="treaty"
+                                                              style="width:200px" class="select_box">
+					{section name="t" loop=$treaties}
+                                    <option value="{$treaties[t].id}">{$treaties[t].name}</option>
+					{/section}
+                                </select></b></td>
+                    </tr>
+
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><input type="submit" value="{t}Send{/t}"></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:justify" colspan=2><b style="color:white"><br />
+				{t}What each treaty do (All the treaties allow trading):{/t}</b><br />
+                            <p style="color:#ffcaca"><b>{t}Neutrality Treaty:{/t}</b> {t}This is a
+				treaty with another empire that will prevent you from being attacked
+				by the other empire.{/t}</p>
+                            <p style="color:#ff9999"><b>{t}Minor Alliance:{/t}</b> {t}This treaty not
+				only protect you from the other empire's attacks, but the other
+				empire will also send you defensive forces when you are attacked.
+				You will automatically send him or her forces when he/she is
+				attacked also.{/t}</p>
+                            <p style="color:#ffcaca"><b>{t}Total Defense:{/t}</b> {t}This is the same
+				as the Minor Alliance, but each of you will send more forces in
+				defense than in a Minor Alliance.{/t}</p>
+
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <br />
+    <br />
+</form>
+
+
+
+{if isset($form_coalition_create_block) }
+
+<form method="post" onsubmit="ajax_submit_form('diplomacy.php',this); return false;">
+
+    <table cellpadding="1" cellspacing="0" border="0" bgcolor="darkred"
+           width="780">
+        <tr>
+            <td background="../images/game/header.jpg"><b>&nbsp;
+			{t}Create a coalition{/t}</b></td>
+        </tr>
+        <tr>
+            <td>
+                <table style="font-size:10pt;" bgcolor="#333333" width="100%"
+                       cellspacing="1" cellpadding="5" border="0" align="center"
+                       background="../images/game/background1.jpg">
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><b>{t}Coalition name:{/t}</b></td>
+                        <td align="left"><b><input
+                                    class="input_text"
+                                    type="text" name="coalition_name"></b></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><input type="submit" value="{t}Create{/t}"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <br />
+    <br />
+</form>
+{/if}
+
+
+{if isset($form_coalition_manage_block) }
+
+<form method="post" onsubmit="ajax_submit_form('diplomacy.php',this); return false;">
+
+    <table cellpadding="1" cellspacing="0" border="0" bgcolor="darkred"
+           width="780">
+        <tr>
+            <td background="../images/game/header.jpg"><font
+                    color="yellow" style="font-size:13px;"> <b>
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td>&nbsp;<a href="#" onclick="open_page('logo_editor_coalition.php')"><img
+                                            src="img_logo.php?data={$coalition_logo}&{$timestamp}" width="16" height="16"
+                                            border="1" bordercolor="yellow" style="border-color:yellow"></a></td>
+                                <td>&nbsp;<b>{t}Coalition{/t} ({$coalition_name})</b>
+                                    &nbsp;<a class="link" onClick="if (!confirm('{t}Are you sure?{/t}')) return false; else open_page('diplomacy.php?disband_coalition');"
+                                             href="#">Disband</a>&nbsp;|&nbsp;<a class="link" href="logo_editor_coalition.php">{t}Edit Logo{/t}</a></b></font></td>
+                            </tr>
+                        </table></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table  bgcolor="#333333" width="100%"
+                                        cellspacing="1" cellpadding="5" border="0" align="center"
+                                        background="../images/game/background1.jpg">
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left" width="220"><b>{t}Empire{/t}</b></td>
+                                        <td align="left"><b>{t}Date{/t}</b></td>
+                                        <td align="left" width="120"><b>{t}Status{/t}</b></td>
+                                        <td align="left" width="60"><b>{t}Action{/t}</b></td>
+                                    </tr>
+
+			{section name="cl" loop=$coalition_listing}
+                                    <tr>
+                                        <td width="100%" background="{$coalition_listing[cl].background}" align="left"
+                                            bgcolor="{$coalition_listing[cl].bgcolor}" style="color:yellow"><b><a
+                                                    href="javascript:show_info({$coalition_listing[cl].empire_id})"
+                                                    style="text-decoration:none;color:#191919">{$coalition_listing[cl].empire}</a></b></td>
+                                        <td nowrap background="{$coalition_listing[cl].background}" align="left"
+                                            bgcolor="{$coalition_listing[cl].bgcolor}" style="color:#191919"><b>{$coalition_listing[cl].date}</b></td>
+                                        <td nowrap background="{$coalition_listing[cl].background}" align="left"
+                                            bgcolor="{$coalition_listing[cl].bgcolor}" style="color:#191919"><b>{$coalition_listing[cl].status}</b></td>
+                                        <td nowrap background="{$coalition_listing[cl].background}" align="left"
+                                            bgcolor="{$coalition_listing[cl].bgcolor}"><b>
+                                                <a class="link" onClick="if (!confirm('{t}Are you sure?{/t}')) return false; else open_page('diplomacy.php?coalition_kick={$coalition_listing[cl].empire_id}');"
+                                                   href="#">{t}Kick{/t}</a>
+                                                &nbsp;
+                                                <a class="link" onClick="if (!confirm('{t}Are you sure? You will loose the ownership of this coalition{/t}')) return false; else open_page('diplomacy.php?coalition_transferownership={$coalition_listing[cl].empire_id}');"
+                                                   href="#">{t}Set Owner{/t}</a>
+                                            </b></td>
+
+                                    </tr>
+			{/section}
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        </table>
+
+                        <br />
+                        <br />
+                        </form>
+
+                        {/if}
+
+
+                        {if isset($form_coalition_invite_block) }
+
+                        <form method="post" onsubmit="ajax_submit_form('diplomacy.php',this); return false;">
+
+                            <table cellpadding="1" cellspacing="0" border="0" bgcolor="darkred"
+                                   width="780">
+                                <tr>
+                                    <td background="../images/game/header.jpg"><font
+                                            color="black" style="font-size:13px;color:white"><b>&nbsp;{t}Invite someone{/t}</b></font></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table style="font-size:10pt;" bgcolor="#333333" width="100%"
+                                               cellspacing="1" cellpadding="5" border="0" align="center"
+                                               background="../images/game/background1.jpg">
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td align="right"><b>{t}Empire:{/t}</b></td>
+                                                <td align="left"><b><select
+                                                            style="width:500px" class="text_area"
+                                                            type="text" name="coalition_invite">
+                                                            <option value="-1">---</option>
+					{section name="ec" loop=$empires_coalition}
+                                                            <option value="{$empires_coalition[ec].id}">{$empires_coalition[ec].name}</option>
+					{/section}
+
+                                                        </select> </b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td><input type="submit" value="{t}Send Invitation{/t}"></td>
+                                            </tr><tr>
+                                                <td colspan="2" style="color:#ffcaca"><b>{t}Joining a coalition will give you a total defense treaty with every members{/t}</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <br />
+                        </form>
+
+                        {/if}

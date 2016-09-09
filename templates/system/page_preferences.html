@@ -1,0 +1,178 @@
+{capture name=page_title}
+{t}Preferences{/t}
+{/capture}
+
+{include file="frame_header.html" title=$smarty.capture.page_title}
+
+
+
+<div align="center" style="background-image:url(images/system/div_bg.jpg);background-color:#663333;padding:10px;border:1px solid red">
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="login.php"  style="color:yellow"><b>{t}PLAY NOW{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="take_a_tour.php"><b>{t}TAKE A TOUR{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="scoreboard.php"><b>{t}SCOREBOARD{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome2_link" href="server_status.php"><b>{t}SERVER STATUS{/t}</b></a></div>&nbsp;<b class="text_huge" style="color:red">|</b>&nbsp;
+<div class="div_welcome_text" style="display:inline"><a class="div_welcome_link" href="forum.php"><b>{t}FORUM{/t}</b></a></div>
+</div>
+<br/>
+
+
+<div align="center">
+
+<table width="720px" cellspacing="0" cellpadding="0" border="0" class="text_normal">
+<tr>
+<td bgcolor="#ca3333" style="padding:5px" nowrap>
+
+    <table cellspacing="0" cellpadding="0" border="0">
+        <tr><td><img src="images/common/star.gif" border="0">&nbsp;</td><td><b style="color:yellow">Player Profile</b></td></tr>
+    </table>
+
+</td>
+<td bgcolor="darkred" style="padding:5px" nowrap><b><a class="link" href="gamesbrowser.php">Browse Available Games</a></b></td>
+<td width="100%">&nbsp;</td>
+</tr>
+</table>
+
+<div style="background-image:url(images/common/alpha1.png);border:1px solid #663333; padding:5px;color:#eaeaea;width:720px" align="left">
+
+{if $welcomeback eq 1}
+<b class="text_big" style="color:yellow">
+<br/>
+&nbsp;Welcome back {$real_name}!
+<br/>
+</b>
+{/if}
+
+<table width="100%">
+<tr>
+<td  valign="top" width="100%">
+
+<form enctype="multipart/form-data" method="post" name="signup_form" action="preferences.php?UPDATE">
+<input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+
+<table cellspacing="0" cellpadding="2" border="0" style="margin:20px" width="100%">
+<tr>
+	<td nowrap class="text_normal">{t}Email address{/t}:</td>
+	<td><input type="text" maxlength="255" style="width:250px" class="input_text" name="email" value="{$email}"></td>
+</tr>
+<tr>
+	<td nowrap class="text_normal">{t}Real name{/t}:</td>
+	<td><input type="text" maxlength="75" style="width:150px" class="input_text" name="real_name" value="{$real_name}"></td>
+</tr>
+<tr>
+	<td nowrap class="text_normal">{t}Country{/t}:</td>
+	<td><input type="text" maxlength="35" style="width:150px" class="input_text" name="country" value="{$country}"></td>
+</tr>
+
+<tr>
+	<td nowrap class="text_normal">{t}Password{/t}:</td>
+	<td><input type="password" maxlength="35" style="width:80px" class="input_text" name="password1"><b class="text_tiny" style="color:yellow">&nbsp;{t}Leave empty to keep old password{/t}
+</b></td>
+</tr>
+<tr>
+	<td nowrap class="text_normal">{t}Confirm password{/t}:</td>
+	<td><input type="password" maxlength="35" style="width:80px"  class="input_text" name="password2"></td>
+</tr>
+
+<tr>	
+	<td nowrap class="text_normal" valign="top">{t}Avatar image{/t}:</td>
+	<td><input type="file"  class="input_text" name="avatar_img"><br/>
+	<img src="{$avatar_img}" style="margin:10px 0px 10px 0px;border:1px solid white"></td>
+</tr>
+
+<tr>					
+	<td>&nbsp;</td>
+	<td width="100%">
+<input type="submit" class="input_button" value="{t}Update Account{/t}">
+{if isset($is_admin)}
+<input type="button" onClick="window.location='admin.php'" class="input_button" value="{t}Admin{/t}">
+{/if}
+
+<input type="button" onClick="window.location='welcome.php?LOGOFF'" class="input_button" value="{t}Logoff{/t}">
+</td>
+</tr>
+</table>
+
+<script language="javascript">
+	document.signup_form.email.focus();
+</script>
+</form>
+<b class="text_big" style="color:yellow">
+<br/>
+</b>
+</td>
+<td valign="top">
+<table background="images/common/alpha2.png" style="border:1px solid #3a3a3a" width="240" cellspacing="0" cellpadding="5">
+<tr><td valign="top">
+
+<b class="text_normal" style="color:yellow">{t}Player statistics:{/t}</b>
+
+<table style="color:#dadada" class="text_normal" cellpadding="2" cellspacing="2">
+<tr>
+	<td>{t}Created on{/t}:</td>
+	<td><b style="color:white">{$stats_created_on|date_format}</b></td>
+</tr>
+<tr>
+	<td>{t}Game(s) won{/t}:</td>
+	<td><b style="color:white">{$stats_games_won}</b></td>
+</tr>
+<tr>
+	<td>{t}Game(s) lost{/t}:</td>
+	<td><b style="color:white">{$stats_games_lost}</b></td>
+</tr>
+<tr>
+	<td>{t}Score{/t}:</td>
+	<td><b style="color:white">{$stats_score}</b></td>
+</tr>
+</table>
+<br/>
+<table class="text_normal" cellpadding="2" cellspacing="2">
+{section name="stats"  loop=$stats_games}
+<tr>
+	<td nowrap>Game: <b>{$stats_games[stats].name}</b>, {t}Rank{/t}: <b>{$stats_games[stats].rank}</b></td>
+	<td><b><a href="{$stats_games[stats].link}" class="link">{t}Play{/t}</a></b></td>
+</tr>
+
+{sectionelse}
+<tr><td><b>{t}*** No games joined yet.{/t}</b></td></tr>
+{/section}
+</table>
+
+
+</td></tr>
+</table>
+
+<br/>
+{if $premium_offer eq 1}
+<table background="images/system/upgrade_bg.png" style="border:1px solid red" width="240" cellspacing="0" cellpadding="5">
+<tr><td><img src="images/system/upgrade.png" border="0" alt="Upgrade"></td>
+    <td><a class="text_big" style="color:red;text-decoration:none" href="premiumaccount.php"><b>{t}PREMIUM ACCESS{/t}</b></a></td>
+</tr>
+<tr>
+<td colspan="2">
+<div align="right">
+<a class="text_small" style="color:darkred" href="premiumaccount.php"><b>{t}More details{/t}</b></a>
+</div>
+
+</td></tr>
+</table>
+{/if}
+
+<br>
+<table class="text_tiny" background="images/common/alpha2.png" style="border:1px solid #6a6a6a;color:#cacaca" width="240" cellspacing="0" cellpadding="5">
+<tr><td colspan="2"><b  class="text_normal" style="color:yellow">{t}Last logins{/t}</b></td></tr>
+{section name="last" loop=$last_logins}
+<tr><td>{$last_logins[last].date}</td><td>{$last_logins[last].name}</td><td>{$last_logins[last].hostname}</td></tr>
+
+{sectionelse}
+<tr><td colspan="3">---</td></tr>
+{/section}
+
+</table>
+<br/>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+{include file="frame_footer.html"}

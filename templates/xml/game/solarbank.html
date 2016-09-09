@@ -1,0 +1,203 @@
+<table width="720px"  style="margin:0 0 10 0;border:0px solid darkred;" cellspacing="0" cellpadding="0">
+<tr>
+	<td width="100%" align="left">
+
+		<table  cellspacing="0" cellpadding="0" border="0">
+		<tr>	
+		<td nowrap><img src="../images/game/tab_left.gif" border="0"></td>
+		<td nowrap bgcolor="darkred" style="padding:0px 5px 0px 5px"><a  style="text-decoration:none;color:white" href="solarbank.php"><b>{t}Solar Bank{/t}</b></a></td> 
+		<td><img src="../images/game/tab_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="globalmarket.php"><b>{t}Global Market{/t}</b></a></td> 
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="lottery.php"><b>{t}Lottery{/t}</b></a></td>
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		<td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+		<td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="trade.php"><b>{t}Trade Center{/t}</b></a></td>
+		<td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+		</tr>
+		</table>
+	</td>
+</tr>
+	
+	<tr>
+		<td>
+		<table width="100%" align="center" cellspacing="0" cellpadding="10"
+			style="border:1px solid darkred" background="../images/game/background1.jpg"
+			bgcolor="#333333">
+		<tr>
+				<td valign="top">&nbsp;<img src="../images/game/bank.jpg" style="border:1px solid white"></td>
+				<td>
+
+				<table width="100%" cellpadding="2" cellspacing="0" border="0">
+
+					<tr>
+						<td bgcolor="#bbbbbb"><b style="color:black">{t}LOANS{/t}</b></td>
+					</tr>
+					<tr>
+						<td>{t}Current loan interests rate: {/t}<b style="color:#ffcaca">{$solarbank_loan_rate}
+						%</b></td>
+					</tr>
+					<tr>
+						<td>{t}Loans available:{/t} <b style="color:#ffcaca">{$solarbank_loan_loans}</b></td>
+					</tr>
+					<tr>
+						<td>{t}Credits available:{/t} <b style="color:#ffcaca">{$solarbank_loan_credits}</b></i></td>
+					</tr>
+					<tr>
+						<td>{t}Max turns per loan:{/t} <b style="color:#ffcaca">{$solarbank_loan_maxturns}</b></i></td>
+					</tr>
+
+					<tr>
+						<td>
+						<hr color="#666666">
+						</td>
+					</tr>
+					{section name="l" loop=$loans}
+					<tr>
+						<td><b
+							style="color:red">#</b> <b>{$loans[l].current_credits}
+						</b> / <b>{$loans[l].turns_left} {t}turn(s){/t}</b> {t}remaining{/t} <b
+							style="color:#ffcaca">({$loans[l].initial_credits} /
+						{$loans[l].total_turns} {t}turn(s){/t})</b> <b>{$loans[l].rate} %</b></td>
+					</tr>
+					{sectionelse}
+					<tr>
+						<td><font style="color:#ffcaca"><b>{t}No active loans{/t}</b></font></td>
+					</tr>
+					{/section}
+
+					<tr>
+						<td>
+						<hr color="#666666">
+						</td>
+					</tr>
+					<tr>
+						<td>{t}Current credits:{/t} {$credits|number_format} cr.<br />
+						</td>
+					</tr>
+					<tr>
+						<td>{t}Total amount loaned:{/t} <b style="color:#ffcaca">{$solarbank_loan_amount}</b></td>
+					</tr>
+
+					<tr>
+						<td>
+						<form method="post" action="solarbank.php?takeloan">
+						<table width="500">
+							<tr>
+								<td align="right"><b>{t}Credits:{/t}</b></td>
+								<td><input
+									class="input_text"
+									type="text" name="credits"></td>
+								<td align="right"><b>{t}Turns:{/t}</b></td>
+								<td><input type="text"
+									style="width:40px" class="input_text" 
+									name="turns"></td>
+								<td><input type="submit" value="{t}Take loan{/t}"></td>
+							</tr>
+						</table>
+						</form>
+						<br />
+
+
+						</td>
+					</tr>
+
+
+
+					<tr>
+						<td><br />
+						</td>
+					</tr>
+
+					<tr>
+						<td bgcolor="#AAAAAA"><b style="color:black">{t}GALACTIC BONDS{/t}</b></td>
+					</tr>
+					<tr>
+						<td>{t}Current bond interests rate:{/t} <b style="color:#ffcaca">{$solarbank_bond_rate}
+						%</b></td>
+					</tr>
+					<tr>
+						<td>{t}Bonds available:{/t} <b style="color:#ffcaca">{$solarbank_bond_bonds}</b></td>
+					</tr>
+					<tr>
+						<td>{t}Turns per bond:{/t} <b style="color:#ffcaca">{$solarbank_bond_turns}</b></i></td>
+					</tr>
+
+					<tr>
+						<td>
+						<hr color="#666666">
+						</td>
+					</tr>
+					{section name="b" loop=$bonds}
+					<tr>
+						<td><b
+							style="color:red">#</b> <b>{$bonds[b].current_credits}
+						</b> / <b>{$bonds[b].turns_left} {t}turn(s){/t}</b> {t}remaining{/t} <b
+							style="color:#ffcaca">({$bonds[b].initial_credits} /
+						{$bonds[b].total_turns} turn(s))</b> <b>{$bonds[b].rate} %</b></td>
+					</tr>
+					{sectionelse}
+					<tr>
+						<td><font style="color:#ffcaca"><b>{t}No	active bonds{/t}</b></font></td>
+					</tr>
+					{/section}
+					<tr>
+						<td>
+						<hr color="#666666">
+						</td>
+					</tr>
+					<tr>
+						<td>{t}Current credits:{/t} {$credits|number_format} cr.<br />
+						</td>
+					</tr>
+					<tr>
+						<td>Total amount in bond: <b style="color:#ffcaca">{$solarbank_bond_amount}</b></td>
+					</tr>
+
+					<tr>
+						<td>
+						<form method="post" action="solarbank.php?takebond">
+						<table width="500">
+							<tr>
+								<td align="right"><b>{t}Credits:{/t}</b></td>
+								<td><input
+									style="width:120px" class="input_text" 
+									type="text" name="credits"></td>
+
+								<td><input type="submit" value="{t}Take bond{/t}"></td>
+							</tr>
+						</table>
+						</form>
+						<br />
+
+
+						</td>
+					</tr>
+
+
+
+					<tr>
+						<td><br />
+						</td>
+					</tr>
+				</table>
+
+
+				</td>
+			</tr>
+
+		</table>
+
+
+
+
+		</td>
+	</tr>
+</table>
+

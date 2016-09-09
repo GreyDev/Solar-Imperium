@@ -1,0 +1,60 @@
+<table width="100%" align="center">
+<tr>
+
+<td width="80" rowspan="4" valign="top">
+<img src="../images/game/population_growth.jpg" width="64" height="64" style="border:1px solid white">
+</td>
+
+<td width="300" bgcolor="#663333">
+
+<table  cellspacing="0" cellpadding="0" border="0">
+<tr><td  style="color:white" align="right"><b>{t}Initial population:{/t}</b></td><td><b style="color:white">{$initial_population}</b></td></tr>
+</table>
+
+</td><td width="300" bgcolor="#663333">
+
+<table  cellspacing="0" cellpadding="0" border="0">
+<tr><td style="color:white" align="right"><b>{t}Final:{/t}</b></td><td><b style="color:white">{$final_population} </b><b style="color:black">({$growrate} %)</b></td></tr>
+</table>
+
+</td></tr>
+<tr><td>
+
+<table  cellspacing="0" cellpadding="0" border="0">
+<tr><td style="color:#dddddd" align="right">{t}Born:{/t}</td><td><b style="color:white">{$born}</b></td></tr>
+</table>
+
+</td><td>
+
+<table  cellspacing="0" cellpadding="0" border="0">
+<tr><td style="color:#aaaaaa" align="right">{t}Dead:{/t}</td><td><b style="color:white">{$dead}</b></td></tr>
+</table>
+
+</td></tr>
+<tr><td>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td style="color:#dddddd" align="right">{t}Immigration:{/t}</td><td><b style="color:white">{$immigration}</b></td></tr>
+</table>
+
+</td><td>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td style="color:#aaaaaa" align="right">{t}Emmigration:{/t}</td><td><b style="color:white">{$emmigration}</b></td></tr>
+</table>
+
+</td></tr>
+<tr><td>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td style="color:#dddddd" align="right"><b>{t}Pollution level:{/t}</b></td><td><b style="color:{$color}">{$pratio}
+
+{if $pratio > 1}
+{t}**POLLUTED**{/t}
+{/if}
+
+</b></td></tr>
+</table>
+
+</td></tr>
+</table>

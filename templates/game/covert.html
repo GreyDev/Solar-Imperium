@@ -1,0 +1,128 @@
+<table  cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+        <td nowrap bgcolor="#666666" style="padding:0px 5px 0px 5px"><a  class="link" href="#" onclick="open_page('battle.php')"><b>{t}Battle Command{/t}</b></a></td>
+        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+
+        <td nowrap><img src="../images/game/tab_left.gif" border="0"></td>
+        <td nowrap bgcolor="darkred"  style="padding:0px 5px 0px 5px"><a  style="text-decoration:none;color:white" href="# onclick="open_page('covert.php')"><b>{t}Covert Operations{/t}</b></a></td>
+        <td><img src="../images/game/tab_right.gif" border="0"></td>
+
+
+        <td nowrap><img src="../images/game/tab2_left.gif" border="0"></td>
+        <td nowrap bgcolor="#666666"  style="padding:0px 5px 0px 5px"><a  class="link" href="#" onclick="open_page('last_invasions.php')"><b>{t}Last Invasions{/t}</b></a></td>
+        <td><img src="../images/game/tab2_right.gif" border="0"></td>
+    </tr>
+</table>
+
+
+<form method="post" name="form1" onsubmit="ajax_submit_form('covert.php',this); return false;">
+    <table width="780" bgcolor="darkred" cellspacing="1" cellpadding="0" border="0">
+        <tr><td>
+                <table width="100%" align="center" cellspacing="0" cellpadding="8" border="0" style="font-size:11pt;" bgcolor="#333333" background="../images/game/background1.jpg">
+
+                    <tr><td>
+                            <b style="color:yellow">&nbsp;<a href="javascript:show_help('covert');" class="link" onmouseover="ajax_showTooltip('galaxypedia_short.php?search=covert',this);return false" onmouseout="ajax_hideTooltip()">{t}Covert Operations{/t}</a></b><br/><br/>
+                        </td></tr>
+
+
+                    <tr>
+                        <td align="right">{t}Operation:{/t}</td>
+                        <td>
+                            <b style="color:#ffcaca">
+                                <select name="operation" style="width:400px" class="select_box" onChange="
+		
+                                    {literal}
+                                    if (this.value ==9) {
+                                        document.getElementById('empire_from').disabled=false;
+                                        document.getElementById('empire_from_label').style.color='white';
+                                        document.getElementById('empire_from').value = -1;
+                                    } else {
+
+                                        if (this.value == 10) {
+
+                                            document.getElementById('empire').value = -1;
+                                            document.getElementById('empire').disabled=true;
+                                            document.getElementById('empire_label').style.color='#666666';
+
+                                            document.getElementById('empire_from').disabled=true;
+                                            document.getElementById('empire_from_label').style.color='#666666';
+                                            document.getElementById('empire_from').value = -1;
+                                        } else {
+
+                                            document.getElementById('empire').value = -1;
+                                            document.getElementById('empire').disabled=false;
+                                            document.getElementById('empire_label').style.color='white';
+
+                                            document.getElementById('empire_from').disabled=true;
+                                            document.getElementById('empire_from_label').style.color='#666666';
+                                            document.getElementById('empire_from').value = -1;
+                                        }
+                                    }
+                                    {/literal}
+                                        ">
+		{section name="op" loop=$operations}
+                                    <option value="{$operations[op].id}">{$operations[op].name}</option>
+		{/section}
+
+                                </select>
+                            </b>
+                        </td></tr>
+
+                    <tr>
+                        <td align="right" id="empire_label">{t}Empire:{/t}</td>
+                        <td>
+                            <b style="color:#ffcaca">
+                                <select name="empire" style="width:400px" id="empire" class="select_box">
+                                    <option value="-1">---</option>
+		{section name="e" loop=$empires}
+                                    <option value="{$empires[e].id}">{$empires[e].name}</option>
+		{/section}
+                                </select>
+                            </b>
+                        </td></tr>
+
+
+                    <tr>
+                        <td align="right" style="color:#666666" id="empire_from_label">{t}Setup with:{/t}</td>
+                        <td>
+                            <b style="color:#ffcaca">
+                                <select  id="empire_from" disabled name="empire_from" style="width:400px" class="select_box">
+                                    <option value="-1">---</option>
+		{section name="e" loop=$empires}
+                                    <option value="{$empires[e].id}">{$empires[e].name}</option>
+		{/section}
+
+                                </select>
+                            </b>
+                        </td></tr>
+
+                    <tr><td align="right">{t}Credits:{/t}</td>
+                        <td><b style="color:#ffcaca">{$credits|number_format} cr.</b></td></tr>
+                    <tr><td align="right">{t}Covert points:{/t}</td>
+                        <td><b style="color:#ffcaca">{$covert_points|number_format}</b></td></tr>
+
+                    <tr><td>&nbsp;</td><td><input type="submit" value="{t}Launch operation{/t}"></td></tr>
+
+                    <tr><td style="font-size:10pt" colspan=2><b style="color:white"><br/>{t}What each operation do:{/t}</b><br/>
+                            <p style="text-align:justify;color:#dddddd;border:1px dashed #BBBBBB;padding:5px;background-color:#333333"><b>{t}Send Spy:{/t}</b> {t}You can get information about another empire, simular but less detailed than your own status screen. Spying may not always be successful, but you can guarantee that you can get a spy report by bribing a spy in the other empire. You can spy as many times as you like.{/t}</p>
+                            <p style="text-align:justify;color:#dddddd;border:1px dashed #BBBBBB;padding:5px;background-color:#333333"><b>{t}Insurgent Aid:{/t}</b> {t}By sending rebellious troublemakers and pamphlets an opponent empire, you can increase the internal violence in that empire. To restore peace may be costly or impossible for the other emperor, and may cause civil war. The violence in the other empire will cause tourism profits to decrease and the population to drop. It's harder to do Insurgent Aid if the other empire is already in civil disorder{/t}</p>
+                            <p style="text-align:justify;color:#dddddd;border:1px dashed #BBBBBB;padding:5px;background-color:#333333"><b>{t}Support Dissension:{/t}</b> {t}You try to convince enemy troops to leave or flee the army. ( They might join your army){/t}</p>
+                            <p style="text-align:justify;color:#dddddd;border:1px dashed #BBBBBB;padding:5px;background-color:#333333"><b>{t}Demoralize Troops:{/t}</b> {t}By sending distractions and interruptions to the target empire, you can redecue the training efficiency of their soldiers and reduce the effectiveness of the army.{/t}</p>
+                            <p style="text-align:justify;color:#dddddd;border:1px dashed #BBBBBB;padding:5px;background-color:#333333"><b>{t}Bombing Operations:{/t}</b> {t}Your spies can booby-trap the target's food supplies. Some or all of the food may be blown up. This is useful in starving another empire to death.{/t}</p>
+                            <p style="text-align:justify;color:#dddddd;border:1px dashed #BBBBBB;padding:5px;background-color:#333333"><b>{t}Relations Spying:{/t}</b> {t}Your agents didscover the treaties held by another empire.{/t}</p>
+                            <p style="text-align:justify;color:#dddddd;border:1px dashed #BBBBBB;padding:5px;background-color:#333333"><b>{t}Take Hostages:{/t}</b> {t}Your terrorist spies capture a prominent official from the other empire and demand a sum of money for his or her return. The opponent emperor is forced to pay the fee, and you will receive the money.{/t}</p>
+                            <p style="text-align:justify;color:#dddddd;border:1px dashed #BBBBBB;padding:5px;background-color:#333333"><b>{t}Carriers Sabotage:{/t}</b> {t}Destroying carriers can ground a big empire for some turns, use it as a defensive tactic{/t}</p>
+                            <p style="text-align:justify;color:#dddddd;border:1px dashed #BBBBBB;padding:5px;background-color:#333333"><b>{t}Communication Spying:{/t}</b> {t}Allow you to read the 5 last received messages of an empire{/t}</p>
+                            <p style="text-align:justify;color:#dddddd;border:1px dashed #BBBBBB;padding:5px;background-color:#333333"><b>{t}Setup Coup:{/t}</b> {t}Send a failed covert operation notice to a target empire and make it look the covert operation was coming from another empire.{/t}</p>
+                        </td></tr>
+
+                </table>
+            </td></tr></table>
+
+    <br/><br/>
+
+</form>
+
+<br/> <br/>
+

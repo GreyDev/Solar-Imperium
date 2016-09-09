@@ -1,0 +1,53 @@
+{literal}
+<script language="javascript">
+	
+		function buy_lightcruisers()
+		{
+		{/literal};
+			var qty = prompt('How much lightcruisers? [MAX={$max_lightcruisers|number_format}]','');
+		{literal}
+			if (qty == null) return false;
+
+			window.location='blackmarket.php?buy_lightcruisers='+qty;
+
+		}
+
+	
+
+		</script>
+{/literal}
+
+<table width="720">
+<tr>
+<td><img src="../images/game/blackmarket.jpg" style="border:1px solid yellow"></td>
+<td><b style="color:yellow">{t}You can always trust a ferengi trader to provide you the most illegal goods known in the universe. Remember that we disappear at the end of this turn. Don't waste my precious time, let's trade now!{/t}</b></td>
+</tr>
+</table>
+<br/>
+<table cellpadding="4" width="720" background="../images/game/background1.jpg" style="border:1px solid darkred">
+<tr>
+<td><img src="../images/game/blackmarket/starship.gif"></td>
+<td style="color:#aaaaaa">{t}Buy stolen light cruisers, they come cheap!{/t}</td>
+<td><b>{$price_lightcruisers|number_format} cr.</B></td>
+<td><a href="#" class="link" onClick="return buy_lightcruisers();"><b>{t}Buy{/t}</b></a></td>
+</tr>
+<tr>
+<td><img src="../images/game/blackmarket/nuke.gif"></td>
+<td>{t}Buy nuclear bombs, a nice surprise for your foes but remember that if you get caught by the galactic coordinator using it, you are dead! Ha! Ha! Ha! Ha!{/t}</td>
+<td><b>{$price_nukes|number_format} cr.</B></td>
+<td><a href="blackmarket.php?buy_nuke" class="link" onClick="return confirm('{t}Are you sure?{/t}');"><b>{t}Buy{/t}</b></a></td>
+</tr>
+<tr>
+<td><img src="../images/game/blackmarket/teleport.gif"></td>
+<td style="color:#aaaaaa">{t}Teleport your entire empire to a random spot, the money is good but remember that you will loose 50% of your population in the process.{/t}</td>
+<td><b>{$price_teleport|number_format} cr.</B></td>
+<td><a href="blackmarket.php?buy_teleport" class="link" onClick="return confirm('{t}Are you sure?{/t}');"><b>{t}Buy{/t}</b></a></td>
+</tr>
+<tr>
+<td><img src="../images/game/blackmarket/hacker.gif"></td>
+<td>{t}We can hack into galactic coordinator computers and give you 5 extra protection turns{/t}</td>
+<td><b>{$price_extraprotection|number_format} cr.</B></td>
+<td><a href="blackmarket.php?buy_extraprotection" class="link" onClick="return confirm('{t}Are you sure?{/t}');"><b>{t}Buy{/t}</b></a></td>
+</tr>
+</table>
+</br>

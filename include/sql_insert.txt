@@ -1,0 +1,484 @@
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_army` (
+  `id` int(11) NOT NULL auto_increment,
+  `empire` bigint(20) NOT NULL default '0',
+  `soldiers` bigint(20) NOT NULL default '0',
+  `fighters` bigint(20) NOT NULL default '0',
+  `stations` bigint(20) NOT NULL default '0',
+  `covertagents` bigint(20) NOT NULL default '0',
+  `covert_points` int(11) NOT NULL default '0',
+  `lightcruisers` bigint(20) NOT NULL default '0',
+  `heavycruisers` bigint(20) NOT NULL default '0',
+  `carriers` bigint(20) NOT NULL default '0',
+  `soldiers_level` int(11) NOT NULL default '0',
+  `fighters_level` int(11) NOT NULL default '0',
+  `stations_level` int(11) NOT NULL default '0',
+  `covertagents_level` int(11) NOT NULL default '0',
+  `lightcruisers_level` int(11) NOT NULL default '0',
+  `heavycruisers_level` int(11) NOT NULL default '0',
+  `carriers_level` int(11) NOT NULL default '0',
+  `effectiveness` int(11) NOT NULL default '100',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_armyconvoy` (
+  `id` int(11) NOT NULL auto_increment,
+  `convoy_type` int(11) NOT NULL default '0',
+  `convoy_target` int(11) NOT NULL default '0',
+  `empire_from` int(11) default NULL,
+  `empire_to` int(11) NOT NULL default '0',
+  `convoy_soldiers` bigint(20) NOT NULL default '0',
+  `convoy_soldiers_level` int(11) NOT NULL default '0',
+  `convoy_fighters_level` int(11) NOT NULL default '0',
+  `convoy_lightcruisers_level` int(11) NOT NULL default '0',
+  `convoy_heavycruisers_level` int(11) NOT NULL default '0',
+  `convoy_fighters` bigint(20) NOT NULL default '0',
+  `convoy_lightcruisers` bigint(20) NOT NULL default '0',
+  `convoy_heavycruisers` bigint(20) NOT NULL default '0',
+  `carriers` bigint(20) NOT NULL default '0',
+  `carriers_level` int(11) NOT NULL default '0',
+  `time_start` int(11) NOT NULL default '0',
+  `time_end` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_bond` (
+  `id` int(11) NOT NULL auto_increment,
+  `empire` int(11) NOT NULL default '0',
+  `initial_credits` bigint(20) NOT NULL default '0',
+  `current_credits` bigint(20) NOT NULL default '0',
+  `total_turns` int(11) NOT NULL default '0',
+  `turns_left` int(11) NOT NULL default '0',
+  `rate` int(11) NOT NULL default '0',
+  `date` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_coalition` (
+  `id` int(11) NOT NULL auto_increment,
+  `date` int(11) NOT NULL default '0',
+  `name` varchar(35) NOT NULL default '',
+  `networth` bigint(20) NOT NULL default '0',
+  `logo` text NOT NULL,
+  `planets` bigint(20) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_coordinator` (
+  `date` int(11) NOT NULL default '0',
+  `lottery_cash` bigint(20) NOT NULL default '0',
+  `lottery_date` int(11) NOT NULL default '0',
+  `last_turns_update` int(11) NOT NULL default '0',
+  `last_time_update` int(11) NOT NULL default '0',
+  `last_daily_update` int(11) NOT NULL default '0',
+  `game_status` int(11) NOT NULL default '0',
+  `restart_date` int(11) NOT NULL default '0',
+  `last_master` varchar(35) default NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+/***/
+
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_empire` (
+  `id` int(11) NOT NULL auto_increment,
+  `player_id` int(11) NOT NULL,
+  `logo` text NOT NULL,
+  `emperor` varchar(25) NOT NULL default '',
+  `gender` char(1) NOT NULL default 'M',
+  `name` varchar(25) NOT NULL default '',
+  `biography` text NOT NULL,
+  `active` int(11) NOT NULL default '0',
+  `date` int(11) NOT NULL default '0',
+  `turns_left` int(11) NOT NULL default '0',
+  `turns_played` bigint(20) NOT NULL default '0',
+  `protection_turns_left` int(11) NOT NULL default '0',
+  `credits` bigint(24) NOT NULL default '0',
+  `last_credits` bigint(24) NOT NULL default '0',
+  `population` bigint(20) NOT NULL default '0',
+  `food` bigint(20) NOT NULL default '0',
+  `ore` bigint(20) NOT NULL default '0',
+  `petroleum` bigint(20) NOT NULL default '0',
+  `networth` bigint(20) NOT NULL default '0',
+  `taxrate` int(11) NOT NULL default '23',
+  `ai_level` int(11) NOT NULL,
+  `civil_status` int(11) NOT NULL default '0',
+  `inflation` float NOT NULL default '0',
+  `lottery_tickets` bigint(20) NOT NULL default '0',
+  `planets_bought` bigint(20) NOT NULL default '0',
+  `already_attacked` int(11) NOT NULL default '0',
+  `last_turn_date` int(11) NOT NULL default '0',
+  `food_rate` int(11) NOT NULL default '0',
+  `ore_rate` int(50) NOT NULL default '0',
+  `petroleum_rate` int(50) NOT NULL default '0',
+  `research_tech_id` int(11) NOT NULL default '-1',
+  `research_points` int(11) NOT NULL default '0',
+  `research_level` int(11) NOT NULL default '1',
+  `research_rate` int(11) NOT NULL default '0',
+  `x` int(11) NOT NULL default '0',
+  `y` int(11) NOT NULL default '0',
+  `blackmarket` int(11) NOT NULL default '0',
+  `have_nukes` int(11) NOT NULL default '0',
+  `premium` int(11) NOT NULL,
+  `food_traded` int(11) NOT NULL default '0',
+  `ore_traded` int(11) NOT NULL default '0',
+  `petroleum_traded` int(11) NOT NULL default '0',
+  `last_turn_food_sold` bigint(20) NOT NULL default '0',
+  `last_turn_ore_sold` bigint(20) NOT NULL default '0',
+  `last_turn_petroleum_sold` bigint(20) NOT NULL default '0',
+  `last_turn_research_sold` bigint(20) NOT NULL default '0',
+  `blackmarket_cooldown` int(11) NOT NULL default '50',
+  `attacked_by` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_event` (
+  `id` int(11) NOT NULL auto_increment,
+  `event_type` int(11) NOT NULL default '0',
+  `event_from` int(11) NOT NULL default '0',
+  `event_to` int(11) NOT NULL default '0',
+  `params` longtext NOT NULL,
+  `seen` tinyint(4) NOT NULL default '0',
+  `sticky` int(11) NOT NULL default '0',
+  `date` int(11) NOT NULL default '0',
+  `height` int(11) NOT NULL default '160',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_hall_of_fame` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `game_name` varchar(255) NOT NULL default '',
+  `date` int(11) NOT NULL default '0',
+  `elapsed` int(11) NOT NULL default '0',
+  `victory_condition` varchar(255) NOT NULL default '',
+  `winner_coalition` varchar(255) NOT NULL default '',
+  `gold_empire` varchar(255) NOT NULL default '',
+  `gold_networth` bigint(20) NOT NULL default '0',
+  `silver_empire` varchar(255) NOT NULL default '',
+  `silver_networth` bigint(20) NOT NULL default '0',
+  `bronze_empire` varchar(255) NOT NULL default '',
+  `bronze_networth` bigint(20) NOT NULL default '0',
+  `winner_empire` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_invasion` (
+  `id` int(11) NOT NULL auto_increment,
+  `empire_id` int(11) NOT NULL,
+  `data` longblob NOT NULL,
+  `date` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_loan` (
+  `id` int(11) NOT NULL auto_increment,
+  `empire` int(11) NOT NULL default '0',
+  `initial_credits` bigint(20) NOT NULL default '0',
+  `current_credits` bigint(20) NOT NULL default '0',
+  `total_turns` int(11) NOT NULL default '0',
+  `turns_left` int(11) NOT NULL default '0',
+  `rate` int(11) NOT NULL default '0',
+  `date` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_market` (
+  `id` int(11) NOT NULL auto_increment,
+  `food` bigint(20) NOT NULL default '10000',
+  `food_ratio` float NOT NULL default '1',
+  `ore` bigint(20) NOT NULL default '10000',
+  `ore_ratio` float NOT NULL default '1',
+  `petroleum` bigint(20) NOT NULL default '10000',
+  `petroleum_ratio` float NOT NULL default '1',
+  `food_buy` bigint(20) NOT NULL default '1',
+  `food_sell` bigint(20) NOT NULL default '1',
+  `ore_buy` bigint(20) NOT NULL default '1',
+  `ore_sell` bigint(20) NOT NULL default '1',
+  `petroleum_buy` bigint(20) NOT NULL default '1',
+  `petroleum_sell` bigint(20) NOT NULL default '1',
+  `last_update` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_member` (
+  `id` int(11) NOT NULL auto_increment,
+  `date` int(11) NOT NULL default '0',
+  `empire` int(11) NOT NULL default '0',
+  `coalition` int(11) NOT NULL default '0',
+  `level` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_pirate` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(35) NOT NULL default '',
+  `networth` bigint(20) NOT NULL default '0',
+  `credits` bigint(24) NOT NULL default '0',
+  `food` bigint(20) NOT NULL default '0',
+  `research` bigint(20) NOT NULL default '0',
+  `covertagents` bigint(20) NOT NULL default '0',
+  `stations` bigint(20) NOT NULL default '0',
+  `soldiers` bigint(20) NOT NULL default '0',
+  `fighters` bigint(20) NOT NULL default '0',
+  `lightcruisers` bigint(20) NOT NULL default '0',
+  `heavycruisers` bigint(20) NOT NULL default '0',
+  `carriers` bigint(20) NOT NULL default '0',
+  `food_planets` bigint(20) NOT NULL default '0',
+  `ore_planets` bigint(20) NOT NULL default '0',
+  `tourism_planets` bigint(20) NOT NULL default '0',
+  `supply_planets` bigint(20) NOT NULL default '0',
+  `gov_planets` bigint(20) NOT NULL default '0',
+  `edu_planets` bigint(20) NOT NULL default '0',
+  `urban_planets` bigint(20) NOT NULL default '0',
+  `research_planets` bigint(20) NOT NULL default '0',
+  `petro_planets` bigint(20) NOT NULL default '0',
+  `antipollu_planets` bigint(20) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+/***/
+
+INSERT INTO `game{prefix}_tb_pirate` (`id`, `name`, `networth`, `credits`, `food`, `research`, `covertagents`, `stations`, `soldiers`, `fighters`, `lightcruisers`, `heavycruisers`, `carriers`, `food_planets`, `ore_planets`, `tourism_planets`, `supply_planets`, `gov_planets`, `edu_planets`, `urban_planets`, `research_planets`, `petro_planets`, `antipollu_planets`) VALUES
+(1, 'Xandorian Dieters', 386622, 19, 2846, 3368, 3485, 5415, 3999, 4798, 1157, 4196, 2869, 3123, 203, 2635, 1391, 7497, 4494, 4809, 4119, 7410, 2973),
+(2, 'Uncertain Gangs', 313065, 1969227, 985, 940, 3119, 2776, 0, 8577, 11127, 23, 9108, 4553, 135, 3131, 6823, 2047, 230, 1363, 6523, 1309, 5182),
+(3, 'Extraterrestrial Thugs', 459926, 557, 3494, 5943, 3390, 4578, 1165, 14122, 473, 9209, 7373, 4316, 3492, 8154, 5077, 5962, 1596, 5610, 5221, 831, 5724),
+(4, 'Storm Warhogs', 476415, 6341, 4795, 6232, 8950, 2628, 8366, 9908, 4236, 5509, 10931, 9137, 5917, 4335, 5639, 9361, 152, 701, 8752, 2965, 672),
+(5, 'Nemesis Raiders', 359531, 6769, 6503, 4499, 10951, 2439, 959, 10093, 8331, 7232, 8472, 4489, 3069, 3531, 720, 2184, 6269, 9086, 1550, 504, 4542),
+(6, 'Galactic Bugs', 479517, 2278, 422, 624, 6857, 6120, 2845, 7313, 7065, 15295, 8554, 7385, 5497, 5301, 2226, 1438, 7062, 3520, 8668, 5823, 1022),
+(7, 'Space Invaders', 582006, 6738, 612, 4134, 878, 1385, 5170, 6619, 189, 7615, 7554, 4500, 7102, 14645, 5117, 6676, 4098, 5427, 4464, 1368, 4797),
+(8, 'Compiler Babies', 489695, 2871, 8124, 1078, 7848, 1368, 3525, 4281, 4337, 950, 13073, 5624, 8548, 4691, 485, 43, 4179, 5779, 7919, 7406, 4284),
+(9, 'Arcadian Sharks', 456890, 3827, 156, 4893, 2395, 4784, 2230, 7272, 1719, 6880, 7706, 5213, 273, 6812, 6557, 7678, 8262, 422, 4384, 4408, 1671);
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_planets` (
+  `id` int(11) NOT NULL auto_increment,
+  `empire` int(11) NOT NULL default '0',
+  `food_planets` bigint(20) NOT NULL default '0',
+  `ore_planets` bigint(20) NOT NULL default '0',
+  `tourism_planets` bigint(20) NOT NULL default '0',
+  `supply_planets` bigint(20) NOT NULL default '0',
+  `gov_planets` bigint(20) NOT NULL default '0',
+  `edu_planets` bigint(20) NOT NULL default '0',
+  `research_planets` bigint(20) NOT NULL default '0',
+  `urban_planets` bigint(20) NOT NULL default '0',
+  `petro_planets` bigint(20) NOT NULL default '0',
+  `antipollu_planets` bigint(20) NOT NULL default '0',
+  `max_petro` bigint(20) NOT NULL default '0',
+  `max_tourism` bigint(20) NOT NULL default '0',
+  `max_ore` bigint(20) NOT NULL default '0',
+  `max_food` bigint(20) NOT NULL default '0',
+  `max_supply` bigint(20) NOT NULL default '0',
+  `max_gov` bigint(20) NOT NULL default '0',
+  `max_edu` bigint(20) NOT NULL default '0',
+  `max_research` bigint(20) NOT NULL default '0',
+  `max_urban` bigint(20) NOT NULL default '0',
+  `max_antipollu` bigint(20) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_production` (
+  `id` int(11) NOT NULL auto_increment,
+  `empire` int(11) NOT NULL default '0',
+  `food_short` int(11) NOT NULL default '100',
+  `food_long` int(11) NOT NULL default '100',
+  `ore_short` int(11) NOT NULL default '100',
+  `ore_long` int(11) NOT NULL default '100',
+  `tourism_short` int(11) NOT NULL default '100',
+  `tourism_long` int(11) NOT NULL default '100',
+  `supply_short` int(11) NOT NULL default '100',
+  `supply_long` int(11) NOT NULL default '100',
+  `edu_short` int(11) NOT NULL default '100',
+  `edu_long` int(11) NOT NULL default '100',
+  `research_short` int(11) NOT NULL default '100',
+  `research_long` int(11) NOT NULL default '100',
+  `urban_short` int(11) NOT NULL default '100',
+  `urban_long` int(11) NOT NULL default '100',
+  `petro_short` int(11) NOT NULL default '100',
+  `petro_long` int(11) NOT NULL default '100',
+  `antipollu_short` int(11) NOT NULL default '100',
+  `antipollu_long` int(11) NOT NULL default '100',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_research_done` (
+  `id` int(11) NOT NULL auto_increment,
+  `empire_id` int(11) NOT NULL default '0',
+  `tech_id` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_research_tech` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(35) NOT NULL default '',
+  `level` int(11) NOT NULL default '0',
+  `cost` bigint(20) NOT NULL default '0',
+  `image` varchar(255) NOT NULL default '',
+  `description` varchar(255) NOT NULL default '',
+  `target` varchar(35) NOT NULL default '',
+  `value` varchar(35) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
+
+/***/
+
+
+INSERT INTO `game{prefix}_tb_research_tech` (`id`, `name`, `level`, `cost`, `image`, `description`, `target`, `value`) VALUES
+(1, 'Storm Troopers', 1, 600000, 'soldiers_1.gif', 'Enhance your soldiers with new armor protection and laser guns', 'soldiers_level', '1'),
+(2, 'Enhanced ore output', 1, 1000000, 'ore_boost.gif', 'Mining machines dig faster and your Ore output is increased by 25%.', 'ore_production', '+25'),
+(3, 'Advanced Fighter', 1, 800000, 'fighters_1.gif', 'Fighter training and production leads to a new era of fighters. These are generally much better then ordinary fighters.', 'fighters_level', '1'),
+(4, 'Enhanced education system', 1, 1000000, 'edu_boost.gif', 'Digital books can store 15 Quadrillion more pages in it''s database. Education planets boosted by 25%', 'edu_production', '+25'),
+(5, 'Shadow Agent', 2, 12000000, 'covertagents_1.gif', 'A enhanced agent', 'covertagents_level', '1'),
+(6, 'Research boost', 2, 16000000, 'research_boost.gif', 'Scientists are born with an extra arm. Research output increased with 25%.', 'research_production', '+25'),
+(7, 'Enhanced Defense Stations', 2, 10000000, 'stations_1.gif', 'LCS (Laser Calibration System) makes defense stations more accurate in combat.', 'stations_level', '1'),
+(8, 'Tourism boost', 2, 10000000, 'tourism_boost.gif', 'New zero-gravity amusement park on all tourism planets. Increasing tourism output by 25%.', 'tourism_production', '+25'),
+(9, 'Food crops increase', 3, 26000000, 'food_boost.gif', 'New researches enables cropfarms to be built faster. Food output increased by 25%.', 'food_production', '+25'),
+(10, 'Water Additive', 3, 50000000, 'peace1.gif', 'By adding something in the water, your population will cherish you again,  reset civil status to ''peaceful''', 'civilstatus_civilstatus', '0'),
+(11, 'Star Enforcer', 3, 24000000, 'lightcruisers_1.gif', 'Researches the Star Enforcer with greater speed, weapon and On-Board navigation system.', 'lightcruisers_level', '1'),
+(12, 'Urban boost', 3, 36000000, 'urban_boost.gif', 'Taxes on breathing air implented. Urban planets output increased by 25%', 'urban_production', '+25'),
+(13, 'Juggernaut', 4, 60000000, 'heavycruisers_1.gif', 'Researches the Juggernaut. Improved armor and weaponsystem.', 'heavycruisers_level', '1'),
+(14, 'Petroleum production increase', 4, 100000000, 'petro_boost.gif', 'Researches P.S.S.4000 (Petroleum Scanning System 4000) that finds petroleum faster. Increased output by 25%', 'petro_production', '+25'),
+(15, 'Supply boost', 4, 100000000, 'supply_boost.gif', 'New combat simulation computer enhances military training and production. Supply planets output incresed by 25%', 'supply_production', '+25'),
+(17, 'Behemot carrier', 5, 140000000, 'carriers_1.gif', 'Researches Behemot carrier. Storage capacities on carriers increased.', 'carriers_level', '1'),
+(18, 'Antipollution boost', 5, 200000000, 'antipollu_boost.gif', 'Anti-pollution planets cleans more and gains increased output by 25%.', 'antipollu_production', '+25'),
+(19, 'Space Marine', 5, 160000000, 'soldiers_2.gif', 'Improved armor protection and weapon range. This soldier can attack orbrital ships.', 'soldiers_level', '2'),
+(20, 'Food boost #2', 5, 220000000, 'food_boost2.gif', 'Cows and Pigs increased in size by new genetic discovery. Food output increased by 50%', 'food_production', '+50'),
+(21, 'Education boost #2', 6, 400000000, 'edu_boost2.gif', 'Researches PEN-system (Perfectly Educated Nation). Improved education planets by 25%', 'edu_production', '+50'),
+(22, 'Raptor Fighter', 6, 360000000, 'fighters_2.gif', 'Improves your fighter to become the ultimate flying fighting machine. If you ever see one of these, you should run.', 'fighters_level', '2'),
+(23, 'Urban boost #2', 6, 600000000, 'urban_boost2.gif', 'The gravitron powered tubes allow civilians to travel faster between cities', 'urban_production', '+50'),
+(24, 'Global defensive perimeter', 6, 400000000, 'stations_2.gif', 'Defense stations goes big and bad. Now with range enough to attack Heavy Cruisers!', 'stations_level', '2'),
+(25, 'Cyber Agents', 7, 1000000000, 'covertagents_2.gif', 'Cyber agents are the ultimate solution in population control and presidential security', 'covertagents_level', '2'),
+(26, 'Striker Light Cruiser', 7, 1200000000, 'lightcruisers_2.gif', 'A very powerful light cruiser', 'lightcruisers_level', '2'),
+(27, 'Ore Boost #2', 7, 1300000000, 'ore_boost2.gif', 'Scientists finally found own to transmute gold from cheap salt', 'ore_production', '+50'),
+(28, 'Research boost #2', 7, 1600000000, 'research_boost2.gif', 'Enhanced research production', 'research_production', '+50'),
+(29, 'Petro boost #2', 8, 1400000000, 'petro_boost2.gif', 'Boost petroleum production', 'petro_production', '+50'),
+(30, 'Supply boost #2', 8, 1200000000, 'supply_boost2.gif', 'A nice supply production boost', 'supply_production', '+50'),
+(31, 'Gigantix Carriers', 8, 1400000000, 'carriers_2.gif', 'Using strong compression methods, this new carrier can contains more and travel faster', 'carriers_level', '2'),
+(33, 'Leviathan battle cruisers', 8, 2147483647, 'heavycruisers_2.gif', 'The big fat battle cruiser everyones love', 'heavycruisers_level', '2');
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_session` (
+  `id` int(11) NOT NULL auto_increment,
+  `empire` int(11) NOT NULL default '0',
+  `lastdate` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_shoutbox` (
+  `id` int(11) NOT NULL auto_increment,
+  `date` int(11) NOT NULL default '0',
+  `coalition` int(11) NOT NULL default '0',
+  `empire_name` varchar(255) NOT NULL default '0',
+  `empire_id` int(11) NOT NULL default '0',
+  `message` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_stats` (
+  `id` int(11) NOT NULL auto_increment,
+  `empire` int(11) NOT NULL default '0',
+  `date` int(11) NOT NULL default '0',
+  `credits` bigint(20) NOT NULL default '0',
+  `food` bigint(20) NOT NULL default '0',
+  `networth` bigint(20) NOT NULL default '0',
+  `military` bigint(20) NOT NULL default '0',
+  `planets` bigint(20) NOT NULL default '0',
+  `population` bigint(20) NOT NULL default '0',
+  `pollution` int(11) NOT NULL default '0',
+  `turn` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_supply` (
+  `id` int(11) NOT NULL auto_increment,
+  `empire` int(11) NOT NULL default '0',
+  `rate_soldier` int(11) NOT NULL default '0',
+  `rate_fighter` int(11) NOT NULL default '0',
+  `rate_station` int(11) NOT NULL default '0',
+  `rate_heavycruiser` int(11) NOT NULL default '0',
+  `rate_carrier` int(11) NOT NULL default '0',
+  `rate_covert` int(11) NOT NULL default '0',
+  `rate_credits` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_trace` (
+  `id` int(11) NOT NULL auto_increment,
+  `empire` int(11) NOT NULL,
+  `turn` int(11) NOT NULL,
+  `description` text NOT NULL,
+  `date` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_tradeconvoy` (
+  `id` int(11) NOT NULL auto_increment,
+  `empire_from` int(11) default NULL,
+  `empire_to` int(11) NOT NULL default '0',
+  `trade_money` bigint(24) NOT NULL default '0',
+  `trade_food` bigint(20) NOT NULL default '0',
+  `trade_covertagents` bigint(20) NOT NULL default '0',
+  `trade_soldiers` bigint(20) NOT NULL default '0',
+  `trade_fighters` bigint(20) NOT NULL default '0',
+  `trade_stations` bigint(20) NOT NULL default '0',
+  `trade_lightcruisers` bigint(20) NOT NULL default '0',
+  `trade_heavycruisers` bigint(20) NOT NULL default '0',
+  `carriers` bigint(20) NOT NULL default '0',
+  `time_start` int(11) NOT NULL default '0',
+  `time_end` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+/***/
+
+CREATE TABLE IF NOT EXISTS `game{prefix}_tb_treaty` (
+  `id` int(11) NOT NULL auto_increment,
+  `empire_from` int(11) NOT NULL default '0',
+  `empire_to` int(11) NOT NULL default '0',
+  `type` int(11) NOT NULL default '0',
+  `date` int(11) NOT NULL default '0',
+  `status` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=0 ;
+
+

@@ -1,0 +1,29 @@
+<xml>
+
+    <HallOfFame>
+
+        {section name="hlf" loop=$hall_of_fame}
+        <Entry>
+            <Date>{$hall_of_fame[hlf].date}</Date>
+            <PlayerName>{$hall_of_fame[hlf].player_name}</PlayerName>
+            <GameName>{$hall_of_fame[hlf].game_name}</GameName>
+        </Entry>
+        {/section}
+
+    </HallOfFame>
+
+
+    <Scoreboard>
+        {section name="sc" loop=$scores}
+        <Entry>
+            <Rank>{$scores[sc].rank}</Rank>
+            <PlayerName>{$scores[sc].name}</PlayerName>
+            <Score>{$scores[sc].score}</Score>
+            <LastVisit>{$scores[sc].lastvisit}</LastVisit>
+            <Elapsed>{$scores[sc].lifespan}</Elapsed>
+        </Entry>
+        {/section}
+
+    </Scoreboard>
+
+</xml>

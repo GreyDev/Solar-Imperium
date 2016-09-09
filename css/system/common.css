@@ -1,0 +1,382 @@
+#bg_image {
+    background-attachment: fixed;
+    width: 2048px;
+    height: 2048px;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    z-index: 0;
+}
+
+#contents {
+    position:absolute;
+    width: 99%;
+    z-index:1;
+}
+
+
+.text_tiny {
+
+	font-size: 10px;
+	font-family: sans-serif;
+
+}
+
+
+.text_small {
+
+	font-size: 12px;
+	font-family: sans-serif;
+
+}
+
+.text_normal {
+
+	font-size: 14px;
+	font-family: sans-serif;
+
+}
+
+.text_normal_bold {
+
+	font-size: 14px;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.text_big {
+
+	font-size: 16px;
+	font-family: sans-serif;
+
+}
+
+.text_verybig {
+
+	font-size: 18px;
+	font-family: sans-serif;
+
+}
+
+
+.text_huge {
+
+	font-size: 20px;
+	font-family: sans-serif;
+
+}
+
+.div_login {
+
+	float: right;
+	border: 1px dashed #666666;
+	background-color: #cacaca;
+	margin: 5px;
+	padding: 2px;
+
+}
+
+
+.input_text {
+
+
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color: #660000;
+	color: #ff9999;
+	border: 1px solid darkred;
+	padding: 2px;
+
+
+}
+
+
+.input_button {
+
+
+	font-size: 14px;
+	font-family: sans-serif;
+	background-color: #cacaca;
+	font-weight: bolder;
+	color: black;
+	border: 1px solid #000033;
+
+
+}
+
+.input_button:hover {
+
+
+	font-size: 14px;
+	font-family: sans-serif;
+	background-color: #dedede;
+	color: darkred;
+	border: 1px solid #cc0000;
+
+
+}
+
+form {
+ margin:0px;
+}
+
+a {
+	color: blue;
+}
+
+.menu_item {
+
+	font-size: 12px;
+	font-family: sans-serif;
+	color: #dfdfff;
+ 	text-decoration: none;
+	font-weight: bold;
+
+}
+
+.menu_item:hover {
+
+	font-size: 12px;
+	font-family: sans-serif;
+	color: white;
+  	text-decoration: none;
+	font-weight: bold;
+
+}
+
+.div_warning {
+    display:none;
+	margin:10px;
+	padding:10px;
+	border:1px solid #FF0000;
+	background-color:#ff3333;
+	visibility:hidden;
+	color:#660000;
+	font-size: 22px;
+	font-family: sans-serif;
+	
+}
+
+
+.div_warning_visible {
+	margin:2px;
+	padding:10px;
+    border:1px solid #FF0000;
+	background-color:#ff3333;
+	color:#660000;
+	font-size: 22px;
+	font-family: sans-serif;
+
+}
+
+
+.table_messages {
+
+	border:1px solid blue;
+	padding:0px;margin:10px;
+	background-color:#99AACC;
+	font-size: 14px;
+	font-family: sans-serif;
+
+}
+
+.table_halloffame {
+	padding:4px;
+	color:white;
+	border:1px solid #9999aa;
+	margin:0px; 
+	background-color:#111133;
+	font-size: 12px;
+	font-family: sans-serif;
+
+}
+
+.table_scores {
+
+	color:white; 
+	border:1px solid #9999aa; 
+	background-color:#111133;
+
+}
+
+
+.img_poster {
+	border:1px solid black;
+	margin:0px 0px 0px 15px;
+}
+
+
+.div_languages {
+	margin-left: auto;
+    margin-right: auto;
+	text-align:right;
+	padding: 5px;
+}
+
+.img_language {
+	border:1px solid white;
+}
+
+.topframe_link {
+
+	color:#333333;
+	text-decoration: none;
+	padding: 2px;
+	margin: 2px;
+	background-color: #cc3333;
+	border:1px solid #333333;
+}
+
+.topframe_link:hover {
+
+	color:white;
+	text-decoration: none;
+	padding: 2px;
+	margin: 2px;
+	background-color: #3a3a3a;
+
+	border:1px solid #333333;
+}
+
+.topframe_image {
+
+	margin: 4px;
+}
+
+
+.div_welcome_background {
+
+	background-image: url(../../images/system/welcome_bg.png);
+	width: 784px;
+	height: 572px;
+
+
+}
+
+.div_welcome_text {
+
+	text-align: left;
+	font-size:20px;
+	font-family: sans-serif;
+
+}
+
+
+
+.link {
+
+	text-decoration: none;
+	color: white;
+}
+
+.link:hover {
+
+	color: yellow;
+}
+
+
+
+.link2 {
+
+	text-decoration: none;
+	color: #6a6a6a;
+}
+
+.link2:hover {
+
+	color: darkred;
+}
+
+
+.link3 {
+
+	text-decoration: none;
+	color: #6a6a6a;
+}
+
+.link3:hover {
+
+	color: #cacaca;
+}
+
+
+
+.link4 {
+
+	text-decoration: none;
+	color: #cacaca;
+}
+
+.link4:hover {
+
+	color: white;
+}
+
+
+
+.div_welcome_link {
+
+	text-decoration: none;
+	color: white;
+}
+
+.div_welcome_link:hover {
+
+	color: yellow;
+}
+
+
+
+.div_welcome2_link {
+
+	text-decoration: none;
+	color: #cacaca;
+}
+
+.div_welcome2_link:hover {
+
+	color: yellow;
+}
+
+
+.div_serverstatus {
+	width: 790px;
+	background-color: blue;
+	background-image: url(../../images/system/serverstatus_bg.jpg);
+	border:1px solid darkred;
+}
+
+
+.div_login_background {
+
+	background-color: blue;
+	background-image: url(../../images/system/login_bg.jpg);
+	width: 780px;
+	height: 567px;
+	border: 1px solid #333333;
+
+
+}
+
+
+.div_register_background {
+
+	background-color: blue;
+	background-image: url(../../images/system/register_bg.jpg);
+	width: 780px;
+	height: 567px;
+	border: 1px solid #333333;
+
+
+}
+
+
+
+.div_background1 {
+	background-color: blue;
+	background-image: url(../../images/system/background1.jpg);
+	border:1px solid cyan;
+	color: #cacaca;
+
+}
+

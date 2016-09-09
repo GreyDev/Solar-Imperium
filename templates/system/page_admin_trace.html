@@ -1,0 +1,26 @@
+{capture name=page_title}
+{t}Admin Section{/t}
+{/capture}
+
+{include file="frame_header.html" title=$smarty.capture.page_title}
+<!-- begin content -->
+<div style="margin:5px" class="text_normal"><a href="admin.php" class="link"><b>Back to administration</b></a></div>
+<table width="100%" cellspacing="1" cellpadding="2" border="0" class="text_normal">
+<tr>
+<td bgcolor="#222222"  style="color:yellow"><b>Date</b></td>
+<td bgcolor="#222222"  style="color:yellow"><b>Turn</b></td>
+<td bgcolor="#222222"  style="color:yellow"><b>Description</b></td>
+</tr>
+{section name="item" loop=$items}
+<tr>
+<td bgcolor="#353535"  nowrap style="color:lightblue">{$items[item].date|date_format}</td>
+<td bgcolor="#555555" style="color:cyan">{$items[item].turn}</td>
+<td bgcolor="#444444" style="color:white">{$items[item].description|stripslashes}</td>
+</tr>
+
+{/section}
+</table>
+<div style="margin:5px" class="text_normal"><a href="admin.php" class="link"><b>Back to administration</b></a></div>
+
+<!-- end content -->
+{include file="frame_footer.html"}

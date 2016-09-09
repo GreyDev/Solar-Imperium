@@ -1,0 +1,4 @@
+Use the install.php script to install the game!
+
+If its not working, contact me at ybourbeau@mrgtech.ca
+
